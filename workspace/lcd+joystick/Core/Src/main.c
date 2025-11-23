@@ -26,6 +26,7 @@
 #include "lcd1602.h"
 #include <stdio.h> 
 #include <string.h>
+#include "joystick.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,7 +49,8 @@
 /* USER CODE BEGIN PV */
 enum GameState
 {
-  GAME_MENU = 0,
+  START = 0,
+  GAME_MENU,
   PLAYER_SELECT,
   ONE_PLAYER,
   TWO_PLAYERS,
@@ -65,6 +67,8 @@ struct GameInfo
   uint8_t playerInputs[2][100];
   uint8_t playerScores[2];
 };
+
+Joystick_HandleTypeDef joystick;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -125,9 +129,15 @@ int main(void)
   LCD_Cls();
   /*** End of LCD Initialization ***/
 
+  /*** Initialize Joystick ***/
+  Joystick_Init(&joystick, &hadc1, ADC_CHANNEL_7, ADC_CHANNEL_8, 
+                 GPIOC, GPIO_PIN_6);
+  /*** End of Joystick Initialization ***/
+
   GameState currentState = GAME_MENU;
   GameInfo play;
   char lineOne[17] = {0}, lineTwo[17] = {0};
+  uint16_t joystickXY[2];
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -137,6 +147,10 @@ int main(void)
     /* USER CODE END WHILE */
     switch(currentState)
     {
+      case START:
+        if (Joystick_ReadButton(&joystick)) 
+        {  currentState = GAME_MENU;  }
+        break;
       case GAME_MENU:
         snprintf(lineOne, sizeof(lineOne), "\tWelcome to");
         snprintf(lineTwo, sizeof(lineTwo), "\tSimon Game!");
@@ -150,7 +164,7 @@ int main(void)
         break;
       case PLAYER_SELECT:
         // Read the joystick input to determine the number of players
-        /* readJoystick();
+        /* Joystick_ReadXY(&joystick, joystickXY);
         if (Joystick LEFT moved) 
         {
           snprintf(lineTwo, sizeof(lineTwo), "<1> OR 2");
@@ -165,7 +179,7 @@ int main(void)
           play.numPlayers = 2;
         }    
 
-        if (Joystick SELECT pressed) 
+        if (Joystick_ReadButton(&joystick)) 
         {
           if (play.numPlayers)
             currentState = ONE_PLAYER;
