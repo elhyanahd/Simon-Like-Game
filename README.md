@@ -17,4 +17,4 @@ System Components (based on Subsystem):
 - Display Feedback: LCD1602 Module
 
 Draft Schematic:
-![Proposed Schematic](image.png)
+![Proposed Schematic](media/image.png)
