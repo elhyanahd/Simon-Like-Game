@@ -15,6 +15,13 @@ typedef struct
     uint16_t buttonPin;        // GPIO pin for SW
 } Joystick_HandleTypeDef;
 
+typedef enum 
+{
+    JOY_IDLE,
+    JOY_UP,
+    JOY_DOWN
+} JoyStickDirection;
+
 // Initialize joystick handle
 void Joystick_Init(Joystick_HandleTypeDef* joystick,
                    ADC_HandleTypeDef* hadc,
@@ -23,10 +30,16 @@ void Joystick_Init(Joystick_HandleTypeDef* joystick,
                    GPIO_TypeDef* buttonPort,
                    uint16_t buttonPin);
 
+// Calibrate joystick to find center position
+void Joystick_Calibrate(Joystick_HandleTypeDef *joystick);
+
+// Get joystick direction
+JoyStickDirection Joystick_GetDirection(Joystick_HandleTypeDef *joystick);
+
 // Read X and Y axes (0–4095)
 void Joystick_ReadXY(Joystick_HandleTypeDef* joystick, uint16_t* xy);
 
-// Read SW button 
-uint8_t Joystick_ReadButton(Joystick_HandleTypeDef* joystick);
+// Check if joystick button is pressed
+uint8_t Joystick_Pressed(Joystick_HandleTypeDef* joystick);
 
 #endif

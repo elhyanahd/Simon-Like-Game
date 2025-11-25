@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
   27:Core/Src/main.c **** /* USER CODE BEGIN Includes */
   28:Core/Src/main.c **** #include "lcd1602.h"
   29:Core/Src/main.c **** #include <stdio.h> 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 2
 
 
   30:Core/Src/main.c **** #include <string.h>
@@ -85,47 +85,54 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
   51:Core/Src/main.c **** /* USER CODE BEGIN PV */
   52:Core/Src/main.c **** typedef enum 
   53:Core/Src/main.c **** {
-  54:Core/Src/main.c ****   START = 0,
-  55:Core/Src/main.c ****   GAME_MENU,
-  56:Core/Src/main.c ****   PLAYER_SELECT,
-  57:Core/Src/main.c ****   ONE_PLAYER,
-  58:Core/Src/main.c ****   TWO_PLAYERS,
-  59:Core/Src/main.c ****   SCORES,
-  60:Core/Src/main.c ****   GAME_RESULT
-  61:Core/Src/main.c **** } GameState ; 
-  62:Core/Src/main.c **** 
-  63:Core/Src/main.c **** typedef struct 
-  64:Core/Src/main.c **** {
-  65:Core/Src/main.c ****   uint8_t numPlayers;
-  66:Core/Src/main.c ****   uint8_t currentPlayer;
-  67:Core/Src/main.c ****   uint8_t sequence[100];
-  68:Core/Src/main.c ****   uint8_t sequenceLength;
-  69:Core/Src/main.c ****   uint8_t playerInputs[2][100];
-  70:Core/Src/main.c ****   uint8_t playerScores[2];
-  71:Core/Src/main.c **** } GameInfo ;
-  72:Core/Src/main.c **** 
-  73:Core/Src/main.c **** Joystick_HandleTypeDef joystick;
-  74:Core/Src/main.c **** /* USER CODE END PV */
-  75:Core/Src/main.c **** 
-  76:Core/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
-  77:Core/Src/main.c **** void SystemClock_Config(void);
-  78:Core/Src/main.c **** void PeriphCommonClock_Config(void);
-  79:Core/Src/main.c **** /* USER CODE BEGIN PFP */
-  80:Core/Src/main.c **** 
-  81:Core/Src/main.c **** /* USER CODE END PFP */
+  54:Core/Src/main.c ****   WELCOME = 0,
+  55:Core/Src/main.c ****   START,
+  56:Core/Src/main.c ****   PLAYER_MENU,
+  57:Core/Src/main.c ****   PLAYER_SELECT,
+  58:Core/Src/main.c ****   ONE_PLAYER,
+  59:Core/Src/main.c ****   TWO_PLAYERS,
+  60:Core/Src/main.c ****   SCORES,
+  61:Core/Src/main.c ****   GAME_RESULT,
+  62:Core/Src/main.c ****   SLEEP
+  63:Core/Src/main.c **** } GameState ; 
+  64:Core/Src/main.c **** 
+  65:Core/Src/main.c **** typedef struct 
+  66:Core/Src/main.c **** {
+  67:Core/Src/main.c ****   uint8_t numPlayers;
+  68:Core/Src/main.c ****   uint8_t currentPlayer;
+  69:Core/Src/main.c ****   uint8_t sequence[100];
+  70:Core/Src/main.c ****   uint8_t sequenceLength;
+  71:Core/Src/main.c ****   uint8_t playerInputs[2][100];
+  72:Core/Src/main.c ****   uint8_t playerScores[2];
+  73:Core/Src/main.c **** } GameInfo ;
+  74:Core/Src/main.c **** 
+  75:Core/Src/main.c **** Joystick_HandleTypeDef joystick;
+  76:Core/Src/main.c **** /* USER CODE END PV */
+  77:Core/Src/main.c **** 
+  78:Core/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
+  79:Core/Src/main.c **** void SystemClock_Config(void);
+  80:Core/Src/main.c **** void PeriphCommonClock_Config(void);
+  81:Core/Src/main.c **** /* USER CODE BEGIN PFP */
   82:Core/Src/main.c **** 
-  83:Core/Src/main.c **** /* Private user code ---------------------------------------------------------*/
-  84:Core/Src/main.c **** /* USER CODE BEGIN 0 */
-  85:Core/Src/main.c **** void displayOnLCD(char* lineOne, char* lineTwo)
-  86:Core/Src/main.c **** {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 3
+  83:Core/Src/main.c **** /* USER CODE END PFP */
+  84:Core/Src/main.c **** 
+  85:Core/Src/main.c **** /* Private user code ---------------------------------------------------------*/
+  86:Core/Src/main.c **** /* USER CODE BEGIN 0 */
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 3
 
 
-  30              		.loc 1 86 1 view -0
+  87:Core/Src/main.c **** /**
+  88:Core/Src/main.c ****  * @brief  Display two lines of text on the LCD.
+  89:Core/Src/main.c ****  * @param  lineOne: Pointer to the first line of text (max 16 characters).
+  90:Core/Src/main.c ****  * @param  lineTwo: Pointer to the second line of text (max 16 characters
+  91:Core/Src/main.c ****  */
+  92:Core/Src/main.c **** void displayOnLCD(char* lineOne, char* lineTwo)
+  93:Core/Src/main.c **** {
+  30              		.loc 1 93 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
-  34              		.loc 1 86 1 is_stmt 0 view .LVU1
+  34              		.loc 1 93 1 is_stmt 0 view .LVU1
   35 0000 38B5     		push	{r3, r4, r5, lr}
   36              		.cfi_def_cfa_offset 16
   37              		.cfi_offset 3, -16
@@ -134,43 +141,46 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
   40              		.cfi_offset 14, -4
   41 0002 0546     		mov	r5, r0
   42 0004 0C46     		mov	r4, r1
-  87:Core/Src/main.c ****   LCD_GotoXY(0, 0);
-  43              		.loc 1 87 3 is_stmt 1 view .LVU2
+  94:Core/Src/main.c ****   LCD_GotoXY(0, 0);
+  43              		.loc 1 94 3 is_stmt 1 view .LVU2
   44 0006 0021     		movs	r1, #0
   45              	.LVL1:
-  46              		.loc 1 87 3 is_stmt 0 view .LVU3
+  46              		.loc 1 94 3 is_stmt 0 view .LVU3
   47 0008 0846     		mov	r0, r1
   48              	.LVL2:
-  49              		.loc 1 87 3 view .LVU4
+  49              		.loc 1 94 3 view .LVU4
   50 000a FFF7FEFF 		bl	LCD_GotoXY
   51              	.LVL3:
-  88:Core/Src/main.c ****   LCD_Print(lineOne);
-  52              		.loc 1 88 3 is_stmt 1 view .LVU5
+  95:Core/Src/main.c ****   LCD_Print(lineOne);
+  52              		.loc 1 95 3 is_stmt 1 view .LVU5
   53 000e 2846     		mov	r0, r5
   54 0010 FFF7FEFF 		bl	LCD_Print
   55              	.LVL4:
-  89:Core/Src/main.c ****   LCD_GotoXY(0, 1);
-  56              		.loc 1 89 3 view .LVU6
+  96:Core/Src/main.c ****   LCD_GotoXY(0, 1);
+  56              		.loc 1 96 3 view .LVU6
   57 0014 0121     		movs	r1, #1
   58 0016 0020     		movs	r0, #0
   59 0018 FFF7FEFF 		bl	LCD_GotoXY
   60              	.LVL5:
-  90:Core/Src/main.c ****   LCD_Print(lineTwo);
-  61              		.loc 1 90 3 view .LVU7
+  97:Core/Src/main.c ****   LCD_Print(lineTwo);
+  61              		.loc 1 97 3 view .LVU7
   62 001c 2046     		mov	r0, r4
   63 001e FFF7FEFF 		bl	LCD_Print
   64              	.LVL6:
-  91:Core/Src/main.c ****   HAL_Delay(1000);
-  65              		.loc 1 91 3 view .LVU8
+  98:Core/Src/main.c ****   HAL_Delay(1000);
+  65              		.loc 1 98 3 view .LVU8
   66 0022 4FF47A70 		mov	r0, #1000
   67 0026 FFF7FEFF 		bl	HAL_Delay
   68              	.LVL7:
-  92:Core/Src/main.c **** }
-  69              		.loc 1 92 1 is_stmt 0 view .LVU9
+  99:Core/Src/main.c **** }
+  69              		.loc 1 99 1 is_stmt 0 view .LVU9
   70 002a 38BD     		pop	{r3, r4, r5, pc}
-  71              		.loc 1 92 1 view .LVU10
+  71              		.loc 1 99 1 view .LVU10
   72              		.cfi_endproc
   73              	.LFE1107:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 4
+
+
   75              		.section	.text.Error_Handler,"ax",%progbits
   76              		.align	1
   77              		.global	Error_Handler
@@ -178,256 +188,303 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
   79              		.thumb
   80              		.thumb_func
   82              	Error_Handler:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 4
-
-
   83              	.LFB1111:
-  93:Core/Src/main.c **** /* USER CODE END 0 */
-  94:Core/Src/main.c **** 
-  95:Core/Src/main.c **** /**
-  96:Core/Src/main.c ****   * @brief  The application entry point.
-  97:Core/Src/main.c ****   * @retval int
-  98:Core/Src/main.c ****   */
-  99:Core/Src/main.c **** int main(void)
- 100:Core/Src/main.c **** {
+ 100:Core/Src/main.c **** /* USER CODE END 0 */
  101:Core/Src/main.c **** 
- 102:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
- 103:Core/Src/main.c **** 
- 104:Core/Src/main.c ****   /* USER CODE END 1 */
- 105:Core/Src/main.c **** 
- 106:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
- 107:Core/Src/main.c **** 
- 108:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
- 109:Core/Src/main.c ****   HAL_Init();
+ 102:Core/Src/main.c **** /**
+ 103:Core/Src/main.c ****   * @brief  The application entry point.
+ 104:Core/Src/main.c ****   * @retval int
+ 105:Core/Src/main.c ****   */
+ 106:Core/Src/main.c **** int main(void)
+ 107:Core/Src/main.c **** {
+ 108:Core/Src/main.c **** 
+ 109:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
  110:Core/Src/main.c **** 
- 111:Core/Src/main.c ****   /* USER CODE BEGIN Init */
+ 111:Core/Src/main.c ****   /* USER CODE END 1 */
  112:Core/Src/main.c **** 
- 113:Core/Src/main.c ****   /* USER CODE END Init */
+ 113:Core/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
  114:Core/Src/main.c **** 
- 115:Core/Src/main.c ****   /* Configure the system clock */
- 116:Core/Src/main.c ****   SystemClock_Config();
+ 115:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 116:Core/Src/main.c ****   HAL_Init();
  117:Core/Src/main.c **** 
- 118:Core/Src/main.c ****   /* Configure the peripherals common clocks */
- 119:Core/Src/main.c ****   PeriphCommonClock_Config();
- 120:Core/Src/main.c **** 
- 121:Core/Src/main.c ****   /* USER CODE BEGIN SysInit */
- 122:Core/Src/main.c **** 
- 123:Core/Src/main.c ****   /* USER CODE END SysInit */
+ 118:Core/Src/main.c ****   /* USER CODE BEGIN Init */
+ 119:Core/Src/main.c **** 
+ 120:Core/Src/main.c ****   /* USER CODE END Init */
+ 121:Core/Src/main.c **** 
+ 122:Core/Src/main.c ****   /* Configure the system clock */
+ 123:Core/Src/main.c ****   SystemClock_Config();
  124:Core/Src/main.c **** 
- 125:Core/Src/main.c ****   /* Initialize all configured peripherals */
- 126:Core/Src/main.c ****   MX_GPIO_Init();
- 127:Core/Src/main.c ****   MX_ADC1_Init();
- 128:Core/Src/main.c ****   MX_USART1_UART_Init();
- 129:Core/Src/main.c ****   MX_TIM2_Init();
- 130:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
- 131:Core/Src/main.c ****   HAL_TIM_Base_Start(&htim2);
- 132:Core/Src/main.c ****   /*** Initialize LCD ***/
- 133:Core/Src/main.c ****   LCD_Init();
- 134:Core/Src/main.c ****   LCD_Cls();
- 135:Core/Src/main.c ****   /*** End of LCD Initialization ***/
- 136:Core/Src/main.c **** 
- 137:Core/Src/main.c ****   /*** Initialize Joystick ***/
- 138:Core/Src/main.c ****   Joystick_Init(&joystick, &hadc1, ADC_CHANNEL_7, ADC_CHANNEL_8, 
- 139:Core/Src/main.c ****                  GPIOC, GPIO_PIN_6);
- 140:Core/Src/main.c ****   /*** End of Joystick Initialization ***/
- 141:Core/Src/main.c **** 
- 142:Core/Src/main.c ****   GameState currentState = GAME_MENU;
- 143:Core/Src/main.c ****   GameInfo play;
- 144:Core/Src/main.c ****   char lineOne[17] = {0}, lineTwo[17] = {0};
- 145:Core/Src/main.c ****   uint16_t joystickXY[2];
- 146:Core/Src/main.c ****   /* USER CODE END 2 */
- 147:Core/Src/main.c **** 
- 148:Core/Src/main.c ****   /* Infinite loop */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 5
+ 125:Core/Src/main.c ****   /* Configure the peripherals common clocks */
+ 126:Core/Src/main.c ****   PeriphCommonClock_Config();
+ 127:Core/Src/main.c **** 
+ 128:Core/Src/main.c ****   /* USER CODE BEGIN SysInit */
+ 129:Core/Src/main.c **** 
+ 130:Core/Src/main.c ****   /* USER CODE END SysInit */
+ 131:Core/Src/main.c **** 
+ 132:Core/Src/main.c ****   /* Initialize all configured peripherals */
+ 133:Core/Src/main.c ****   MX_GPIO_Init();
+ 134:Core/Src/main.c ****   MX_ADC1_Init();
+ 135:Core/Src/main.c ****   MX_USART1_UART_Init();
+ 136:Core/Src/main.c ****   MX_TIM2_Init();
+ 137:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
+ 138:Core/Src/main.c ****   HAL_TIM_Base_Start(&htim2);
+ 139:Core/Src/main.c ****   /*** Initialize LCD ***/
+ 140:Core/Src/main.c ****   LCD_Init();
+ 141:Core/Src/main.c ****   LCD_Cls();
+ 142:Core/Src/main.c ****   /*** End of LCD Initialization ***/
+ 143:Core/Src/main.c **** 
+ 144:Core/Src/main.c ****   /*** Initialize Joystick ***/
+ 145:Core/Src/main.c ****   Joystick_Init(&joystick, &hadc1, ADC_CHANNEL_7, ADC_CHANNEL_8, 
+ 146:Core/Src/main.c ****                  GPIOC, GPIO_PIN_6);
+ 147:Core/Src/main.c ****   Joystick_Calibrate(&joystick);
+ 148:Core/Src/main.c ****   /*** End of Joystick Initialization ***/
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 5
 
 
- 149:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
- 150:Core/Src/main.c ****   while (1)
- 151:Core/Src/main.c ****   {
- 152:Core/Src/main.c ****     /* USER CODE END WHILE */
- 153:Core/Src/main.c **** 
- 154:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
- 155:Core/Src/main.c ****     /** temporary Joystick test code */
- 156:Core/Src/main.c ****       char buffer[200] = {0};
- 157:Core/Src/main.c ****       // Read joystick axes
- 158:Core/Src/main.c ****       Joystick_ReadXY(&joystick, joystickXY);
- 159:Core/Src/main.c **** 
- 160:Core/Src/main.c ****       // Format string and send over UART
- 161:Core/Src/main.c ****       snprintf(buffer, sizeof(buffer), "X: %4d, Y: %4d\r\n", joystickXY[0], joystickXY[1]);
- 162:Core/Src/main.c ****       HAL_UART_Transmit(&huart1, (uint8_t*)buffer, strlen(buffer), 1000);
- 163:Core/Src/main.c **** 
- 164:Core/Src/main.c ****       HAL_Delay(100); // 100 ms delay between readings
- 165:Core/Src/main.c ****       /** end of temporary Joystick test code */
- 166:Core/Src/main.c **** 
- 167:Core/Src/main.c ****     /**switch(currentState)
- 168:Core/Src/main.c ****     {
- 169:Core/Src/main.c ****       case START:
+ 149:Core/Src/main.c **** 
+ 150:Core/Src/main.c ****   GameState currentState = WELCOME;
+ 151:Core/Src/main.c ****   GameInfo play;
+ 152:Core/Src/main.c ****   char lineOne[17] = {0}, lineTwo[17] = {0};
+ 153:Core/Src/main.c ****   int directionDelay = 0;
+ 154:Core/Src/main.c ****   JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
+ 155:Core/Src/main.c ****   /* USER CODE END 2 */
+ 156:Core/Src/main.c **** 
+ 157:Core/Src/main.c ****   /* Infinite loop */
+ 158:Core/Src/main.c ****   /* USER CODE BEGIN WHILE */
+ 159:Core/Src/main.c ****   while (1)
+ 160:Core/Src/main.c ****   {
+ 161:Core/Src/main.c ****     /* USER CODE END WHILE */
+ 162:Core/Src/main.c **** 
+ 163:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
+ 164:Core/Src/main.c ****     // FSM to manage game states
+ 165:Core/Src/main.c ****     switch(currentState)
+ 166:Core/Src/main.c ****     {
+ 167:Core/Src/main.c ****       // Display WELCOME message and 
+ 168:Core/Src/main.c ****       //Push to start prompt after 2 seconds
+ 169:Core/Src/main.c ****       case WELCOME:
  170:Core/Src/main.c ****         LCD_Cls();
- 171:Core/Src/main.c ****         if (Joystick_ReadButton(&joystick)) 
- 172:Core/Src/main.c ****         {  currentState = GAME_MENU;  }
- 173:Core/Src/main.c ****         break;
- 174:Core/Src/main.c ****       case GAME_MENU:
- 175:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "\tWelcome to");
- 176:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "\tSimon Game!");
- 177:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
- 178:Core/Src/main.c **** 
- 179:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "How many players?");
- 180:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "\t1 OR 2");
- 181:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 171:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "Welcome to the");
+ 172:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "Simon Game");
+ 173:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 174:Core/Src/main.c ****         HAL_Delay(2000);  
+ 175:Core/Src/main.c ****         
+ 176:Core/Src/main.c ****         LCD_Cls();
+ 177:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "Push To Start!");
+ 178:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 179:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 180:Core/Src/main.c ****         currentState = START;
+ 181:Core/Src/main.c ****         break;
  182:Core/Src/main.c **** 
- 183:Core/Src/main.c ****         currentState = PLAYER_SELECT; 
- 184:Core/Src/main.c ****         break;
- 185:Core/Src/main.c ****       case PLAYER_SELECT:
- 186:Core/Src/main.c ****         // Read the joystick input to determine the number of players
- 187:Core/Src/main.c ****          Joystick_ReadXY(&joystick, joystickXY);
- 188:Core/Src/main.c ****         if (Joystick LEFT moved) 
- 189:Core/Src/main.c ****         {
- 190:Core/Src/main.c ****           snprintf(lineTwo, sizeof(lineTwo), "<1> OR 2");
- 191:Core/Src/main.c ****           displayOnLCD(lineOne, lineTwo);
- 192:Core/Src/main.c ****           play.numPlayers = 1;
- 193:Core/Src/main.c ****         }    
- 194:Core/Src/main.c ****         
- 195:Core/Src/main.c ****         if (Joystick RIGHT moved) 
- 196:Core/Src/main.c ****         {
- 197:Core/Src/main.c ****           snprintf(lineTwo, sizeof(lineTwo), "1 OR <2>");
- 198:Core/Src/main.c ****           displayOnLCD(lineOne, lineTwo);
- 199:Core/Src/main.c ****           play.numPlayers = 2;
- 200:Core/Src/main.c ****         }    
- 201:Core/Src/main.c **** 
- 202:Core/Src/main.c ****         if (Joystick_ReadButton(&joystick)) 
- 203:Core/Src/main.c ****         {
- 204:Core/Src/main.c ****           if (play.numPlayers)
- 205:Core/Src/main.c ****             currentState = ONE_PLAYER;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 6
+ 183:Core/Src/main.c ****       // Check if Joystick is pressed to start the game
+ 184:Core/Src/main.c ****       case START:
+ 185:Core/Src/main.c ****         if (Joystick_Pressed(&joystick)) 
+ 186:Core/Src/main.c ****         {  currentState = PLAYER_MENU;  }        
+ 187:Core/Src/main.c ****         break;
+ 188:Core/Src/main.c **** 
+ 189:Core/Src/main.c ****       // Display Player selection menu
+ 190:Core/Src/main.c ****       case PLAYER_MENU:
+ 191:Core/Src/main.c ****         LCD_Cls();
+ 192:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 193:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 194:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 195:Core/Src/main.c ****         currentState = PLAYER_SELECT;
+ 196:Core/Src/main.c ****         break;
+ 197:Core/Src/main.c **** 
+ 198:Core/Src/main.c ****       // Handle Player selection based on joystick UP/DOWN input
+ 199:Core/Src/main.c ****       case PLAYER_SELECT:
+ 200:Core/Src/main.c ****         // Read the joystick input to determine the number of players
+ 201:Core/Src/main.c ****         direction = Joystick_GetDirection(&joystick);
+ 202:Core/Src/main.c **** 
+ 203:Core/Src/main.c ****         // Adding "debounce" logic to help resolve jittery input
+ 204:Core/Src/main.c ****         //causing direciton UP to be seen once
+ 205:Core/Src/main.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 6
 
 
- 206:Core/Src/main.c ****           else 
- 207:Core/Src/main.c ****             currentState = TWO_PLAYERS;
- 208:Core/Src/main.c ****         }
- 209:Core/Src/main.c ****         break;
- 210:Core/Src/main.c ****       case ONE_PLAYER:
- 211:Core/Src/main.c ****         // Handle one player game logic
- 212:Core/Src/main.c ****         break;
- 213:Core/Src/main.c ****       case TWO_PLAYERS:
- 214:Core/Src/main.c ****         // Handle two players game logic
- 215:Core/Src/main.c ****         break;
- 216:Core/Src/main.c ****       case SCORES:
- 217:Core/Src/main.c ****         // Handle scores display logic
- 218:Core/Src/main.c ****         break;
- 219:Core/Src/main.c ****       case GAME_RESULT:
- 220:Core/Src/main.c ****         // Handle game result logic
- 221:Core/Src/main.c ****         break;
- 222:Core/Src/main.c ****       default:
- 223:Core/Src/main.c ****         currentState = START;
- 224:Core/Src/main.c ****         break;
- 225:Core/Src/main.c ****     } **/
- 226:Core/Src/main.c ****   }
- 227:Core/Src/main.c ****   /* USER CODE END 3 */
- 228:Core/Src/main.c **** }
- 229:Core/Src/main.c **** 
- 230:Core/Src/main.c **** /**
- 231:Core/Src/main.c ****   * @brief System Clock Configuration
- 232:Core/Src/main.c ****   * @retval None
- 233:Core/Src/main.c ****   */
- 234:Core/Src/main.c **** void SystemClock_Config(void)
- 235:Core/Src/main.c **** {
- 236:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 237:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 238:Core/Src/main.c **** 
- 239:Core/Src/main.c ****   /** Macro to configure the PLL multiplication factor
- 240:Core/Src/main.c ****   */
- 241:Core/Src/main.c ****   __HAL_RCC_PLL_PLLM_CONFIG(RCC_PLLM_DIV2);
- 242:Core/Src/main.c **** 
- 243:Core/Src/main.c ****   /** Macro to configure the PLL clock source
- 244:Core/Src/main.c ****   */
- 245:Core/Src/main.c ****   __HAL_RCC_PLL_PLLSOURCE_CONFIG(RCC_PLLSOURCE_MSI);
- 246:Core/Src/main.c **** 
- 247:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
- 248:Core/Src/main.c ****   */
- 249:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 250:Core/Src/main.c **** 
- 251:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
- 252:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
- 253:Core/Src/main.c ****   */
- 254:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_MSI;
- 255:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 256:Core/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
- 257:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 258:Core/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
- 259:Core/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
- 260:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 261:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 262:Core/Src/main.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 7
+ 206:Core/Src/main.c ****         {
+ 207:Core/Src/main.c ****           direction = JOY_UP;
+ 208:Core/Src/main.c ****           directionDelay++;
+ 209:Core/Src/main.c ****         }
+ 210:Core/Src/main.c ****         else 
+ 211:Core/Src/main.c ****         { directionDelay = 0; }
+ 212:Core/Src/main.c **** 
+ 213:Core/Src/main.c ****         // Update display only if joystick direction has changed
+ 214:Core/Src/main.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 215:Core/Src/main.c ****         {
+ 216:Core/Src/main.c ****           
+ 217:Core/Src/main.c ****           if (direction == JOY_UP)
+ 218:Core/Src/main.c ****           {
+ 219:Core/Src/main.c ****             LCD_Cls();
+ 220:Core/Src/main.c ****             snprintf(lineOne, sizeof(lineOne), "<1> player OR");
+ 221:Core/Src/main.c ****             snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 222:Core/Src/main.c ****             displayOnLCD(lineOne, lineTwo);
+ 223:Core/Src/main.c ****             play.numPlayers = 1;
+ 224:Core/Src/main.c ****             direction = JOY_UP;
+ 225:Core/Src/main.c ****           }    
+ 226:Core/Src/main.c ****           else if (direction == JOY_DOWN) 
+ 227:Core/Src/main.c ****           {
+ 228:Core/Src/main.c ****             LCD_Cls();
+ 229:Core/Src/main.c ****             snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 230:Core/Src/main.c ****             snprintf(lineTwo, sizeof(lineTwo), "<2> players?");
+ 231:Core/Src/main.c ****             displayOnLCD(lineOne, lineTwo);
+ 232:Core/Src/main.c ****             play.numPlayers = 2;
+ 233:Core/Src/main.c ****           }
+ 234:Core/Src/main.c **** 
+ 235:Core/Src/main.c ****           lastDirection = direction;  // store last direction
+ 236:Core/Src/main.c ****         }   
+ 237:Core/Src/main.c **** 
+ 238:Core/Src/main.c ****         // Check if joystick is pressed to confirm selection
+ 239:Core/Src/main.c ****         // Move to the state which matches the mode selected
+ 240:Core/Src/main.c ****         if (Joystick_Pressed(&joystick)) 
+ 241:Core/Src/main.c ****         {
+ 242:Core/Src/main.c ****           if (play.numPlayers == 1)
+ 243:Core/Src/main.c ****             currentState = ONE_PLAYER;
+ 244:Core/Src/main.c ****           else 
+ 245:Core/Src/main.c ****             currentState = TWO_PLAYERS;
+ 246:Core/Src/main.c ****         }
+ 247:Core/Src/main.c ****         break;
+ 248:Core/Src/main.c ****       
+ 249:Core/Src/main.c ****         // For LCD+Joystick testing purposes only,
+ 250:Core/Src/main.c ****         // Display the mode type selected, wait 2 seconds then
+ 251:Core/Src/main.c ****         // return to the PLAYER SELECT state for further 
+ 252:Core/Src/main.c ****         // joystick to LCD interaction testing
+ 253:Core/Src/main.c ****       case ONE_PLAYER:
+ 254:Core/Src/main.c ****         LCD_Cls();
+ 255:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+ 256:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 257:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 258:Core/Src/main.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 259:Core/Src/main.c ****         currentState = PLAYER_MENU;
+ 260:Core/Src/main.c ****         break;
+ 261:Core/Src/main.c **** 
+ 262:Core/Src/main.c ****       case TWO_PLAYERS:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 7
 
 
- 263:Core/Src/main.c ****     Error_Handler();
- 264:Core/Src/main.c ****   }
- 265:Core/Src/main.c **** 
- 266:Core/Src/main.c ****   /** Configure the SYSCLKSource, HCLK, PCLK1 and PCLK2 clocks dividers
- 267:Core/Src/main.c ****   */
- 268:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK4|RCC_CLOCKTYPE_HCLK2
- 269:Core/Src/main.c ****                               |RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 270:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 271:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
- 272:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 273:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 274:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 275:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
- 276:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
- 277:Core/Src/main.c **** 
- 278:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
- 279:Core/Src/main.c ****   {
- 280:Core/Src/main.c ****     Error_Handler();
- 281:Core/Src/main.c ****   }
+ 263:Core/Src/main.c ****         LCD_Cls();
+ 264:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+ 265:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 266:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 267:Core/Src/main.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 268:Core/Src/main.c ****         currentState = PLAYER_MENU;
+ 269:Core/Src/main.c ****         break;
+ 270:Core/Src/main.c ****       // case SCORES:
+ 271:Core/Src/main.c ****       //   // Handle scores display logic
+ 272:Core/Src/main.c ****       //   break;
+ 273:Core/Src/main.c ****       // case GAME_RESULT:
+ 274:Core/Src/main.c ****       //   // Handle game result logic
+ 275:Core/Src/main.c ****       //   break;
+ 276:Core/Src/main.c ****       default:
+ 277:Core/Src/main.c ****         currentState = START;
+ 278:Core/Src/main.c ****         break;
+ 279:Core/Src/main.c ****     }
+ 280:Core/Src/main.c ****   }
+ 281:Core/Src/main.c ****   /* USER CODE END 3 */
  282:Core/Src/main.c **** }
  283:Core/Src/main.c **** 
  284:Core/Src/main.c **** /**
- 285:Core/Src/main.c ****   * @brief Peripherals Common Clock Configuration
+ 285:Core/Src/main.c ****   * @brief System Clock Configuration
  286:Core/Src/main.c ****   * @retval None
  287:Core/Src/main.c ****   */
- 288:Core/Src/main.c **** void PeriphCommonClock_Config(void)
+ 288:Core/Src/main.c **** void SystemClock_Config(void)
  289:Core/Src/main.c **** {
- 290:Core/Src/main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
- 291:Core/Src/main.c **** 
- 292:Core/Src/main.c ****   /** Initializes the peripherals clock
- 293:Core/Src/main.c ****   */
- 294:Core/Src/main.c ****   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SMPS;
- 295:Core/Src/main.c ****   PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
- 296:Core/Src/main.c ****   PeriphClkInitStruct.SmpsDivSelection = RCC_SMPSCLKDIV_RANGE0;
- 297:Core/Src/main.c **** 
- 298:Core/Src/main.c ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
- 299:Core/Src/main.c ****   {
- 300:Core/Src/main.c ****     Error_Handler();
- 301:Core/Src/main.c ****   }
- 302:Core/Src/main.c ****   /* USER CODE BEGIN Smps */
- 303:Core/Src/main.c **** 
- 304:Core/Src/main.c ****   /* USER CODE END Smps */
- 305:Core/Src/main.c **** }
- 306:Core/Src/main.c **** 
- 307:Core/Src/main.c **** /* USER CODE BEGIN 4 */
- 308:Core/Src/main.c **** 
- 309:Core/Src/main.c **** /* USER CODE END 4 */
- 310:Core/Src/main.c **** 
- 311:Core/Src/main.c **** /**
- 312:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
- 313:Core/Src/main.c ****   * @retval None
- 314:Core/Src/main.c ****   */
- 315:Core/Src/main.c **** void Error_Handler(void)
- 316:Core/Src/main.c **** {
-  84              		.loc 1 316 1 is_stmt 1 view -0
+ 290:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 291:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 292:Core/Src/main.c **** 
+ 293:Core/Src/main.c ****   /** Macro to configure the PLL multiplication factor
+ 294:Core/Src/main.c ****   */
+ 295:Core/Src/main.c ****   __HAL_RCC_PLL_PLLM_CONFIG(RCC_PLLM_DIV2);
+ 296:Core/Src/main.c **** 
+ 297:Core/Src/main.c ****   /** Macro to configure the PLL clock source
+ 298:Core/Src/main.c ****   */
+ 299:Core/Src/main.c ****   __HAL_RCC_PLL_PLLSOURCE_CONFIG(RCC_PLLSOURCE_MSI);
+ 300:Core/Src/main.c **** 
+ 301:Core/Src/main.c ****   /** Configure the main internal regulator output voltage
+ 302:Core/Src/main.c ****   */
+ 303:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 304:Core/Src/main.c **** 
+ 305:Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+ 306:Core/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 307:Core/Src/main.c ****   */
+ 308:Core/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_MSI;
+ 309:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 310:Core/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 311:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 312:Core/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
+ 313:Core/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
+ 314:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 315:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 316:Core/Src/main.c ****   {
+ 317:Core/Src/main.c ****     Error_Handler();
+ 318:Core/Src/main.c ****   }
+ 319:Core/Src/main.c **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 8
+
+
+ 320:Core/Src/main.c ****   /** Configure the SYSCLKSource, HCLK, PCLK1 and PCLK2 clocks dividers
+ 321:Core/Src/main.c ****   */
+ 322:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK4|RCC_CLOCKTYPE_HCLK2
+ 323:Core/Src/main.c ****                               |RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 324:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 325:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+ 326:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 327:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 328:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 329:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
+ 330:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
+ 331:Core/Src/main.c **** 
+ 332:Core/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+ 333:Core/Src/main.c ****   {
+ 334:Core/Src/main.c ****     Error_Handler();
+ 335:Core/Src/main.c ****   }
+ 336:Core/Src/main.c **** }
+ 337:Core/Src/main.c **** 
+ 338:Core/Src/main.c **** /**
+ 339:Core/Src/main.c ****   * @brief Peripherals Common Clock Configuration
+ 340:Core/Src/main.c ****   * @retval None
+ 341:Core/Src/main.c ****   */
+ 342:Core/Src/main.c **** void PeriphCommonClock_Config(void)
+ 343:Core/Src/main.c **** {
+ 344:Core/Src/main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+ 345:Core/Src/main.c **** 
+ 346:Core/Src/main.c ****   /** Initializes the peripherals clock
+ 347:Core/Src/main.c ****   */
+ 348:Core/Src/main.c ****   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SMPS;
+ 349:Core/Src/main.c ****   PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
+ 350:Core/Src/main.c ****   PeriphClkInitStruct.SmpsDivSelection = RCC_SMPSCLKDIV_RANGE0;
+ 351:Core/Src/main.c **** 
+ 352:Core/Src/main.c ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+ 353:Core/Src/main.c ****   {
+ 354:Core/Src/main.c ****     Error_Handler();
+ 355:Core/Src/main.c ****   }
+ 356:Core/Src/main.c ****   /* USER CODE BEGIN Smps */
+ 357:Core/Src/main.c **** 
+ 358:Core/Src/main.c ****   /* USER CODE END Smps */
+ 359:Core/Src/main.c **** }
+ 360:Core/Src/main.c **** 
+ 361:Core/Src/main.c **** /* USER CODE BEGIN 4 */
+ 362:Core/Src/main.c **** 
+ 363:Core/Src/main.c **** /* USER CODE END 4 */
+ 364:Core/Src/main.c **** 
+ 365:Core/Src/main.c **** /**
+ 366:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 367:Core/Src/main.c ****   * @retval None
+ 368:Core/Src/main.c ****   */
+ 369:Core/Src/main.c **** void Error_Handler(void)
+ 370:Core/Src/main.c **** {
+  84              		.loc 1 370 1 is_stmt 1 view -0
   85              		.cfi_startproc
   86              		@ Volatile: function does not return.
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 8
-
-
   87              		@ args = 0, pretend = 0, frame = 0
   88              		@ frame_needed = 0, uses_anonymous_args = 0
   89              		@ link register save eliminated.
- 317:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
- 318:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
- 319:Core/Src/main.c ****   __disable_irq();
-  90              		.loc 1 319 3 view .LVU12
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 9
+
+
+ 371:Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 372:Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 373:Core/Src/main.c ****   __disable_irq();
+  90              		.loc 1 373 3 view .LVU12
   91              	.LBB4:
   92              	.LBI4:
   93              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
@@ -478,12 +535,12 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
   45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
   47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 9
-
-
   48:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   49:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
   50:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 10
+
+
   51:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif                                           
   52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
   53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
@@ -538,12 +595,12 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
  103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
  104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 10
-
-
  105:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
  106:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
  107:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 11
+
+
  108:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
  109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
@@ -598,12 +655,12 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  159:Drivers/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = 0u;
  160:Drivers/CMSIS/Include/cmsis_gcc.h ****     }
  161:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 11
-
-
  162:Drivers/CMSIS/Include/cmsis_gcc.h ****  
  163:Drivers/CMSIS/Include/cmsis_gcc.h ****   _start();
  164:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 12
+
+
  165:Drivers/CMSIS/Include/cmsis_gcc.h ****   
  166:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
  167:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -658,19 +715,19 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  100              	@ 0 "" 2
  101              		.thumb
  102              		.syntax unified
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 12
-
-
  103              	.L4:
  104              	.LBE5:
  105              	.LBE4:
- 320:Core/Src/main.c ****   while (1)
- 106              		.loc 1 320 3 view .LVU15
- 321:Core/Src/main.c ****   {
- 322:Core/Src/main.c ****   }
- 107              		.loc 1 322 3 view .LVU16
- 320:Core/Src/main.c ****   while (1)
- 108              		.loc 1 320 9 view .LVU17
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 13
+
+
+ 374:Core/Src/main.c ****   while (1)
+ 106              		.loc 1 374 3 view .LVU15
+ 375:Core/Src/main.c ****   {
+ 376:Core/Src/main.c ****   }
+ 107              		.loc 1 376 3 view .LVU16
+ 374:Core/Src/main.c ****   while (1)
+ 108              		.loc 1 374 9 view .LVU17
  109 0002 FEE7     		b	.L4
  110              		.cfi_endproc
  111              	.LFE1111:
@@ -682,8 +739,8 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  118              		.thumb_func
  120              	SystemClock_Config:
  121              	.LFB1109:
- 235:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 122              		.loc 1 235 1 view -0
+ 289:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 122              		.loc 1 289 1 view -0
  123              		.cfi_startproc
  124              		@ args = 0, pretend = 0, frame = 104
  125              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -693,20 +750,20 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  129              		.cfi_offset 14, -4
  130 0002 9AB0     		sub	sp, sp, #104
  131              		.cfi_def_cfa_offset 112
- 236:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 132              		.loc 1 236 3 view .LVU19
- 236:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 133              		.loc 1 236 22 is_stmt 0 view .LVU20
+ 290:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 132              		.loc 1 290 3 view .LVU19
+ 290:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 133              		.loc 1 290 22 is_stmt 0 view .LVU20
  134 0004 08AC     		add	r4, sp, #32
  135 0006 4822     		movs	r2, #72
  136 0008 0021     		movs	r1, #0
  137 000a 2046     		mov	r0, r4
  138 000c FFF7FEFF 		bl	memset
  139              	.LVL8:
- 237:Core/Src/main.c **** 
- 140              		.loc 1 237 3 is_stmt 1 view .LVU21
- 237:Core/Src/main.c **** 
- 141              		.loc 1 237 22 is_stmt 0 view .LVU22
+ 291:Core/Src/main.c **** 
+ 140              		.loc 1 291 3 is_stmt 1 view .LVU21
+ 291:Core/Src/main.c **** 
+ 141              		.loc 1 291 22 is_stmt 0 view .LVU22
  142 0010 0023     		movs	r3, #0
  143 0012 0193     		str	r3, [sp, #4]
  144 0014 0293     		str	r3, [sp, #8]
@@ -715,152 +772,152 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  147 001a 0593     		str	r3, [sp, #20]
  148 001c 0693     		str	r3, [sp, #24]
  149 001e 0793     		str	r3, [sp, #28]
- 241:Core/Src/main.c **** 
- 150              		.loc 1 241 3 is_stmt 1 view .LVU23
+ 295:Core/Src/main.c **** 
+ 150              		.loc 1 295 3 is_stmt 1 view .LVU23
  151 0020 4FF0B041 		mov	r1, #1476395008
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 13
-
-
  152 0024 CA68     		ldr	r2, [r1, #12]
  153 0026 22F07002 		bic	r2, r2, #112
  154 002a 42F01002 		orr	r2, r2, #16
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 14
+
+
  155 002e CA60     		str	r2, [r1, #12]
- 245:Core/Src/main.c **** 
- 156              		.loc 1 245 3 view .LVU24
+ 299:Core/Src/main.c **** 
+ 156              		.loc 1 299 3 view .LVU24
  157 0030 CA68     		ldr	r2, [r1, #12]
  158 0032 22F00302 		bic	r2, r2, #3
  159 0036 42F00102 		orr	r2, r2, #1
  160 003a CA60     		str	r2, [r1, #12]
- 249:Core/Src/main.c **** 
- 161              		.loc 1 249 3 view .LVU25
+ 303:Core/Src/main.c **** 
+ 161              		.loc 1 303 3 view .LVU25
  162              	.LBB6:
- 249:Core/Src/main.c **** 
- 163              		.loc 1 249 3 view .LVU26
- 249:Core/Src/main.c **** 
- 164              		.loc 1 249 3 view .LVU27
+ 303:Core/Src/main.c **** 
+ 163              		.loc 1 303 3 view .LVU26
+ 303:Core/Src/main.c **** 
+ 164              		.loc 1 303 3 view .LVU27
  165 003c 01F58061 		add	r1, r1, #1024
  166 0040 0A68     		ldr	r2, [r1]
  167 0042 22F4C062 		bic	r2, r2, #1536
  168 0046 42F40072 		orr	r2, r2, #512
  169 004a 0A60     		str	r2, [r1]
- 249:Core/Src/main.c **** 
- 170              		.loc 1 249 3 view .LVU28
+ 303:Core/Src/main.c **** 
+ 170              		.loc 1 303 3 view .LVU28
  171 004c 0A68     		ldr	r2, [r1]
  172 004e 02F4C062 		and	r2, r2, #1536
  173 0052 0092     		str	r2, [sp]
- 249:Core/Src/main.c **** 
- 174              		.loc 1 249 3 view .LVU29
+ 303:Core/Src/main.c **** 
+ 174              		.loc 1 303 3 view .LVU29
  175 0054 009A     		ldr	r2, [sp]
  176              	.LBE6:
- 249:Core/Src/main.c **** 
- 177              		.loc 1 249 3 view .LVU30
- 254:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 178              		.loc 1 254 3 view .LVU31
- 254:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 179              		.loc 1 254 36 is_stmt 0 view .LVU32
+ 303:Core/Src/main.c **** 
+ 177              		.loc 1 303 3 view .LVU30
+ 308:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 178              		.loc 1 308 3 view .LVU31
+ 308:Core/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 179              		.loc 1 308 36 is_stmt 0 view .LVU32
  180 0056 2222     		movs	r2, #34
  181 0058 0892     		str	r2, [sp, #32]
- 255:Core/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
- 182              		.loc 1 255 3 is_stmt 1 view .LVU33
- 255:Core/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
- 183              		.loc 1 255 30 is_stmt 0 view .LVU34
+ 309:Core/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 182              		.loc 1 309 3 is_stmt 1 view .LVU33
+ 309:Core/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 183              		.loc 1 309 30 is_stmt 0 view .LVU34
  184 005a 4FF48072 		mov	r2, #256
  185 005e 0B92     		str	r2, [sp, #44]
- 256:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 186              		.loc 1 256 3 is_stmt 1 view .LVU35
- 256:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 187              		.loc 1 256 30 is_stmt 0 view .LVU36
+ 310:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 186              		.loc 1 310 3 is_stmt 1 view .LVU35
+ 310:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+ 187              		.loc 1 310 30 is_stmt 0 view .LVU36
  188 0060 0122     		movs	r2, #1
  189 0062 0F92     		str	r2, [sp, #60]
- 257:Core/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
- 190              		.loc 1 257 3 is_stmt 1 view .LVU37
- 257:Core/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
- 191              		.loc 1 257 41 is_stmt 0 view .LVU38
+ 311:Core/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
+ 190              		.loc 1 311 3 is_stmt 1 view .LVU37
+ 311:Core/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
+ 191              		.loc 1 311 41 is_stmt 0 view .LVU38
  192 0064 4022     		movs	r2, #64
  193 0066 0C92     		str	r2, [sp, #48]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 14
+ 312:Core/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
+ 194              		.loc 1 312 3 is_stmt 1 view .LVU39
+ 312:Core/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 15
 
 
- 258:Core/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
- 194              		.loc 1 258 3 is_stmt 1 view .LVU39
- 258:Core/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
- 195              		.loc 1 258 41 is_stmt 0 view .LVU40
+ 195              		.loc 1 312 41 is_stmt 0 view .LVU40
  196 0068 1093     		str	r3, [sp, #64]
- 259:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 197              		.loc 1 259 3 is_stmt 1 view .LVU41
- 259:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 198              		.loc 1 259 35 is_stmt 0 view .LVU42
+ 313:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 197              		.loc 1 313 3 is_stmt 1 view .LVU41
+ 313:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 198              		.loc 1 313 35 is_stmt 0 view .LVU42
  199 006a A022     		movs	r2, #160
  200 006c 1192     		str	r2, [sp, #68]
- 260:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 201              		.loc 1 260 3 is_stmt 1 view .LVU43
- 260:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 202              		.loc 1 260 34 is_stmt 0 view .LVU44
+ 314:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 201              		.loc 1 314 3 is_stmt 1 view .LVU43
+ 314:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 202              		.loc 1 314 34 is_stmt 0 view .LVU44
  203 006e 1393     		str	r3, [sp, #76]
- 261:Core/Src/main.c ****   {
- 204              		.loc 1 261 3 is_stmt 1 view .LVU45
- 261:Core/Src/main.c ****   {
- 205              		.loc 1 261 7 is_stmt 0 view .LVU46
+ 315:Core/Src/main.c ****   {
+ 204              		.loc 1 315 3 is_stmt 1 view .LVU45
+ 315:Core/Src/main.c ****   {
+ 205              		.loc 1 315 7 is_stmt 0 view .LVU46
  206 0070 2046     		mov	r0, r4
  207 0072 FFF7FEFF 		bl	HAL_RCC_OscConfig
  208              	.LVL9:
- 261:Core/Src/main.c ****   {
- 209              		.loc 1 261 6 discriminator 1 view .LVU47
+ 315:Core/Src/main.c ****   {
+ 209              		.loc 1 315 6 discriminator 1 view .LVU47
  210 0076 80B9     		cbnz	r0, .L9
- 268:Core/Src/main.c ****                               |RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 211              		.loc 1 268 3 is_stmt 1 view .LVU48
- 268:Core/Src/main.c ****                               |RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 212              		.loc 1 268 31 is_stmt 0 view .LVU49
+ 322:Core/Src/main.c ****                               |RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 211              		.loc 1 322 3 is_stmt 1 view .LVU48
+ 322:Core/Src/main.c ****                               |RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 212              		.loc 1 322 31 is_stmt 0 view .LVU49
  213 0078 6F23     		movs	r3, #111
  214 007a 0193     		str	r3, [sp, #4]
- 271:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 215              		.loc 1 271 3 is_stmt 1 view .LVU50
- 271:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 216              		.loc 1 271 34 is_stmt 0 view .LVU51
+ 325:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 215              		.loc 1 325 3 is_stmt 1 view .LVU50
+ 325:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 216              		.loc 1 325 34 is_stmt 0 view .LVU51
  217 007c 0023     		movs	r3, #0
  218 007e 0293     		str	r3, [sp, #8]
- 272:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 219              		.loc 1 272 3 is_stmt 1 view .LVU52
- 272:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 220              		.loc 1 272 35 is_stmt 0 view .LVU53
+ 326:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 219              		.loc 1 326 3 is_stmt 1 view .LVU52
+ 326:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 220              		.loc 1 326 35 is_stmt 0 view .LVU53
  221 0080 0393     		str	r3, [sp, #12]
- 273:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 222              		.loc 1 273 3 is_stmt 1 view .LVU54
- 273:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 223              		.loc 1 273 36 is_stmt 0 view .LVU55
+ 327:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 222              		.loc 1 327 3 is_stmt 1 view .LVU54
+ 327:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 223              		.loc 1 327 36 is_stmt 0 view .LVU55
  224 0082 0493     		str	r3, [sp, #16]
- 274:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
- 225              		.loc 1 274 3 is_stmt 1 view .LVU56
- 274:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
- 226              		.loc 1 274 36 is_stmt 0 view .LVU57
+ 328:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
+ 225              		.loc 1 328 3 is_stmt 1 view .LVU56
+ 328:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
+ 226              		.loc 1 328 36 is_stmt 0 view .LVU57
  227 0084 0593     		str	r3, [sp, #20]
- 275:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
- 228              		.loc 1 275 3 is_stmt 1 view .LVU58
- 275:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
- 229              		.loc 1 275 36 is_stmt 0 view .LVU59
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 15
-
-
+ 329:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
+ 228              		.loc 1 329 3 is_stmt 1 view .LVU58
+ 329:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
+ 229              		.loc 1 329 36 is_stmt 0 view .LVU59
  230 0086 8022     		movs	r2, #128
  231 0088 0692     		str	r2, [sp, #24]
- 276:Core/Src/main.c **** 
- 232              		.loc 1 276 3 is_stmt 1 view .LVU60
- 276:Core/Src/main.c **** 
- 233              		.loc 1 276 36 is_stmt 0 view .LVU61
+ 330:Core/Src/main.c **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 16
+
+
+ 232              		.loc 1 330 3 is_stmt 1 view .LVU60
+ 330:Core/Src/main.c **** 
+ 233              		.loc 1 330 36 is_stmt 0 view .LVU61
  234 008a 0793     		str	r3, [sp, #28]
- 278:Core/Src/main.c ****   {
- 235              		.loc 1 278 3 is_stmt 1 view .LVU62
- 278:Core/Src/main.c ****   {
- 236              		.loc 1 278 7 is_stmt 0 view .LVU63
+ 332:Core/Src/main.c ****   {
+ 235              		.loc 1 332 3 is_stmt 1 view .LVU62
+ 332:Core/Src/main.c ****   {
+ 236              		.loc 1 332 7 is_stmt 0 view .LVU63
  237 008c 0121     		movs	r1, #1
  238 008e 01A8     		add	r0, sp, #4
  239 0090 FFF7FEFF 		bl	HAL_RCC_ClockConfig
  240              	.LVL10:
- 278:Core/Src/main.c ****   {
- 241              		.loc 1 278 6 discriminator 1 view .LVU64
+ 332:Core/Src/main.c ****   {
+ 241              		.loc 1 332 6 discriminator 1 view .LVU64
  242 0094 18B9     		cbnz	r0, .L10
- 282:Core/Src/main.c **** 
- 243              		.loc 1 282 1 view .LVU65
+ 336:Core/Src/main.c **** 
+ 243              		.loc 1 336 1 view .LVU65
  244 0096 1AB0     		add	sp, sp, #104
  245              		.cfi_remember_state
  246              		.cfi_def_cfa_offset 8
@@ -868,13 +925,13 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  248 0098 10BD     		pop	{r4, pc}
  249              	.L9:
  250              		.cfi_restore_state
- 263:Core/Src/main.c ****   }
- 251              		.loc 1 263 5 is_stmt 1 view .LVU66
+ 317:Core/Src/main.c ****   }
+ 251              		.loc 1 317 5 is_stmt 1 view .LVU66
  252 009a FFF7FEFF 		bl	Error_Handler
  253              	.LVL11:
  254              	.L10:
- 280:Core/Src/main.c ****   }
- 255              		.loc 1 280 5 view .LVU67
+ 334:Core/Src/main.c ****   }
+ 255              		.loc 1 334 5 view .LVU67
  256 009e FFF7FEFF 		bl	Error_Handler
  257              	.LVL12:
  258              		.cfi_endproc
@@ -887,8 +944,8 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  266              		.thumb_func
  268              	PeriphCommonClock_Config:
  269              	.LFB1110:
- 289:Core/Src/main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
- 270              		.loc 1 289 1 view -0
+ 343:Core/Src/main.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+ 270              		.loc 1 343 1 view -0
  271              		.cfi_startproc
  272              		@ args = 0, pretend = 0, frame = 80
  273              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -898,40 +955,40 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  277              		.cfi_offset 14, -4
  278 0002 94B0     		sub	sp, sp, #80
  279              		.cfi_def_cfa_offset 88
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 16
+ 344:Core/Src/main.c **** 
+ 280              		.loc 1 344 3 view .LVU69
+ 344:Core/Src/main.c **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 17
 
 
- 290:Core/Src/main.c **** 
- 280              		.loc 1 290 3 view .LVU69
- 290:Core/Src/main.c **** 
- 281              		.loc 1 290 28 is_stmt 0 view .LVU70
+ 281              		.loc 1 344 28 is_stmt 0 view .LVU70
  282 0004 5022     		movs	r2, #80
  283 0006 0021     		movs	r1, #0
  284 0008 6846     		mov	r0, sp
  285 000a FFF7FEFF 		bl	memset
  286              	.LVL13:
- 294:Core/Src/main.c ****   PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
- 287              		.loc 1 294 3 is_stmt 1 view .LVU71
- 294:Core/Src/main.c ****   PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
- 288              		.loc 1 294 44 is_stmt 0 view .LVU72
+ 348:Core/Src/main.c ****   PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
+ 287              		.loc 1 348 3 is_stmt 1 view .LVU71
+ 348:Core/Src/main.c ****   PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
+ 288              		.loc 1 348 44 is_stmt 0 view .LVU72
  289 000e 4FF40053 		mov	r3, #8192
  290 0012 0093     		str	r3, [sp]
- 295:Core/Src/main.c ****   PeriphClkInitStruct.SmpsDivSelection = RCC_SMPSCLKDIV_RANGE0;
- 291              		.loc 1 295 3 is_stmt 1 view .LVU73
- 296:Core/Src/main.c **** 
- 292              		.loc 1 296 3 view .LVU74
- 298:Core/Src/main.c ****   {
- 293              		.loc 1 298 3 view .LVU75
- 298:Core/Src/main.c ****   {
- 294              		.loc 1 298 7 is_stmt 0 view .LVU76
+ 349:Core/Src/main.c ****   PeriphClkInitStruct.SmpsDivSelection = RCC_SMPSCLKDIV_RANGE0;
+ 291              		.loc 1 349 3 is_stmt 1 view .LVU73
+ 350:Core/Src/main.c **** 
+ 292              		.loc 1 350 3 view .LVU74
+ 352:Core/Src/main.c ****   {
+ 293              		.loc 1 352 3 view .LVU75
+ 352:Core/Src/main.c ****   {
+ 294              		.loc 1 352 7 is_stmt 0 view .LVU76
  295 0014 6846     		mov	r0, sp
  296 0016 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  297              	.LVL14:
- 298:Core/Src/main.c ****   {
- 298              		.loc 1 298 6 discriminator 1 view .LVU77
+ 352:Core/Src/main.c ****   {
+ 298              		.loc 1 352 6 discriminator 1 view .LVU77
  299 001a 08B9     		cbnz	r0, .L14
- 305:Core/Src/main.c **** 
- 300              		.loc 1 305 1 view .LVU78
+ 359:Core/Src/main.c **** 
+ 300              		.loc 1 359 1 view .LVU78
  301 001c 14B0     		add	sp, sp, #80
  302              		.cfi_remember_state
  303              		.cfi_def_cfa_offset 8
@@ -939,8 +996,8 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  305 001e 10BD     		pop	{r4, pc}
  306              	.L14:
  307              		.cfi_restore_state
- 300:Core/Src/main.c ****   }
- 308              		.loc 1 300 5 is_stmt 1 view .LVU79
+ 354:Core/Src/main.c ****   }
+ 308              		.loc 1 354 5 is_stmt 1 view .LVU79
  309 0020 FFF7FEFF 		bl	Error_Handler
  310              	.LVL15:
  311              		.cfi_endproc
@@ -948,243 +1005,728 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 1
  314              		.section	.rodata.main.str1.4,"aMS",%progbits,1
  315              		.align	2
  316              	.LC0:
- 317 0000 583A2025 		.ascii	"X: %4d, Y: %4d\015\012\000"
- 317      34642C20 
- 317      593A2025 
- 317      34640D0A 
- 317      00
- 318              		.section	.text.main,"ax",%progbits
- 319              		.align	1
- 320              		.global	main
- 321              		.syntax unified
- 322              		.thumb
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 17
+ 317 0000 57656C63 		.ascii	"Welcome to the\000"
+ 317      6F6D6520 
+ 317      746F2074 
+ 317      686500
+ 318 000f 00       		.align	2
+ 319              	.LC1:
+ 320 0010 53696D6F 		.ascii	"Simon Game\000"
+ 320      6E204761 
+ 320      6D6500
+ 321 001b 00       		.align	2
+ 322              	.LC2:
+ 323 001c 50757368 		.ascii	"Push To Start!\000"
+ 323      20546F20 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 18
 
 
- 323              		.thumb_func
- 325              	main:
- 326              	.LFB1108:
- 100:Core/Src/main.c **** 
- 327              		.loc 1 100 1 view -0
- 328              		.cfi_startproc
- 329              		@ args = 0, pretend = 0, frame = 248
- 330              		@ frame_needed = 0, uses_anonymous_args = 0
- 331 0000 30B5     		push	{r4, r5, lr}
- 332              		.cfi_def_cfa_offset 12
- 333              		.cfi_offset 4, -12
- 334              		.cfi_offset 5, -8
- 335              		.cfi_offset 14, -4
- 336 0002 C1B0     		sub	sp, sp, #260
- 337              		.cfi_def_cfa_offset 272
- 109:Core/Src/main.c **** 
- 338              		.loc 1 109 3 view .LVU81
- 339 0004 FFF7FEFF 		bl	HAL_Init
- 340              	.LVL16:
+ 323      53746172 
+ 323      742100
+ 324 002b 00       		.align	2
+ 325              	.LC3:
+ 326 002c 3120706C 		.ascii	"1 player OR\000"
+ 326      61796572 
+ 326      204F5200 
+ 327              		.align	2
+ 328              	.LC4:
+ 329 0038 3220706C 		.ascii	"2 players?\000"
+ 329      61796572 
+ 329      733F00
+ 330 0043 00       		.align	2
+ 331              	.LC5:
+ 332 0044 3C313E20 		.ascii	"<1> player OR\000"
+ 332      706C6179 
+ 332      6572204F 
+ 332      5200
+ 333 0052 0000     		.align	2
+ 334              	.LC6:
+ 335 0054 3C323E20 		.ascii	"<2> players?\000"
+ 335      706C6179 
+ 335      6572733F 
+ 335      00
+ 336 0061 000000   		.align	2
+ 337              	.LC7:
+ 338 0064 3120506C 		.ascii	"1 Player Mode\000"
+ 338      61796572 
+ 338      204D6F64 
+ 338      6500
+ 339 0072 0000     		.align	2
+ 340              	.LC8:
+ 341 0074 3220506C 		.ascii	"2 Player Mode\000"
+ 341      61796572 
+ 341      204D6F64 
+ 341      6500
+ 342              		.section	.text.main,"ax",%progbits
+ 343              		.align	1
+ 344              		.global	main
+ 345              		.syntax unified
+ 346              		.thumb
+ 347              		.thumb_func
+ 349              	main:
+ 350              	.LFB1108:
+ 107:Core/Src/main.c **** 
+ 351              		.loc 1 107 1 view -0
+ 352              		.cfi_startproc
+ 353              		@ args = 0, pretend = 0, frame = 352
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 356              		.cfi_def_cfa_offset 24
+ 357              		.cfi_offset 4, -24
+ 358              		.cfi_offset 5, -20
+ 359              		.cfi_offset 6, -16
+ 360              		.cfi_offset 7, -12
+ 361              		.cfi_offset 8, -8
+ 362              		.cfi_offset 14, -4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 19
+
+
+ 363 0004 DAB0     		sub	sp, sp, #360
+ 364              		.cfi_def_cfa_offset 384
  116:Core/Src/main.c **** 
- 341              		.loc 1 116 3 view .LVU82
- 342 0008 FFF7FEFF 		bl	SystemClock_Config
- 343              	.LVL17:
- 119:Core/Src/main.c **** 
- 344              		.loc 1 119 3 view .LVU83
- 345 000c FFF7FEFF 		bl	PeriphCommonClock_Config
- 346              	.LVL18:
- 126:Core/Src/main.c ****   MX_ADC1_Init();
- 347              		.loc 1 126 3 view .LVU84
- 348 0010 FFF7FEFF 		bl	MX_GPIO_Init
- 349              	.LVL19:
- 127:Core/Src/main.c ****   MX_USART1_UART_Init();
- 350              		.loc 1 127 3 view .LVU85
- 351 0014 FFF7FEFF 		bl	MX_ADC1_Init
- 352              	.LVL20:
- 128:Core/Src/main.c ****   MX_TIM2_Init();
- 353              		.loc 1 128 3 view .LVU86
- 354 0018 FFF7FEFF 		bl	MX_USART1_UART_Init
- 355              	.LVL21:
- 129:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
- 356              		.loc 1 129 3 view .LVU87
- 357 001c FFF7FEFF 		bl	MX_TIM2_Init
- 358              	.LVL22:
- 131:Core/Src/main.c ****   /*** Initialize LCD ***/
- 359              		.loc 1 131 3 view .LVU88
- 360 0020 2048     		ldr	r0, .L18
- 361 0022 FFF7FEFF 		bl	HAL_TIM_Base_Start
- 362              	.LVL23:
- 133:Core/Src/main.c ****   LCD_Cls();
- 363              		.loc 1 133 3 view .LVU89
- 364 0026 FFF7FEFF 		bl	LCD_Init
- 365              	.LVL24:
- 134:Core/Src/main.c ****   /*** End of LCD Initialization ***/
- 366              		.loc 1 134 3 view .LVU90
- 367 002a FFF7FEFF 		bl	LCD_Cls
- 368              	.LVL25:
- 138:Core/Src/main.c ****                  GPIOC, GPIO_PIN_6);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 18
+ 365              		.loc 1 116 3 view .LVU81
+ 366 0006 FFF7FEFF 		bl	HAL_Init
+ 367              	.LVL16:
+ 123:Core/Src/main.c **** 
+ 368              		.loc 1 123 3 view .LVU82
+ 369 000a FFF7FEFF 		bl	SystemClock_Config
+ 370              	.LVL17:
+ 126:Core/Src/main.c **** 
+ 371              		.loc 1 126 3 view .LVU83
+ 372 000e FFF7FEFF 		bl	PeriphCommonClock_Config
+ 373              	.LVL18:
+ 133:Core/Src/main.c ****   MX_ADC1_Init();
+ 374              		.loc 1 133 3 view .LVU84
+ 375 0012 FFF7FEFF 		bl	MX_GPIO_Init
+ 376              	.LVL19:
+ 134:Core/Src/main.c ****   MX_USART1_UART_Init();
+ 377              		.loc 1 134 3 view .LVU85
+ 378 0016 FFF7FEFF 		bl	MX_ADC1_Init
+ 379              	.LVL20:
+ 135:Core/Src/main.c ****   MX_TIM2_Init();
+ 380              		.loc 1 135 3 view .LVU86
+ 381 001a FFF7FEFF 		bl	MX_USART1_UART_Init
+ 382              	.LVL21:
+ 136:Core/Src/main.c ****   /* USER CODE BEGIN 2 */
+ 383              		.loc 1 136 3 view .LVU87
+ 384 001e FFF7FEFF 		bl	MX_TIM2_Init
+ 385              	.LVL22:
+ 138:Core/Src/main.c ****   /*** Initialize LCD ***/
+ 386              		.loc 1 138 3 view .LVU88
+ 387 0022 8448     		ldr	r0, .L42
+ 388 0024 FFF7FEFF 		bl	HAL_TIM_Base_Start
+ 389              	.LVL23:
+ 140:Core/Src/main.c ****   LCD_Cls();
+ 390              		.loc 1 140 3 view .LVU89
+ 391 0028 FFF7FEFF 		bl	LCD_Init
+ 392              	.LVL24:
+ 141:Core/Src/main.c ****   /*** End of LCD Initialization ***/
+ 393              		.loc 1 141 3 view .LVU90
+ 394 002c FFF7FEFF 		bl	LCD_Cls
+ 395              	.LVL25:
+ 145:Core/Src/main.c ****                  GPIOC, GPIO_PIN_6);
+ 396              		.loc 1 145 3 view .LVU91
+ 397 0030 814C     		ldr	r4, .L42+4
+ 398 0032 4023     		movs	r3, #64
+ 399 0034 0193     		str	r3, [sp, #4]
+ 400 0036 814B     		ldr	r3, .L42+8
+ 401 0038 0093     		str	r3, [sp]
+ 402 003a 814B     		ldr	r3, .L42+12
+ 403 003c 814A     		ldr	r2, .L42+16
+ 404 003e 8249     		ldr	r1, .L42+20
+ 405 0040 2046     		mov	r0, r4
+ 406 0042 FFF7FEFF 		bl	Joystick_Init
+ 407              	.LVL26:
+ 147:Core/Src/main.c ****   /*** End of Joystick Initialization ***/
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 20
 
 
- 369              		.loc 1 138 3 view .LVU91
- 370 002e 4023     		movs	r3, #64
- 371 0030 0193     		str	r3, [sp, #4]
- 372 0032 1D4B     		ldr	r3, .L18+4
- 373 0034 0093     		str	r3, [sp]
- 374 0036 1D4B     		ldr	r3, .L18+8
- 375 0038 1D4A     		ldr	r2, .L18+12
- 376 003a 1E49     		ldr	r1, .L18+16
- 377 003c 1E48     		ldr	r0, .L18+20
- 378 003e FFF7FEFF 		bl	Joystick_Init
- 379              	.LVL26:
- 142:Core/Src/main.c ****   GameInfo play;
- 380              		.loc 1 142 3 view .LVU92
- 143:Core/Src/main.c ****   char lineOne[17] = {0}, lineTwo[17] = {0};
- 381              		.loc 1 143 3 view .LVU93
- 144:Core/Src/main.c ****   uint16_t joystickXY[2];
- 382              		.loc 1 144 3 view .LVU94
- 144:Core/Src/main.c ****   uint16_t joystickXY[2];
- 383              		.loc 1 144 8 is_stmt 0 view .LVU95
- 384 0042 0023     		movs	r3, #0
- 385 0044 3B93     		str	r3, [sp, #236]
- 386 0046 3C93     		str	r3, [sp, #240]
- 387 0048 3D93     		str	r3, [sp, #244]
- 388 004a 3E93     		str	r3, [sp, #248]
- 389 004c 8DF8FC30 		strb	r3, [sp, #252]
- 144:Core/Src/main.c ****   uint16_t joystickXY[2];
- 390              		.loc 1 144 27 view .LVU96
- 391 0050 3693     		str	r3, [sp, #216]
- 392 0052 3793     		str	r3, [sp, #220]
- 393 0054 3893     		str	r3, [sp, #224]
- 394 0056 3993     		str	r3, [sp, #228]
- 395 0058 8DF8E830 		strb	r3, [sp, #232]
- 396              	.L16:
- 145:Core/Src/main.c ****   /* USER CODE END 2 */
- 397              		.loc 1 145 3 is_stmt 1 view .LVU97
- 150:Core/Src/main.c ****   {
- 398              		.loc 1 150 3 view .LVU98
- 399              	.LBB7:
- 156:Core/Src/main.c ****       // Read joystick axes
- 400              		.loc 1 156 7 view .LVU99
- 156:Core/Src/main.c ****       // Read joystick axes
- 401              		.loc 1 156 12 is_stmt 0 view .LVU100
- 402 005c 03AC     		add	r4, sp, #12
- 403 005e C825     		movs	r5, #200
- 404 0060 2A46     		mov	r2, r5
- 405 0062 0021     		movs	r1, #0
- 406 0064 2046     		mov	r0, r4
- 407 0066 FFF7FEFF 		bl	memset
- 408              	.LVL27:
- 158:Core/Src/main.c **** 
- 409              		.loc 1 158 7 is_stmt 1 view .LVU101
- 410 006a 35A9     		add	r1, sp, #212
- 411 006c 1248     		ldr	r0, .L18+20
- 412 006e FFF7FEFF 		bl	Joystick_ReadXY
- 413              	.LVL28:
- 161:Core/Src/main.c ****       HAL_UART_Transmit(&huart1, (uint8_t*)buffer, strlen(buffer), 1000);
- 414              		.loc 1 161 7 view .LVU102
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 19
+ 408              		.loc 1 147 3 view .LVU92
+ 409 0046 2046     		mov	r0, r4
+ 410 0048 FFF7FEFF 		bl	Joystick_Calibrate
+ 411              	.LVL27:
+ 150:Core/Src/main.c ****   GameInfo play;
+ 412              		.loc 1 150 3 view .LVU93
+ 151:Core/Src/main.c ****   char lineOne[17] = {0}, lineTwo[17] = {0};
+ 413              		.loc 1 151 3 view .LVU94
+ 152:Core/Src/main.c ****   int directionDelay = 0;
+ 414              		.loc 1 152 3 view .LVU95
+ 152:Core/Src/main.c ****   int directionDelay = 0;
+ 415              		.loc 1 152 8 is_stmt 0 view .LVU96
+ 416 004c 0024     		movs	r4, #0
+ 417 004e 0894     		str	r4, [sp, #32]
+ 418 0050 0994     		str	r4, [sp, #36]
+ 419 0052 0A94     		str	r4, [sp, #40]
+ 420 0054 0B94     		str	r4, [sp, #44]
+ 421 0056 8DF83040 		strb	r4, [sp, #48]
+ 152:Core/Src/main.c ****   int directionDelay = 0;
+ 422              		.loc 1 152 27 view .LVU97
+ 423 005a 0394     		str	r4, [sp, #12]
+ 424 005c 0494     		str	r4, [sp, #16]
+ 425 005e 0594     		str	r4, [sp, #20]
+ 426 0060 0694     		str	r4, [sp, #24]
+ 427 0062 8DF81C40 		strb	r4, [sp, #28]
+ 153:Core/Src/main.c ****   JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
+ 428              		.loc 1 153 3 is_stmt 1 view .LVU98
+ 429              	.LVL28:
+ 154:Core/Src/main.c ****   /* USER CODE END 2 */
+ 430              		.loc 1 154 3 view .LVU99
+ 154:Core/Src/main.c ****   /* USER CODE END 2 */
+ 431              		.loc 1 154 43 is_stmt 0 view .LVU100
+ 432 0066 2646     		mov	r6, r4
+ 153:Core/Src/main.c ****   JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
+ 433              		.loc 1 153 7 view .LVU101
+ 434 0068 2546     		mov	r5, r4
+ 435 006a 30E0     		b	.L17
+ 436              	.LVL29:
+ 437              	.L31:
+ 165:Core/Src/main.c ****     {
+ 438              		.loc 1 165 5 view .LVU102
+ 439 006c 0124     		movs	r4, #1
+ 440              	.LVL30:
+ 165:Core/Src/main.c ****     {
+ 441              		.loc 1 165 5 view .LVU103
+ 442 006e 2EE0     		b	.L17
+ 443              	.LVL31:
+ 444              	.L24:
+ 170:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "Welcome to the");
+ 445              		.loc 1 170 9 is_stmt 1 view .LVU104
+ 446 0070 FFF7FEFF 		bl	LCD_Cls
+ 447              	.LVL32:
+ 171:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "Simon Game");
+ 448              		.loc 1 171 9 view .LVU105
+ 449 0074 08AF     		add	r7, sp, #32
+ 450 0076 754B     		ldr	r3, .L42+24
+ 451 0078 3C46     		mov	r4, r7
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 21
 
 
- 161:Core/Src/main.c ****       HAL_UART_Transmit(&huart1, (uint8_t*)buffer, strlen(buffer), 1000);
- 415              		.loc 1 161 87 is_stmt 0 view .LVU103
- 416 0072 BDF8D630 		ldrh	r3, [sp, #214]
- 161:Core/Src/main.c ****       HAL_UART_Transmit(&huart1, (uint8_t*)buffer, strlen(buffer), 1000);
- 417              		.loc 1 161 7 view .LVU104
- 418 0076 0093     		str	r3, [sp]
- 419 0078 BDF8D430 		ldrh	r3, [sp, #212]
- 420 007c 0F4A     		ldr	r2, .L18+24
- 421 007e 2946     		mov	r1, r5
- 422 0080 2046     		mov	r0, r4
- 423 0082 FFF7FEFF 		bl	snprintf
- 424              	.LVL29:
- 162:Core/Src/main.c **** 
- 425              		.loc 1 162 7 is_stmt 1 view .LVU105
- 162:Core/Src/main.c **** 
- 426              		.loc 1 162 52 is_stmt 0 view .LVU106
- 427 0086 2046     		mov	r0, r4
- 428 0088 FFF7FEFF 		bl	strlen
- 429              	.LVL30:
- 162:Core/Src/main.c **** 
- 430              		.loc 1 162 7 discriminator 1 view .LVU107
- 431 008c 4FF47A73 		mov	r3, #1000
- 432 0090 82B2     		uxth	r2, r0
- 433 0092 2146     		mov	r1, r4
- 434 0094 0A48     		ldr	r0, .L18+28
- 435 0096 FFF7FEFF 		bl	HAL_UART_Transmit
- 436              	.LVL31:
- 164:Core/Src/main.c ****       /** end of temporary Joystick test code */
- 437              		.loc 1 164 7 is_stmt 1 view .LVU108
- 438 009a 6420     		movs	r0, #100
- 439 009c FFF7FEFF 		bl	HAL_Delay
- 440              	.LVL32:
- 441              	.LBE7:
- 150:Core/Src/main.c ****   {
- 442              		.loc 1 150 9 view .LVU109
- 443 00a0 DCE7     		b	.L16
- 444              	.L19:
- 445 00a2 00BF     		.align	2
- 446              	.L18:
- 447 00a4 00000000 		.word	htim2
- 448 00a8 00080048 		.word	1207961600
- 449 00ac 00018021 		.word	562036992
- 450 00b0 8000501D 		.word	491782272
- 451 00b4 00000000 		.word	hadc1
- 452 00b8 00000000 		.word	joystick
- 453 00bc 00000000 		.word	.LC0
- 454 00c0 00000000 		.word	huart1
- 455              		.cfi_endproc
- 456              	.LFE1108:
- 458              		.global	joystick
- 459              		.section	.bss.joystick,"aw",%nobits
- 460              		.align	2
- 463              	joystick:
- 464 0000 00000000 		.space	20
- 464      00000000 
- 464      00000000 
- 464      00000000 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 20
+ 452              	.LVL33:
+ 171:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "Simon Game");
+ 453              		.loc 1 171 9 is_stmt 0 view .LVU106
+ 454 007a 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 455 007c 07C4     		stmia	r4!, {r0, r1, r2}
+ 456 007e 24F8023B 		strh	r3, [r4], #2	@ movhi
+ 457 0082 1B0C     		lsrs	r3, r3, #16
+ 458 0084 2370     		strb	r3, [r4]
+ 172:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 459              		.loc 1 172 9 is_stmt 1 view .LVU107
+ 460 0086 0DF10C08 		add	r8, sp, #12
+ 461 008a 714A     		ldr	r2, .L42+28
+ 462 008c 4346     		mov	r3, r8
+ 463 008e 07CA     		ldm	r2, {r0, r1, r2}
+ 464 0090 03C3     		stmia	r3!, {r0, r1}
+ 465 0092 23F8022B 		strh	r2, [r3], #2	@ movhi
+ 466 0096 120C     		lsrs	r2, r2, #16
+ 467 0098 1A70     		strb	r2, [r3]
+ 173:Core/Src/main.c ****         HAL_Delay(2000);  
+ 468              		.loc 1 173 9 view .LVU108
+ 469 009a 4146     		mov	r1, r8
+ 470 009c 3846     		mov	r0, r7
+ 471 009e FFF7FEFF 		bl	displayOnLCD
+ 472              	.LVL34:
+ 174:Core/Src/main.c ****         
+ 473              		.loc 1 174 9 view .LVU109
+ 474 00a2 4FF4FA60 		mov	r0, #2000
+ 475 00a6 FFF7FEFF 		bl	HAL_Delay
+ 476              	.LVL35:
+ 176:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "Push To Start!");
+ 477              		.loc 1 176 9 view .LVU110
+ 478 00aa FFF7FEFF 		bl	LCD_Cls
+ 479              	.LVL36:
+ 177:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 480              		.loc 1 177 9 view .LVU111
+ 481 00ae 694B     		ldr	r3, .L42+32
+ 482 00b0 3C46     		mov	r4, r7
+ 483 00b2 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 484 00b4 07C4     		stmia	r4!, {r0, r1, r2}
+ 485 00b6 24F8023B 		strh	r3, [r4], #2	@ movhi
+ 486 00ba 1B0C     		lsrs	r3, r3, #16
+ 487 00bc 2370     		strb	r3, [r4]
+ 178:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 488              		.loc 1 178 9 view .LVU112
+ 489 00be 0023     		movs	r3, #0
+ 490 00c0 8DF80C30 		strb	r3, [sp, #12]
+ 179:Core/Src/main.c ****         currentState = START;
+ 491              		.loc 1 179 9 view .LVU113
+ 492 00c4 4146     		mov	r1, r8
+ 493 00c6 3846     		mov	r0, r7
+ 494 00c8 FFF7FEFF 		bl	displayOnLCD
+ 495              	.LVL37:
+ 180:Core/Src/main.c ****         break;
+ 496              		.loc 1 180 9 view .LVU114
+ 181:Core/Src/main.c **** 
+ 497              		.loc 1 181 9 view .LVU115
+ 180:Core/Src/main.c ****         break;
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 22
 
 
- 464      00000000 
- 465              		.text
- 466              	.Letext0:
- 467              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 468              		.file 4 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 469              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
- 470              		.file 6 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h"
- 471              		.file 7 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 472              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
- 473              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
- 474              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h"
- 475              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rcc.h"
- 476              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rcc_ex.h"
- 477              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h"
- 478              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
- 479              		.file 15 "Core/Inc/adc.h"
- 480              		.file 16 "Core/Inc/tim.h"
- 481              		.file 17 "Core/Inc/usart.h"
- 482              		.file 18 "Core/Inc/joystick.h"
- 483              		.file 19 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-t
- 484              		.file 20 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-t
- 485              		.file 21 "Core/Inc/lcd1602.h"
- 486              		.file 22 "Core/Inc/gpio.h"
- 487              		.file 23 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
- 488              		.file 24 "<built-in>"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s 			page 21
+ 498              		.loc 1 180 22 is_stmt 0 view .LVU116
+ 499 00cc 0124     		movs	r4, #1
+ 500              	.LVL38:
+ 501              	.L17:
+ 159:Core/Src/main.c ****   {
+ 502              		.loc 1 159 3 is_stmt 1 view .LVU117
+ 165:Core/Src/main.c ****     {
+ 503              		.loc 1 165 5 view .LVU118
+ 504 00ce 052C     		cmp	r4, #5
+ 505 00d0 CCD8     		bhi	.L31
+ 506 00d2 01A3     		adr	r3, .L19
+ 507 00d4 53F824F0 		ldr	pc, [r3, r4, lsl #2]
+ 508              		.p2align 2
+ 509              	.L19:
+ 510 00d8 71000000 		.word	.L24+1
+ 511 00dc F1000000 		.word	.L23+1
+ 512 00e0 FF000000 		.word	.L22+1
+ 513 00e4 2D010000 		.word	.L21+1
+ 514 00e8 E5010000 		.word	.L20+1
+ 515 00ec 0D020000 		.word	.L18+1
+ 516              		.p2align 1
+ 517              	.L23:
+ 185:Core/Src/main.c ****         {  currentState = PLAYER_MENU;  }        
+ 518              		.loc 1 185 9 view .LVU119
+ 185:Core/Src/main.c ****         {  currentState = PLAYER_MENU;  }        
+ 519              		.loc 1 185 13 is_stmt 0 view .LVU120
+ 520 00f0 5148     		ldr	r0, .L42+4
+ 521 00f2 FFF7FEFF 		bl	Joystick_Pressed
+ 522              	.LVL39:
+ 185:Core/Src/main.c ****         {  currentState = PLAYER_MENU;  }        
+ 523              		.loc 1 185 12 discriminator 1 view .LVU121
+ 524 00f6 0028     		cmp	r0, #0
+ 525 00f8 E9D0     		beq	.L17
+ 186:Core/Src/main.c ****         break;
+ 526              		.loc 1 186 25 view .LVU122
+ 527 00fa 0224     		movs	r4, #2
+ 528              	.LVL40:
+ 186:Core/Src/main.c ****         break;
+ 529              		.loc 1 186 25 view .LVU123
+ 530 00fc E7E7     		b	.L17
+ 531              	.LVL41:
+ 532              	.L22:
+ 191:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 533              		.loc 1 191 9 is_stmt 1 view .LVU124
+ 534 00fe FFF7FEFF 		bl	LCD_Cls
+ 535              	.LVL42:
+ 192:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 536              		.loc 1 192 9 view .LVU125
+ 537 0102 08AC     		add	r4, sp, #32
+ 538              	.LVL43:
+ 192:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 539              		.loc 1 192 9 is_stmt 0 view .LVU126
+ 540 0104 544B     		ldr	r3, .L42+36
+ 541 0106 93E80700 		ldm	r3, {r0, r1, r2}
+ 542 010a 84E80700 		stm	r4, {r0, r1, r2}
+ 193:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 543              		.loc 1 193 9 is_stmt 1 view .LVU127
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 23
+
+
+ 544 010e 03AF     		add	r7, sp, #12
+ 545 0110 524A     		ldr	r2, .L42+40
+ 546 0112 3B46     		mov	r3, r7
+ 547 0114 07CA     		ldm	r2, {r0, r1, r2}
+ 548 0116 03C3     		stmia	r3!, {r0, r1}
+ 549 0118 23F8022B 		strh	r2, [r3], #2	@ movhi
+ 550 011c 120C     		lsrs	r2, r2, #16
+ 551 011e 1A70     		strb	r2, [r3]
+ 194:Core/Src/main.c ****         currentState = PLAYER_SELECT;
+ 552              		.loc 1 194 9 view .LVU128
+ 553 0120 3946     		mov	r1, r7
+ 554 0122 2046     		mov	r0, r4
+ 555 0124 FFF7FEFF 		bl	displayOnLCD
+ 556              	.LVL44:
+ 195:Core/Src/main.c ****         break;
+ 557              		.loc 1 195 9 view .LVU129
+ 196:Core/Src/main.c **** 
+ 558              		.loc 1 196 9 view .LVU130
+ 195:Core/Src/main.c ****         break;
+ 559              		.loc 1 195 22 is_stmt 0 view .LVU131
+ 560 0128 0324     		movs	r4, #3
+ 196:Core/Src/main.c **** 
+ 561              		.loc 1 196 9 view .LVU132
+ 562 012a D0E7     		b	.L17
+ 563              	.LVL45:
+ 564              	.L21:
+ 201:Core/Src/main.c **** 
+ 565              		.loc 1 201 9 is_stmt 1 view .LVU133
+ 201:Core/Src/main.c **** 
+ 566              		.loc 1 201 21 is_stmt 0 view .LVU134
+ 567 012c 4248     		ldr	r0, .L42+4
+ 568 012e FFF7FEFF 		bl	Joystick_GetDirection
+ 569              	.LVL46:
+ 570 0132 0746     		mov	r7, r0
+ 571              	.LVL47:
+ 205:Core/Src/main.c ****         {
+ 572              		.loc 1 205 9 is_stmt 1 view .LVU135
+ 205:Core/Src/main.c ****         {
+ 573              		.loc 1 205 11 is_stmt 0 view .LVU136
+ 574 0134 022D     		cmp	r5, #2
+ 575 0136 01DC     		bgt	.L27
+ 205:Core/Src/main.c ****         {
+ 576              		.loc 1 205 31 discriminator 1 view .LVU137
+ 577 0138 012E     		cmp	r6, #1
+ 578 013a 0AD0     		beq	.L38
+ 579              	.L27:
+ 580              	.LVL48:
+ 214:Core/Src/main.c ****         {
+ 581              		.loc 1 214 9 is_stmt 1 view .LVU138
+ 214:Core/Src/main.c ****         {
+ 582              		.loc 1 214 12 is_stmt 0 view .LVU139
+ 583 013c 002F     		cmp	r7, #0
+ 584 013e 42D0     		beq	.L34
+ 585 0140 0025     		movs	r5, #0
+ 586              	.LVL49:
+ 587              	.L28:
+ 214:Core/Src/main.c ****         {
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 24
+
+
+ 588              		.loc 1 214 35 discriminator 1 view .LVU140
+ 589 0142 BE42     		cmp	r6, r7
+ 590 0144 40D0     		beq	.L29
+ 217:Core/Src/main.c ****           {
+ 591              		.loc 1 217 11 is_stmt 1 view .LVU141
+ 217:Core/Src/main.c ****           {
+ 592              		.loc 1 217 14 is_stmt 0 view .LVU142
+ 593 0146 012F     		cmp	r7, #1
+ 594 0148 09D0     		beq	.L39
+ 226:Core/Src/main.c ****           {
+ 595              		.loc 1 226 16 is_stmt 1 view .LVU143
+ 226:Core/Src/main.c ****           {
+ 596              		.loc 1 226 19 is_stmt 0 view .LVU144
+ 597 014a 022F     		cmp	r7, #2
+ 598 014c 22D0     		beq	.L40
+ 599 014e 3E46     		mov	r6, r7
+ 600              	.LVL50:
+ 226:Core/Src/main.c ****           {
+ 601              		.loc 1 226 19 view .LVU145
+ 602 0150 3AE0     		b	.L29
+ 603              	.LVL51:
+ 604              	.L38:
+ 205:Core/Src/main.c ****         {
+ 605              		.loc 1 205 58 discriminator 2 view .LVU146
+ 606 0152 10B9     		cbnz	r0, .L33
+ 207:Core/Src/main.c ****           directionDelay++;
+ 607              		.loc 1 207 11 is_stmt 1 view .LVU147
+ 608              	.LVL52:
+ 208:Core/Src/main.c ****         }
+ 609              		.loc 1 208 11 view .LVU148
+ 208:Core/Src/main.c ****         }
+ 610              		.loc 1 208 25 is_stmt 0 view .LVU149
+ 611 0154 0135     		adds	r5, r5, #1
+ 612              	.LVL53:
+ 214:Core/Src/main.c ****         {
+ 613              		.loc 1 214 9 is_stmt 1 view .LVU150
+ 207:Core/Src/main.c ****           directionDelay++;
+ 614              		.loc 1 207 21 is_stmt 0 view .LVU151
+ 615 0156 3746     		mov	r7, r6
+ 616 0158 F3E7     		b	.L28
+ 617              	.LVL54:
+ 618              	.L33:
+ 211:Core/Src/main.c **** 
+ 619              		.loc 1 211 26 view .LVU152
+ 620 015a 0025     		movs	r5, #0
+ 621              	.LVL55:
+ 211:Core/Src/main.c **** 
+ 622              		.loc 1 211 26 view .LVU153
+ 623 015c F1E7     		b	.L28
+ 624              	.LVL56:
+ 625              	.L39:
+ 219:Core/Src/main.c ****             snprintf(lineOne, sizeof(lineOne), "<1> player OR");
+ 626              		.loc 1 219 13 is_stmt 1 view .LVU154
+ 627 015e FFF7FEFF 		bl	LCD_Cls
+ 628              	.LVL57:
+ 220:Core/Src/main.c ****             snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 629              		.loc 1 220 13 view .LVU155
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 25
+
+
+ 630 0162 0DF1200C 		add	ip, sp, #32
+ 631 0166 3E4B     		ldr	r3, .L42+44
+ 632 0168 6646     		mov	r6, ip
+ 633              	.LVL58:
+ 220:Core/Src/main.c ****             snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 634              		.loc 1 220 13 is_stmt 0 view .LVU156
+ 635 016a 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 636 016c 07C6     		stmia	r6!, {r0, r1, r2}
+ 637 016e 3380     		strh	r3, [r6]	@ movhi
+ 221:Core/Src/main.c ****             displayOnLCD(lineOne, lineTwo);
+ 638              		.loc 1 221 13 is_stmt 1 view .LVU157
+ 639 0170 03AE     		add	r6, sp, #12
+ 640 0172 3A4A     		ldr	r2, .L42+40
+ 641 0174 3346     		mov	r3, r6
+ 642 0176 07CA     		ldm	r2, {r0, r1, r2}
+ 643 0178 03C3     		stmia	r3!, {r0, r1}
+ 644 017a 23F8022B 		strh	r2, [r3], #2	@ movhi
+ 645 017e 120C     		lsrs	r2, r2, #16
+ 646 0180 1A70     		strb	r2, [r3]
+ 222:Core/Src/main.c ****             play.numPlayers = 1;
+ 647              		.loc 1 222 13 view .LVU158
+ 648 0182 3146     		mov	r1, r6
+ 649 0184 6046     		mov	r0, ip
+ 650 0186 FFF7FEFF 		bl	displayOnLCD
+ 651              	.LVL59:
+ 223:Core/Src/main.c ****             direction = JOY_UP;
+ 652              		.loc 1 223 13 view .LVU159
+ 223:Core/Src/main.c ****             direction = JOY_UP;
+ 653              		.loc 1 223 29 is_stmt 0 view .LVU160
+ 654 018a 0122     		movs	r2, #1
+ 655 018c 8DF83420 		strb	r2, [sp, #52]
+ 224:Core/Src/main.c ****           }    
+ 656              		.loc 1 224 13 is_stmt 1 view .LVU161
+ 657              	.LVL60:
+ 224:Core/Src/main.c ****           }    
+ 658              		.loc 1 224 23 is_stmt 0 view .LVU162
+ 659 0190 3E46     		mov	r6, r7
+ 660 0192 19E0     		b	.L29
+ 661              	.LVL61:
+ 662              	.L40:
+ 228:Core/Src/main.c ****             snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 663              		.loc 1 228 13 is_stmt 1 view .LVU163
+ 664 0194 FFF7FEFF 		bl	LCD_Cls
+ 665              	.LVL62:
+ 229:Core/Src/main.c ****             snprintf(lineTwo, sizeof(lineTwo), "<2> players?");
+ 666              		.loc 1 229 13 view .LVU164
+ 667 0198 0DF1200C 		add	ip, sp, #32
+ 668 019c 2E4B     		ldr	r3, .L42+36
+ 669 019e 93E80700 		ldm	r3, {r0, r1, r2}
+ 670 01a2 8CE80700 		stm	ip, {r0, r1, r2}
+ 230:Core/Src/main.c ****             displayOnLCD(lineOne, lineTwo);
+ 671              		.loc 1 230 13 view .LVU165
+ 672 01a6 0DF10C0E 		add	lr, sp, #12
+ 673 01aa 2E4B     		ldr	r3, .L42+48
+ 674 01ac 7646     		mov	r6, lr
+ 675              	.LVL63:
+ 230:Core/Src/main.c ****             displayOnLCD(lineOne, lineTwo);
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 26
+
+
+ 676              		.loc 1 230 13 is_stmt 0 view .LVU166
+ 677 01ae 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 678 01b0 07C6     		stmia	r6!, {r0, r1, r2}
+ 679 01b2 3370     		strb	r3, [r6]
+ 231:Core/Src/main.c ****             play.numPlayers = 2;
+ 680              		.loc 1 231 13 is_stmt 1 view .LVU167
+ 681 01b4 7146     		mov	r1, lr
+ 682 01b6 6046     		mov	r0, ip
+ 683 01b8 FFF7FEFF 		bl	displayOnLCD
+ 684              	.LVL64:
+ 232:Core/Src/main.c ****           }
+ 685              		.loc 1 232 13 view .LVU168
+ 232:Core/Src/main.c ****           }
+ 686              		.loc 1 232 29 is_stmt 0 view .LVU169
+ 687 01bc 0222     		movs	r2, #2
+ 688 01be 8DF83420 		strb	r2, [sp, #52]
+ 689 01c2 3E46     		mov	r6, r7
+ 690 01c4 00E0     		b	.L29
+ 691              	.LVL65:
+ 692              	.L34:
+ 232:Core/Src/main.c ****           }
+ 693              		.loc 1 232 29 view .LVU170
+ 694 01c6 0025     		movs	r5, #0
+ 695              	.LVL66:
+ 696              	.L29:
+ 240:Core/Src/main.c ****         {
+ 697              		.loc 1 240 9 is_stmt 1 view .LVU171
+ 240:Core/Src/main.c ****         {
+ 698              		.loc 1 240 13 is_stmt 0 view .LVU172
+ 699 01c8 1B48     		ldr	r0, .L42+4
+ 700 01ca FFF7FEFF 		bl	Joystick_Pressed
+ 701              	.LVL67:
+ 240:Core/Src/main.c ****         {
+ 702              		.loc 1 240 12 discriminator 1 view .LVU173
+ 703 01ce 0028     		cmp	r0, #0
+ 704 01d0 3FF47DAF 		beq	.L17
+ 242:Core/Src/main.c ****             currentState = ONE_PLAYER;
+ 705              		.loc 1 242 11 is_stmt 1 view .LVU174
+ 242:Core/Src/main.c ****             currentState = ONE_PLAYER;
+ 706              		.loc 1 242 19 is_stmt 0 view .LVU175
+ 707 01d4 9DF83430 		ldrb	r3, [sp, #52]	@ zero_extendqisi2
+ 242:Core/Src/main.c ****             currentState = ONE_PLAYER;
+ 708              		.loc 1 242 14 view .LVU176
+ 709 01d8 012B     		cmp	r3, #1
+ 710 01da 01D0     		beq	.L41
+ 245:Core/Src/main.c ****         }
+ 711              		.loc 1 245 26 view .LVU177
+ 712 01dc 0524     		movs	r4, #5
+ 713              	.LVL68:
+ 245:Core/Src/main.c ****         }
+ 714              		.loc 1 245 26 view .LVU178
+ 715 01de 76E7     		b	.L17
+ 716              	.LVL69:
+ 717              	.L41:
+ 243:Core/Src/main.c ****           else 
+ 718              		.loc 1 243 26 view .LVU179
+ 719 01e0 0424     		movs	r4, #4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 27
+
+
+ 720              	.LVL70:
+ 243:Core/Src/main.c ****           else 
+ 721              		.loc 1 243 26 view .LVU180
+ 722 01e2 74E7     		b	.L17
+ 723              	.LVL71:
+ 724              	.L20:
+ 254:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+ 725              		.loc 1 254 9 is_stmt 1 view .LVU181
+ 726 01e4 FFF7FEFF 		bl	LCD_Cls
+ 727              	.LVL72:
+ 255:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 728              		.loc 1 255 9 view .LVU182
+ 729 01e8 08AF     		add	r7, sp, #32
+ 730 01ea 1F4B     		ldr	r3, .L42+52
+ 731 01ec 3C46     		mov	r4, r7
+ 732              	.LVL73:
+ 255:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 733              		.loc 1 255 9 is_stmt 0 view .LVU183
+ 734 01ee 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 735 01f0 07C4     		stmia	r4!, {r0, r1, r2}
+ 736 01f2 2380     		strh	r3, [r4]	@ movhi
+ 256:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 737              		.loc 1 256 9 is_stmt 1 view .LVU184
+ 738 01f4 03A9     		add	r1, sp, #12
+ 739 01f6 0023     		movs	r3, #0
+ 740 01f8 0B70     		strb	r3, [r1]
+ 257:Core/Src/main.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 741              		.loc 1 257 9 view .LVU185
+ 742 01fa 3846     		mov	r0, r7
+ 743 01fc FFF7FEFF 		bl	displayOnLCD
+ 744              	.LVL74:
+ 258:Core/Src/main.c ****         currentState = PLAYER_MENU;
+ 745              		.loc 1 258 9 view .LVU186
+ 746 0200 4FF4FA60 		mov	r0, #2000
+ 747 0204 FFF7FEFF 		bl	HAL_Delay
+ 748              	.LVL75:
+ 259:Core/Src/main.c ****         break;
+ 749              		.loc 1 259 9 view .LVU187
+ 260:Core/Src/main.c **** 
+ 750              		.loc 1 260 9 view .LVU188
+ 259:Core/Src/main.c ****         break;
+ 751              		.loc 1 259 22 is_stmt 0 view .LVU189
+ 752 0208 0224     		movs	r4, #2
+ 260:Core/Src/main.c **** 
+ 753              		.loc 1 260 9 view .LVU190
+ 754 020a 60E7     		b	.L17
+ 755              	.LVL76:
+ 756              	.L18:
+ 263:Core/Src/main.c ****         snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+ 757              		.loc 1 263 9 is_stmt 1 view .LVU191
+ 758 020c FFF7FEFF 		bl	LCD_Cls
+ 759              	.LVL77:
+ 264:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 760              		.loc 1 264 9 view .LVU192
+ 761 0210 08AF     		add	r7, sp, #32
+ 762 0212 164B     		ldr	r3, .L42+56
+ 763 0214 3C46     		mov	r4, r7
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 28
+
+
+ 764              	.LVL78:
+ 264:Core/Src/main.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 765              		.loc 1 264 9 is_stmt 0 view .LVU193
+ 766 0216 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 767 0218 07C4     		stmia	r4!, {r0, r1, r2}
+ 768 021a 2380     		strh	r3, [r4]	@ movhi
+ 265:Core/Src/main.c ****         displayOnLCD(lineOne, lineTwo);
+ 769              		.loc 1 265 9 is_stmt 1 view .LVU194
+ 770 021c 03A9     		add	r1, sp, #12
+ 771 021e 0023     		movs	r3, #0
+ 772 0220 0B70     		strb	r3, [r1]
+ 266:Core/Src/main.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 773              		.loc 1 266 9 view .LVU195
+ 774 0222 3846     		mov	r0, r7
+ 775 0224 FFF7FEFF 		bl	displayOnLCD
+ 776              	.LVL79:
+ 267:Core/Src/main.c ****         currentState = PLAYER_MENU;
+ 777              		.loc 1 267 9 view .LVU196
+ 778 0228 4FF4FA60 		mov	r0, #2000
+ 779 022c FFF7FEFF 		bl	HAL_Delay
+ 780              	.LVL80:
+ 268:Core/Src/main.c ****         break;
+ 781              		.loc 1 268 9 view .LVU197
+ 269:Core/Src/main.c ****       // case SCORES:
+ 782              		.loc 1 269 9 view .LVU198
+ 268:Core/Src/main.c ****         break;
+ 783              		.loc 1 268 22 is_stmt 0 view .LVU199
+ 784 0230 0224     		movs	r4, #2
+ 785              	.LVL81:
+ 269:Core/Src/main.c ****       // case SCORES:
+ 786              		.loc 1 269 9 view .LVU200
+ 787 0232 4CE7     		b	.L17
+ 788              	.L43:
+ 789              		.align	2
+ 790              	.L42:
+ 791 0234 00000000 		.word	htim2
+ 792 0238 00000000 		.word	joystick
+ 793 023c 00080048 		.word	1207961600
+ 794 0240 00018021 		.word	562036992
+ 795 0244 8000501D 		.word	491782272
+ 796 0248 00000000 		.word	hadc1
+ 797 024c 00000000 		.word	.LC0
+ 798 0250 10000000 		.word	.LC1
+ 799 0254 1C000000 		.word	.LC2
+ 800 0258 2C000000 		.word	.LC3
+ 801 025c 38000000 		.word	.LC4
+ 802 0260 44000000 		.word	.LC5
+ 803 0264 54000000 		.word	.LC6
+ 804 0268 64000000 		.word	.LC7
+ 805 026c 74000000 		.word	.LC8
+ 806              		.cfi_endproc
+ 807              	.LFE1108:
+ 809              		.global	joystick
+ 810              		.section	.bss.joystick,"aw",%nobits
+ 811              		.align	2
+ 814              	joystick:
+ 815 0000 00000000 		.space	20
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 29
+
+
+ 815      00000000 
+ 815      00000000 
+ 815      00000000 
+ 815      00000000 
+ 816              		.text
+ 817              	.Letext0:
+ 818              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 819              		.file 4 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 820              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 821              		.file 6 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h"
+ 822              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 823              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
+ 824              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h"
+ 825              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rcc.h"
+ 826              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rcc_ex.h"
+ 827              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h"
+ 828              		.file 13 "Core/Inc/adc.h"
+ 829              		.file 14 "Core/Inc/tim.h"
+ 830              		.file 15 "Core/Inc/joystick.h"
+ 831              		.file 16 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-t
+ 832              		.file 17 "Core/Inc/lcd1602.h"
+ 833              		.file 18 "Core/Inc/usart.h"
+ 834              		.file 19 "Core/Inc/gpio.h"
+ 835              		.file 20 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 836              		.file 21 "<built-in>"
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:21     .text.displayOnLCD:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:27     .text.displayOnLCD:00000000 displayOnLCD
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:76     .text.Error_Handler:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:82     .text.Error_Handler:00000000 Error_Handler
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:114    .text.SystemClock_Config:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:120    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:262    .text.PeriphCommonClock_Config:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:268    .text.PeriphCommonClock_Config:00000000 PeriphCommonClock_Config
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:315    .rodata.main.str1.4:00000000 $d
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:319    .text.main:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:325    .text.main:00000000 main
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:447    .text.main:000000a4 $d
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:463    .bss.joystick:00000000 joystick
-C:\Users\elhyd\AppData\Local\Temp\ccyCCTko.s:460    .bss.joystick:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:21     .text.displayOnLCD:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:27     .text.displayOnLCD:00000000 displayOnLCD
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:76     .text.Error_Handler:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:82     .text.Error_Handler:00000000 Error_Handler
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:114    .text.SystemClock_Config:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:120    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:262    .text.PeriphCommonClock_Config:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:268    .text.PeriphCommonClock_Config:00000000 PeriphCommonClock_Config
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:315    .rodata.main.str1.4:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:343    .text.main:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:349    .text.main:00000000 main
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:510    .text.main:000000d8 $d
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:516    .text.main:000000f0 $t
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:791    .text.main:00000234 $d
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:814    .bss.joystick:00000000 joystick
+C:\Users\elhyd\AppData\Local\Temp\ccLVS8OV.s:811    .bss.joystick:00000000 $d
 
 UNDEFINED SYMBOLS
 LCD_GotoXY
@@ -1203,10 +1745,8 @@ HAL_TIM_Base_Start
 LCD_Init
 LCD_Cls
 Joystick_Init
-Joystick_ReadXY
-snprintf
-strlen
-HAL_UART_Transmit
+Joystick_Calibrate
+Joystick_Pressed
+Joystick_GetDirection
 htim2
 hadc1
-huart1
