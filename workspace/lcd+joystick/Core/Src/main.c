@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -48,7 +49,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-enum GameState
+typedef enum 
 {
   START = 0,
   GAME_MENU,
@@ -57,9 +58,9 @@ enum GameState
   TWO_PLAYERS,
   SCORES,
   GAME_RESULT
-}; 
+} GameState ; 
 
-struct GameInfo
+typedef struct 
 {
   uint8_t numPlayers;
   uint8_t currentPlayer;
@@ -67,7 +68,7 @@ struct GameInfo
   uint8_t sequenceLength;
   uint8_t playerInputs[2][100];
   uint8_t playerScores[2];
-};
+} GameInfo ;
 
 Joystick_HandleTypeDef joystick;
 /* USER CODE END PV */
@@ -125,7 +126,9 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_USART1_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start(&htim2);
   /*** Initialize LCD ***/
   LCD_Init();
   LCD_Cls();
@@ -149,9 +152,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    switch(currentState)
-    {
-      /** temporary Joystick test code */
+    /** temporary Joystick test code */
       char buffer[200] = {0};
       // Read joystick axes
       Joystick_ReadXY(&joystick, joystickXY);
@@ -163,6 +164,8 @@ int main(void)
       HAL_Delay(100); // 100 ms delay between readings
       /** end of temporary Joystick test code */
 
+    /**switch(currentState)
+    {
       case START:
         LCD_Cls();
         if (Joystick_ReadButton(&joystick)) 
@@ -181,7 +184,7 @@ int main(void)
         break;
       case PLAYER_SELECT:
         // Read the joystick input to determine the number of players
-        /* Joystick_ReadXY(&joystick, joystickXY);
+         Joystick_ReadXY(&joystick, joystickXY);
         if (Joystick LEFT moved) 
         {
           snprintf(lineTwo, sizeof(lineTwo), "<1> OR 2");
@@ -202,7 +205,7 @@ int main(void)
             currentState = ONE_PLAYER;
           else 
             currentState = TWO_PLAYERS;
-        }*/
+        }
         break;
       case ONE_PLAYER:
         // Handle one player game logic
@@ -219,7 +222,7 @@ int main(void)
       default:
         currentState = START;
         break;
-    }
+    } **/
   }
   /* USER CODE END 3 */
 }
@@ -235,7 +238,7 @@ void SystemClock_Config(void)
 
   /** Macro to configure the PLL multiplication factor
   */
-  __HAL_RCC_PLL_PLLM_CONFIG(RCC_PLLM_DIV1);
+  __HAL_RCC_PLL_PLLM_CONFIG(RCC_PLLM_DIV2);
 
   /** Macro to configure the PLL clock source
   */
@@ -253,7 +256,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_10;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -272,7 +275,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.AHBCLK2Divider = RCC_SYSCLK_DIV2;
   RCC_ClkInitStruct.AHBCLK4Divider = RCC_SYSCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
