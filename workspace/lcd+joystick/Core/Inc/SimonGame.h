@@ -22,8 +22,10 @@ typedef struct
 {
   uint8_t numPlayers;
   uint8_t currentPlayer;
+  uint8_t sequenceSpeed;
   uint8_t sequence[100];
   uint8_t sequenceLength;
+  uint8_t round;
   uint8_t playerInputs[2][100];
   uint8_t playerScores[2];
 } GameInfo ;
@@ -35,5 +37,7 @@ typedef struct {
 
 void Game_Init(Game* game);
 void Game_Run(Game* game, Joystick_HandleTypeDef* joystick);
+void computerTurn(Game* game);
+void playerTurn(Game* game, uint8_t player);
 
 #endif

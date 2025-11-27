@@ -3,6 +3,8 @@
 #include "gpio.h"
 #include <stdio.h> 
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * @brief  Initialize the game state and information.
@@ -137,6 +139,9 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
             game->state = ONE_PLAYER;
           else 
             game->state = TWO_PLAYERS;
+
+          game->info.round = 1;
+          game->info.sequenceLength = 4;
         }
         break;
       
@@ -151,6 +156,11 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         displayOnLCD(lineOne, lineTwo);
         HAL_Delay(2000);  //wait 2 seconds
         game->state = PLAY;
+
+        // Seed the random number generator using joystick readings
+        uint16_t seed[2] = {0};
+        Joystick_ReadXY(&joystick, seed);
+        srand(seed[0] ^ seed[1]);
         break;
 
       case TWO_PLAYERS:
@@ -205,4 +215,21 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         game->state = START;
         break;
     }
+}
+
+
+/**
+ * @brief  Handle the computer's turn in the game.
+ * @param  game: Pointer to the Game structure.
+ */
+void computerTurn(Game* game)
+{
+  for(int i = 0; i < game->info.sequenceLength; i++)
+  {
+    // Extract the 2-bit color code for the current position
+    int colorRandom = rand() % 4;
+
+    // Store the color code in the sequence array
+    game->info.sequence[i] = colorRandom;
+  }
 }
