@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
   28:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   29:Core/Src/gpio.c **** /* Configure GPIO                                                             */
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 2
 
 
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
@@ -78,36 +78,38 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
   45:Core/Src/gpio.c **** {
   29              		.loc 1 45 1 view -0
   30              		.cfi_startproc
-  31              		@ args = 0, pretend = 0, frame = 32
+  31              		@ args = 0, pretend = 0, frame = 40
   32              		@ frame_needed = 0, uses_anonymous_args = 0
-  33 0000 F0B5     		push	{r4, r5, r6, r7, lr}
-  34              		.cfi_def_cfa_offset 20
-  35              		.cfi_offset 4, -20
-  36              		.cfi_offset 5, -16
-  37              		.cfi_offset 6, -12
-  38              		.cfi_offset 7, -8
-  39              		.cfi_offset 14, -4
-  40 0002 89B0     		sub	sp, sp, #36
-  41              		.cfi_def_cfa_offset 56
+  33 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+  34              		.cfi_def_cfa_offset 28
+  35              		.cfi_offset 4, -28
+  36              		.cfi_offset 5, -24
+  37              		.cfi_offset 6, -20
+  38              		.cfi_offset 7, -16
+  39              		.cfi_offset 8, -12
+  40              		.cfi_offset 9, -8
+  41              		.cfi_offset 14, -4
+  42 0004 8BB0     		sub	sp, sp, #44
+  43              		.cfi_def_cfa_offset 72
   46:Core/Src/gpio.c **** 
   47:Core/Src/gpio.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  42              		.loc 1 47 3 view .LVU1
-  43              		.loc 1 47 20 is_stmt 0 view .LVU2
-  44 0004 03AD     		add	r5, sp, #12
-  45 0006 0024     		movs	r4, #0
-  46 0008 0394     		str	r4, [sp, #12]
-  47 000a 0494     		str	r4, [sp, #16]
-  48 000c 0594     		str	r4, [sp, #20]
-  49 000e 0694     		str	r4, [sp, #24]
-  50 0010 0794     		str	r4, [sp, #28]
+  44              		.loc 1 47 3 view .LVU1
+  45              		.loc 1 47 20 is_stmt 0 view .LVU2
+  46 0006 05AD     		add	r5, sp, #20
+  47 0008 0024     		movs	r4, #0
+  48 000a 0594     		str	r4, [sp, #20]
+  49 000c 0694     		str	r4, [sp, #24]
+  50 000e 0794     		str	r4, [sp, #28]
+  51 0010 0894     		str	r4, [sp, #32]
+  52 0012 0994     		str	r4, [sp, #36]
   48:Core/Src/gpio.c **** 
   49:Core/Src/gpio.c ****   /* GPIO Ports Clock Enable */
   50:Core/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
-  51              		.loc 1 50 3 is_stmt 1 view .LVU3
-  52              	.LVL0:
-  53              	.LBB8:
-  54              	.LBI8:
-  55              		.file 2 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h"
+  53              		.loc 1 50 3 is_stmt 1 view .LVU3
+  54              	.LVL0:
+  55              	.LBB10:
+  56              	.LBI10:
+  57              		.file 2 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h"
    1:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
    2:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
    3:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @file    stm32wbxx_ll_bus.h
@@ -116,11 +118,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
    6:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
    7:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @attention
    8:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 3
+
+
    9:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * Copyright (c) 2019 STMicroelectronics.
   10:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * All rights reserved.
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 3
-
-
   11:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *
   12:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * This software is licensed under terms that can be found in the LICENSE file
   13:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * in the root directory of this software component.
@@ -176,11 +178,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
   63:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
   64:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Exported types ------------------------------------------------------------*/
   65:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 4
+
+
   66:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Exported constants --------------------------------------------------------*/
   67:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Constants BUS Exported Constants
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 4
-
-
   68:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
   69:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
   70:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
@@ -236,11 +238,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  120:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_PKA            RCC_AHB3ENR_PKAEN
  121:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_AES2           RCC_AHB3ENR_AES2EN
  122:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_RNG            RCC_AHB3ENR_RNGEN
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 5
+
+
  123:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_HSEM           RCC_AHB3ENR_HSEMEN
  124:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_IPCC           RCC_AHB3ENR_IPCCEN
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 5
-
-
  125:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_SRAM2          RCC_AHB3SMENR_SRAM2SMEN
  126:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_FLASH          RCC_AHB3ENR_FLASHEN
  127:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
@@ -296,11 +298,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  177:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  178:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(ADC_SUPPORT_2_5_MSPS)
  179:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_ADC            RCC_APB2ENR_ADCEN
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 6
+
+
  180:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* ADC_SUPPORT_2_5_MSPS */
  181:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_TIM1           RCC_APB2ENR_TIM1EN
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 6
-
-
  182:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SPI1           RCC_APB2ENR_SPI1EN
  183:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_USART1         RCC_APB2ENR_USART1EN
  184:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TIM16)
@@ -356,11 +358,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  234:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOE        RCC_C2AHB2ENR_GPIOEEN
  235:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOH        RCC_C2AHB2ENR_GPIOHEN
  236:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(ADC_SUPPORT_5_MSPS)
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 7
+
+
  237:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_ADC          RCC_C2AHB2ENR_ADCEN
  238:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* ADC_SUPPORT_5_MSPS */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 7
-
-
  239:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(AES1)
  240:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_AES1         RCC_C2AHB2ENR_AES1EN
  241:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* AES1 */
@@ -416,11 +418,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  291:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP2_PERIPH_LPTIM2       RCC_C2APB1ENR2_LPTIM2EN
  292:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  293:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 8
+
+
  294:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  295:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 8
-
-
  296:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  297:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB2_GRP1_PERIPH  C2 APB2 GRP1 PERIPH
  298:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
@@ -476,11 +478,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  348:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  349:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Enable AHB1 peripherals clock.
  350:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_EnableClock\n
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 9
+
+
  351:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_EnableClock\n
  352:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMAMUX1EN      LL_AHB1_GRP1_EnableClock\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 9
-
-
  353:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_EnableClock\n
  354:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      TSCEN         LL_AHB1_GRP1_EnableClock
  355:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
@@ -536,11 +538,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  405:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
  406:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
  407:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 10
+
+
  408:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
  409:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 10
-
-
  410:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClock(uint32_t Periphs)
  411:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  412:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1ENR, Periphs);
@@ -596,11 +598,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  462:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_EnableClockSleep\n
  463:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMAMUX1SMEN    LL_AHB1_GRP1_EnableClockSleep\n
  464:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    SRAM1SMEN     LL_AHB1_GRP1_EnableClockSleep\n
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 11
+
+
  465:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    CRCSMEN       LL_AHB1_GRP1_EnableClockSleep\n
  466:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    TSCSMEN       LL_AHB1_GRP1_EnableClockSleep
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 11
-
-
  467:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  468:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
  469:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
@@ -656,11 +658,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  519:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB2ENR      GPIOAEN       LL_AHB2_GRP1_EnableClock\n
  520:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOBEN       LL_AHB2_GRP1_EnableClock\n
  521:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOCEN       LL_AHB2_GRP1_EnableClock\n
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 12
+
+
  522:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIODEN       LL_AHB2_GRP1_EnableClock\n
  523:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOEEN       LL_AHB2_GRP1_EnableClock\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 12
-
-
  524:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOHEN       LL_AHB2_GRP1_EnableClock\n
  525:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      ADCEN         LL_AHB2_GRP1_EnableClock\n
  526:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      AES1EN        LL_AHB2_GRP1_EnableClock
@@ -677,251 +679,403 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 1
  537:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
  538:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB2_GRP1_EnableClock(uint32_t Periphs)
-  56              		.loc 2 539 22 view .LVU4
-  57              	.LBB9:
+  58              		.loc 2 539 22 view .LVU4
+  59              	.LBB11:
  540:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   __IO uint32_t tmpreg;
-  58              		.loc 2 541 3 view .LVU5
+  60              		.loc 2 541 3 view .LVU5
  542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
-  59              		.loc 2 542 3 view .LVU6
-  60 0012 4FF0B043 		mov	r3, #1476395008
-  61 0016 DA6C     		ldr	r2, [r3, #76]
-  62 0018 42F00402 		orr	r2, r2, #4
-  63 001c DA64     		str	r2, [r3, #76]
+  61              		.loc 2 542 3 view .LVU6
+  62 0014 4FF0B043 		mov	r3, #1476395008
+  63 0018 DA6C     		ldr	r2, [r3, #76]
+  64 001a 42F00402 		orr	r2, r2, #4
+  65 001e DA64     		str	r2, [r3, #76]
  543:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB2ENR, Periphs);
-  64              		.loc 2 544 3 view .LVU7
-  65              		.loc 2 544 12 is_stmt 0 view .LVU8
-  66 001e DA6C     		ldr	r2, [r3, #76]
-  67 0020 02F00402 		and	r2, r2, #4
-  68              		.loc 2 544 10 view .LVU9
-  69 0024 0292     		str	r2, [sp, #8]
+  66              		.loc 2 544 3 view .LVU7
+  67              		.loc 2 544 12 is_stmt 0 view .LVU8
+  68 0020 DA6C     		ldr	r2, [r3, #76]
+  69 0022 02F00402 		and	r2, r2, #4
+  70              		.loc 2 544 10 view .LVU9
+  71 0026 0492     		str	r2, [sp, #16]
  545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
-  70              		.loc 2 545 3 is_stmt 1 view .LVU10
-  71 0026 029A     		ldr	r2, [sp, #8]
-  72              	.LVL1:
-  73              		.loc 2 545 3 is_stmt 0 view .LVU11
-  74              	.LBE9:
-  75              	.LBE8:
+  72              		.loc 2 545 3 is_stmt 1 view .LVU10
+  73 0028 049A     		ldr	r2, [sp, #16]
+  74              	.LVL1:
+  75              		.loc 2 545 3 is_stmt 0 view .LVU11
+  76              	.LBE11:
+  77              	.LBE10:
   51:Core/Src/gpio.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
-  76              		.loc 1 51 3 is_stmt 1 view .LVU12
-  77              	.LBB10:
-  78              	.LBI10:
+  78              		.loc 1 51 3 is_stmt 1 view .LVU12
+  79              	.LBB12:
+  80              	.LBI12:
  539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
-  79              		.loc 2 539 22 view .LVU13
-  80              	.LBB11:
+  81              		.loc 2 539 22 view .LVU13
+  82              	.LBB13:
  541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
-  81              		.loc 2 541 3 view .LVU14
+  83              		.loc 2 541 3 view .LVU14
  542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
-  82              		.loc 2 542 3 view .LVU15
-  83 0028 DA6C     		ldr	r2, [r3, #76]
-  84 002a 42F00102 		orr	r2, r2, #1
-  85 002e DA64     		str	r2, [r3, #76]
- 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 13
+  84              		.loc 2 542 3 view .LVU15
+  85 002a DA6C     		ldr	r2, [r3, #76]
+  86 002c 42F00102 		orr	r2, r2, #1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 13
 
 
-  86              		.loc 2 544 3 view .LVU16
+  87 0030 DA64     		str	r2, [r3, #76]
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
-  87              		.loc 2 544 12 is_stmt 0 view .LVU17
-  88 0030 DA6C     		ldr	r2, [r3, #76]
-  89 0032 02F00102 		and	r2, r2, #1
+  88              		.loc 2 544 3 view .LVU16
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
-  90              		.loc 2 544 10 view .LVU18
-  91 0036 0192     		str	r2, [sp, #4]
-  92              		.loc 2 545 3 is_stmt 1 view .LVU19
-  93 0038 019A     		ldr	r2, [sp, #4]
-  94              	.LVL2:
-  95              		.loc 2 545 3 is_stmt 0 view .LVU20
-  96              	.LBE11:
-  97              	.LBE10:
+  89              		.loc 2 544 12 is_stmt 0 view .LVU17
+  90 0032 DA6C     		ldr	r2, [r3, #76]
+  91 0034 02F00102 		and	r2, r2, #1
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+  92              		.loc 2 544 10 view .LVU18
+  93 0038 0392     		str	r2, [sp, #12]
+  94              		.loc 2 545 3 is_stmt 1 view .LVU19
+  95 003a 039A     		ldr	r2, [sp, #12]
+  96              	.LVL2:
+  97              		.loc 2 545 3 is_stmt 0 view .LVU20
+  98              	.LBE13:
+  99              	.LBE12:
   52:Core/Src/gpio.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
-  98              		.loc 1 52 3 is_stmt 1 view .LVU21
-  99              	.LBB12:
- 100              	.LBI12:
+ 100              		.loc 1 52 3 is_stmt 1 view .LVU21
+ 101              	.LBB14:
+ 102              	.LBI14:
  539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
- 101              		.loc 2 539 22 view .LVU22
- 102              	.LBB13:
+ 103              		.loc 2 539 22 view .LVU22
+ 104              	.LBB15:
  541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
- 103              		.loc 2 541 3 view .LVU23
+ 105              		.loc 2 541 3 view .LVU23
  542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
- 104              		.loc 2 542 3 view .LVU24
- 105 003a DA6C     		ldr	r2, [r3, #76]
- 106 003c 42F00202 		orr	r2, r2, #2
- 107 0040 DA64     		str	r2, [r3, #76]
+ 106              		.loc 2 542 3 view .LVU24
+ 107 003c DA6C     		ldr	r2, [r3, #76]
+ 108 003e 42F00202 		orr	r2, r2, #2
+ 109 0042 DA64     		str	r2, [r3, #76]
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
- 108              		.loc 2 544 3 view .LVU25
+ 110              		.loc 2 544 3 view .LVU25
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
- 109              		.loc 2 544 12 is_stmt 0 view .LVU26
- 110 0042 DB6C     		ldr	r3, [r3, #76]
- 111 0044 03F00203 		and	r3, r3, #2
+ 111              		.loc 2 544 12 is_stmt 0 view .LVU26
+ 112 0044 DA6C     		ldr	r2, [r3, #76]
+ 113 0046 02F00202 		and	r2, r2, #2
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
- 112              		.loc 2 544 10 view .LVU27
- 113 0048 0093     		str	r3, [sp]
- 114              		.loc 2 545 3 is_stmt 1 view .LVU28
- 115 004a 009B     		ldr	r3, [sp]
- 116              	.LVL3:
- 117              		.loc 2 545 3 is_stmt 0 view .LVU29
- 118              	.LBE13:
- 119              	.LBE12:
-  53:Core/Src/gpio.c **** 
-  54:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
-  55:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOC, D4_Pin|D5_Pin|D6_Pin|D7_Pin, GPIO_PIN_RESET);
- 120              		.loc 1 55 3 is_stmt 1 view .LVU30
- 121 004c 1B4E     		ldr	r6, .L3
- 122 004e 2246     		mov	r2, r4
- 123 0050 0F21     		movs	r1, #15
- 124 0052 3046     		mov	r0, r6
- 125 0054 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 126              	.LVL4:
-  56:Core/Src/gpio.c **** 
-  57:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
-  58:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOA, RS_Pin|E_Pin, GPIO_PIN_RESET);
- 127              		.loc 1 58 3 view .LVU31
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 14
+ 114              		.loc 2 544 10 view .LVU27
+ 115 004a 0292     		str	r2, [sp, #8]
+ 116              		.loc 2 545 3 is_stmt 1 view .LVU28
+ 117 004c 029A     		ldr	r2, [sp, #8]
+ 118              	.LVL3:
+ 119              		.loc 2 545 3 is_stmt 0 view .LVU29
+ 120              	.LBE15:
+ 121              	.LBE14:
+  53:Core/Src/gpio.c ****   __HAL_RCC_GPIOE_CLK_ENABLE();
+ 122              		.loc 1 53 3 is_stmt 1 view .LVU30
+ 123              	.LBB16:
+ 124              	.LBI16:
+ 539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 125              		.loc 2 539 22 view .LVU31
+ 126              	.LBB17:
+ 541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
+ 127              		.loc 2 541 3 view .LVU32
+ 542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 128              		.loc 2 542 3 view .LVU33
+ 129 004e DA6C     		ldr	r2, [r3, #76]
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 14
 
 
- 128 0058 2246     		mov	r2, r4
- 129 005a 0321     		movs	r1, #3
- 130 005c 4FF09040 		mov	r0, #1207959552
- 131 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 132              	.LVL5:
-  59:Core/Src/gpio.c **** 
-  60:Core/Src/gpio.c ****   /*Configure GPIO pins : D4_Pin D5_Pin D6_Pin D7_Pin */
-  61:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = D4_Pin|D5_Pin|D6_Pin|D7_Pin;
- 133              		.loc 1 61 3 view .LVU32
- 134              		.loc 1 61 23 is_stmt 0 view .LVU33
- 135 0064 0F23     		movs	r3, #15
- 136 0066 0393     		str	r3, [sp, #12]
-  62:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 137              		.loc 1 62 3 is_stmt 1 view .LVU34
- 138              		.loc 1 62 24 is_stmt 0 view .LVU35
- 139 0068 0127     		movs	r7, #1
- 140 006a 0497     		str	r7, [sp, #16]
-  63:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 141              		.loc 1 63 3 is_stmt 1 view .LVU36
- 142              		.loc 1 63 24 is_stmt 0 view .LVU37
- 143 006c 0594     		str	r4, [sp, #20]
-  64:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 144              		.loc 1 64 3 is_stmt 1 view .LVU38
- 145              		.loc 1 64 25 is_stmt 0 view .LVU39
- 146 006e 0694     		str	r4, [sp, #24]
-  65:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
- 147              		.loc 1 65 3 is_stmt 1 view .LVU40
- 148 0070 2946     		mov	r1, r5
- 149 0072 3046     		mov	r0, r6
- 150 0074 FFF7FEFF 		bl	HAL_GPIO_Init
- 151              	.LVL6:
-  66:Core/Src/gpio.c **** 
-  67:Core/Src/gpio.c ****   /*Configure GPIO pins : RS_Pin E_Pin */
-  68:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = RS_Pin|E_Pin;
- 152              		.loc 1 68 3 view .LVU41
- 153              		.loc 1 68 23 is_stmt 0 view .LVU42
- 154 0078 0323     		movs	r3, #3
- 155 007a 0393     		str	r3, [sp, #12]
-  69:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 156              		.loc 1 69 3 is_stmt 1 view .LVU43
- 157              		.loc 1 69 24 is_stmt 0 view .LVU44
- 158 007c 0497     		str	r7, [sp, #16]
-  70:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 159              		.loc 1 70 3 is_stmt 1 view .LVU45
- 160              		.loc 1 70 24 is_stmt 0 view .LVU46
- 161 007e 0594     		str	r4, [sp, #20]
-  71:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 162              		.loc 1 71 3 is_stmt 1 view .LVU47
- 163              		.loc 1 71 25 is_stmt 0 view .LVU48
- 164 0080 0694     		str	r4, [sp, #24]
-  72:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 165              		.loc 1 72 3 is_stmt 1 view .LVU49
- 166 0082 2946     		mov	r1, r5
- 167 0084 4FF09040 		mov	r0, #1207959552
- 168 0088 FFF7FEFF 		bl	HAL_GPIO_Init
- 169              	.LVL7:
-  73:Core/Src/gpio.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 15
+ 130 0050 42F01002 		orr	r2, r2, #16
+ 131 0054 DA64     		str	r2, [r3, #76]
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 132              		.loc 2 544 3 view .LVU34
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 133              		.loc 2 544 12 is_stmt 0 view .LVU35
+ 134 0056 DB6C     		ldr	r3, [r3, #76]
+ 135 0058 03F01003 		and	r3, r3, #16
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 136              		.loc 2 544 10 view .LVU36
+ 137 005c 0193     		str	r3, [sp, #4]
+ 138              		.loc 2 545 3 is_stmt 1 view .LVU37
+ 139 005e 019B     		ldr	r3, [sp, #4]
+ 140              	.LVL4:
+ 141              		.loc 2 545 3 is_stmt 0 view .LVU38
+ 142              	.LBE17:
+ 143              	.LBE16:
+  54:Core/Src/gpio.c **** 
+  55:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
+  56:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOC, D4_Pin|D5_Pin|D6_Pin|D7_Pin
+ 144              		.loc 1 56 3 is_stmt 1 view .LVU39
+ 145 0060 364F     		ldr	r7, .L3
+ 146 0062 2246     		mov	r2, r4
+ 147 0064 2F21     		movs	r1, #47
+ 148 0066 3846     		mov	r0, r7
+ 149 0068 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 150              	.LVL5:
+  57:Core/Src/gpio.c ****                           |LEDB_Pin, GPIO_PIN_RESET);
+  58:Core/Src/gpio.c **** 
+  59:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
+  60:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOA, RS_Pin|E_Pin, GPIO_PIN_RESET);
+ 151              		.loc 1 60 3 view .LVU40
+ 152 006c 2246     		mov	r2, r4
+ 153 006e 0321     		movs	r1, #3
+ 154 0070 4FF09040 		mov	r0, #1207959552
+ 155 0074 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 156              	.LVL6:
+  61:Core/Src/gpio.c **** 
+  62:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
+  63:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOB, LEDY_Pin|LEDR_Pin, GPIO_PIN_RESET);
+ 157              		.loc 1 63 3 view .LVU41
+ 158 0078 DFF8C490 		ldr	r9, .L3+4
+ 159 007c 2246     		mov	r2, r4
+ 160 007e 40F60401 		movw	r1, #2052
+ 161 0082 4846     		mov	r0, r9
+ 162 0084 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 163              	.LVL7:
+  64:Core/Src/gpio.c **** 
+  65:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
+  66:Core/Src/gpio.c ****   HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
+ 164              		.loc 1 66 3 view .LVU42
+ 165 0088 DFF8B880 		ldr	r8, .L3+8
+ 166 008c 2246     		mov	r2, r4
+ 167 008e 1021     		movs	r1, #16
+ 168 0090 4046     		mov	r0, r8
+ 169 0092 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 170              	.LVL8:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 15
 
 
-  74:Core/Src/gpio.c ****   /*Configure GPIO pin : JoyStick_SW_Pin */
-  75:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = JoyStick_SW_Pin;
- 170              		.loc 1 75 3 view .LVU50
- 171              		.loc 1 75 23 is_stmt 0 view .LVU51
- 172 008c 4023     		movs	r3, #64
- 173 008e 0393     		str	r3, [sp, #12]
-  76:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
- 174              		.loc 1 76 3 is_stmt 1 view .LVU52
- 175              		.loc 1 76 24 is_stmt 0 view .LVU53
- 176 0090 0494     		str	r4, [sp, #16]
-  77:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
- 177              		.loc 1 77 3 is_stmt 1 view .LVU54
- 178              		.loc 1 77 24 is_stmt 0 view .LVU55
- 179 0092 0597     		str	r7, [sp, #20]
-  78:Core/Src/gpio.c ****   HAL_GPIO_Init(JoyStick_SW_GPIO_Port, &GPIO_InitStruct);
- 180              		.loc 1 78 3 is_stmt 1 view .LVU56
- 181 0094 2946     		mov	r1, r5
- 182 0096 3046     		mov	r0, r6
- 183 0098 FFF7FEFF 		bl	HAL_GPIO_Init
- 184              	.LVL8:
-  79:Core/Src/gpio.c **** 
-  80:Core/Src/gpio.c ****   /*Configure GPIO pins : USB_DM_Pin USB_DP_Pin */
-  81:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = USB_DM_Pin|USB_DP_Pin;
- 185              		.loc 1 81 3 view .LVU57
- 186              		.loc 1 81 23 is_stmt 0 view .LVU58
- 187 009c 4FF4C053 		mov	r3, #6144
- 188 00a0 0393     		str	r3, [sp, #12]
-  82:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 189              		.loc 1 82 3 is_stmt 1 view .LVU59
- 190              		.loc 1 82 24 is_stmt 0 view .LVU60
- 191 00a2 0223     		movs	r3, #2
- 192 00a4 0493     		str	r3, [sp, #16]
-  83:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 193              		.loc 1 83 3 is_stmt 1 view .LVU61
- 194              		.loc 1 83 24 is_stmt 0 view .LVU62
- 195 00a6 0594     		str	r4, [sp, #20]
-  84:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 196              		.loc 1 84 3 is_stmt 1 view .LVU63
- 197              		.loc 1 84 25 is_stmt 0 view .LVU64
- 198 00a8 0694     		str	r4, [sp, #24]
-  85:Core/Src/gpio.c ****   GPIO_InitStruct.Alternate = GPIO_AF10_USB;
- 199              		.loc 1 85 3 is_stmt 1 view .LVU65
- 200              		.loc 1 85 29 is_stmt 0 view .LVU66
- 201 00aa 0A23     		movs	r3, #10
- 202 00ac 0793     		str	r3, [sp, #28]
-  86:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 203              		.loc 1 86 3 is_stmt 1 view .LVU67
- 204 00ae 2946     		mov	r1, r5
- 205 00b0 4FF09040 		mov	r0, #1207959552
- 206 00b4 FFF7FEFF 		bl	HAL_GPIO_Init
- 207              	.LVL9:
-  87:Core/Src/gpio.c **** 
-  88:Core/Src/gpio.c **** }
- 208              		.loc 1 88 1 is_stmt 0 view .LVU68
- 209 00b8 09B0     		add	sp, sp, #36
- 210              		.cfi_def_cfa_offset 20
- 211              		@ sp needed
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 16
+  67:Core/Src/gpio.c **** 
+  68:Core/Src/gpio.c ****   /*Configure GPIO pins : D4_Pin D5_Pin D6_Pin D7_Pin
+  69:Core/Src/gpio.c ****                            LEDB_Pin */
+  70:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = D4_Pin|D5_Pin|D6_Pin|D7_Pin
+ 171              		.loc 1 70 3 view .LVU43
+ 172              		.loc 1 70 23 is_stmt 0 view .LVU44
+ 173 0096 2F23     		movs	r3, #47
+ 174 0098 0593     		str	r3, [sp, #20]
+  71:Core/Src/gpio.c ****                           |LEDB_Pin;
+  72:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 175              		.loc 1 72 3 is_stmt 1 view .LVU45
+ 176              		.loc 1 72 24 is_stmt 0 view .LVU46
+ 177 009a 0126     		movs	r6, #1
+ 178 009c 0696     		str	r6, [sp, #24]
+  73:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 179              		.loc 1 73 3 is_stmt 1 view .LVU47
+ 180              		.loc 1 73 24 is_stmt 0 view .LVU48
+ 181 009e 0794     		str	r4, [sp, #28]
+  74:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 182              		.loc 1 74 3 is_stmt 1 view .LVU49
+ 183              		.loc 1 74 25 is_stmt 0 view .LVU50
+ 184 00a0 0894     		str	r4, [sp, #32]
+  75:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 185              		.loc 1 75 3 is_stmt 1 view .LVU51
+ 186 00a2 2946     		mov	r1, r5
+ 187 00a4 3846     		mov	r0, r7
+ 188 00a6 FFF7FEFF 		bl	HAL_GPIO_Init
+ 189              	.LVL9:
+  76:Core/Src/gpio.c **** 
+  77:Core/Src/gpio.c ****   /*Configure GPIO pins : RS_Pin E_Pin */
+  78:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = RS_Pin|E_Pin;
+ 190              		.loc 1 78 3 view .LVU52
+ 191              		.loc 1 78 23 is_stmt 0 view .LVU53
+ 192 00aa 0323     		movs	r3, #3
+ 193 00ac 0593     		str	r3, [sp, #20]
+  79:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 194              		.loc 1 79 3 is_stmt 1 view .LVU54
+ 195              		.loc 1 79 24 is_stmt 0 view .LVU55
+ 196 00ae 0696     		str	r6, [sp, #24]
+  80:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 197              		.loc 1 80 3 is_stmt 1 view .LVU56
+ 198              		.loc 1 80 24 is_stmt 0 view .LVU57
+ 199 00b0 0794     		str	r4, [sp, #28]
+  81:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 200              		.loc 1 81 3 is_stmt 1 view .LVU58
+ 201              		.loc 1 81 25 is_stmt 0 view .LVU59
+ 202 00b2 0894     		str	r4, [sp, #32]
+  82:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 203              		.loc 1 82 3 is_stmt 1 view .LVU60
+ 204 00b4 2946     		mov	r1, r5
+ 205 00b6 4FF09040 		mov	r0, #1207959552
+ 206 00ba FFF7FEFF 		bl	HAL_GPIO_Init
+ 207              	.LVL10:
+  83:Core/Src/gpio.c **** 
+  84:Core/Src/gpio.c ****   /*Configure GPIO pins : BlueButton_Pin GreenButton_Pin YellowButtonm_Pin */
+  85:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = BlueButton_Pin|GreenButton_Pin|YellowButtonm_Pin;
+ 208              		.loc 1 85 3 view .LVU61
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 16
 
 
- 212 00ba F0BD     		pop	{r4, r5, r6, r7, pc}
- 213              	.L4:
- 214              		.align	2
- 215              	.L3:
- 216 00bc 00080048 		.word	1207961600
- 217              		.cfi_endproc
- 218              	.LFE1104:
- 220              		.text
- 221              	.Letext0:
- 222              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 223              		.file 4 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 224              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
- 225              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_gpio.h"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s 			page 17
+ 209              		.loc 1 85 23 is_stmt 0 view .LVU62
+ 210 00be 7023     		movs	r3, #112
+ 211 00c0 0593     		str	r3, [sp, #20]
+  86:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 212              		.loc 1 86 3 is_stmt 1 view .LVU63
+ 213              		.loc 1 86 24 is_stmt 0 view .LVU64
+ 214 00c2 0694     		str	r4, [sp, #24]
+  87:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 215              		.loc 1 87 3 is_stmt 1 view .LVU65
+ 216              		.loc 1 87 24 is_stmt 0 view .LVU66
+ 217 00c4 0794     		str	r4, [sp, #28]
+  88:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 218              		.loc 1 88 3 is_stmt 1 view .LVU67
+ 219 00c6 2946     		mov	r1, r5
+ 220 00c8 4FF09040 		mov	r0, #1207959552
+ 221 00cc FFF7FEFF 		bl	HAL_GPIO_Init
+ 222              	.LVL11:
+  89:Core/Src/gpio.c **** 
+  90:Core/Src/gpio.c ****   /*Configure GPIO pins : LEDY_Pin LEDR_Pin */
+  91:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = LEDY_Pin|LEDR_Pin;
+ 223              		.loc 1 91 3 view .LVU68
+ 224              		.loc 1 91 23 is_stmt 0 view .LVU69
+ 225 00d0 40F60403 		movw	r3, #2052
+ 226 00d4 0593     		str	r3, [sp, #20]
+  92:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 227              		.loc 1 92 3 is_stmt 1 view .LVU70
+ 228              		.loc 1 92 24 is_stmt 0 view .LVU71
+ 229 00d6 0696     		str	r6, [sp, #24]
+  93:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 230              		.loc 1 93 3 is_stmt 1 view .LVU72
+ 231              		.loc 1 93 24 is_stmt 0 view .LVU73
+ 232 00d8 0794     		str	r4, [sp, #28]
+  94:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 233              		.loc 1 94 3 is_stmt 1 view .LVU74
+ 234              		.loc 1 94 25 is_stmt 0 view .LVU75
+ 235 00da 0894     		str	r4, [sp, #32]
+  95:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 236              		.loc 1 95 3 is_stmt 1 view .LVU76
+ 237 00dc 2946     		mov	r1, r5
+ 238 00de 4846     		mov	r0, r9
+ 239 00e0 FFF7FEFF 		bl	HAL_GPIO_Init
+ 240              	.LVL12:
+  96:Core/Src/gpio.c **** 
+  97:Core/Src/gpio.c ****   /*Configure GPIO pin : LEDG_Pin */
+  98:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = LEDG_Pin;
+ 241              		.loc 1 98 3 view .LVU77
+ 242              		.loc 1 98 23 is_stmt 0 view .LVU78
+ 243 00e4 1023     		movs	r3, #16
+ 244 00e6 0593     		str	r3, [sp, #20]
+  99:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 245              		.loc 1 99 3 is_stmt 1 view .LVU79
+ 246              		.loc 1 99 24 is_stmt 0 view .LVU80
+ 247 00e8 0696     		str	r6, [sp, #24]
+ 100:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 248              		.loc 1 100 3 is_stmt 1 view .LVU81
+ 249              		.loc 1 100 24 is_stmt 0 view .LVU82
+ 250 00ea 0794     		str	r4, [sp, #28]
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 17
+
+
+ 101:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 251              		.loc 1 101 3 is_stmt 1 view .LVU83
+ 252              		.loc 1 101 25 is_stmt 0 view .LVU84
+ 253 00ec 0894     		str	r4, [sp, #32]
+ 102:Core/Src/gpio.c ****   HAL_GPIO_Init(LEDG_GPIO_Port, &GPIO_InitStruct);
+ 254              		.loc 1 102 3 is_stmt 1 view .LVU85
+ 255 00ee 2946     		mov	r1, r5
+ 256 00f0 4046     		mov	r0, r8
+ 257 00f2 FFF7FEFF 		bl	HAL_GPIO_Init
+ 258              	.LVL13:
+ 103:Core/Src/gpio.c **** 
+ 104:Core/Src/gpio.c ****   /*Configure GPIO pin : JoyStick_SW_Pin */
+ 105:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = JoyStick_SW_Pin;
+ 259              		.loc 1 105 3 view .LVU86
+ 260              		.loc 1 105 23 is_stmt 0 view .LVU87
+ 261 00f6 4023     		movs	r3, #64
+ 262 00f8 0593     		str	r3, [sp, #20]
+ 106:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 263              		.loc 1 106 3 is_stmt 1 view .LVU88
+ 264              		.loc 1 106 24 is_stmt 0 view .LVU89
+ 265 00fa 0694     		str	r4, [sp, #24]
+ 107:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 266              		.loc 1 107 3 is_stmt 1 view .LVU90
+ 267              		.loc 1 107 24 is_stmt 0 view .LVU91
+ 268 00fc 0796     		str	r6, [sp, #28]
+ 108:Core/Src/gpio.c ****   HAL_GPIO_Init(JoyStick_SW_GPIO_Port, &GPIO_InitStruct);
+ 269              		.loc 1 108 3 is_stmt 1 view .LVU92
+ 270 00fe 2946     		mov	r1, r5
+ 271 0100 3846     		mov	r0, r7
+ 272 0102 FFF7FEFF 		bl	HAL_GPIO_Init
+ 273              	.LVL14:
+ 109:Core/Src/gpio.c **** 
+ 110:Core/Src/gpio.c ****   /*Configure GPIO pins : USB_DM_Pin USB_DP_Pin */
+ 111:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = USB_DM_Pin|USB_DP_Pin;
+ 274              		.loc 1 111 3 view .LVU93
+ 275              		.loc 1 111 23 is_stmt 0 view .LVU94
+ 276 0106 4FF4C053 		mov	r3, #6144
+ 277 010a 0593     		str	r3, [sp, #20]
+ 112:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 278              		.loc 1 112 3 is_stmt 1 view .LVU95
+ 279              		.loc 1 112 24 is_stmt 0 view .LVU96
+ 280 010c 0223     		movs	r3, #2
+ 281 010e 0693     		str	r3, [sp, #24]
+ 113:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 282              		.loc 1 113 3 is_stmt 1 view .LVU97
+ 283              		.loc 1 113 24 is_stmt 0 view .LVU98
+ 284 0110 0794     		str	r4, [sp, #28]
+ 114:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 285              		.loc 1 114 3 is_stmt 1 view .LVU99
+ 286              		.loc 1 114 25 is_stmt 0 view .LVU100
+ 287 0112 0894     		str	r4, [sp, #32]
+ 115:Core/Src/gpio.c ****   GPIO_InitStruct.Alternate = GPIO_AF10_USB;
+ 288              		.loc 1 115 3 is_stmt 1 view .LVU101
+ 289              		.loc 1 115 29 is_stmt 0 view .LVU102
+ 290 0114 0A23     		movs	r3, #10
+ 291 0116 0993     		str	r3, [sp, #36]
+ 116:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 18
+
+
+ 292              		.loc 1 116 3 is_stmt 1 view .LVU103
+ 293 0118 2946     		mov	r1, r5
+ 294 011a 4FF09040 		mov	r0, #1207959552
+ 295 011e FFF7FEFF 		bl	HAL_GPIO_Init
+ 296              	.LVL15:
+ 117:Core/Src/gpio.c **** 
+ 118:Core/Src/gpio.c ****   /*Configure GPIO pin : RedButton_Pin */
+ 119:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = RedButton_Pin;
+ 297              		.loc 1 119 3 view .LVU104
+ 298              		.loc 1 119 23 is_stmt 0 view .LVU105
+ 299 0122 4FF48053 		mov	r3, #4096
+ 300 0126 0593     		str	r3, [sp, #20]
+ 120:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 301              		.loc 1 120 3 is_stmt 1 view .LVU106
+ 302              		.loc 1 120 24 is_stmt 0 view .LVU107
+ 303 0128 0694     		str	r4, [sp, #24]
+ 121:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 304              		.loc 1 121 3 is_stmt 1 view .LVU108
+ 305              		.loc 1 121 24 is_stmt 0 view .LVU109
+ 306 012a 0794     		str	r4, [sp, #28]
+ 122:Core/Src/gpio.c ****   HAL_GPIO_Init(RedButton_GPIO_Port, &GPIO_InitStruct);
+ 307              		.loc 1 122 3 is_stmt 1 view .LVU110
+ 308 012c 2946     		mov	r1, r5
+ 309 012e 3846     		mov	r0, r7
+ 310 0130 FFF7FEFF 		bl	HAL_GPIO_Init
+ 311              	.LVL16:
+ 123:Core/Src/gpio.c **** 
+ 124:Core/Src/gpio.c **** }
+ 312              		.loc 1 124 1 is_stmt 0 view .LVU111
+ 313 0134 0BB0     		add	sp, sp, #44
+ 314              		.cfi_def_cfa_offset 28
+ 315              		@ sp needed
+ 316 0136 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 317              	.L4:
+ 318 013a 00BF     		.align	2
+ 319              	.L3:
+ 320 013c 00080048 		.word	1207961600
+ 321 0140 00040048 		.word	1207960576
+ 322 0144 00100048 		.word	1207963648
+ 323              		.cfi_endproc
+ 324              	.LFE1104:
+ 326              		.text
+ 327              	.Letext0:
+ 328              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 329              		.file 4 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 330              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 331              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_gpio.h"
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s:21     .text.MX_GPIO_Init:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s:27     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\elhyd\AppData\Local\Temp\ccAfUYoc.s:216    .text.MX_GPIO_Init:000000bc $d
+C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s:21     .text.MX_GPIO_Init:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s:27     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\elhyd\AppData\Local\Temp\ccrfRzdk.s:320    .text.MX_GPIO_Init:0000013c $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

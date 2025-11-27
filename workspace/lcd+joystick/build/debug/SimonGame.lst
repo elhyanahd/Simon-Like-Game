@@ -1,0 +1,1176 @@
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"SimonGame.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/SimonGame.c"
+  20              		.section	.text.Game_Init,"ax",%progbits
+  21              		.align	1
+  22              		.global	Game_Init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	Game_Init:
+  28              	.LVL0:
+  29              	.LFB1107:
+   1:Core/Src/SimonGame.c **** #include "SimonGame.h"
+   2:Core/Src/SimonGame.c **** #include "lcd1602.h"
+   3:Core/Src/SimonGame.c **** #include "gpio.h"
+   4:Core/Src/SimonGame.c **** #include <stdio.h> 
+   5:Core/Src/SimonGame.c **** #include <string.h>
+   6:Core/Src/SimonGame.c **** 
+   7:Core/Src/SimonGame.c **** /**
+   8:Core/Src/SimonGame.c ****  * @brief  Initialize the game state and information.
+   9:Core/Src/SimonGame.c ****  * @param  game: Pointer to the Game structure to initialize.
+  10:Core/Src/SimonGame.c ****  */
+  11:Core/Src/SimonGame.c **** void Game_Init(Game* game)
+  12:Core/Src/SimonGame.c **** {
+  30              		.loc 1 12 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 12 1 is_stmt 0 view .LVU1
+  35 0000 08B5     		push	{r3, lr}
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 3, -8
+  38              		.cfi_offset 14, -4
+  13:Core/Src/SimonGame.c ****     game->state = WELCOME;
+  39              		.loc 1 13 5 is_stmt 1 view .LVU2
+  40              		.loc 1 13 17 is_stmt 0 view .LVU3
+  41 0002 0021     		movs	r1, #0
+  42 0004 00F8011B 		strb	r1, [r0], #1
+  43              	.LVL1:
+  14:Core/Src/SimonGame.c ****     memset(&game->info, 0, sizeof(GameInfo));
+  44              		.loc 1 14 5 is_stmt 1 view .LVU4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 2
+
+
+  45 0008 40F23112 		movw	r2, #305
+  46 000c FFF7FEFF 		bl	memset
+  47              	.LVL2:
+  15:Core/Src/SimonGame.c **** }
+  48              		.loc 1 15 1 is_stmt 0 view .LVU5
+  49 0010 08BD     		pop	{r3, pc}
+  50              		.cfi_endproc
+  51              	.LFE1107:
+  53              		.section	.text.displayOnLCD,"ax",%progbits
+  54              		.align	1
+  55              		.global	displayOnLCD
+  56              		.syntax unified
+  57              		.thumb
+  58              		.thumb_func
+  60              	displayOnLCD:
+  61              	.LVL3:
+  62              	.LFB1108:
+  16:Core/Src/SimonGame.c **** 
+  17:Core/Src/SimonGame.c **** /**
+  18:Core/Src/SimonGame.c ****  * @brief  Display two lines of text on the LCD.
+  19:Core/Src/SimonGame.c ****  * @param  lineOne: Pointer to the first line of text (max 16 characters).
+  20:Core/Src/SimonGame.c ****  * @param  lineTwo: Pointer to the second line of text (max 16 characters
+  21:Core/Src/SimonGame.c ****  */
+  22:Core/Src/SimonGame.c **** void displayOnLCD(char* lineOne, char* lineTwo)
+  23:Core/Src/SimonGame.c **** {
+  63              		.loc 1 23 1 is_stmt 1 view -0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		.loc 1 23 1 is_stmt 0 view .LVU7
+  68 0000 38B5     		push	{r3, r4, r5, lr}
+  69              		.cfi_def_cfa_offset 16
+  70              		.cfi_offset 3, -16
+  71              		.cfi_offset 4, -12
+  72              		.cfi_offset 5, -8
+  73              		.cfi_offset 14, -4
+  74 0002 0546     		mov	r5, r0
+  75 0004 0C46     		mov	r4, r1
+  24:Core/Src/SimonGame.c ****   LCD_GotoXY(0, 0);
+  76              		.loc 1 24 3 is_stmt 1 view .LVU8
+  77 0006 0021     		movs	r1, #0
+  78              	.LVL4:
+  79              		.loc 1 24 3 is_stmt 0 view .LVU9
+  80 0008 0846     		mov	r0, r1
+  81              	.LVL5:
+  82              		.loc 1 24 3 view .LVU10
+  83 000a FFF7FEFF 		bl	LCD_GotoXY
+  84              	.LVL6:
+  25:Core/Src/SimonGame.c ****   LCD_Print(lineOne);
+  85              		.loc 1 25 3 is_stmt 1 view .LVU11
+  86 000e 2846     		mov	r0, r5
+  87 0010 FFF7FEFF 		bl	LCD_Print
+  88              	.LVL7:
+  26:Core/Src/SimonGame.c ****   LCD_GotoXY(0, 1);
+  89              		.loc 1 26 3 view .LVU12
+  90 0014 0121     		movs	r1, #1
+  91 0016 0020     		movs	r0, #0
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 3
+
+
+  92 0018 FFF7FEFF 		bl	LCD_GotoXY
+  93              	.LVL8:
+  27:Core/Src/SimonGame.c ****   LCD_Print(lineTwo);
+  94              		.loc 1 27 3 view .LVU13
+  95 001c 2046     		mov	r0, r4
+  96 001e FFF7FEFF 		bl	LCD_Print
+  97              	.LVL9:
+  28:Core/Src/SimonGame.c ****   HAL_Delay(1000);
+  98              		.loc 1 28 3 view .LVU14
+  99 0022 4FF47A70 		mov	r0, #1000
+ 100 0026 FFF7FEFF 		bl	HAL_Delay
+ 101              	.LVL10:
+  29:Core/Src/SimonGame.c **** }
+ 102              		.loc 1 29 1 is_stmt 0 view .LVU15
+ 103 002a 38BD     		pop	{r3, r4, r5, pc}
+ 104              		.loc 1 29 1 view .LVU16
+ 105              		.cfi_endproc
+ 106              	.LFE1108:
+ 108              		.section	.text.debounceButton,"ax",%progbits
+ 109              		.align	1
+ 110              		.global	debounceButton
+ 111              		.syntax unified
+ 112              		.thumb
+ 113              		.thumb_func
+ 115              	debounceButton:
+ 116              	.LVL11:
+ 117              	.LFB1109:
+  30:Core/Src/SimonGame.c **** 
+  31:Core/Src/SimonGame.c **** /**
+  32:Core/Src/SimonGame.c ****  * @brief Helper function created for debouncing the switch buttons.
+  33:Core/Src/SimonGame.c ****  *        If the given GPIO switch is pressed (active-low state) wait
+  34:Core/Src/SimonGame.c ****  *        the .2 s delay time and check if switch is released.
+  35:Core/Src/SimonGame.c ****  * 
+  36:Core/Src/SimonGame.c ****  * @param GPIO 
+  37:Core/Src/SimonGame.c ****  * @param Pin 
+  38:Core/Src/SimonGame.c ****  * @return int (1 - if switch is pressed and released, else 0)
+  39:Core/Src/SimonGame.c ****  */
+  40:Core/Src/SimonGame.c **** int debounceButton(GPIO_TypeDef *GPIO, uint16_t Pin)
+  41:Core/Src/SimonGame.c **** {
+ 118              		.loc 1 41 1 is_stmt 1 view -0
+ 119              		.cfi_startproc
+ 120              		@ args = 0, pretend = 0, frame = 0
+ 121              		@ frame_needed = 0, uses_anonymous_args = 0
+ 122              		.loc 1 41 1 is_stmt 0 view .LVU18
+ 123 0000 38B5     		push	{r3, r4, r5, lr}
+ 124              		.cfi_def_cfa_offset 16
+ 125              		.cfi_offset 3, -16
+ 126              		.cfi_offset 4, -12
+ 127              		.cfi_offset 5, -8
+ 128              		.cfi_offset 14, -4
+ 129 0002 0446     		mov	r4, r0
+ 130 0004 0D46     		mov	r5, r1
+  42:Core/Src/SimonGame.c ****   if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET)
+ 131              		.loc 1 42 3 is_stmt 1 view .LVU19
+ 132              		.loc 1 42 6 is_stmt 0 view .LVU20
+ 133 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 134              	.LVL12:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 4
+
+
+ 135              		.loc 1 42 5 discriminator 1 view .LVU21
+ 136 000a 08B1     		cbz	r0, .L10
+  43:Core/Src/SimonGame.c ****   {
+  44:Core/Src/SimonGame.c ****     HAL_Delay(20);
+  45:Core/Src/SimonGame.c ****     if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET) 
+  46:Core/Src/SimonGame.c ****     { return 1; }
+  47:Core/Src/SimonGame.c ****   }
+  48:Core/Src/SimonGame.c ****   
+  49:Core/Src/SimonGame.c ****   return 0;
+ 137              		.loc 1 49 10 view .LVU22
+ 138 000c 0020     		movs	r0, #0
+ 139              	.L5:
+  50:Core/Src/SimonGame.c **** }
+ 140              		.loc 1 50 1 view .LVU23
+ 141 000e 38BD     		pop	{r3, r4, r5, pc}
+ 142              	.LVL13:
+ 143              	.L10:
+  44:Core/Src/SimonGame.c ****     if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET) 
+ 144              		.loc 1 44 5 is_stmt 1 view .LVU24
+ 145 0010 1420     		movs	r0, #20
+ 146 0012 FFF7FEFF 		bl	HAL_Delay
+ 147              	.LVL14:
+  45:Core/Src/SimonGame.c ****     { return 1; }
+ 148              		.loc 1 45 5 view .LVU25
+  45:Core/Src/SimonGame.c ****     { return 1; }
+ 149              		.loc 1 45 8 is_stmt 0 view .LVU26
+ 150 0016 2946     		mov	r1, r5
+ 151 0018 2046     		mov	r0, r4
+ 152 001a FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 153              	.LVL15:
+  45:Core/Src/SimonGame.c ****     { return 1; }
+ 154              		.loc 1 45 7 discriminator 1 view .LVU27
+ 155 001e 08B1     		cbz	r0, .L8
+  49:Core/Src/SimonGame.c **** }
+ 156              		.loc 1 49 10 view .LVU28
+ 157 0020 0020     		movs	r0, #0
+ 158 0022 F4E7     		b	.L5
+ 159              	.L8:
+  46:Core/Src/SimonGame.c ****   }
+ 160              		.loc 1 46 14 view .LVU29
+ 161 0024 0120     		movs	r0, #1
+ 162 0026 F2E7     		b	.L5
+ 163              		.cfi_endproc
+ 164              	.LFE1109:
+ 166              		.section	.rodata.Game_Run.str1.4,"aMS",%progbits,1
+ 167              		.align	2
+ 168              	.LC0:
+ 169 0000 57656C63 		.ascii	"Welcome to the\000"
+ 169      6F6D6520 
+ 169      746F2074 
+ 169      686500
+ 170 000f 00       		.align	2
+ 171              	.LC1:
+ 172 0010 53696D6F 		.ascii	"Simon Game\000"
+ 172      6E204761 
+ 172      6D6500
+ 173 001b 00       		.align	2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 5
+
+
+ 174              	.LC2:
+ 175 001c 50757368 		.ascii	"Push To Start!\000"
+ 175      20546F20 
+ 175      53746172 
+ 175      742100
+ 176 002b 00       		.align	2
+ 177              	.LC3:
+ 178 002c 3120706C 		.ascii	"1 player OR\000"
+ 178      61796572 
+ 178      204F5200 
+ 179              		.align	2
+ 180              	.LC4:
+ 181 0038 3220706C 		.ascii	"2 players?\000"
+ 181      61796572 
+ 181      733F00
+ 182 0043 00       		.align	2
+ 183              	.LC5:
+ 184 0044 3C313E20 		.ascii	"<1> player OR\000"
+ 184      706C6179 
+ 184      6572204F 
+ 184      5200
+ 185 0052 0000     		.align	2
+ 186              	.LC6:
+ 187 0054 3C323E20 		.ascii	"<2> players?\000"
+ 187      706C6179 
+ 187      6572733F 
+ 187      00
+ 188 0061 000000   		.align	2
+ 189              	.LC7:
+ 190 0064 3120506C 		.ascii	"1 Player Mode\000"
+ 190      61796572 
+ 190      204D6F64 
+ 190      6500
+ 191 0072 0000     		.align	2
+ 192              	.LC8:
+ 193 0074 3220506C 		.ascii	"2 Player Mode\000"
+ 193      61796572 
+ 193      204D6F64 
+ 193      6500
+ 194              		.section	.text.Game_Run,"ax",%progbits
+ 195              		.align	1
+ 196              		.global	Game_Run
+ 197              		.syntax unified
+ 198              		.thumb
+ 199              		.thumb_func
+ 201              	Game_Run:
+ 202              	.LVL16:
+ 203              	.LFB1110:
+  51:Core/Src/SimonGame.c **** 
+  52:Core/Src/SimonGame.c **** void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
+  53:Core/Src/SimonGame.c **** {
+ 204              		.loc 1 53 1 is_stmt 1 view -0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		.loc 1 53 1 is_stmt 0 view .LVU31
+ 209 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 6
+
+
+ 210              		.cfi_def_cfa_offset 24
+ 211              		.cfi_offset 3, -24
+ 212              		.cfi_offset 4, -20
+ 213              		.cfi_offset 5, -16
+ 214              		.cfi_offset 6, -12
+ 215              		.cfi_offset 7, -8
+ 216              		.cfi_offset 14, -4
+ 217 0002 0446     		mov	r4, r0
+ 218 0004 0D46     		mov	r5, r1
+  54:Core/Src/SimonGame.c ****     static char lineOne[17] = {0}, lineTwo[17] = {0};
+ 219              		.loc 1 54 5 is_stmt 1 view .LVU32
+  55:Core/Src/SimonGame.c ****     static int directionDelay = 0;
+ 220              		.loc 1 55 5 view .LVU33
+  56:Core/Src/SimonGame.c ****     static JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
+ 221              		.loc 1 56 5 view .LVU34
+  57:Core/Src/SimonGame.c ****     
+  58:Core/Src/SimonGame.c ****     // FSM to manage game states
+  59:Core/Src/SimonGame.c ****     switch(game->state)
+ 222              		.loc 1 59 5 view .LVU35
+ 223              		.loc 1 59 16 is_stmt 0 view .LVU36
+ 224 0006 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 225              		.loc 1 59 5 view .LVU37
+ 226 0008 062B     		cmp	r3, #6
+ 227 000a 00F23081 		bhi	.L12
+ 228 000e DFE813F0 		tbh	[pc, r3, lsl #1]
+ 229              	.L14:
+ 230 0012 0700     		.2byte	(.L20-.L14)/2
+ 231 0014 3700     		.2byte	(.L19-.L14)/2
+ 232 0016 3F00     		.2byte	(.L18-.L14)/2
+ 233 0018 5700     		.2byte	(.L17-.L14)/2
+ 234 001a BD00     		.2byte	(.L16-.L14)/2
+ 235 001c D200     		.2byte	(.L15-.L14)/2
+ 236 001e E700     		.2byte	(.L13-.L14)/2
+ 237              		.p2align 1
+ 238              	.L20:
+  60:Core/Src/SimonGame.c ****     {
+  61:Core/Src/SimonGame.c ****       // Display WELCOME message and 
+  62:Core/Src/SimonGame.c ****       //Push to start prompt after 2 seconds
+  63:Core/Src/SimonGame.c ****       case WELCOME:
+  64:Core/Src/SimonGame.c ****         LCD_Cls();
+ 239              		.loc 1 64 9 is_stmt 1 view .LVU38
+ 240 0020 FFF7FEFF 		bl	LCD_Cls
+ 241              	.LVL17:
+  65:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "Welcome to the");
+ 242              		.loc 1 65 9 view .LVU39
+ 243 0024 934E     		ldr	r6, .L40
+ 244 0026 944B     		ldr	r3, .L40+4
+ 245 0028 3546     		mov	r5, r6
+ 246              	.LVL18:
+ 247              		.loc 1 65 9 is_stmt 0 view .LVU40
+ 248 002a 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 249 002c 07C5     		stmia	r5!, {r0, r1, r2}
+ 250 002e 2B80     		strh	r3, [r5]	@ movhi
+ 251 0030 1B0C     		lsrs	r3, r3, #16
+ 252 0032 05F8023F 		strb	r3, [r5, #2]!
+  66:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "Simon Game");
+ 253              		.loc 1 66 9 is_stmt 1 view .LVU41
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 7
+
+
+ 254 0036 914F     		ldr	r7, .L40+8
+ 255 0038 914A     		ldr	r2, .L40+12
+ 256 003a 3B46     		mov	r3, r7
+ 257 003c 07CA     		ldm	r2, {r0, r1, r2}
+ 258 003e 03C3     		stmia	r3!, {r0, r1}
+ 259 0040 23F8022B 		strh	r2, [r3], #2	@ movhi
+ 260 0044 120C     		lsrs	r2, r2, #16
+ 261 0046 1A70     		strb	r2, [r3]
+  67:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 262              		.loc 1 67 9 view .LVU42
+ 263 0048 3946     		mov	r1, r7
+ 264 004a 3046     		mov	r0, r6
+ 265 004c FFF7FEFF 		bl	displayOnLCD
+ 266              	.LVL19:
+  68:Core/Src/SimonGame.c ****         HAL_Delay(2000);  
+ 267              		.loc 1 68 9 view .LVU43
+ 268 0050 4FF4FA60 		mov	r0, #2000
+ 269 0054 FFF7FEFF 		bl	HAL_Delay
+ 270              	.LVL20:
+  69:Core/Src/SimonGame.c ****         
+  70:Core/Src/SimonGame.c ****         LCD_Cls();
+ 271              		.loc 1 70 9 view .LVU44
+ 272 0058 FFF7FEFF 		bl	LCD_Cls
+ 273              	.LVL21:
+  71:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "Push To Start!");
+ 274              		.loc 1 71 9 view .LVU45
+ 275 005c 894B     		ldr	r3, .L40+16
+ 276 005e B446     		mov	ip, r6
+ 277 0060 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 278 0062 ACE80700 		stmia	ip!, {r0, r1, r2}
+ 279 0066 ACF80030 		strh	r3, [ip]	@ movhi
+ 280 006a 1B0C     		lsrs	r3, r3, #16
+ 281 006c 2B70     		strb	r3, [r5]
+  72:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 282              		.loc 1 72 9 view .LVU46
+ 283 006e 0023     		movs	r3, #0
+ 284 0070 3B70     		strb	r3, [r7]
+  73:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 285              		.loc 1 73 9 view .LVU47
+ 286 0072 3946     		mov	r1, r7
+ 287 0074 3046     		mov	r0, r6
+ 288 0076 FFF7FEFF 		bl	displayOnLCD
+ 289              	.LVL22:
+  74:Core/Src/SimonGame.c ****         game->state = START;
+ 290              		.loc 1 74 9 view .LVU48
+ 291              		.loc 1 74 21 is_stmt 0 view .LVU49
+ 292 007a 0123     		movs	r3, #1
+ 293 007c 2370     		strb	r3, [r4]
+  75:Core/Src/SimonGame.c ****         break;
+ 294              		.loc 1 75 9 is_stmt 1 view .LVU50
+ 295              	.L11:
+  76:Core/Src/SimonGame.c **** 
+  77:Core/Src/SimonGame.c ****       // Check if Joystick is pressed to start the game
+  78:Core/Src/SimonGame.c ****       case START:
+  79:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+  80:Core/Src/SimonGame.c ****         {  game->state = PLAYER_MENU;  }        
+  81:Core/Src/SimonGame.c ****         break;
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 8
+
+
+  82:Core/Src/SimonGame.c **** 
+  83:Core/Src/SimonGame.c ****       // Display Player selection menu
+  84:Core/Src/SimonGame.c ****       case PLAYER_MENU:
+  85:Core/Src/SimonGame.c ****         LCD_Cls();
+  86:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "1 player OR");
+  87:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+  88:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+  89:Core/Src/SimonGame.c ****         game->state = PLAYER_SELECT;
+  90:Core/Src/SimonGame.c ****         break;
+  91:Core/Src/SimonGame.c **** 
+  92:Core/Src/SimonGame.c ****       // Handle Player selection based on joystick UP/DOWN input
+  93:Core/Src/SimonGame.c ****       case PLAYER_SELECT:
+  94:Core/Src/SimonGame.c ****         // Read the joystick input to determine the number of players
+  95:Core/Src/SimonGame.c ****         direction = Joystick_GetDirection(joystick);
+  96:Core/Src/SimonGame.c **** 
+  97:Core/Src/SimonGame.c ****         // Adding "debounce" logic to help resolve jittery input
+  98:Core/Src/SimonGame.c ****         //causing direciton UP to be seen once
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 100:Core/Src/SimonGame.c ****         {
+ 101:Core/Src/SimonGame.c ****           direction = JOY_UP;
+ 102:Core/Src/SimonGame.c ****           directionDelay++;
+ 103:Core/Src/SimonGame.c ****         }
+ 104:Core/Src/SimonGame.c ****         else 
+ 105:Core/Src/SimonGame.c ****         { directionDelay = 0; }
+ 106:Core/Src/SimonGame.c **** 
+ 107:Core/Src/SimonGame.c ****         // Update display only if joystick direction has changed
+ 108:Core/Src/SimonGame.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 109:Core/Src/SimonGame.c ****         {
+ 110:Core/Src/SimonGame.c ****           
+ 111:Core/Src/SimonGame.c ****           if (direction == JOY_UP)
+ 112:Core/Src/SimonGame.c ****           {
+ 113:Core/Src/SimonGame.c ****             LCD_Cls();
+ 114:Core/Src/SimonGame.c ****             snprintf(lineOne, sizeof(lineOne), "<1> player OR");
+ 115:Core/Src/SimonGame.c ****             snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 116:Core/Src/SimonGame.c ****             displayOnLCD(lineOne, lineTwo);
+ 117:Core/Src/SimonGame.c ****             game->info.numPlayers = 1;
+ 118:Core/Src/SimonGame.c ****             direction = JOY_UP;
+ 119:Core/Src/SimonGame.c ****           }    
+ 120:Core/Src/SimonGame.c ****           else if (direction == JOY_DOWN) 
+ 121:Core/Src/SimonGame.c ****           {
+ 122:Core/Src/SimonGame.c ****             LCD_Cls();
+ 123:Core/Src/SimonGame.c ****             snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 124:Core/Src/SimonGame.c ****             snprintf(lineTwo, sizeof(lineTwo), "<2> players?");
+ 125:Core/Src/SimonGame.c ****             displayOnLCD(lineOne, lineTwo);
+ 126:Core/Src/SimonGame.c ****             game->info.numPlayers = 2;
+ 127:Core/Src/SimonGame.c ****           }
+ 128:Core/Src/SimonGame.c **** 
+ 129:Core/Src/SimonGame.c ****           lastDirection = direction;  // store last direction
+ 130:Core/Src/SimonGame.c ****         }   
+ 131:Core/Src/SimonGame.c **** 
+ 132:Core/Src/SimonGame.c ****         // Check if joystick is pressed to confirm selection
+ 133:Core/Src/SimonGame.c ****         // Move to the state which matches the mode selected
+ 134:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 135:Core/Src/SimonGame.c ****         {
+ 136:Core/Src/SimonGame.c ****           if (game->info.numPlayers == 1)
+ 137:Core/Src/SimonGame.c ****             game->state = ONE_PLAYER;
+ 138:Core/Src/SimonGame.c ****           else 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 9
+
+
+ 139:Core/Src/SimonGame.c ****             game->state = TWO_PLAYERS;
+ 140:Core/Src/SimonGame.c ****         }
+ 141:Core/Src/SimonGame.c ****         break;
+ 142:Core/Src/SimonGame.c ****       
+ 143:Core/Src/SimonGame.c ****         // For LCD+Joystick testing purposes only,
+ 144:Core/Src/SimonGame.c ****         // Display the mode type selected, wait 2 seconds then
+ 145:Core/Src/SimonGame.c ****         // return to the PLAYER SELECT state for further 
+ 146:Core/Src/SimonGame.c ****         // joystick to LCD interaction testing
+ 147:Core/Src/SimonGame.c ****       case ONE_PLAYER:
+ 148:Core/Src/SimonGame.c ****         LCD_Cls();
+ 149:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+ 150:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 151:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 152:Core/Src/SimonGame.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 153:Core/Src/SimonGame.c ****         game->state = PLAY;
+ 154:Core/Src/SimonGame.c ****         break;
+ 155:Core/Src/SimonGame.c **** 
+ 156:Core/Src/SimonGame.c ****       case TWO_PLAYERS:
+ 157:Core/Src/SimonGame.c ****         LCD_Cls();
+ 158:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+ 159:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 160:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 161:Core/Src/SimonGame.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 162:Core/Src/SimonGame.c ****         game->state = PLAYER_MENU;
+ 163:Core/Src/SimonGame.c ****         break;
+ 164:Core/Src/SimonGame.c **** 
+ 165:Core/Src/SimonGame.c ****       case PLAY:
+ 166:Core/Src/SimonGame.c ****         // if red button is pressed, turn on LEDR
+ 167:Core/Src/SimonGame.c ****         if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+ 168:Core/Src/SimonGame.c ****         { 
+ 169:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
+ 170:Core/Src/SimonGame.c ****         }
+ 171:Core/Src/SimonGame.c ****         else
+ 172:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);}
+ 173:Core/Src/SimonGame.c **** 
+ 174:Core/Src/SimonGame.c ****         // if blue button is pressed, turn on LEDB
+ 175:Core/Src/SimonGame.c ****         if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+ 176:Core/Src/SimonGame.c ****         { 
+ 177:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
+ 178:Core/Src/SimonGame.c ****         }
+ 179:Core/Src/SimonGame.c ****         else
+ 180:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);}
+ 181:Core/Src/SimonGame.c **** 
+ 182:Core/Src/SimonGame.c ****         // if yellow button is pressed, turn on LEDY
+ 183:Core/Src/SimonGame.c ****         if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+ 184:Core/Src/SimonGame.c ****         { 
+ 185:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_SET);
+ 186:Core/Src/SimonGame.c ****         }
+ 187:Core/Src/SimonGame.c ****         else
+ 188:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_RESET);}
+ 189:Core/Src/SimonGame.c **** 
+ 190:Core/Src/SimonGame.c ****         // if green button is pressed, turn on LEDG
+ 191:Core/Src/SimonGame.c ****         if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+ 192:Core/Src/SimonGame.c ****         { 
+ 193:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+ 194:Core/Src/SimonGame.c ****         }
+ 195:Core/Src/SimonGame.c ****         else
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 10
+
+
+ 196:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);}
+ 197:Core/Src/SimonGame.c ****         break;
+ 198:Core/Src/SimonGame.c ****       // case SCORES:
+ 199:Core/Src/SimonGame.c ****       //   // Handle scores display logic
+ 200:Core/Src/SimonGame.c ****       //   break;
+ 201:Core/Src/SimonGame.c ****       // case GAME_RESULT:
+ 202:Core/Src/SimonGame.c ****       //   // Handle game result logic
+ 203:Core/Src/SimonGame.c ****       //   break;
+ 204:Core/Src/SimonGame.c ****       default:
+ 205:Core/Src/SimonGame.c ****         game->state = START;
+ 206:Core/Src/SimonGame.c ****         break;
+ 207:Core/Src/SimonGame.c ****     }
+ 208:Core/Src/SimonGame.c **** }...
+ 296              		.loc 1 208 1 is_stmt 0 view .LVU51
+ 297 007e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 298              	.LVL23:
+ 299              	.L19:
+  79:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 300              		.loc 1 79 9 is_stmt 1 view .LVU52
+  79:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 301              		.loc 1 79 13 is_stmt 0 view .LVU53
+ 302 0080 0846     		mov	r0, r1
+ 303              	.LVL24:
+  79:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 304              		.loc 1 79 13 view .LVU54
+ 305 0082 FFF7FEFF 		bl	Joystick_Pressed
+ 306              	.LVL25:
+  79:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 307              		.loc 1 79 12 discriminator 1 view .LVU55
+ 308 0086 0028     		cmp	r0, #0
+ 309 0088 F9D0     		beq	.L11
+  80:Core/Src/SimonGame.c ****         {  game->state = PLAYER_MENU;  }        
+ 310              		.loc 1 80 12 is_stmt 1 view .LVU56
+  80:Core/Src/SimonGame.c ****         {  game->state = PLAYER_MENU;  }        
+ 311              		.loc 1 80 24 is_stmt 0 view .LVU57
+ 312 008a 0223     		movs	r3, #2
+ 313 008c 2370     		strb	r3, [r4]
+ 314 008e F6E7     		b	.L11
+ 315              	.LVL26:
+ 316              	.L18:
+  85:Core/Src/SimonGame.c ****         LCD_Cls();
+ 317              		.loc 1 85 9 is_stmt 1 view .LVU58
+ 318 0090 FFF7FEFF 		bl	LCD_Cls
+ 319              	.LVL27:
+  86:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 320              		.loc 1 86 9 view .LVU59
+ 321 0094 774D     		ldr	r5, .L40
+ 322              	.LVL28:
+  86:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 323              		.loc 1 86 9 is_stmt 0 view .LVU60
+ 324 0096 7C4B     		ldr	r3, .L40+20
+ 325 0098 93E80700 		ldm	r3, {r0, r1, r2}
+ 326 009c 85E80700 		stm	r5, {r0, r1, r2}
+  87:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 327              		.loc 1 87 9 is_stmt 1 view .LVU61
+ 328 00a0 764E     		ldr	r6, .L40+8
+ 329 00a2 7A4A     		ldr	r2, .L40+24
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 11
+
+
+ 330 00a4 3346     		mov	r3, r6
+ 331 00a6 07CA     		ldm	r2, {r0, r1, r2}
+ 332 00a8 03C3     		stmia	r3!, {r0, r1}
+ 333 00aa 23F8022B 		strh	r2, [r3], #2	@ movhi
+ 334 00ae 120C     		lsrs	r2, r2, #16
+ 335 00b0 1A70     		strb	r2, [r3]
+  88:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 336              		.loc 1 88 9 view .LVU62
+ 337 00b2 3146     		mov	r1, r6
+ 338 00b4 2846     		mov	r0, r5
+ 339 00b6 FFF7FEFF 		bl	displayOnLCD
+ 340              	.LVL29:
+  89:Core/Src/SimonGame.c ****         game->state = PLAYER_SELECT;
+ 341              		.loc 1 89 9 view .LVU63
+  89:Core/Src/SimonGame.c ****         game->state = PLAYER_SELECT;
+ 342              		.loc 1 89 21 is_stmt 0 view .LVU64
+ 343 00ba 0323     		movs	r3, #3
+ 344 00bc 2370     		strb	r3, [r4]
+  90:Core/Src/SimonGame.c ****         break;
+ 345              		.loc 1 90 9 is_stmt 1 view .LVU65
+ 346 00be DEE7     		b	.L11
+ 347              	.LVL30:
+ 348              	.L17:
+  95:Core/Src/SimonGame.c ****         direction = Joystick_GetDirection(joystick);
+ 349              		.loc 1 95 9 view .LVU66
+  95:Core/Src/SimonGame.c ****         direction = Joystick_GetDirection(joystick);
+ 350              		.loc 1 95 21 is_stmt 0 view .LVU67
+ 351 00c0 0846     		mov	r0, r1
+ 352              	.LVL31:
+  95:Core/Src/SimonGame.c ****         direction = Joystick_GetDirection(joystick);
+ 353              		.loc 1 95 21 view .LVU68
+ 354 00c2 FFF7FEFF 		bl	Joystick_GetDirection
+ 355              	.LVL32:
+  95:Core/Src/SimonGame.c ****         direction = Joystick_GetDirection(joystick);
+ 356              		.loc 1 95 19 discriminator 1 view .LVU69
+ 357 00c6 724B     		ldr	r3, .L40+28
+ 358 00c8 1870     		strb	r0, [r3]
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 359              		.loc 1 99 9 is_stmt 1 view .LVU70
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 360              		.loc 1 99 27 is_stmt 0 view .LVU71
+ 361 00ca 724B     		ldr	r3, .L40+32
+ 362 00cc 1B68     		ldr	r3, [r3]
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 363              		.loc 1 99 11 view .LVU72
+ 364 00ce 022B     		cmp	r3, #2
+ 365 00d0 03DC     		bgt	.L22
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 366              		.loc 1 99 48 discriminator 1 view .LVU73
+ 367 00d2 714A     		ldr	r2, .L40+36
+ 368 00d4 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 369              		.loc 1 99 31 discriminator 1 view .LVU74
+ 370 00d6 012A     		cmp	r2, #1
+ 371 00d8 1CD0     		beq	.L36
+ 372              	.L22:
+ 105:Core/Src/SimonGame.c ****         { directionDelay = 0; }
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 12
+
+
+ 373              		.loc 1 105 11 is_stmt 1 view .LVU75
+ 105:Core/Src/SimonGame.c ****         { directionDelay = 0; }
+ 374              		.loc 1 105 26 is_stmt 0 view .LVU76
+ 375 00da 6E4B     		ldr	r3, .L40+32
+ 376 00dc 0022     		movs	r2, #0
+ 377 00de 1A60     		str	r2, [r3]
+ 378              	.L23:
+ 108:Core/Src/SimonGame.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 379              		.loc 1 108 9 is_stmt 1 view .LVU77
+ 108:Core/Src/SimonGame.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 380              		.loc 1 108 23 is_stmt 0 view .LVU78
+ 381 00e0 6B4B     		ldr	r3, .L40+28
+ 382 00e2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 108:Core/Src/SimonGame.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 383              		.loc 1 108 12 view .LVU79
+ 384 00e4 5BB1     		cbz	r3, .L24
+ 108:Core/Src/SimonGame.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 385              		.loc 1 108 48 discriminator 1 view .LVU80
+ 386 00e6 6C4A     		ldr	r2, .L40+36
+ 387 00e8 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 108:Core/Src/SimonGame.c ****         if (direction != JOY_IDLE && direction != lastDirection)
+ 388              		.loc 1 108 35 discriminator 1 view .LVU81
+ 389 00ea 9342     		cmp	r3, r2
+ 390 00ec 07D0     		beq	.L24
+ 111:Core/Src/SimonGame.c ****           if (direction == JOY_UP)
+ 391              		.loc 1 111 11 is_stmt 1 view .LVU82
+ 111:Core/Src/SimonGame.c ****           if (direction == JOY_UP)
+ 392              		.loc 1 111 14 is_stmt 0 view .LVU83
+ 393 00ee 012B     		cmp	r3, #1
+ 394 00f0 19D0     		beq	.L37
+ 120:Core/Src/SimonGame.c ****           else if (direction == JOY_DOWN) 
+ 395              		.loc 1 120 16 is_stmt 1 view .LVU84
+ 120:Core/Src/SimonGame.c ****           else if (direction == JOY_DOWN) 
+ 396              		.loc 1 120 19 is_stmt 0 view .LVU85
+ 397 00f2 022B     		cmp	r3, #2
+ 398 00f4 31D0     		beq	.L38
+ 399              	.L26:
+ 129:Core/Src/SimonGame.c ****           lastDirection = direction;  // store last direction
+ 400              		.loc 1 129 11 is_stmt 1 view .LVU86
+ 129:Core/Src/SimonGame.c ****           lastDirection = direction;  // store last direction
+ 401              		.loc 1 129 25 is_stmt 0 view .LVU87
+ 402 00f6 664B     		ldr	r3, .L40+28
+ 403 00f8 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 404 00fa 674B     		ldr	r3, .L40+36
+ 405 00fc 1A70     		strb	r2, [r3]
+ 406              	.L24:
+ 134:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 407              		.loc 1 134 9 is_stmt 1 view .LVU88
+ 134:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 408              		.loc 1 134 13 is_stmt 0 view .LVU89
+ 409 00fe 2846     		mov	r0, r5
+ 410 0100 FFF7FEFF 		bl	Joystick_Pressed
+ 411              	.LVL33:
+ 134:Core/Src/SimonGame.c ****         if (Joystick_Pressed(joystick)) 
+ 412              		.loc 1 134 12 discriminator 1 view .LVU90
+ 413 0104 0028     		cmp	r0, #0
+ 414 0106 BAD0     		beq	.L11
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 13
+
+
+ 136:Core/Src/SimonGame.c ****           if (game->info.numPlayers == 1)
+ 415              		.loc 1 136 11 is_stmt 1 view .LVU91
+ 136:Core/Src/SimonGame.c ****           if (game->info.numPlayers == 1)
+ 416              		.loc 1 136 25 is_stmt 0 view .LVU92
+ 417 0108 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 136:Core/Src/SimonGame.c ****           if (game->info.numPlayers == 1)
+ 418              		.loc 1 136 14 view .LVU93
+ 419 010a 012B     		cmp	r3, #1
+ 420 010c 3BD0     		beq	.L39
+ 139:Core/Src/SimonGame.c ****             game->state = TWO_PLAYERS;
+ 421              		.loc 1 139 13 is_stmt 1 view .LVU94
+ 139:Core/Src/SimonGame.c ****             game->state = TWO_PLAYERS;
+ 422              		.loc 1 139 25 is_stmt 0 view .LVU95
+ 423 010e 0523     		movs	r3, #5
+ 424 0110 2370     		strb	r3, [r4]
+ 425 0112 B4E7     		b	.L11
+ 426              	.L36:
+  99:Core/Src/SimonGame.c ****         if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+ 427              		.loc 1 99 58 discriminator 2 view .LVU96
+ 428 0114 0028     		cmp	r0, #0
+ 429 0116 E0D1     		bne	.L22
+ 101:Core/Src/SimonGame.c ****           direction = JOY_UP;
+ 430              		.loc 1 101 11 is_stmt 1 view .LVU97
+ 101:Core/Src/SimonGame.c ****           direction = JOY_UP;
+ 431              		.loc 1 101 21 is_stmt 0 view .LVU98
+ 432 0118 5D4A     		ldr	r2, .L40+28
+ 433 011a 0121     		movs	r1, #1
+ 434 011c 1170     		strb	r1, [r2]
+ 102:Core/Src/SimonGame.c ****           directionDelay++;
+ 435              		.loc 1 102 11 is_stmt 1 view .LVU99
+ 102:Core/Src/SimonGame.c ****           directionDelay++;
+ 436              		.loc 1 102 25 is_stmt 0 view .LVU100
+ 437 011e 0B44     		add	r3, r3, r1
+ 438 0120 5C4A     		ldr	r2, .L40+32
+ 439 0122 1360     		str	r3, [r2]
+ 440 0124 DCE7     		b	.L23
+ 441              	.L37:
+ 113:Core/Src/SimonGame.c ****             LCD_Cls();
+ 442              		.loc 1 113 13 is_stmt 1 view .LVU101
+ 443 0126 FFF7FEFF 		bl	LCD_Cls
+ 444              	.LVL34:
+ 114:Core/Src/SimonGame.c ****             snprintf(lineOne, sizeof(lineOne), "<1> player OR");
+ 445              		.loc 1 114 13 view .LVU102
+ 446 012a 524F     		ldr	r7, .L40
+ 447 012c 5B4B     		ldr	r3, .L40+40
+ 448 012e 3E46     		mov	r6, r7
+ 449 0130 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 450 0132 07C6     		stmia	r6!, {r0, r1, r2}
+ 451 0134 3380     		strh	r3, [r6]	@ movhi
+ 115:Core/Src/SimonGame.c ****             snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+ 452              		.loc 1 115 13 view .LVU103
+ 453 0136 514E     		ldr	r6, .L40+8
+ 454 0138 544A     		ldr	r2, .L40+24
+ 455 013a 3346     		mov	r3, r6
+ 456 013c 07CA     		ldm	r2, {r0, r1, r2}
+ 457 013e 03C3     		stmia	r3!, {r0, r1}
+ 458 0140 23F8022B 		strh	r2, [r3], #2	@ movhi
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 14
+
+
+ 459 0144 120C     		lsrs	r2, r2, #16
+ 460 0146 1A70     		strb	r2, [r3]
+ 116:Core/Src/SimonGame.c ****             displayOnLCD(lineOne, lineTwo);
+ 461              		.loc 1 116 13 view .LVU104
+ 462 0148 3146     		mov	r1, r6
+ 463 014a 3846     		mov	r0, r7
+ 464 014c FFF7FEFF 		bl	displayOnLCD
+ 465              	.LVL35:
+ 117:Core/Src/SimonGame.c ****             game->info.numPlayers = 1;
+ 466              		.loc 1 117 13 view .LVU105
+ 117:Core/Src/SimonGame.c ****             game->info.numPlayers = 1;
+ 467              		.loc 1 117 35 is_stmt 0 view .LVU106
+ 468 0150 0123     		movs	r3, #1
+ 469 0152 6370     		strb	r3, [r4, #1]
+ 118:Core/Src/SimonGame.c ****             direction = JOY_UP;
+ 470              		.loc 1 118 13 is_stmt 1 view .LVU107
+ 118:Core/Src/SimonGame.c ****             direction = JOY_UP;
+ 471              		.loc 1 118 23 is_stmt 0 view .LVU108
+ 472 0154 4E4A     		ldr	r2, .L40+28
+ 473 0156 1370     		strb	r3, [r2]
+ 474 0158 CDE7     		b	.L26
+ 475              	.L38:
+ 122:Core/Src/SimonGame.c ****             LCD_Cls();
+ 476              		.loc 1 122 13 is_stmt 1 view .LVU109
+ 477 015a FFF7FEFF 		bl	LCD_Cls
+ 478              	.LVL36:
+ 123:Core/Src/SimonGame.c ****             snprintf(lineOne, sizeof(lineOne), "1 player OR");
+ 479              		.loc 1 123 13 view .LVU110
+ 480 015e 454F     		ldr	r7, .L40
+ 481 0160 494B     		ldr	r3, .L40+20
+ 482 0162 93E80700 		ldm	r3, {r0, r1, r2}
+ 483 0166 87E80700 		stm	r7, {r0, r1, r2}
+ 124:Core/Src/SimonGame.c ****             snprintf(lineTwo, sizeof(lineTwo), "<2> players?");
+ 484              		.loc 1 124 13 view .LVU111
+ 485 016a DFF810C1 		ldr	ip, .L40+8
+ 486 016e 4C4B     		ldr	r3, .L40+44
+ 487 0170 6646     		mov	r6, ip
+ 488 0172 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 489 0174 07C6     		stmia	r6!, {r0, r1, r2}
+ 490 0176 3370     		strb	r3, [r6]
+ 125:Core/Src/SimonGame.c ****             displayOnLCD(lineOne, lineTwo);
+ 491              		.loc 1 125 13 view .LVU112
+ 492 0178 6146     		mov	r1, ip
+ 493 017a 3846     		mov	r0, r7
+ 494 017c FFF7FEFF 		bl	displayOnLCD
+ 495              	.LVL37:
+ 126:Core/Src/SimonGame.c ****             game->info.numPlayers = 2;
+ 496              		.loc 1 126 13 view .LVU113
+ 126:Core/Src/SimonGame.c ****             game->info.numPlayers = 2;
+ 497              		.loc 1 126 35 is_stmt 0 view .LVU114
+ 498 0180 0223     		movs	r3, #2
+ 499 0182 6370     		strb	r3, [r4, #1]
+ 500 0184 B7E7     		b	.L26
+ 501              	.L39:
+ 137:Core/Src/SimonGame.c ****             game->state = ONE_PLAYER;
+ 502              		.loc 1 137 13 is_stmt 1 view .LVU115
+ 137:Core/Src/SimonGame.c ****             game->state = ONE_PLAYER;
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 15
+
+
+ 503              		.loc 1 137 25 is_stmt 0 view .LVU116
+ 504 0186 0423     		movs	r3, #4
+ 505 0188 2370     		strb	r3, [r4]
+ 506 018a 78E7     		b	.L11
+ 507              	.LVL38:
+ 508              	.L16:
+ 148:Core/Src/SimonGame.c ****         LCD_Cls();
+ 509              		.loc 1 148 9 is_stmt 1 view .LVU117
+ 510 018c FFF7FEFF 		bl	LCD_Cls
+ 511              	.LVL39:
+ 149:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+ 512              		.loc 1 149 9 view .LVU118
+ 513 0190 384E     		ldr	r6, .L40
+ 514 0192 444B     		ldr	r3, .L40+48
+ 515 0194 3546     		mov	r5, r6
+ 516              	.LVL40:
+ 149:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+ 517              		.loc 1 149 9 is_stmt 0 view .LVU119
+ 518 0196 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 519 0198 07C5     		stmia	r5!, {r0, r1, r2}
+ 520 019a 2B80     		strh	r3, [r5]	@ movhi
+ 150:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 521              		.loc 1 150 9 is_stmt 1 view .LVU120
+ 522 019c 3749     		ldr	r1, .L40+8
+ 523 019e 0023     		movs	r3, #0
+ 524 01a0 0B70     		strb	r3, [r1]
+ 151:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 525              		.loc 1 151 9 view .LVU121
+ 526 01a2 3046     		mov	r0, r6
+ 527 01a4 FFF7FEFF 		bl	displayOnLCD
+ 528              	.LVL41:
+ 152:Core/Src/SimonGame.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 529              		.loc 1 152 9 view .LVU122
+ 530 01a8 4FF4FA60 		mov	r0, #2000
+ 531 01ac FFF7FEFF 		bl	HAL_Delay
+ 532              	.LVL42:
+ 153:Core/Src/SimonGame.c ****         game->state = PLAY;
+ 533              		.loc 1 153 9 view .LVU123
+ 153:Core/Src/SimonGame.c ****         game->state = PLAY;
+ 534              		.loc 1 153 21 is_stmt 0 view .LVU124
+ 535 01b0 0623     		movs	r3, #6
+ 536 01b2 2370     		strb	r3, [r4]
+ 154:Core/Src/SimonGame.c ****         break;
+ 537              		.loc 1 154 9 is_stmt 1 view .LVU125
+ 538 01b4 63E7     		b	.L11
+ 539              	.LVL43:
+ 540              	.L15:
+ 157:Core/Src/SimonGame.c ****         LCD_Cls();
+ 541              		.loc 1 157 9 view .LVU126
+ 542 01b6 FFF7FEFF 		bl	LCD_Cls
+ 543              	.LVL44:
+ 158:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+ 544              		.loc 1 158 9 view .LVU127
+ 545 01ba 2E4E     		ldr	r6, .L40
+ 546 01bc 3A4B     		ldr	r3, .L40+52
+ 547 01be 3546     		mov	r5, r6
+ 548              	.LVL45:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 16
+
+
+ 158:Core/Src/SimonGame.c ****         snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+ 549              		.loc 1 158 9 is_stmt 0 view .LVU128
+ 550 01c0 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 551 01c2 07C5     		stmia	r5!, {r0, r1, r2}
+ 552 01c4 2B80     		strh	r3, [r5]	@ movhi
+ 159:Core/Src/SimonGame.c ****         snprintf(lineTwo, sizeof(lineTwo), "");
+ 553              		.loc 1 159 9 is_stmt 1 view .LVU129
+ 554 01c6 2D49     		ldr	r1, .L40+8
+ 555 01c8 0023     		movs	r3, #0
+ 556 01ca 0B70     		strb	r3, [r1]
+ 160:Core/Src/SimonGame.c ****         displayOnLCD(lineOne, lineTwo);
+ 557              		.loc 1 160 9 view .LVU130
+ 558 01cc 3046     		mov	r0, r6
+ 559 01ce FFF7FEFF 		bl	displayOnLCD
+ 560              	.LVL46:
+ 161:Core/Src/SimonGame.c ****         HAL_Delay(2000);  //wait 2 seconds
+ 561              		.loc 1 161 9 view .LVU131
+ 562 01d2 4FF4FA60 		mov	r0, #2000
+ 563 01d6 FFF7FEFF 		bl	HAL_Delay
+ 564              	.LVL47:
+ 162:Core/Src/SimonGame.c ****         game->state = PLAYER_MENU;
+ 565              		.loc 1 162 9 view .LVU132
+ 162:Core/Src/SimonGame.c ****         game->state = PLAYER_MENU;
+ 566              		.loc 1 162 21 is_stmt 0 view .LVU133
+ 567 01da 0223     		movs	r3, #2
+ 568 01dc 2370     		strb	r3, [r4]
+ 163:Core/Src/SimonGame.c ****         break;
+ 569              		.loc 1 163 9 is_stmt 1 view .LVU134
+ 570 01de 4EE7     		b	.L11
+ 571              	.LVL48:
+ 572              	.L13:
+ 167:Core/Src/SimonGame.c ****         if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+ 573              		.loc 1 167 9 view .LVU135
+ 167:Core/Src/SimonGame.c ****         if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+ 574              		.loc 1 167 12 is_stmt 0 view .LVU136
+ 575 01e0 4FF48051 		mov	r1, #4096
+ 576              	.LVL49:
+ 167:Core/Src/SimonGame.c ****         if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+ 577              		.loc 1 167 12 view .LVU137
+ 578 01e4 3148     		ldr	r0, .L40+56
+ 579              	.LVL50:
+ 167:Core/Src/SimonGame.c ****         if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+ 580              		.loc 1 167 12 view .LVU138
+ 581 01e6 FFF7FEFF 		bl	debounceButton
+ 582              	.LVL51:
+ 167:Core/Src/SimonGame.c ****         if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+ 583              		.loc 1 167 11 discriminator 1 view .LVU139
+ 584 01ea 38B3     		cbz	r0, .L28
+ 169:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
+ 585              		.loc 1 169 13 is_stmt 1 view .LVU140
+ 586 01ec 0122     		movs	r2, #1
+ 587 01ee 4FF40061 		mov	r1, #2048
+ 588 01f2 2F48     		ldr	r0, .L40+60
+ 589 01f4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 590              	.LVL52:
+ 591              	.L29:
+ 175:Core/Src/SimonGame.c ****         if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 17
+
+
+ 592              		.loc 1 175 9 view .LVU141
+ 175:Core/Src/SimonGame.c ****         if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+ 593              		.loc 1 175 12 is_stmt 0 view .LVU142
+ 594 01f8 1021     		movs	r1, #16
+ 595 01fa 4FF09040 		mov	r0, #1207959552
+ 596 01fe FFF7FEFF 		bl	debounceButton
+ 597              	.LVL53:
+ 175:Core/Src/SimonGame.c ****         if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+ 598              		.loc 1 175 11 discriminator 1 view .LVU143
+ 599 0202 10B3     		cbz	r0, .L30
+ 177:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
+ 600              		.loc 1 177 13 is_stmt 1 view .LVU144
+ 601 0204 0122     		movs	r2, #1
+ 602 0206 2021     		movs	r1, #32
+ 603 0208 2848     		ldr	r0, .L40+56
+ 604 020a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 605              	.LVL54:
+ 606              	.L31:
+ 183:Core/Src/SimonGame.c ****         if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+ 607              		.loc 1 183 9 view .LVU145
+ 183:Core/Src/SimonGame.c ****         if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+ 608              		.loc 1 183 12 is_stmt 0 view .LVU146
+ 609 020e 4021     		movs	r1, #64
+ 610 0210 4FF09040 		mov	r0, #1207959552
+ 611 0214 FFF7FEFF 		bl	debounceButton
+ 612              	.LVL55:
+ 183:Core/Src/SimonGame.c ****         if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+ 613              		.loc 1 183 11 discriminator 1 view .LVU147
+ 614 0218 E8B1     		cbz	r0, .L32
+ 185:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_SET);
+ 615              		.loc 1 185 13 is_stmt 1 view .LVU148
+ 616 021a 0122     		movs	r2, #1
+ 617 021c 0421     		movs	r1, #4
+ 618 021e 2448     		ldr	r0, .L40+60
+ 619 0220 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 620              	.LVL56:
+ 621              	.L33:
+ 191:Core/Src/SimonGame.c ****         if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+ 622              		.loc 1 191 9 view .LVU149
+ 191:Core/Src/SimonGame.c ****         if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+ 623              		.loc 1 191 12 is_stmt 0 view .LVU150
+ 624 0224 2021     		movs	r1, #32
+ 625 0226 4FF09040 		mov	r0, #1207959552
+ 626 022a FFF7FEFF 		bl	debounceButton
+ 627              	.LVL57:
+ 191:Core/Src/SimonGame.c ****         if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+ 628              		.loc 1 191 11 discriminator 1 view .LVU151
+ 629 022e C0B1     		cbz	r0, .L34
+ 193:Core/Src/SimonGame.c ****             HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+ 630              		.loc 1 193 13 is_stmt 1 view .LVU152
+ 631 0230 0122     		movs	r2, #1
+ 632 0232 1021     		movs	r1, #16
+ 633 0234 1F48     		ldr	r0, .L40+64
+ 634 0236 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 635              	.LVL58:
+ 636 023a 20E7     		b	.L11
+ 637              	.L28:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 18
+
+
+ 172:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);}
+ 638              		.loc 1 172 13 view .LVU153
+ 639 023c 0022     		movs	r2, #0
+ 640 023e 4FF40061 		mov	r1, #2048
+ 641 0242 1B48     		ldr	r0, .L40+60
+ 642 0244 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 643              	.LVL59:
+ 644 0248 D6E7     		b	.L29
+ 645              	.L30:
+ 180:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);}
+ 646              		.loc 1 180 13 view .LVU154
+ 647 024a 0022     		movs	r2, #0
+ 648 024c 2021     		movs	r1, #32
+ 649 024e 1748     		ldr	r0, .L40+56
+ 650 0250 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 651              	.LVL60:
+ 652 0254 DBE7     		b	.L31
+ 653              	.L32:
+ 188:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_RESET);}
+ 654              		.loc 1 188 13 view .LVU155
+ 655 0256 0022     		movs	r2, #0
+ 656 0258 0421     		movs	r1, #4
+ 657 025a 1548     		ldr	r0, .L40+60
+ 658 025c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 659              	.LVL61:
+ 660 0260 E0E7     		b	.L33
+ 661              	.L34:
+ 196:Core/Src/SimonGame.c ****         {   HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);}
+ 662              		.loc 1 196 13 view .LVU156
+ 663 0262 0022     		movs	r2, #0
+ 664 0264 1021     		movs	r1, #16
+ 665 0266 1348     		ldr	r0, .L40+64
+ 666 0268 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 667              	.LVL62:
+ 668 026c 07E7     		b	.L11
+ 669              	.LVL63:
+ 670              	.L12:
+ 205:Core/Src/SimonGame.c ****         game->state = START;
+ 671              		.loc 1 205 9 view .LVU157
+ 205:Core/Src/SimonGame.c ****         game->state = START;
+ 672              		.loc 1 205 21 is_stmt 0 view .LVU158
+ 673 026e 0123     		movs	r3, #1
+ 674 0270 0370     		strb	r3, [r0]
+ 206:Core/Src/SimonGame.c ****         break;
+ 675              		.loc 1 206 9 is_stmt 1 view .LVU159
+ 676              		.loc 1 208 1 is_stmt 0 view .LVU160
+ 677 0272 04E7     		b	.L11
+ 678              	.L41:
+ 679              		.align	2
+ 680              	.L40:
+ 681 0274 00000000 		.word	lineOne.4
+ 682 0278 00000000 		.word	.LC0
+ 683 027c 00000000 		.word	lineTwo.3
+ 684 0280 10000000 		.word	.LC1
+ 685 0284 1C000000 		.word	.LC2
+ 686 0288 2C000000 		.word	.LC3
+ 687 028c 38000000 		.word	.LC4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 19
+
+
+ 688 0290 00000000 		.word	direction.2
+ 689 0294 00000000 		.word	directionDelay.1
+ 690 0298 00000000 		.word	lastDirection.0
+ 691 029c 44000000 		.word	.LC5
+ 692 02a0 54000000 		.word	.LC6
+ 693 02a4 64000000 		.word	.LC7
+ 694 02a8 74000000 		.word	.LC8
+ 695 02ac 00080048 		.word	1207961600
+ 696 02b0 00040048 		.word	1207960576
+ 697 02b4 00100048 		.word	1207963648
+ 698              		.cfi_endproc
+ 699              	.LFE1110:
+ 701              		.section	.bss.lastDirection.0,"aw",%nobits
+ 704              	lastDirection.0:
+ 705 0000 00       		.space	1
+ 706              		.section	.bss.directionDelay.1,"aw",%nobits
+ 707              		.align	2
+ 710              	directionDelay.1:
+ 711 0000 00000000 		.space	4
+ 712              		.section	.bss.direction.2,"aw",%nobits
+ 715              	direction.2:
+ 716 0000 00       		.space	1
+ 717              		.section	.bss.lineTwo.3,"aw",%nobits
+ 718              		.align	2
+ 721              	lineTwo.3:
+ 722 0000 00000000 		.space	17
+ 722      00000000 
+ 722      00000000 
+ 722      00000000 
+ 722      00
+ 723              		.section	.bss.lineOne.4,"aw",%nobits
+ 724              		.align	2
+ 727              	lineOne.4:
+ 728 0000 00000000 		.space	17
+ 728      00000000 
+ 728      00000000 
+ 728      00000000 
+ 728      00
+ 729              		.text
+ 730              	.Letext0:
+ 731              		.file 2 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 732              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 733              		.file 4 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 734              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h"
+ 735              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 736              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
+ 737              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h"
+ 738              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_gpio.h"
+ 739              		.file 10 "Core/Inc/joystick.h"
+ 740              		.file 11 "Core/Inc/SimonGame.h"
+ 741              		.file 12 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-t
+ 742              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 743              		.file 14 "Core/Inc/lcd1602.h"
+ 744              		.file 15 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-t
+ 745              		.file 16 "<built-in>"
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 SimonGame.c
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:21     .text.Game_Init:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:27     .text.Game_Init:00000000 Game_Init
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:54     .text.displayOnLCD:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:60     .text.displayOnLCD:00000000 displayOnLCD
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:109    .text.debounceButton:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:115    .text.debounceButton:00000000 debounceButton
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:167    .rodata.Game_Run.str1.4:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:195    .text.Game_Run:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:201    .text.Game_Run:00000000 Game_Run
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:230    .text.Game_Run:00000012 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:237    .text.Game_Run:00000020 $t
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:681    .text.Game_Run:00000274 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:727    .bss.lineOne.4:00000000 lineOne.4
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:721    .bss.lineTwo.3:00000000 lineTwo.3
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:715    .bss.direction.2:00000000 direction.2
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:710    .bss.directionDelay.1:00000000 directionDelay.1
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:704    .bss.lastDirection.0:00000000 lastDirection.0
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:705    .bss.lastDirection.0:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:707    .bss.directionDelay.1:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:716    .bss.direction.2:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:718    .bss.lineTwo.3:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccIvDXx3.s:724    .bss.lineOne.4:00000000 $d
+
+UNDEFINED SYMBOLS
+memset
+LCD_GotoXY
+LCD_Print
+HAL_Delay
+HAL_GPIO_ReadPin
+LCD_Cls
+Joystick_Pressed
+Joystick_GetDirection
+HAL_GPIO_WritePin

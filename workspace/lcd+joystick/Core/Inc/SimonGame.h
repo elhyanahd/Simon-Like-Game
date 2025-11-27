@@ -2,9 +2,6 @@
 #define GAME_H
 
 #include <stdint.h>
-#include "lcd1602.h"
-#include <stdio.h> 
-#include <string.h>
 #include "joystick.h"
 
 typedef enum 
@@ -15,6 +12,7 @@ typedef enum
   PLAYER_SELECT,
   ONE_PLAYER,
   TWO_PLAYERS,
+  PLAY,
   SCORES,
   GAME_RESULT,
   SLEEP

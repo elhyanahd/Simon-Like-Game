@@ -75,6 +75,7 @@ endif
 ######################################
 # C sources
 C_SOURCES =  \
+Core/Src/SimonGame.c \
 Core/Src/adc.c \
 Core/Src/gpio.c \
 Core/Src/joystick.c \

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
   28:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       and I-Cache are disabled, and all peripherals are off except internal
   29:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       SRAM, Flash and JTAG.
   30:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 2
 
 
   31:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       (+) There is no prescaler on High speed (AHBs) and Low speed (APBs) buses:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
   85:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** #define MEGA_HZ                    (1000000U) /* Division factor to convert Hz in Mhz */
   86:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** /**
   87:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @}
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 3
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 3
 
 
   88:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  142:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****            ##### Initialization and de-initialization functions #####
  143:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****  ===============================================================================
  144:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     [..]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 4
 
 
  145:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       This section provides functions allowing to configure the internal and external oscillators
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  199:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****          (+) Several clock sources can be used to drive the System clock (SYSCLK): MSI, HSI,
  200:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****              HSE and main PLL.
  201:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****              The AHB clock (HCLK1) is derived from System clock through configurable
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 5
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 5
 
 
  202:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****              prescaler and used to clock the CPU, memory and peripherals mapped
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  256:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *           - MSI ON and used as system clock source
  257:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *           - HSE, HSI, PLL, PLLSAI1
  258:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *           - HCLK1, HCLK2, HCLK4, PCLK1 and PCLK2 prescalers set to 1.
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 6
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 6
 
 
  259:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *           - CSS, MCO OFF
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  313:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** #if defined(SAI1)
  314:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   CLEAR_BIT(RCC->CR, RCC_CR_HSION | RCC_CR_HSIKERON | RCC_CR_HSIASFS | RCC_CR_HSEON | RCC_CR_HSEPRE
  315:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             RCC_CR_PLLSAI1ON);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 7
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 7
 
 
  316:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** #else
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  370:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
  371:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     return HAL_OK;
  372:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 8
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 8
 
 
  373:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** }
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  427:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
  428:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  429:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           /* Selects the Multiple Speed oscillator (MSI) clock range .*/
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 9
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 9
 
 
  430:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           __HAL_RCC_MSI_RANGE_CONFIG(RCC_OscInitStruct->MSIClockRange);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  484:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       else
  485:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
  486:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         /* Disable the Internal High Speed oscillator (MSI). */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 10
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 10
 
 
  487:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         __HAL_RCC_MSI_DISABLE();
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  541:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       else
  542:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
  543:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         /* Get Start Tick*/
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 11
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 11
 
 
  544:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         tickstart = HAL_GetTick();
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  598:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           {
  599:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             return HAL_TIMEOUT;
  600:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 12
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 12
 
 
  601:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  655:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****               return HAL_TIMEOUT;
  656:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             }
  657:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 13
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 13
 
 
  658:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  712:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         /*2. Switch OFF LSI2*/
  713:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  714:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         /* Disable the Internal Low Speed oscillator (LSI2). */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 14
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 14
 
 
  715:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         __HAL_RCC_LSI2_DISABLE();
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  769:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     /* Requires to enable write access to Backup Domain of necessary */
  770:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  771:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     if (HAL_IS_BIT_CLR(PWR->CR1, PWR_CR1_DBP))
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 15
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 15
 
 
  772:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  826:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     /* Check the parameters */
  827:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     assert_param(IS_RCC_HSI48(RCC_OscInitStruct->HSI48State));
  828:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 16
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 16
 
 
  829:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     /* Check the HSI State */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  883:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       assert_param(IS_RCC_PLLQ_VALUE(RCC_OscInitStruct->PLL.PLLQ));
  884:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       assert_param(IS_RCC_PLLR_VALUE(RCC_OscInitStruct->PLL.PLLR));
  885:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 17
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 17
 
 
  886:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       /* Do nothing if PLL configuration is unchanged */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  940:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             /* Wait till PLL is ready */
  941:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             while (READ_BIT(RCC->CR, RCC_CR_PLLRDY) == 0U)
  942:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 18
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 18
 
 
  943:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****               if ((HAL_GetTick() - tickstart) > PLL_TIMEOUT_VALUE)
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  997:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           {
  998:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             return HAL_TIMEOUT;
  999:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 19
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 19
 
 
 1000:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1054:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @retval None
 1055:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   */
 1056:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, uint32_t FLatency)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 20
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 20
 
 
 1057:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1111:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   /*-------------------------- HCLK2 Configuration --------------------------*/
 1112:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   if (((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_HCLK2) == RCC_CLOCKTYPE_HCLK2)
 1113:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 21
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 21
 
 
 1114:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     assert_param(IS_RCC_HCLKx(RCC_ClkInitStruct->AHBCLK2Divider));
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1168:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     tickstart = HAL_GetTick();
 1169:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     while (LL_RCC_IsActiveFlag_PPRE2() == 0U)
 1170:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 22
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 22
 
 
 1171:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       if ((HAL_GetTick() - tickstart) > PRESCALER_TIMEOUT_VALUE)
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1225:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     tickstart = HAL_GetTick();
 1226:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
 1227:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     /* check system clock source switch status */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 23
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 23
 
 
 1228:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     while (__HAL_RCC_GET_SYSCLK_SOURCE() != (RCC_ClkInitStruct->SYSCLKSource << RCC_CFGR_SWS_Pos))
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1282:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     (+) Enable the Clock Security System.
 1283:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
 1284:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** @endverbatim
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 24
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 24
 
 
 1285:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @{
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1339:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   mco_gpio_index = RCC_GET_MCO_GPIO_INDEX(RCC_MCOx);
 1340:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   SET_BIT(RCC->AHB2ENR, (1UL << mco_gpio_index));
 1341:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 25
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 25
 
 
 1342:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   /* Configure the MCOx pin in alternate function mode */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1396:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @note   This function can be used by the user application to compute the
 1397:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *         baudrate for the communication peripherals or configure other parameters.
 1398:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 26
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 26
 
 
 1399:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @note   Each time SYSCLK changes, this function must be called to update the
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1453:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         break;
 1454:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       case RCC_PLLSOURCE_MSI:  /* MSI used as PLL clock source */
 1455:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       default:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 27
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 27
 
 
 1456:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         pllinputfreq = __LL_RCC_CALC_MSI_FREQ(LL_RCC_MSI_GetRange());
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1510:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @note   Each time PCLK2 changes, this function must be called to update the
 1511:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   *         right PCLK2 value. Otherwise, any configuration based on this function will be incorrec
 1512:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @retval PCLK2 frequency in Hz
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 28
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 28
 
 
 1513:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1567:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLQ      = (regPLLCFGRvalue & RCC_PLLCFGR_PLLQ);
 1568:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLR      = (regPLLCFGRvalue & RCC_PLLCFGR_PLLR);
 1569:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 29
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 29
 
 
 1570:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   /* Get Backup Domain register */
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1624:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
 1625:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   /* Get the AHBCLK4Divider configuration ------------------------------------*/
 1626:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   RCC_ClkInitStruct->AHBCLK4Divider = LL_RCC_GetAHB4Prescaler();
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 30
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 30
 
 
 1627:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1681:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   * @retval can be a combination of @ref RCC_Reset_Flag
 1682:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   */
 1683:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** uint32_t HAL_RCC_GetResetSource(void)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 31
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 31
 
 
 1684:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** {
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1738:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   return RCC_SetFlashLatency((flash_clksrcfreq / MEGA_HZ), PWR_REGULATOR_VOLTAGE_SCALE1);
 1739:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** #endif /* PWR_CR1_VOS */
 1740:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 32
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 32
 
 
 1741:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
   64              	.LVL2:
 1760:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   uint32_t tickstart;
   65              		.loc 1 1760 3 view .LVU10
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 33
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 33
 
 
 1761:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1767:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
   98              		.loc 1 1767 7 view .LVU21
 1767:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 34
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 34
 
 
   99              		.loc 1 1767 55 is_stmt 0 view .LVU22
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  143 007c 53F82C5C 		ldr	r5, [r3, #-44]
  144              	.LVL13:
 1781:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         break;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 35
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 35
 
 
  145              		.loc 1 1781 9 is_stmt 1 view .LVU37
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  176 009e AB42     		cmp	r3, r5
  177 00a0 06D0     		beq	.L18
 1804:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 36
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 36
 
 
 1805:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     if ((HAL_GetTick() - tickstart) > LATENCY_TIMEOUT_VALUE)
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  225              		.cfi_offset 4, -8
  226              		.cfi_offset 14, -4
 1717:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   uint32_t msifreq;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 37
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 37
 
 
  227              		.loc 1 1717 3 is_stmt 1 view .LVU58
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
   31:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @{
   32:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
   33:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 38
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 38
 
 
   34:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #if defined(RCC)
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
   88:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
   89:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
   90:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 39
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 39
 
 
   91:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  145:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_CICR_HSIRDYC                RCC_CICR_HSIRDYC     /*!< HSI Ready Interrupt Clear     
  146:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_CICR_HSERDYC                RCC_CICR_HSERDYC     /*!< HSE Ready Interrupt Clear     
  147:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_CICR_PLLRDYC                RCC_CICR_PLLRDYC     /*!< PLL Ready Interrupt Clear     
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 40
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 40
 
 
  148:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #if defined(RCC_HSI48_SUPPORT)
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  202:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_CIER_HSI48RDYIE             RCC_CIER_HSI48RDYIE    /*!< HSI48 Ready Interrupt Enable
  203:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #endif /* RCC_HSI48_SUPPORT */
  204:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #if defined(SAI1)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 41
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 41
 
 
  205:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_CIER_PLLSAI1RDYIE           RCC_CIER_PLLSAI1RDYIE  /*!< PLLSAI1 Ready Interrupt Enab
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  259:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @{
  260:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
  261:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_HSEAMPTHRESHOLD_1_2         (0x000000000U)        /*!< HSE sense amplifier bias curr
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 42
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 42
 
 
  262:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_HSEAMPTHRESHOLD_3_4         RCC_HSECR_HSES        /*!< HSE sense amplifier bias curr
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_SYSCLK_DIV_8                (RCC_CFGR_HPRE_3 | RCC_CFGR_HPRE_1)                     
  317:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_SYSCLK_DIV_10               (RCC_CFGR_HPRE_2 | RCC_CFGR_HPRE_1)                     
  318:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_SYSCLK_DIV_16               (RCC_CFGR_HPRE_3 | RCC_CFGR_HPRE_1 | RCC_CFGR_HPRE_0)   
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 43
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 43
 
 
  319:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_SYSCLK_DIV_32               (RCC_CFGR_HPRE_2 | RCC_CFGR_HPRE_1 | RCC_CFGR_HPRE_0)   
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  373:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #if defined(RCC_HSI48_SUPPORT)
  374:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_MCO1SOURCE_HSI48            (RCC_CFGR_MCOSEL_0|RCC_CFGR_MCOSEL_3)         /*!< HSI48
  375:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #endif /* RCC_HSI48_SUPPORT */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 44
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 44
 
 
  376:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_MCO1SOURCE_HSE_BEFORE_STAB  (RCC_CFGR_MCOSEL_2|RCC_CFGR_MCOSEL_3)         /*!< HSE b
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  430:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
  431:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_PERIPH_FREQUENCY_NO         0x00000000U                 /*!< No clock enabled for th
  432:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_PERIPH_FREQUENCY_NA         0xFFFFFFFFU                 /*!< Frequency cannot be pro
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 45
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 45
 
 
  433:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  487:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_LPTIM2_CLKSOURCE_LSE        (uint32_t)(RCC_CCIPR_LPTIM2SEL | (RCC_CCIPR_LPTIM2SEL >>
  488:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
  489:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 46
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 46
 
 
  490:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_ADC_CLKSOURCE_PLL              RCC_CCIPR_ADCSEL_1 /*!< PLL selected as ADC clock    
  545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_ADC_CLKSOURCE_SYSCLK           RCC_CCIPR_ADCSEL   /*!< SYSCLK selected as ADC clock 
  546:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 47
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 47
 
 
  547:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  601:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_SAI1_CLKSOURCE              RCC_CCIPR_SAI1SEL   /*!< SAI1 clock source selection bit
  602:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
  603:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 48
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 48
 
 
  604:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  658:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_RFWKP_CLKSOURCE_LSI           RCC_CSR_RFWKPSEL_1          /*!< LSI oscillator clock 
  659:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #endif /* STM32WB15xx || STM32WB10xx */
  660:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_RFWKP_CLKSOURCE_HSE_DIV1024   RCC_CSR_RFWKPSEL            /*!< HSE oscillator clock 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 49
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 49
 
 
  661:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  715:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_7                  (RCC_PLLCFGR_PLLP_1|RCC_PLLCFGR_PLLP_2)                 
  716:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_8                  (RCC_PLLCFGR_PLLP_0|RCC_PLLCFGR_PLLP_1|RCC_PLLCFGR_PLLP_
  717:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_9                  (RCC_PLLCFGR_PLLP_3)                                    
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 50
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 50
 
 
  718:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_10                 (RCC_PLLCFGR_PLLP_0|RCC_PLLCFGR_PLLP_3)                 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  772:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
  773:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
  774:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 51
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 51
 
 
  775:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /** @defgroup RCC_LL_EC_PLLSAI1P  PLLSAI1 division factor (PLLP)
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  829:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
  830:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
  831:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 52
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 52
 
 
  832:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /* Exported macro ------------------------------------------------------------*/
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  886:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval PLL clock frequency (in Hz)
  887:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
  888:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #define __LL_RCC_CALC_PLLCLK_FREQ(__INPUTFREQ__, __PLLM__, __PLLN__, __PLLR__) ((__INPUTFREQ__) * (
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 53
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 53
 
 
  889:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****                                                                                 (((__PLLR__) >> RCC
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  943:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
  944:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
  945:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Helper macro to calculate the PLLPCLK frequency used on ADC domain
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 54
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 54
 
 
  946:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @note ex: @ref __LL_RCC_CALC_PLLCLK_ADC_FREQ (HSE_VALUE,@ref LL_RCC_PLL_GetDivider (),
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1000:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *             @ref LL_RCC_PLL_GetN (), @ref LL_RCC_PLL_GetQ ());
 1001:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  __INPUTFREQ__ PLL Input frequency (based on MSI/HSE/HSI)
 1002:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  __PLLM__ This parameter can be one of the following values:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 55
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 55
 
 
 1003:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1057:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_17
 1058:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_18
 1059:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_19
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 56
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 56
 
 
 1060:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_20
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1114:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_1
 1115:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_2
 1116:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 57
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 57
 
 
 1117:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_4
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1171:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_8
 1172:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_10
 1173:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_16
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 58
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 58
 
 
 1174:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_32
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1228:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_4
 1229:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_8
 1230:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_16
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 59
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 59
 
 
 1231:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval PCLK2 clock frequency (in Hz)
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1285:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CR           HSEPRE        LL_RCC_HSE_DisableDiv2
 1286:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
 1287:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 60
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 60
 
 
 1288:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_HSE_DisableDiv2(void)
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1342:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 1343:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
 1344:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Check if HSE clock control register is locked or not
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 61
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 61
 
 
 1345:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll HSECR           UNLOCKED        LL_RCC_HSE_IsClockControlLocked
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1399:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_HSE_CURRENTMAX_1
 1400:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_HSE_CURRENTMAX_2
 1401:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_HSE_CURRENTMAX_3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 62
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 62
 
 
 1402:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_HSE_CURRENTMAX_4
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1456:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Disable HSI in stop mode
 1457:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CR           HSIKERON      LL_RCC_HSI_DisableInStopMode
 1458:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 63
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 63
 
 
 1459:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1513:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 1514:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 1515:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 64
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 64
 
 
 1516:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Disable HSI Automatic from stop mode
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1570:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Enable HSI48
 1571:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CRRCR          HSI48ON       LL_RCC_HSI48_Enable
 1572:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 65
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 65
 
 
 1573:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1627:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 1628:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
 1629:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Disable  Low Speed External (LSE) crystal.
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 66
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 66
 
 
 1630:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll BDCR         LSEON         LL_RCC_LSE_Disable
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1684:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
 1685:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Get LSE oscillator drive capability
 1686:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll BDCR         LSEDRV        LL_RCC_LSE_GetDriveCapability
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 67
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 67
 
 
 1687:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval Returned value can be one of the following values:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1741:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @}
 1742:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
 1743:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 68
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 68
 
 
 1744:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /** @defgroup RCC_LL_EF_LSI1 LSI1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1798:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CSR          LSI2ON         LL_RCC_LSI2_Disable
 1799:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
 1800:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 69
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 69
 
 
 1801:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_LSI2_Disable(void)
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1855:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
 1856:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Disable MSI oscillator
 1857:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CR           MSION         LL_RCC_MSI_Disable
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 70
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 70
 
 
 1858:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1912:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_MSIRANGE_6
 1913:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_MSIRANGE_7
 1914:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_MSIRANGE_8
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 71
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 71
 
 
 1915:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_MSIRANGE_9
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1969:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  Value Between Min_Data = 0 and Max_Data = 255
 1970:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
 1971:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 72
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 72
 
 
 1972:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_MSI_SetCalibTrimming(uint32_t Value)
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2026:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 2027:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 2028:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 73
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 73
 
 
 2029:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Get Low speed clock selection
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2083:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
 2084:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_GetRFClockSource(void)
 2085:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 74
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 74
 
 
 2086:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   return (uint32_t)(READ_BIT(RCC->EXTCFGR, RCC_EXTCFGR_RFCSS));
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2140:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_5
 2141:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_6
 2142:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_8
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 75
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 75
 
 
 2143:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_10
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2197:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_128
 2198:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_256
 2199:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_512
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 76
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 76
 
 
 2200:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2254:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_128
 2255:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_256
 2256:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_SYSCLK_DIV_512
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 77
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 77
 
 
 2257:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  246              		.loc 2 2308 3 view .LVU67
  247              		.loc 2 2308 21 is_stmt 0 view .LVU68
  248 000a 4FF0B043 		mov	r3, #1476395008
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 78
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 78
 
 
  249 000e D3F80831 		ldr	r3, [r3, #264]
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  295              		.syntax unified
  296              		.thumb
  297              		.thumb_func
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 79
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 79
 
 
  299              	HAL_RCC_DeInit:
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  342              	.LVL30:
  343              	.L31:
  280:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 80
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 80
 
 
  344              		.loc 1 280 31 view .LVU89
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  386              	.LBE235:
  295:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  387              		.loc 1 295 3 is_stmt 1 view .LVU102
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 81
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 81
 
 
  388              	.LBB237:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  428 006c 9842     		cmp	r0, r3
  429 006e F2D9     		bls	.L29
  308:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 82
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 82
 
 
  430              		.loc 1 308 14 view .LVU117
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2315:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_1
 2316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_2
 2317:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_4
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 83
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 83
 
 
 2318:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_8
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2372:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @{
 2373:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
 2374:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 84
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 84
 
 
 2375:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Configure SMPS step down converter clock source
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2429:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
 2430:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
 2431:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_SetSMPSPrescaler(uint32_t Prescaler)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 85
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 85
 
 
 2432:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2486:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   MODIFY_REG(RCC->CFGR, RCC_CFGR_MCOSEL | RCC_CFGR_MCOPRE, MCOxSource | MCOxPrescaler);
 2487:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 2488:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 86
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 86
 
 
 2489:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2543:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
 2544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   MODIFY_REG(RCC->CCIPR, ((I2CxSource >> 4) & 0x000FF000U), ((I2CxSource << 4) & 0x000FF000U));
 2545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 87
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 87
 
 
 2546:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2600:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CCIPR        CLK48SEL      LL_RCC_SetCLK48ClockSource
 2601:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  CLK48xSource This parameter can be one of the following values:
 2602:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_CLK48_CLKSOURCE_HSI48 (*)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 88
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 88
 
 
 2603:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_CLK48_CLKSOURCE_PLLSAI1 (*)
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2657:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 2658:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 2659:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 89
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 89
 
 
 2660:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Configure ADC clock source
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2714:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  I2Cx This parameter can be one of the following values:
 2715:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2C1_CLKSOURCE
 2716:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2C3_CLKSOURCE
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 90
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 90
 
 
 2717:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval Returned value can be one of the following values:
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2771:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Get RNGx clock source
 2772:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CCIPR        RNGSEL      LL_RCC_GetRNGClockSource
 2773:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  RNGx This parameter can be one of the following values:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 91
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 91
 
 
 2774:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_RNG_CLKSOURCE
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2828:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_ADC_CLKSOURCE_PLL
 2829:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_ADC_CLKSOURCE_SYSCLK
 2830:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_ADC_CLKSOURCE_HSI (*)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 92
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 92
 
 
 2831:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @note   (*) Value not defined for all devices
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2885:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   SET_BIT(RCC->BDCR, RCC_BDCR_RTCEN);
 2886:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 2887:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 93
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 93
 
 
 2888:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2942:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_PLL_Enable(void)
 2943:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
 2944:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   SET_BIT(RCC->CR, RCC_CR_PLLON);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 94
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 94
 
 
 2945:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 2968:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
 2969:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Configure PLL used for SYSCLK Domain
 2970:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @note PLL Source and PLLM Divider can be written only when PLL is disabled
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 95
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 95
 
 
 2971:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *       PLLSAI1 are disabled
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3025:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_5
 3026:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_6
 3027:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_7
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 96
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 96
 
 
 3028:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_8
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3082:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSOURCE_MSI
 3083:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSOURCE_HSI
 3084:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSOURCE_HSE
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 97
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 97
 
 
 3085:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  PLLM This parameter can be one of the following values:
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3139:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @note PLLN/PLLQ can be written only when PLL is disabled
 3140:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @note This  can be selected for USB, RNG
 3141:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll PLLCFGR      PLLSRC        LL_RCC_PLL_ConfigDomain_48M\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 98
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 98
 
 
 3142:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         PLLCFGR      PLLM          LL_RCC_PLL_ConfigDomain_48M\n
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3196:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_7
 3197:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_8
 3198:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_9
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 99
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 99
 
 
 3199:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_10
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3253:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_4
 3254:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_5
 3255:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_6
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 100
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 100
 
 
 3256:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_7
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3310:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
 3311:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_PLL_IsEnabledDomain_SAI(void)
 3312:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 101
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 101
 
 
 3313:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   return ((READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLPEN) == (RCC_PLLCFGR_PLLPEN)) ? 1UL : 0UL);
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3367:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   CLEAR_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLQEN);
 3368:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 3369:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 102
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 102
 
 
 3370:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3424:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll CR           PLLSAI1ON     LL_RCC_PLLSAI1_Enable
 3425:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
 3426:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 103
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 103
 
 
 3427:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_PLLSAI1_Enable(void)
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  518              		.loc 1 362 19 is_stmt 0 view .LVU147
  519 00d4 0E4B     		ldr	r3, .L42+8
  520 00d6 0F4A     		ldr	r2, .L42+12
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 104
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 104
 
 
  521 00d8 1A60     		str	r2, [r3]
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  561 0106 00BF     		.align	2
  562              	.L42:
  563 0108 FFF4EEFA 		.word	-85003009
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 105
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 105
 
 
  564 010c 00010422 		.word	570687744
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1330:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  609              		.loc 1 1330 3 is_stmt 1 view .LVU173
 1330:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 106
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 106
 
 
  610              		.loc 1 1330 29 is_stmt 0 view .LVU174
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1345:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  649              		.loc 1 1345 3 is_stmt 0 view .LVU190
  650 0040 FFF7FEFF 		bl	HAL_GPIO_Init
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 107
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 107
 
 
  651              	.LVL55:
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  691              	.LBI245:
 2484:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
  692              		.loc 2 2484 22 view .LVU205
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 108
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 108
 
 
  693              	.LBB246:
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  736              		.loc 2 2074 21 is_stmt 0 view .LVU218
  737 0000 4FF0B043 		mov	r3, #1476395008
  738 0004 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 109
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 109
 
 
  739              	.LVL62:
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  777 001e 52F82300 		ldr	r0, [r2, r3, lsl #2]
  778              	.LVL67:
 1416:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 110
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 110
 
 
  779              		.loc 1 1416 18 discriminator 1 view .LVU235
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3469:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_2
 3470:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_3
 3471:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_4
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 111
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 111
 
 
 3472:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_5
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3526:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_9
 3527:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_10
 3528:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_11
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 112
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 112
 
 
 3529:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_12
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3583:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  PLLN Between 6 and 127
 3584:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @param  PLLR This parameter can be one of the following values:
 3585:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1R_DIV_2
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 113
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 113
 
 
 3586:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1R_DIV_3
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3640:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_27
 3641:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_28
 3642:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_29
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 114
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 114
 
 
 3643:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLSAI1P_DIV_30
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3697:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 3698:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 3699:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 115
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 115
 
 
 3700:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Disable PLLSAI1 output mapped on SAI domain clock
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3754:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Enable PLLSAI1 output mapped on ADC domain clock
 3755:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll PLLSAI1CFGR  PLLREN    LL_RCC_PLLSAI1_EnableDomain_ADC
 3756:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval None
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 116
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 116
 
 
 3757:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3811:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_ClearFlag_LSI2RDY(void)
 3812:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
 3813:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   SET_BIT(RCC->CICR, RCC_CICR_LSI2RDYC);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 117
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 117
 
 
 3814:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3868:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
 3869:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 3870:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 118
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 118
 
 
 3871:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Get the oscillator used as PLL clock source.
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  841              		.loc 1 1451 24 view .LVU257
  842 004e 1A48     		ldr	r0, .L65+4
  843 0050 12E0     		b	.L53
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 119
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 119
 
 
  844              	.LVL74:
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  883 006c B02B     		cmp	r3, #176
  884 006e 16D8     		bhi	.L64
  885              	.LVL79:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 120
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 120
 
 
  886              	.L55:
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  925 0088 C3F30213 		ubfx	r3, r3, #4, #3
  926 008c 0133     		adds	r3, r3, #1
  927 008e B0FBF3F0 		udiv	r0, r0, r3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 121
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 121
 
 
  928              	.LBB266:
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  970 00aa 0448     		ldr	r0, .L65+8
  971 00ac 7047     		bx	lr
  972              	.LVL88:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 122
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 122
 
 
  973              	.L58:
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1473:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** }
  1020              		.loc 1 1473 22 discriminator 2 view .LVU309
  1021 000c C3F30313 		ubfx	r3, r3, #4, #4
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 123
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 123
 
 
  1022 0010 024A     		ldr	r2, .L69
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1068              	.LBB271:
  401:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     assert_param(IS_RCC_MSICALIBRATION_VALUE(RCC_OscInitStruct->MSICalibrationValue));
  1069              		.loc 1 401 5 is_stmt 1 view .LVU320
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 124
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 124
 
 
  402:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     assert_param(IS_RCC_MSI_CLOCK_RANGE(RCC_OscInitStruct->MSIClockRange));
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  461:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
  1110              		.loc 1 461 28 is_stmt 0 view .LVU339
  1111 0028 E369     		ldr	r3, [r4, #28]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 125
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 125
 
 
  1112              	.LVL95:
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1152              	.LBE278:
  479:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         /* Adjusts the Multiple Speed oscillator (MSI) calibration value.*/
  1153              		.loc 1 479 9 is_stmt 1 view .LVU354
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 126
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 126
 
 
  1154 0050 636A     		ldr	r3, [r4, #36]
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  508:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  1197              		.loc 1 508 5 is_stmt 1 view .LVU366
  511:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     const uint32_t temp_plloscsrc = __HAL_RCC_GET_PLL_OSCSOURCE();
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 127
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 127
 
 
  1198              		.loc 1 511 5 view .LVU367
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1239              		.loc 1 524 7 is_stmt 0 view .LVU384
  1240 0096 B3F5803F 		cmp	r3, #65536
  1241 009a 00F0B080 		beq	.L178
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 128
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 128
 
 
  524:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1340:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
  1281              		.loc 2 1340 71 view .LVU400
  1282 00be 13F4003F 		tst	r3, #131072
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 129
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 129
 
 
  1283 00c2 73D1     		bne	.L83
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1944:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   if (msiRange > LL_RCC_MSIRANGE_11)
  1323              		.loc 2 1944 23 is_stmt 0 view .LVU415
  1324 00e0 4FF0B043 		mov	r3, #1476395008
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 130
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 130
 
 
  1325 00e4 1B68     		ldr	r3, [r3]
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1365              		.loc 2 1922 3 view .LVU429
  1366              	.LBE288:
  1367              	.LBE287:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 131
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 131
 
 
  432:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         }
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1410              	.LVL125:
 1947:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   }
  1411              		.loc 2 1947 14 view .LVU442
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 132
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 132
 
 
  1412 0134 DBE7     		b	.L76
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  443:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           {
  1454              		.loc 1 443 15 is_stmt 0 view .LVU455
  1455 0152 606A     		ldr	r0, [r4, #36]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 133
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 133
 
 
  1456 0154 FFF7FEFF 		bl	RCC_SetFlashLatencyFromMSIRange
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1497              	.LVL137:
  490:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  1498              		.loc 1 490 21 view .LVU469
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 134
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 134
 
 
  1499 0180 0546     		mov	r5, r0
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  516:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
  1539              		.loc 1 516 28 is_stmt 0 view .LVU484
  1540 01a4 6368     		ldr	r3, [r4, #4]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 135
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 135
 
 
  1541              	.LVL141:
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1580 01be D268     		ldr	r2, [r2, #12]
  1581              		.loc 2 3881 10 view .LVU502
  1582 01c0 02F00302 		and	r2, r2, #3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 136
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 136
 
 
  1583              	.LVL144:
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  595:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         {
  1624              		.loc 1 595 37 view .LVU517
  1625              	.LBB322:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 137
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 137
 
 
  1626              	.LBI322:
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1666 0208 1360     		str	r3, [r2]
 1321:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
  1667              		.loc 2 1321 1 view .LVU532
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 138
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 138
 
 
  1668 020a 4EE7     		b	.L87
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1708              	.L181:
  551:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
  1709              		.loc 1 551 20 view .LVU547
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 139
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 139
 
 
  1710              	.LBE332:
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1752              	.LBB327:
 1547:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
  1753              		.loc 2 1547 3 view .LVU560
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 140
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 140
 
 
  1754 024e 4FF0B042 		mov	r2, #1476395008
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1792              		.loc 2 1775 76 view .LVU576
  1793 027e 13F0020F 		tst	r3, #2
  1794 0282 2ED1     		bne	.L101
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 141
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 141
 
 
  1795              	.LBE335:
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1835              		.loc 1 653 32 discriminator 1 view .LVU590
  1836 02ac 401B     		subs	r0, r0, r5
  653:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 142
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 142
 
 
  1837              		.loc 1 653 16 discriminator 1 view .LVU591
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1878 02ce 13F4806F 		tst	r3, #1024
  1879 02d2 C4D0     		beq	.L91
  1880              	.LBE331:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 143
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 143
 
 
  1881              	.LBE330:
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  1921              		.loc 2 1811 26 view .LVU618
  1922              	.LBB344:
 1813:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 144
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 144
 
 
  1923              		.loc 2 1813 3 view .LVU619
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1763:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
  1965              		.loc 2 1763 22 view .LVU632
  1966              	.LBB348:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 145
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 145
 
 
 1765:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2007              	.LVL180:
  2008              	.L100:
  699:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 146
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 146
 
 
  2009              		.loc 1 699 9 is_stmt 1 view .LVU647
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2049              		.loc 1 707 14 discriminator 1 view .LVU661
  2050 0382 0228     		cmp	r0, #2
  2051 0384 F3D9     		bls	.L107
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 147
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 147
 
 
  709:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2092 03b0 F3D9     		bls	.L108
  722:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           }
  2093              		.loc 1 722 20 view .LVU676
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 148
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 148
 
 
  2094 03b2 0320     		movs	r0, #3
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2135              		.loc 2 1763 22 view .LVU689
  2136              	.LBB364:
 1765:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 149
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 149
 
 
  2137              		.loc 2 1765 3 view .LVU690
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2178              	.L109:
  739:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         {
  2179              		.loc 1 739 9 is_stmt 1 view .LVU704
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 150
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 150
 
 
  739:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         {
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2220 043e 3CD0     		beq	.L184
  789:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  2221              		.loc 1 789 5 discriminator 5 view .LVU719
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 151
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 151
 
 
  2222              	.LBB367:
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2262              		.loc 2 1725 26 view .LVU733
  2263              	.LBB372:
 1727:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 152
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 152
 
 
  2264              		.loc 2 1727 3 view .LVU734
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  781:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         {
  2305              		.loc 1 781 14 is_stmt 0 view .LVU748
  2306 049a FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 153
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 153
 
 
  2307              	.LVL200:
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2349              	.LBB378:
 1625:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
  2350              		.loc 2 1625 3 view .LVU761
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 154
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 154
 
 
  2351 04ca D3F89020 		ldr	r2, [r3, #144]
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2391 04f8 F1D9     		bls	.L121
  816:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****         }
  2392              		.loc 1 816 18 view .LVU776
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 155
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 155
 
 
  2393 04fa 0320     		movs	r0, #3
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2432              		.loc 2 1594 26 view .LVU791
  2433              	.LBB384:
 1596:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 156
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 156
 
 
  2434              		.loc 2 1596 3 view .LVU792
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2475              		.loc 1 856 7 is_stmt 1 view .LVU805
  2476              	.L125:
  856:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 157
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 157
 
 
  2477              		.loc 1 856 37 view .LVU806
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2516              		.loc 2 2072 26 view .LVU821
  2517              	.LBB391:
 2074:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 158
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 158
 
 
  2518              		.loc 2 2074 3 view .LVU822
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2557              	.LVL217:
  991:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  2558              		.loc 1 991 21 view .LVU838
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 159
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 159
 
 
  2559 059c 0446     		mov	r4, r0
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  887:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           (READ_BIT(temp_pllconfig, RCC_PLLCFGR_PLLM) != RCC_OscInitStruct->PLL.PLLM) ||
  2595              		.loc 1 887 10 view .LVU857
  2596 05c0 8342     		cmp	r3, r0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 160
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 160
 
 
  2597 05c2 0AD0     		beq	.L187
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2636 05f6 E5D1     		bne	.L127
  891:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****           (READ_BIT(temp_pllconfig, RCC_PLLCFGR_PLLR) != RCC_OscInitStruct->PLL.PLLR))
  2637              		.loc 1 891 12 view .LVU873
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 161
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 161
 
 
  2638 05f8 02F06063 		and	r3, r2, #234881024
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2678              		.loc 1 912 25 is_stmt 0 view .LVU887
  2679 0628 FFF7FEFF 		bl	HAL_GetTick
  2680              	.LVL224:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 162
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 162
 
 
  912:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  932:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  2724              		.loc 1 932 13 view .LVU899
  2725              	.LBB396:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 163
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 163
 
 
  2726              	.LBI396:
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2766              	.L191:
  945:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****               }
  2767              		.loc 1 945 24 view .LVU914
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 164
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 164
 
 
  2768              	.LBE400:
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2808              		.loc 1 974 18 is_stmt 0 view .LVU928
  2809 06c8 FFF7FEFF 		bl	HAL_GetTick
  2810              	.LVL233:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 165
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 165
 
 
  974:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****             {
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2855              		.cfi_offset 3, -16
  2856              		.cfi_offset 4, -12
  2857              		.cfi_offset 5, -8
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 166
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 166
 
 
  2858              		.cfi_offset 14, -4
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2901 0704 FCE7     		b	.L72
  2902              	.LVL244:
  2903              	.L170:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 167
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 167
 
 
 1012:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       }
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2950 000e 1B68     		ldr	r3, [r3]
  2951 0010 03F00703 		and	r3, r3, #7
 1075:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 168
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 168
 
 
  2952              		.loc 1 1075 6 view .LVU960
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  2991              	.L210:
 1179:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
  2992              		.loc 1 1179 3 is_stmt 1 view .LVU976
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 169
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 169
 
 
 1179:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   {
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3031              	.L236:
 1078:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  3032              		.loc 1 1078 5 is_stmt 1 view .LVU993
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 170
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 170
 
 
  3033 0074 794A     		ldr	r2, .L244
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3073              	.LBB410:
  3074              	.LBI410:
 2152:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 171
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 171
 
 
  3075              		.loc 2 2152 22 view .LVU1008
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3904:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #endif /* RCC_HSI48_SUPPORT */
 3905:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 3906:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #if defined(SAI1)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 172
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 172
 
 
 3907:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 3961:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @retval State of bit (1 or 0).
 3962:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   */
 3963:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_IsActiveFlag_LSERDY(void)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 173
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 173
 
 
 3964:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 4018:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #endif /* RCC_HSI48_SUPPORT */
 4019:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 4020:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** #if defined(SAI1)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 174
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 174
 
 
 4021:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3113 00c2 FFF7FEFF 		bl	HAL_GetTick
  3114              	.LVL257:
 1104:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****       {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 175
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 175
 
 
  3115              		.loc 1 1104 26 discriminator 1 view .LVU1022
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 4061:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** 
 4062:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** /**
 4063:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @brief  Check if HCLK2 prescaler flag value has been applied or not
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 176
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 176
 
 
 4064:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h ****   * @rmtoll EXTCFGR         C2HPREF       LL_RCC_IsActiveFlag_C2HPRE
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3195              	.LVL267:
 2204:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
  3196              		.loc 2 2204 3 is_stmt 0 view .LVU1048
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 177
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 177
 
 
  3197              	.LBE419:
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3232 013e 88E0     		b	.L198
  3233              	.LVL271:
  3234              	.L240:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 178
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 178
 
 
 1147:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     LL_RCC_SetAPB1Prescaler(RCC_ClkInitStruct->APB1CLKDivider);
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3268              		.loc 2 4090 3 view .LVU1073
  3269              		.loc 2 4090 12 is_stmt 0 view .LVU1074
  3270 0156 4FF0B043 		mov	r3, #1476395008
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 179
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 179
 
 
  3271 015a 9B68     		ldr	r3, [r3, #8]
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3312 0184 FFF7FEFF 		bl	HAL_GetTick
  3313              	.LVL281:
  3314 0188 0646     		mov	r6, r0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 180
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 180
 
 
  3315              	.LVL282:
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3350              	.LBB431:
 1340:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
  3351              		.loc 2 1340 3 view .LVU1102
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 181
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 181
 
 
 1340:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3392 01cc 12F4806F 		tst	r2, #1024
  3393 01d0 42D0     		beq	.L229
  3394              	.L214:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 182
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 182
 
 
  3395              	.LBE435:
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
 1228:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     {
  3436              		.loc 1 1228 63 discriminator 1 view .LVU1130
  3437 01f0 6A68     		ldr	r2, [r5, #4]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 183
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 183
 
 
 1228:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     {
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3478              		.loc 1 1248 38 view .LVU1144
 1248:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****     {
  3479              		.loc 1 1248 12 is_stmt 0 view .LVU1145
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 184
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 184
 
 
  3480 0228 0C4B     		ldr	r3, .L244
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3521              		.cfi_restore 5
  3522              		.cfi_restore 6
  3523              		.cfi_restore 14
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 185
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 185
 
 
 1063:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   }
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3572              		.loc 2 2284 3 view .LVU1166
 2284:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** }
  3573              		.loc 2 2284 21 is_stmt 0 view .LVU1167
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 186
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 186
 
 
  3574 0006 4FF0B043 		mov	r3, #1476395008
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3622              	.LBE442:
 1493:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** }
  3623              		.loc 1 1493 22 discriminator 2 view .LVU1176
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 187
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 187
 
 
  3624 000e 03F00F03 		and	r3, r3, #15
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3672 0016 03F01F03 		and	r3, r3, #31
 1506:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  3673              		.loc 1 1506 1 view .LVU1185
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 188
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 188
 
 
  3674 001a D840     		lsrs	r0, r0, r3
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3722              	.L261:
  3723 001e 00BF     		.align	2
  3724              	.L260:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 189
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 189
 
 
  3725 0020 00000000 		.word	APBPrescTable
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3767              		.loc 1 1546 16 is_stmt 0 view .LVU1207
  3768 0010 4C68     		ldr	r4, [r1, #4]
  3769              	.LVL308:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 190
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 190
 
 
 1547:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3804 0036 0461     		str	r4, [r0, #16]
 1562:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLSource = (regPLLCFGRvalue & RCC_PLLCFGR_PLLSRC);
  3805              		.loc 1 1562 3 is_stmt 1 view .LVU1228
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 191
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 191
 
 
 1562:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLSource = (regPLLCFGRvalue & RCC_PLLCFGR_PLLSRC);
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3840 005e 02F06042 		and	r2, r2, #-536870912
  3841              	.LVL312:
 1568:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 192
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 192
 
 
  3842              		.loc 1 1568 36 view .LVU1249
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3879 0088 8362     		str	r3, [r0, #40]
 1590:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
  3880              		.loc 1 1590 1 view .LVU1267
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 193
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 193
 
 
  3881 008a 30BC     		pop	{r4, r5}
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3925              		.loc 1 1614 3 is_stmt 1 view .LVU1279
  3926              	.LBB450:
  3927              	.LBI450:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 194
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 194
 
 
 2258:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rcc.h **** {
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  3965              		.loc 1 1620 37 discriminator 1 view .LVU1296
  3966 0026 0261     		str	r2, [r0, #16]
 1623:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 195
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 195
 
 
  3967              		.loc 1 1623 3 is_stmt 1 view .LVU1297
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  4006              		.align	2
  4007              	.L266:
  4008 0048 00400058 		.word	1476411392
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 196
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 196
 
 
  4009              		.cfi_endproc
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  4060              	.LFE1118:
  4062              		.section	.text.HAL_RCC_NMI_IRQHandler,"ax",%progbits
  4063              		.align	1
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 197
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 197
 
 
  4064              		.global	HAL_RCC_NMI_IRQHandler
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  4112              		.cfi_startproc
  4113              		@ args = 0, pretend = 0, frame = 0
  4114              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 198
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 198
 
 
  4115              		@ link register save eliminated.
@@ -11878,72 +11878,72 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 1
  4161              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_gpio.h"
  4162              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rcc.h"
  4163              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 199
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 199
 
 
  4164              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_pwr_ex.h"
  4165              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_pwr.h"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 200
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 200
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32wbxx_hal_rcc.c
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:21     .text.RCC_SetFlashLatency:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:26     .text.RCC_SetFlashLatency:00000000 RCC_SetFlashLatency
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:204    .text.RCC_SetFlashLatency:000000b8 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:210    .text.RCC_SetFlashLatencyFromMSIRange:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:215    .text.RCC_SetFlashLatencyFromMSIRange:00000000 RCC_SetFlashLatencyFromMSIRange
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:286    .text.RCC_SetFlashLatencyFromMSIRange:00000040 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:293    .text.HAL_RCC_DeInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:299    .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:563    .text.HAL_RCC_DeInit:00000108 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:572    .text.HAL_RCC_MCOConfig:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:578    .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:714    .text.HAL_RCC_GetSysClockFreq:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:720    .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:983    .text.HAL_RCC_GetSysClockFreq:000000b4 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:990    .text.HAL_RCC_GetHCLKFreq:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:996    .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:1030   .text.HAL_RCC_GetHCLKFreq:0000001c $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:1035   .text.HAL_RCC_OscConfig:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:1041   .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:2194   .text.HAL_RCC_OscConfig:0000041c $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:2200   .text.HAL_RCC_OscConfig:00000424 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:2910   .text.HAL_RCC_OscConfig:0000070c $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:2918   .text.HAL_RCC_ClockConfig:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:2924   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3542   .text.HAL_RCC_ClockConfig:0000025c $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3548   .text.HAL_RCC_GetHCLK2Freq:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3554   .text.HAL_RCC_GetHCLK2Freq:00000000 HAL_RCC_GetHCLK2Freq
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3588   .text.HAL_RCC_GetHCLK2Freq:00000020 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3593   .text.HAL_RCC_GetHCLK4Freq:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3599   .text.HAL_RCC_GetHCLK4Freq:00000000 HAL_RCC_GetHCLK4Freq
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3633   .text.HAL_RCC_GetHCLK4Freq:00000020 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3638   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3644   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3679   .text.HAL_RCC_GetPCLK1Freq:00000020 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3684   .text.HAL_RCC_GetPCLK2Freq:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3690   .text.HAL_RCC_GetPCLK2Freq:00000000 HAL_RCC_GetPCLK2Freq
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3725   .text.HAL_RCC_GetPCLK2Freq:00000020 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3730   .text.HAL_RCC_GetOscConfig:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3736   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3890   .text.HAL_RCC_GetClockConfig:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:3896   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4008   .text.HAL_RCC_GetClockConfig:00000048 $d
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4013   .text.HAL_RCC_EnableCSS:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4019   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4044   .text.HAL_RCC_CSSCallback:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4050   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4063   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4069   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4103   .text.HAL_RCC_GetResetSource:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4109   .text.HAL_RCC_GetResetSource:00000000 HAL_RCC_GetResetSource
-C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s:4138   .rodata:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:21     .text.RCC_SetFlashLatency:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:26     .text.RCC_SetFlashLatency:00000000 RCC_SetFlashLatency
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:204    .text.RCC_SetFlashLatency:000000b8 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:210    .text.RCC_SetFlashLatencyFromMSIRange:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:215    .text.RCC_SetFlashLatencyFromMSIRange:00000000 RCC_SetFlashLatencyFromMSIRange
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:286    .text.RCC_SetFlashLatencyFromMSIRange:00000040 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:293    .text.HAL_RCC_DeInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:299    .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:563    .text.HAL_RCC_DeInit:00000108 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:572    .text.HAL_RCC_MCOConfig:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:578    .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:714    .text.HAL_RCC_GetSysClockFreq:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:720    .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:983    .text.HAL_RCC_GetSysClockFreq:000000b4 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:990    .text.HAL_RCC_GetHCLKFreq:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:996    .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:1030   .text.HAL_RCC_GetHCLKFreq:0000001c $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:1035   .text.HAL_RCC_OscConfig:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:1041   .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:2194   .text.HAL_RCC_OscConfig:0000041c $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:2200   .text.HAL_RCC_OscConfig:00000424 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:2910   .text.HAL_RCC_OscConfig:0000070c $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:2918   .text.HAL_RCC_ClockConfig:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:2924   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3542   .text.HAL_RCC_ClockConfig:0000025c $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3548   .text.HAL_RCC_GetHCLK2Freq:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3554   .text.HAL_RCC_GetHCLK2Freq:00000000 HAL_RCC_GetHCLK2Freq
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3588   .text.HAL_RCC_GetHCLK2Freq:00000020 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3593   .text.HAL_RCC_GetHCLK4Freq:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3599   .text.HAL_RCC_GetHCLK4Freq:00000000 HAL_RCC_GetHCLK4Freq
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3633   .text.HAL_RCC_GetHCLK4Freq:00000020 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3638   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3644   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3679   .text.HAL_RCC_GetPCLK1Freq:00000020 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3684   .text.HAL_RCC_GetPCLK2Freq:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3690   .text.HAL_RCC_GetPCLK2Freq:00000000 HAL_RCC_GetPCLK2Freq
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3725   .text.HAL_RCC_GetPCLK2Freq:00000020 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3730   .text.HAL_RCC_GetOscConfig:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3736   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3890   .text.HAL_RCC_GetClockConfig:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:3896   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4008   .text.HAL_RCC_GetClockConfig:00000048 $d
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4013   .text.HAL_RCC_EnableCSS:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4019   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4044   .text.HAL_RCC_CSSCallback:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4050   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4063   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4069   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4103   .text.HAL_RCC_GetResetSource:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4109   .text.HAL_RCC_GetResetSource:00000000 HAL_RCC_GetResetSource
+C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s:4138   .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
 HAL_PWREx_GetVoltageRange
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc1oFqQS.s 			page 201
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccKUGIS5.s 			page 201
 
 
 MSIRangeTable

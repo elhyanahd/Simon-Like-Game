@@ -1,4 +1,8 @@
 #include "SimonGame.h"
+#include "lcd1602.h"
+#include "gpio.h"
+#include <stdio.h> 
+#include <string.h>
 
 /**
  * @brief  Initialize the game state and information.
@@ -22,6 +26,27 @@ void displayOnLCD(char* lineOne, char* lineTwo)
   LCD_GotoXY(0, 1);
   LCD_Print(lineTwo);
   HAL_Delay(1000);
+}
+
+/**
+ * @brief Helper function created for debouncing the switch buttons.
+ *        If the given GPIO switch is pressed (active-low state) wait
+ *        the .2 s delay time and check if switch is released.
+ * 
+ * @param GPIO 
+ * @param Pin 
+ * @return int (1 - if switch is pressed and released, else 0)
+ */
+int debounceButton(GPIO_TypeDef *GPIO, uint16_t Pin)
+{
+  if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET)
+  {
+    HAL_Delay(20);
+    if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET) 
+    { return 1; }
+  }
+  
+  return 0;
 }
 
 void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
@@ -51,7 +76,7 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
 
       // Check if Joystick is pressed to start the game
       case START:
-        if (Joystick_Pressed(&joystick)) 
+        if (Joystick_Pressed(joystick)) 
         {  game->state = PLAYER_MENU;  }        
         break;
 
@@ -67,7 +92,7 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
       // Handle Player selection based on joystick UP/DOWN input
       case PLAYER_SELECT:
         // Read the joystick input to determine the number of players
-        direction = Joystick_GetDirection(&joystick);
+        direction = Joystick_GetDirection(joystick);
 
         // Adding "debounce" logic to help resolve jittery input
         //causing direciton UP to be seen once
@@ -106,7 +131,7 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
 
         // Check if joystick is pressed to confirm selection
         // Move to the state which matches the mode selected
-        if (Joystick_Pressed(&joystick)) 
+        if (Joystick_Pressed(joystick)) 
         {
           if (game->info.numPlayers == 1)
             game->state = ONE_PLAYER;
@@ -125,7 +150,7 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         snprintf(lineTwo, sizeof(lineTwo), "");
         displayOnLCD(lineOne, lineTwo);
         HAL_Delay(2000);  //wait 2 seconds
-        game->state = PLAYER_MENU;
+        game->state = PLAY;
         break;
 
       case TWO_PLAYERS:
@@ -135,6 +160,40 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         displayOnLCD(lineOne, lineTwo);
         HAL_Delay(2000);  //wait 2 seconds
         game->state = PLAYER_MENU;
+        break;
+
+      case PLAY:
+        // if red button is pressed, turn on LEDR
+        if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+        { 
+            HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
+        }
+        else
+        {   HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);}
+
+        // if blue button is pressed, turn on LEDB
+        if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+        { 
+            HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
+        }
+        else
+        {   HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);}
+
+        // if yellow button is pressed, turn on LEDY
+        if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+        { 
+            HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_SET);
+        }
+        else
+        {   HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_RESET);}
+
+        // if green button is pressed, turn on LEDG
+        if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+        { 
+            HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+        }
+        else
+        {   HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);}
         break;
       // case SCORES:
       //   // Handle scores display logic

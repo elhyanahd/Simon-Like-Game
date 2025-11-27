@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
   28:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****                       ##### TIMER Extended features #####
   29:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   ==============================================================================
   30:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   [..]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 2
 
 
   31:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     The Timer Extended features include:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
   85:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /** @addtogroup STM32WBxx_HAL_Driver
   86:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @{
   87:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 3
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 3
 
 
   88:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  142:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /** @defgroup TIMEx_Exported_Functions TIM Extended Exported Functions
  143:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @{
  144:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 4
 
 
  145:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  199:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     htim->Lock = HAL_UNLOCKED;
  200:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  201:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** #if (USE_HAL_TIM_REGISTER_CALLBACKS == 1)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 5
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 5
 
 
  202:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     /* Reset interrupt callbacks to legacy week callbacks */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  256:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->Instance->CR2 |= TIM_TRGO_OC2REF;
  257:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  258:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Initialize the DMA burst operation state */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 6
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 6
 
 
  259:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->DMABurstState = HAL_DMA_BURST_STATE_READY;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  313:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   __HAL_UNLOCK(htim);
  314:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  315:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   return HAL_OK;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 7
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 7
 
 
  316:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  370:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     return HAL_ERROR;
  371:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
  372:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 8
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 8
 
 
  373:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Set the TIM channels state */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  427:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   return HAL_OK;
  428:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
  429:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 9
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 9
 
 
  430:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /**
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  484:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   return HAL_OK;
  485:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
  486:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 10
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 10
 
 
  487:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /**
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  541:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****            && (complementary_channel_1_state == HAL_TIM_CHANNEL_STATE_READY))
  542:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  543:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     if ((pData == NULL) || (Length == 0U))
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 11
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 11
 
 
  544:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  598:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @param  htim TIM Hall Sensor Interface handle
  599:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @retval HAL status
  600:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 12
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 12
 
 
  601:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_HallSensor_Stop_DMA(TIM_HandleTypeDef *htim)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  655:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @param  htim TIM Output Compare handle
  656:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be enabled
  657:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 13
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 13
 
 
  658:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  712:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @retval HAL status
  713:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   */
  714:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_OCN_Stop(TIM_HandleTypeDef *htim, uint32_t Channel)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 14
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 14
 
 
  715:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  769:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
  770:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
  771:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 15
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 15
 
 
  772:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  826:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be disabled
  827:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
  828:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 16
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 16
 
 
  829:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  883:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  884:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     /* Disable the Peripheral */
  885:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     __HAL_TIM_DISABLE(htim);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 17
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 17
 
 
  886:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  940:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     case TIM_CHANNEL_1:
  941:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
  942:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       /* Set the DMA compare callbacks */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 18
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 18
 
 
  943:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC1]->XferCpltCallback = TIM_DMADelayPulseNCplt;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  997:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       }
  998:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       /* Enable the TIM Output Compare DMA request */
  999:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       __HAL_TIM_ENABLE_DMA(htim, TIM_DMA_CC3);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 19
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 19
 
 
 1000:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1054:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
 1055:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     case TIM_CHANNEL_1:
 1056:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 20
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 20
 
 
 1057:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       /* Disable the TIM Output Compare DMA request */
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1111:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   ==============================================================================
 1112:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****                  ##### Timer Complementary PWM functions #####
 1113:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   ==============================================================================
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 21
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 21
 
 
 1114:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   [..]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1168:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
 1169:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     __HAL_TIM_ENABLE(htim);
 1170:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 22
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 22
 
 
 1171:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1225:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 1226:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Check the TIM complementary channel state */
 1227:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   if (TIM_CHANNEL_N_STATE_GET(htim, Channel) != HAL_TIM_CHANNEL_STATE_READY)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 23
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 23
 
 
 1228:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1282:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
 1283:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     else
 1284:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 24
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 24
 
 
 1285:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       __HAL_TIM_ENABLE(htim);
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1339:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 1340:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   if (status == HAL_OK)
 1341:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 25
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 25
 
 
 1342:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     /* Disable the complementary PWM output  */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1396:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
 1397:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       return HAL_ERROR;
 1398:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 26
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 26
 
 
 1399:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     else
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1453:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     case TIM_CHANNEL_3:
 1454:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
 1455:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       /* Set the DMA compare callbacks */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 27
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 27
 
 
 1456:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC3]->XferCpltCallback = TIM_DMADelayPulseNCplt;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1510:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be disabled
 1511:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
 1512:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 28
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 28
 
 
 1513:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1567:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     TIM_CHANNEL_N_STATE_SET(htim, Channel, HAL_TIM_CHANNEL_STATE_READY);
 1568:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
 1569:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 29
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 29
 
 
 1570:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Return function status */
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1624:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
 1625:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     return HAL_ERROR;
 1626:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 30
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 30
 
 
 1627:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1681:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   return HAL_OK;
 1682:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
 1683:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 31
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 31
 
 
 1684:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /**
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1738:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 1739:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /**
 1740:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @brief  Stops the TIM One Pulse signal generation in interrupt mode on the
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 32
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 32
 
 
 1741:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *         complementary channel.
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1795:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   [..]
 1796:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     This section provides functions allowing to:
 1797:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       (+) Configure the commutation event in case of use of the Hall sensor interface.
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 33
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 33
 
 
 1798:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       (+) Configure Output channels for OC and PWM mode.
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1852:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
 1853:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 1854:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Disable Commutation Interrupt */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 34
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 34
 
 
 1855:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   __HAL_TIM_DISABLE_IT(htim, TIM_IT_COM);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1909:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 1910:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Disable Commutation DMA request */
 1911:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   __HAL_TIM_DISABLE_DMA(htim, TIM_DMA_COM);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 35
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 35
 
 
 1912:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1966:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 1967:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Enable the Commutation DMA Request */
 1968:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Set the DMA Commutation Callback */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 36
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 36
 
 
 1969:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->hdma[TIM_DMA_ID_COMMUTATION]->XferCpltCallback = TIMEx_DMACommutationCplt;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2023:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     tmpcr2 &= ~TIM_CR2_MMS2;
 2024:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     /* Select the TRGO2 source*/
 2025:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     tmpcr2 |= sMasterConfig->MasterOutputTrigger2;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 37
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 37
 
 
 2026:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2080:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   assert_param(IS_TIM_BREAK_FILTER(sBreakDeadTimeConfig->BreakFilter));
 2081:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   assert_param(IS_TIM_AUTOMATIC_OUTPUT_STATE(sBreakDeadTimeConfig->AutomaticOutput));
 2082:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   assert_param(IS_TIM_BREAK_AFMODE(sBreakDeadTimeConfig->BreakAFMode));
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 38
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 38
 
 
 2083:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2137:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** {
 2138:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
 2139:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   uint32_t tmporx;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 39
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 39
 
 
 2140:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   uint32_t bkin_enable_mask;
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2194:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   switch (BreakInput)
 2195:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
 2196:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     case TIM_BREAKINPUT_BRK:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 40
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 40
 
 
 2197:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2251:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_TIM1_ETR_COMP1:               TIM1_ETR is connected to COMP1 output (*)
 2252:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_TIM1_ETR_COMP2:               TIM1_ETR is connected to COMP2 output (*)
 2253:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *       field2 can have the following values:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 41
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 41
 
 
 2254:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   *            @arg TIM_TIM1_TI1_GPIO:                TIM1 TI1 is connected to I/O
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2308:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   if (IS_TIM_ETRSEL_INSTANCE(htim->Instance))
 2309:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
 2310:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     if ((Remap & TIM1_AF1_ETRSEL) != (uint32_t)RESET)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 42
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 42
 
 
 2311:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2365:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->State = HAL_TIM_STATE_READY;
 2366:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
 2367:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   __HAL_UNLOCK(htim);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 43
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 43
 
 
 2368:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2422:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
 2423:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
 2424:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 44
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 44
 
 
 2425:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   return status;
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2479:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****         /* Init tickstart for timeout management */
 2480:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****         tickstart = HAL_GetTick();
 2481:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****         while (READ_BIT(htim->Instance->BDTR, TIM_BDTR_BK2DSRM) != 0UL)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 45
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 45
 
 
 2482:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****         {
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2536:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
 2537:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** /**
 2538:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @brief  Commutation half complete callback in non-blocking mode
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 46
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 46
 
 
 2539:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   * @param  htim TIM handle
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2593:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     This subsection permits to get in run-time the status of the peripheral
 2594:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     and the data flow.
 2595:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 47
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 47
 
 
 2596:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** @endverbatim
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2650:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** {
 2651:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
 2652:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 48
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 48
 
 
 2653:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Change the htim state */
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2707:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
 2708:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
 2709:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 49
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 49
 
 
 2710:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   else if (hdma == htim->hdma[TIM_DMA_ID_CC3])
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2764:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** #else
 2765:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_TIM_ErrorCallback(htim);
 2766:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 50
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 50
 
 
 2767:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
   56 0018 1343     		orrs	r3, r3, r2
   57 001a 0362     		str	r3, [r0, #32]
 2794:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 51
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 51
 
 
   58              		.loc 1 2794 1 view .LVU12
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  101 0012 8342     		cmp	r3, r0
  102 0014 10D0     		beq	.L9
  103              	.L4:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 52
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 52
 
 
 2760:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  143 0042 E8E7     		b	.L4
  144              		.cfi_endproc
  145              	.LFE1149:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 53
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 53
 
 
  147              		.section	.text.TIM_DMADelayPulseNCplt,"ax",%progbits
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  188              		.loc 1 2722 3 is_stmt 1 view .LVU54
 2727:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
  189              		.loc 1 2727 3 view .LVU55
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 54
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 54
 
 
  190 0016 2046     		mov	r0, r4
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  228              		.loc 1 2707 7 is_stmt 1 view .LVU71
  229 003e 0123     		movs	r3, #1
  230 0040 84F84530 		strb	r3, [r4, #69]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 55
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 55
 
 
  231 0044 E7E7     		b	.L12
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  280              	.LFB1104:
  177:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   TIM_OC_InitTypeDef OC_Config;
  281              		.loc 1 177 1 is_stmt 1 view -0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 56
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 56
 
 
  282              		.cfi_startproc
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  319 0014 0223     		movs	r3, #2
  320 0016 84F83D30 		strb	r3, [r4, #61]
  221:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 57
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 57
 
 
  321              		.loc 1 221 3 is_stmt 1 view .LVU99
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  359 0048 43F08003 		orr	r3, r3, #128
  360 004c 5360     		str	r3, [r2, #4]
  235:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->Instance->SMCR |= TIM_TS_TI1F_ED;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 58
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 58
 
 
  361              		.loc 1 235 3 is_stmt 1 view .LVU116
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  398 0080 0595     		str	r5, [sp, #20]
  244:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   OC_Config.OCMode = TIM_OCMODE_PWM2;
  399              		.loc 1 244 3 is_stmt 1 view .LVU134
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 59
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 59
 
 
  244:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   OC_Config.OCMode = TIM_OCMODE_PWM2;
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  435 00a4 2268     		ldr	r2, [r4]
  256:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  436              		.loc 1 256 17 view .LVU154
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 60
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 60
 
 
  437 00a6 5368     		ldr	r3, [r2, #4]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  475 00d6 9DE7     		b	.L21
  476              	.LVL22:
  477              	.L22:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 61
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 61
 
 
  478              		.cfi_def_cfa_offset 0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  529              		.cfi_offset 4, -8
  530              		.cfi_offset 14, -4
  531 0002 0446     		mov	r4, r0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 62
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 62
 
 
  281:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  307:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  571              		.loc 1 307 3 view .LVU193
  572 0042 84F84500 		strb	r0, [r4, #69]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 63
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 63
 
 
  310:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  614 0008 90F83F30 		ldrb	r3, [r0, #63]	@ zero_extendqisi2
  615              	.LVL30:
  358:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef complementary_channel_2_state = TIM_CHANNEL_N_STATE_GET(htim, TIM_CHA
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 64
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 64
 
 
  616              		.loc 1 358 3 is_stmt 1 view .LVU209
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  375:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_BUSY);
  655              		.loc 1 375 3 is_stmt 1 view .LVU225
  656 003a 84F83F30 		strb	r3, [r4, #63]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 65
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 65
 
 
  376:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  696 0070 0CD0     		beq	.L39
  388:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
  697              		.loc 1 388 9 discriminator 1 view .LVU241
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 66
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 66
 
 
  698 0072 B2F5803F 		cmp	r2, #65536
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  747              	.LFB1109:
  408:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Check the parameters */
  748              		.loc 1 408 1 is_stmt 1 view -0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 67
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 67
 
 
  749              		.cfi_startproc
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  791 0038 84F84430 		strb	r3, [r4, #68]
  424:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  792              		.loc 1 424 3 view .LVU262
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 68
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 68
 
 
  793 003c 84F84530 		strb	r3, [r4, #69]
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  441:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  836              		.loc 1 441 31 is_stmt 0 view .LVU276
  837 0010 90F84510 		ldrb	r1, [r0, #69]	@ zero_extendqisi2
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 69
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 69
 
 
  838              	.LVL50:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  876              		.loc 1 462 3 view .LVU292
  877 0046 2268     		ldr	r2, [r4]
  878              	.LVL53:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 70
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 70
 
 
  462:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  919 007c 0CD0     		beq	.L55
  473:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
  920              		.loc 1 473 9 discriminator 1 view .LVU307
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 71
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 71
 
 
  921 007e B2F5803F 		cmp	r2, #65536
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  970              	.LFB1111:
  493:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Check the parameters */
  971              		.loc 1 493 1 is_stmt 1 view -0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 72
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 72
 
 
  972              		.cfi_startproc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1015 003a 84F83E30 		strb	r3, [r4, #62]
  510:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
  1016              		.loc 1 510 3 view .LVU327
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 73
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 73
 
 
  1017 003e 84F83F30 		strb	r3, [r4, #63]
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1061              		.loc 1 529 31 is_stmt 0 view .LVU339
  1062 000c 94F84450 		ldrb	r5, [r4, #68]	@ zero_extendqisi2
  1063              	.LVL67:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 74
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 74
 
 
  532:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  561:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  1103              		.loc 1 561 3 is_stmt 0 view .LVU355
  1104 003e 0021     		movs	r1, #0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 75
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 75
 
 
  1105              	.LVL71:
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1143 0068 2268     		ldr	r2, [r4]
  1144 006a D368     		ldr	r3, [r2, #12]
  1145 006c 43F40073 		orr	r3, r3, #512
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 76
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 76
 
 
  1146 0070 D360     		str	r3, [r2, #12]
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1186              		.loc 1 538 12 view .LVU385
  1187 00a4 2846     		mov	r0, r5
  1188              	.LVL78:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 77
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 77
 
 
  538:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1237 0000 10B5     		push	{r4, lr}
  1238              		.cfi_def_cfa_offset 8
  1239              		.cfi_offset 4, -8
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 78
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 78
 
 
  1240              		.cfi_offset 14, -4
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  622:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  1282              		.loc 1 622 3 view .LVU406
  1283 0044 84F84430 		strb	r3, [r4, #68]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 79
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 79
 
 
  625:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1327              		.loc 1 671 6 discriminator 12 view .LVU419
  1328 0012 002B     		cmp	r3, #0
  1329 0014 4ED1     		bne	.L92
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 80
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 80
 
 
  677:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1371 004c 0429     		cmp	r1, #4
  1372 004e 07D0     		beq	.L96
  671:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 81
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 81
 
 
  1373              		.loc 1 671 46 discriminator 5 view .LVU433
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1416              		.loc 1 677 3 discriminator 6 view .LVU444
  1417 0090 0223     		movs	r3, #2
  1418 0092 84F84630 		strb	r3, [r4, #70]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 82
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 82
 
 
  1419 0096 C2E7     		b	.L87
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1461              	.L101:
  1462              		.align	2
  1463              	.L100:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 83
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 83
 
 
  1464 00c0 002C0140 		.word	1073818624
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  723:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  1512              		.loc 1 723 3 discriminator 3 view .LVU465
  1513 0026 536C     		ldr	r3, [r2, #68]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 84
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 84
 
 
  1514 0028 23F40043 		bic	r3, r3, #32768
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1555 0062 0123     		movs	r3, #1
  1556 0064 84F84730 		strb	r3, [r4, #71]
  1557 0068 F5E7     		b	.L106
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 85
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 85
 
 
  1558              	.L110:
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1603 000a 94F84430 		ldrb	r3, [r4, #68]	@ zero_extendqisi2
  755:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  1604              		.loc 1 755 46 discriminator 1 view .LVU490
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 86
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 86
 
 
  1605 000e 013B     		subs	r3, r3, #1
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1647 0048 5364     		str	r3, [r2, #68]
  804:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
  1648              		.loc 1 804 5 view .LVU503
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 87
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 87
 
 
  804:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1691 0088 013B     		subs	r3, r3, #1
  1692 008a 18BF     		it	ne
  1693 008c 0123     		movne	r3, #1
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 88
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 88
 
 
  1694 008e C1E7     		b	.L114
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1736              	.L123:
  782:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
  1737              		.loc 1 782 7 view .LVU528
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 89
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 89
 
 
  1738 00c6 2268     		ldr	r2, [r4]
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1779              		.loc 1 820 1 view .LVU541
  1780 00f2 0020     		movs	r0, #0
  1781 00f4 FCE7     		b	.L117
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 90
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 90
 
 
  1782              	.L130:
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1831 001a D360     		str	r3, [r2, #12]
  847:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
  1832              		.loc 1 847 7 view .LVU549
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 91
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 91
 
 
  869:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1873 004e 1942     		tst	r1, r3
  1874 0050 03D1     		bne	.L144
  882:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 92
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 92
 
 
  1875              		.loc 1 882 5 is_stmt 1 discriminator 3 view .LVU564
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1917              		.loc 1 854 7 view .LVU576
  869:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  1918              		.loc 1 869 3 view .LVU577
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 93
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 93
 
 
  1919 0090 C4E7     		b	.L142
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  1964              		.section	.text.HAL_TIMEx_OCN_Start_DMA,"ax",%progbits
  1965              		.align	1
  1966              		.global	HAL_TIMEx_OCN_Start_DMA
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 94
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 94
 
 
  1967              		.syntax unified
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2010 001e 002D     		cmp	r5, #0
  2011 0020 5AD1     		bne	.L159
  922:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 95
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 95
 
 
  2012              		.loc 1 922 12 discriminator 1 view .LVU600
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2051 0052 6049     		ldr	r1, .L189+4
  2052 0054 1163     		str	r1, [r2, #48]
  947:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 96
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 96
 
 
  2053              		.loc 1 947 7 is_stmt 1 view .LVU616
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2093              		.loc 1 1017 8 view .LVU630
  2094 008e 534A     		ldr	r2, .L189+12
  2095 0090 9342     		cmp	r3, r2
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 97
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 97
 
 
  2096 0092 7CD0     		beq	.L170
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2140 00ce 0228     		cmp	r0, #2
  2141 00d0 14BF     		ite	ne
  2142 00d2 0020     		movne	r0, #0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 98
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 98
 
 
  2143 00d4 0120     		moveq	r0, #1
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2187              		.loc 1 930 7 discriminator 4 view .LVU650
  2188 010e 082D     		cmp	r5, #8
  2189 0110 24D0     		beq	.L188
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 99
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 99
 
 
  930:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  971:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****                            Length) != HAL_OK)
  2229              		.loc 1 971 88 is_stmt 0 view .LVU666
  2230 0140 2268     		ldr	r2, [r4]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 100
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 100
 
 
  971:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****                            Length) != HAL_OK)
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  989:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  2270              		.loc 1 989 17 is_stmt 0 view .LVU682
  2271 016e E26A     		ldr	r2, [r4, #44]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 101
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 101
 
 
  989:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2311              	.LVL155:
 1022:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       }
  2312              		.loc 1 1022 9 is_stmt 0 view .LVU698
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 102
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 102
 
 
  2313 01a0 42F00102 		orr	r2, r2, #1
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2359              	.L190:
  2360 01ce 00BF     		.align	2
  2361              	.L189:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 103
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 103
 
 
  2362 01d0 00000000 		.word	TIM_DMADelayPulseNCplt
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2410 001c 406A     		ldr	r0, [r0, #36]
  2411              	.LVL164:
 1059:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 104
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 104
 
 
  2412              		.loc 1 1059 13 view .LVU715
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2454              		.loc 1 1093 5 discriminator 3 view .LVU727
  2455 0064 1368     		ldr	r3, [r2]
  2456 0066 23F00103 		bic	r3, r3, #1
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 105
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 105
 
 
  2457 006a 1360     		str	r3, [r2]
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2497 0094 C06A     		ldr	r0, [r0, #44]
  2498              	.LVL172:
 1075:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 106
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 106
 
 
  2499              		.loc 1 1075 13 view .LVU742
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2546              	HAL_TIMEx_PWMN_Start:
  2547              	.LVL176:
  2548              	.LFB1120:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 107
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 107
 
 
 1137:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   uint32_t tmpsmcr;
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2589              	.LVL179:
 1153:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  2590              		.loc 1 1153 3 view .LVU766
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 108
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 108
 
 
  2591 0024 FFF7FEFF 		bl	TIM_CCxNChannelCmd
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1144:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  2633              		.loc 1 1144 46 discriminator 4 view .LVU779
  2634 0064 013B     		subs	r3, r3, #1
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 109
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 109
 
 
  2635 0066 18BF     		it	ne
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2677              		.loc 1 1162 8 is_stmt 0 view .LVU791
  2678 009e 062A     		cmp	r2, #6
  2679 00a0 0AD0     		beq	.L218
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 110
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 110
 
 
 1162:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2728              		@ args = 0, pretend = 0, frame = 0
  2729              		@ frame_needed = 0, uses_anonymous_args = 0
 1187:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Check the parameters */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 111
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 111
 
 
  2730              		.loc 1 1187 1 is_stmt 0 view .LVU800
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2773 003c 116A     		ldr	r1, [r2, #32]
  2774 003e 40F24443 		movw	r3, #1092
  2775 0042 1942     		tst	r1, r3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 112
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 112
 
 
  2776 0044 03D1     		bne	.L229
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2820              		.global	HAL_TIMEx_PWMN_Start_IT
  2821              		.syntax unified
  2822              		.thumb
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 113
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 113
 
 
  2823              		.thumb_func
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1235:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  2865              		.loc 1 1235 3 is_stmt 1 view .LVU836
  2866              	.L244:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 114
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 114
 
 
 1240:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2908 005e 1A60     		str	r2, [r3]
  2909 0060 0020     		movs	r0, #0
  2910 0062 45E0     		b	.L242
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 115
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 115
 
 
  2911              	.LVL198:
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  2953 009e 0428     		cmp	r0, #4
  2954 00a0 08D0     		beq	.L246
  2955 00a2 0828     		cmp	r0, #8
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 116
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 116
 
 
  2956 00a4 0FD0     		beq	.L248
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1277:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
  2997              		.loc 1 1277 15 view .LVU875
  2998 00d4 0A4A     		ldr	r2, .L261+4
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 117
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 117
 
 
  2999 00d6 0A40     		ands	r2, r2, r1
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3047              	HAL_TIMEx_PWMN_Stop_IT:
  3048              	.LVL207:
  3049              	.LFB1123:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 118
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 118
 
 
 1305:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1346:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     if ((tmpccer & TIM_CCER_CCxNE_MASK) == (uint32_t)RESET)
  3092              		.loc 1 1346 5 is_stmt 1 view .LVU896
 1346:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     if ((tmpccer & TIM_CCER_CCxNE_MASK) == (uint32_t)RESET)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 119
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 119
 
 
  3093              		.loc 1 1346 19 is_stmt 0 view .LVU897
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1356:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  3135              		.loc 1 1356 5 discriminator 1 view .LVU910
  3136 0068 116A     		ldr	r1, [r2, #32]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 120
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 120
 
 
  3137 006a 40F24443 		movw	r3, #1092
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3178              		.loc 1 1359 5 is_stmt 0 discriminator 2 view .LVU923
  3179 009e 042D     		cmp	r5, #4
  3180 00a0 06D0     		beq	.L276
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 121
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 121
 
 
 1359:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3229              		.cfi_offset 5, -12
  3230              		.cfi_offset 6, -8
  3231              		.cfi_offset 14, -4
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 122
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 122
 
 
  3232 0002 0446     		mov	r4, r0
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1395:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     {
  3272              		.loc 1 1395 8 is_stmt 0 view .LVU946
  3273 0034 002E     		cmp	r6, #0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 123
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 123
 
 
  3274 0036 00F0BC80 		beq	.L299
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3311 0060 3146     		mov	r1, r6
  3312 0062 606A     		ldr	r0, [r4, #36]
  3313 0064 FFF7FEFF 		bl	HAL_DMA_Start_IT
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 124
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 124
 
 
  3314              	.LVL224:
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3356 00a6 0429     		cmp	r1, #4
  3357 00a8 08D0     		beq	.L308
 1389:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 125
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 125
 
 
  3358              		.loc 1 1389 46 discriminator 5 view .LVU976
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3402              		.loc 1 1393 51 discriminator 8 view .LVU986
  3403 00e4 012A     		cmp	r2, #1
  3404 00e6 14BF     		ite	ne
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 126
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 126
 
 
  3405 00e8 0022     		movne	r2, #0
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3450              		.loc 1 1401 7 is_stmt 0 discriminator 3 view .LVU995
  3451 0128 0222     		movs	r2, #2
  3452 012a 84F84520 		strb	r2, [r4, #69]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 127
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 127
 
 
 1409:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3491 0158 D360     		str	r3, [r2, #12]
 1450:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
  3492              		.loc 1 1450 7 view .LVU1012
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 128
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 128
 
 
 1479:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1463:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****                            Length) != HAL_OK)
  3531              		.loc 1 1463 10 discriminator 1 view .LVU1029
  3532 0180 F8B9     		cbnz	r0, .L304
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 129
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 129
 
 
 1470:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       break;
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3574              	.L283:
 1504:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  3575              		.loc 1 1504 1 view .LVU1043
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 130
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 130
 
 
  3576 01b0 70BD     		pop	{r4, r5, r6, pc}
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1518:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  3627              		.loc 1 1518 1 is_stmt 1 view -0
  3628              		.cfi_startproc
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 131
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 131
 
 
  3629              		@ args = 0, pretend = 0, frame = 0
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3671              		.loc 1 1561 5 view .LVU1061
 1561:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  3672              		.loc 1 1561 5 view .LVU1062
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 132
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 132
 
 
  3673 002c 2268     		ldr	r2, [r4]
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1572:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  3716              		.loc 1 1572 1 is_stmt 0 view .LVU1074
  3717 0076 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 133
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 133
 
 
  3718              	.LVL256:
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3758 00a2 09D0     		beq	.L329
 1567:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
  3759              		.loc 1 1567 5 discriminator 7 view .LVU1089
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 134
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 134
 
 
  3760 00a4 0123     		movs	r3, #1
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1610:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_1_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_1);
  3809              		.loc 1 1610 77 is_stmt 0 view .LVU1097
  3810 0004 0E46     		mov	r6, r1
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 135
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 135
 
 
  3811 0006 D1B9     		cbnz	r1, .L333
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1625:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
  3850              		.loc 1 1625 12 view .LVU1113
  3851 003a 1046     		mov	r0, r2
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 136
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 136
 
 
  3852              	.LVL270:
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3893 006a 536C     		ldr	r3, [r2, #68]
  3894 006c 43F40043 		orr	r3, r3, #32768
  3895 0070 5364     		str	r3, [r2, #68]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 137
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 137
 
 
 1642:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  3942 0004 0029     		cmp	r1, #0
  3943 0006 34D1     		bne	.L343
 1659:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 138
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 138
 
 
  3944              		.loc 1 1659 77 discriminator 1 view .LVU1137
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1672:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  3987              		.loc 1 1672 3 discriminator 1 view .LVU1149
  3988 004a 116A     		ldr	r1, [r2, #32]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 139
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 139
 
 
  3989 004c 40F24443 		movw	r3, #1092
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4034 0000 70B5     		push	{r4, r5, r6, lr}
  4035              		.cfi_def_cfa_offset 16
  4036              		.cfi_offset 4, -16
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 140
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 140
 
 
  4037              		.cfi_offset 5, -12
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4076 002e 2DD1     		bne	.L347
 1710:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       || (complementary_channel_2_state != HAL_TIM_CHANNEL_STATE_READY))
  4077              		.loc 1 1710 7 view .LVU1176
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 141
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 141
 
 
  4078 0030 012A     		cmp	r2, #1
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4119 0068 0422     		movs	r2, #4
  4120 006a 3146     		mov	r1, r6
  4121              	.LVL300:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 142
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 142
 
 
 1729:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   TIM_CCxChannelCmd(htim->Instance, input_channel, TIM_CCx_ENABLE);
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4168              	HAL_TIMEx_OnePulseN_Stop_IT:
  4169              	.LVL308:
  4170              	.LFB1129:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 143
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 143
 
 
 1752:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4214              	.LVL312:
 1769:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  4215              		.loc 1 1769 3 view .LVU1211
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 144
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 144
 
 
 1769:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1778:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  4258              		.loc 1 1778 3 view .LVU1224
  4259 007e 84F84530 		strb	r3, [r4, #69]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 145
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 145
 
 
 1781:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** }
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4304 000e 83F83C00 		strb	r0, [r3, #60]
 1838:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  4305              		.loc 1 1838 3 view .LVU1237
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 146
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 146
 
 
 1840:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       (InputTrigger == TIM_TS_ITR2) || (InputTrigger == TIM_TS_ITR3))
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4344 003e 1868     		ldr	r0, [r3]
 1851:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
  4345              		.loc 1 1851 17 view .LVU1254
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 147
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 147
 
 
  4346 0040 4168     		ldr	r1, [r0, #4]
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4386 0070 3029     		cmp	r1, #48
  4387 0072 DFD1     		bne	.L364
  4388 0074 D3E7     		b	.L362
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 148
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 148
 
 
  4389              	.L365:
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 1896:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       (InputTrigger == TIM_TS_ITR2) || (InputTrigger == TIM_TS_ITR3))
  4433              		.loc 1 1896 3 view .LVU1281
  4434 0012 2029     		cmp	r1, #32
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 149
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 149
 
 
  4435 0014 03D0     		beq	.L372
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4473 0040 4168     		ldr	r1, [r0, #4]
 1907:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
  4474              		.loc 1 1907 23 view .LVU1298
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 150
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 150
 
 
  4475 0042 21F00401 		bic	r1, r1, #4
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4516              	.L375:
  4517              		.cfi_def_cfa_offset 0
  4518              		.cfi_restore 4
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 151
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 151
 
 
 1894:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4562 0014 03D0     		beq	.L382
  4563 0016 34D8     		bhi	.L383
  4564 0018 09B1     		cbz	r1, .L382
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 152
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 152
 
 
  4565 001a 1029     		cmp	r1, #16
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4602 0042 21F00401 		bic	r1, r1, #4
  4603 0046 4160     		str	r1, [r0, #4]
 1965:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 153
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 153
 
 
  4604              		.loc 1 1965 3 is_stmt 1 view .LVU1342
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4642              		.loc 1 1980 3 view .LVU1358
 1980:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  4643              		.loc 1 1980 3 view .LVU1359
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 154
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 154
 
 
  4644 0076 0020     		movs	r0, #0
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4692              		.loc 1 1996 3 view .LVU1367
 1997:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  4693              		.loc 1 1997 3 view .LVU1368
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 155
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 155
 
 
 2000:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   assert_param(IS_TIM_TRGO_SOURCE(sMasterConfig->MasterOutputTrigger));
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4731 0022 18D0     		beq	.L402
  4732              	.LVL333:
  4733              	.L394:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 156
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 156
 
 
 2029:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Select the TRGO source */
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4771              		.loc 1 2044 5 is_stmt 1 view .LVU1402
 2044:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   }
  4772              		.loc 1 2044 26 is_stmt 0 view .LVU1403
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 157
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 157
 
 
  4773 0044 9160     		str	r1, [r2, #8]
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4813              		.cfi_restore 5
 2005:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  4814              		.loc 1 2005 3 discriminator 1 view .LVU1418
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 158
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 158
 
 
  4815 0060 0220     		movs	r0, #2
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4856 0006 43D0     		beq	.L408
 2068:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   /* Keep this variable initialized to 0 as it is used to configure BDTR register */
  4857              		.loc 1 2068 1 is_stmt 0 view .LVU1434
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 159
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 159
 
 
  4858 0008 10B4     		push	{r4}
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2095:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKP, sBreakDeadTimeConfig->BreakPolarity);
  4899              		.loc 1 2095 3 is_stmt 0 view .LVU1448
  4900 0030 0869     		ldr	r0, [r1, #16]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 160
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 160
 
 
  4901              	.LVL359:
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  4941              		.loc 1 2101 3 is_stmt 1 view .LVU1462
 2101:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  4942              		.loc 1 2101 7 is_stmt 0 view .LVU1463
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 161
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 161
 
 
  4943 0056 1068     		ldr	r0, [r2]
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2111:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     MODIFY_REG(tmpbdtr, TIM_BDTR_BK2P, sBreakDeadTimeConfig->Break2Polarity);
  4982              		.loc 1 2111 5 is_stmt 0 view .LVU1479
  4983 007a 0C6A     		ldr	r4, [r1, #32]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 162
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 162
 
 
  4984              	.LVL378:
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5031              	.LFB1135:
 2137:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  5032              		.loc 1 2137 1 is_stmt 1 view -0
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 163
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 163
 
 
  5033              		.cfi_startproc
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5068              		.loc 1 2155 3 view .LVU1508
 2155:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
  5069              		.loc 1 2155 28 is_stmt 0 view .LVU1509
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 164
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 164
 
 
  5070 0012 1068     		ldr	r0, [r2]
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5113 0052 7646     		mov	r6, lr
 2187:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****       bkin_enable_bitpos = 0U;
  5114              		.loc 1 2187 26 view .LVU1521
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 165
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 165
 
 
  5115 0054 F446     		mov	ip, lr
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5153 0076 2266     		str	r2, [r4, #96]
 2211:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
  5154              		.loc 1 2211 7 is_stmt 1 view .LVU1538
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 166
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 166
 
 
 2138:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   uint32_t tmporx;
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2224:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  5192              		.loc 1 2224 46 view .LVU1556
  5193 0092 02FA0EF2 		lsl	r2, r2, lr
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 167
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 167
 
 
  5194 0096 4A40     		eors	r2, r2, r1
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2297:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  5239              		.loc 1 2297 3 view .LVU1568
 2299:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 168
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 168
 
 
  5240              		.loc 1 2299 3 view .LVU1569
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5279 002a 20F4E030 		bic	r0, r0, #114688
  5280              	.LVL411:
 2313:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 169
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 169
 
 
  5281              		.loc 1 2313 7 is_stmt 0 view .LVU1585
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5322 0056 7047     		bx	lr
  5323              	.LVL416:
  5324              	.L434:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 170
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 170
 
 
  5325              		.cfi_restore_state
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5372              		.loc 1 2351 3 view .LVU1607
 2354:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  5373              		.loc 1 2354 3 view .LVU1608
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 171
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 171
 
 
 2354:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5410              		.loc 1 2367 3 view .LVU1626
  5411 002c 0023     		movs	r3, #0
  5412 002e 80F83C30 		strb	r3, [r0, #60]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 172
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 172
 
 
 2367:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5457 0008 0120     		movs	r0, #1
  5458              	.LVL425:
 2394:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 173
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 173
 
 
  5459              		.loc 1 2394 3 is_stmt 0 view .LVU1639
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5499              	.LVL432:
 2412:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****           (READ_BIT(tmpbdtr, TIM_BDTR_MOE) == 0U))
  5500              		.loc 1 2412 7 is_stmt 1 view .LVU1654
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 174
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 174
 
 
 2412:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****           (READ_BIT(tmpbdtr, TIM_BDTR_MOE) == 0U))
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5547 0000 38B5     		push	{r3, r4, r5, lr}
  5548              		.cfi_def_cfa_offset 16
  5549              		.cfi_offset 3, -16
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 175
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 175
 
 
  5550              		.cfi_offset 4, -12
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5590 0022 0546     		mov	r5, r0
  5591              	.LVL443:
 2458:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****         {
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 176
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 176
 
 
  5592              		.loc 1 2458 9 is_stmt 1 view .LVU1679
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5631 004e 13F0005F 		tst	r3, #536870912
  5632 0052 01D1     		bne	.L479
 2441:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****   uint32_t tickstart;
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 177
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 177
 
 
  5633              		.loc 1 2441 21 view .LVU1695
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2488:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c ****             }
  5672              		.loc 1 2488 22 view .LVU1711
  5673 007c 0320     		movs	r0, #3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 178
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 178
 
 
  5674 007e C6E7     		b	.L467
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5724 0002 806A     		ldr	r0, [r0, #40]
  5725              	.LVL453:
 2654:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 179
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 179
 
 
  5726              		.loc 1 2654 3 is_stmt 1 view .LVU1720
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5776              		.cfi_offset 3, -8
  5777              		.cfi_offset 14, -4
 2670:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 180
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 180
 
 
  5778              		.loc 1 2670 3 is_stmt 1 view .LVU1729
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5827              		@ args = 0, pretend = 0, frame = 0
  5828              		@ frame_needed = 0, uses_anonymous_args = 0
  5829              		@ link register save eliminated.
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 181
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 181
 
 
 2575:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
 2627:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
  5878              		.loc 1 2627 19 is_stmt 0 view .LVU1749
  5879 0000 19B9     		cbnz	r1, .L491
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 182
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 182
 
 
 2627:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c **** 
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5923              	.Letext0:
  5924              		.file 2 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
  5925              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 183
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 183
 
 
  5926              		.file 4 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
@@ -10928,127 +10928,127 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 1
  5930              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h"
  5931              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h"
  5932              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 184
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 184
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32wbxx_hal_tim_ex.c
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:21     .text.TIM_CCxNChannelCmd:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:26     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:64     .text.TIM_DMAErrorCCxN:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:69     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:148    .text.TIM_DMADelayPulseNCplt:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:153    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:251    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:257    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:272    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:278    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:492    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:498    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:513    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:519    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:588    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:594    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:733    .text.HAL_TIMEx_HallSensor_Start:00000094 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:739    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:745    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:803    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:809    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:956    .text.HAL_TIMEx_HallSensor_Start_IT:000000a0 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:962    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:968    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1031   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1037   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1214   .text.HAL_TIMEx_HallSensor_Start_DMA:000000b4 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1223   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1229   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1293   .text.HAL_TIMEx_OCN_Start:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1299   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1464   .text.HAL_TIMEx_OCN_Start:000000c0 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1470   .text.HAL_TIMEx_OCN_Stop:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1476   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1572   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1578   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1788   .text.HAL_TIMEx_OCN_Start_IT:000000fc $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1794   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1800   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1965   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:1971   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2362   .text.HAL_TIMEx_OCN_Start_DMA:000001d0 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2371   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2377   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2540   .text.HAL_TIMEx_PWMN_Start:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2546   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2711   .text.HAL_TIMEx_PWMN_Start:000000c0 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2717   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2723   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2819   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:2825   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3035   .text.HAL_TIMEx_PWMN_Start_IT:000000fc $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3041   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3047   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3212   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 185
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:21     .text.TIM_CCxNChannelCmd:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:26     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:64     .text.TIM_DMAErrorCCxN:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:69     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:148    .text.TIM_DMADelayPulseNCplt:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:153    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:251    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:257    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:272    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:278    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:492    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:498    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:513    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:519    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:588    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:594    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:733    .text.HAL_TIMEx_HallSensor_Start:00000094 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:739    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:745    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:803    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:809    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:956    .text.HAL_TIMEx_HallSensor_Start_IT:000000a0 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:962    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:968    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1031   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1037   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1214   .text.HAL_TIMEx_HallSensor_Start_DMA:000000b4 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1223   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1229   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1293   .text.HAL_TIMEx_OCN_Start:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1299   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1464   .text.HAL_TIMEx_OCN_Start:000000c0 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1470   .text.HAL_TIMEx_OCN_Stop:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1476   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1572   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1578   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1788   .text.HAL_TIMEx_OCN_Start_IT:000000fc $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1794   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1800   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1965   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:1971   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2362   .text.HAL_TIMEx_OCN_Start_DMA:000001d0 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2371   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2377   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2540   .text.HAL_TIMEx_PWMN_Start:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2546   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2711   .text.HAL_TIMEx_PWMN_Start:000000c0 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2717   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2723   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2819   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:2825   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3035   .text.HAL_TIMEx_PWMN_Start_IT:000000fc $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3041   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3047   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3212   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 185
 
 
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3218   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3609   .text.HAL_TIMEx_PWMN_Start_DMA:000001d0 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3618   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3624   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3787   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3793   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3919   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:3925   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4020   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4026   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4162   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4168   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4273   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4279   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4400   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4406   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4527   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4533   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4671   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000008c $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5710   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5766   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4678   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4684   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4822   .text.HAL_TIMEx_MasterConfigSynchronization:00000064 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4827   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:4833   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5018   .text.HAL_TIMEx_ConfigBreakDeadTime:00000094 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5023   .text.HAL_TIMEx_ConfigBreakInput:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5029   .text.HAL_TIMEx_ConfigBreakInput:00000000 HAL_TIMEx_ConfigBreakInput
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5223   .text.HAL_TIMEx_RemapConfig:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5229   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5352   .text.HAL_TIMEx_RemapConfig:00000070 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5357   .text.HAL_TIMEx_GroupChannel5:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5363   .text.HAL_TIMEx_GroupChannel5:00000000 HAL_TIMEx_GroupChannel5
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5434   .text.HAL_TIMEx_DisarmBreakInput:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5440   .text.HAL_TIMEx_DisarmBreakInput:00000000 HAL_TIMEx_DisarmBreakInput
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5527   .text.HAL_TIMEx_DisarmBreakInput:00000048 $d
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5533   .text.HAL_TIMEx_ReArmBreakInput:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5539   .text.HAL_TIMEx_ReArmBreakInput:00000000 HAL_TIMEx_ReArmBreakInput
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5683   .text.HAL_TIMEx_CommutCallback:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5689   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5704   .text.TIMEx_DMACommutationCplt:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5739   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5745   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5760   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5795   .text.HAL_TIMEx_BreakCallback:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5801   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5816   .text.HAL_TIMEx_Break2Callback:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5822   .text.HAL_TIMEx_Break2Callback:00000000 HAL_TIMEx_Break2Callback
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5837   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5843   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5861   .text.HAL_TIMEx_GetChannelNState:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s:5867   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3218   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3609   .text.HAL_TIMEx_PWMN_Start_DMA:000001d0 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3618   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3624   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3787   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3793   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3919   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:3925   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4020   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4026   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4162   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4168   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4273   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4279   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4400   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4406   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4527   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4533   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4671   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000008c $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5710   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5766   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4678   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4684   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4822   .text.HAL_TIMEx_MasterConfigSynchronization:00000064 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4827   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:4833   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5018   .text.HAL_TIMEx_ConfigBreakDeadTime:00000094 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5023   .text.HAL_TIMEx_ConfigBreakInput:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5029   .text.HAL_TIMEx_ConfigBreakInput:00000000 HAL_TIMEx_ConfigBreakInput
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5223   .text.HAL_TIMEx_RemapConfig:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5229   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5352   .text.HAL_TIMEx_RemapConfig:00000070 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5357   .text.HAL_TIMEx_GroupChannel5:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5363   .text.HAL_TIMEx_GroupChannel5:00000000 HAL_TIMEx_GroupChannel5
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5434   .text.HAL_TIMEx_DisarmBreakInput:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5440   .text.HAL_TIMEx_DisarmBreakInput:00000000 HAL_TIMEx_DisarmBreakInput
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5527   .text.HAL_TIMEx_DisarmBreakInput:00000048 $d
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5533   .text.HAL_TIMEx_ReArmBreakInput:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5539   .text.HAL_TIMEx_ReArmBreakInput:00000000 HAL_TIMEx_ReArmBreakInput
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5683   .text.HAL_TIMEx_CommutCallback:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5689   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5704   .text.TIMEx_DMACommutationCplt:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5739   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5745   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5760   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5795   .text.HAL_TIMEx_BreakCallback:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5801   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5816   .text.HAL_TIMEx_Break2Callback:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5822   .text.HAL_TIMEx_Break2Callback:00000000 HAL_TIMEx_Break2Callback
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5837   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5843   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5861   .text.HAL_TIMEx_GetChannelNState:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s:5867   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
 
 UNDEFINED SYMBOLS
 HAL_TIM_ErrorCallback
 HAL_TIM_PWM_PulseFinishedCallback
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccFlxSla.s 			page 186
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccv2h3Of.s 			page 186
 
 
 TIM_Base_SetConfig

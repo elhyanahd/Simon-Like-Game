@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
   28:Core/Src/adc.c **** 
   29:Core/Src/adc.c **** /* ADC1 init function */
   30:Core/Src/adc.c **** void MX_ADC1_Init(void)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 2
 
 
   31:Core/Src/adc.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
   50:Core/Src/adc.c ****   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   64              		.loc 1 50 3 is_stmt 1 view .LVU13
   65              		.loc 1 50 27 is_stmt 0 view .LVU14
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 3
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 3
 
 
   66 0020 0422     		movs	r2, #4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  103              		.loc 1 67 3 is_stmt 1 view .LVU36
  104              		.loc 1 67 19 is_stmt 0 view .LVU37
  105 0044 0E4B     		ldr	r3, .L7+8
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 4
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 4
 
 
  106 0046 0093     		str	r3, [sp]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  145              	.LVL2:
  146 006e E9E7     		b	.L2
  147              	.L6:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 5
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 5
 
 
   75:Core/Src/adc.c ****   }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  197              		.loc 1 87 28 view .LVU61
  198 0016 FFF7FEFF 		bl	memset
  199              	.LVL6:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 6
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 6
 
 
   88:Core/Src/adc.c ****   if(adcHandle->Instance==ADC1)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  216              		.cfi_restore_state
   96:Core/Src/adc.c ****     PeriphClkInitStruct.PLLSAI1.PLLN = 6;
  217              		.loc 1 96 5 is_stmt 1 view .LVU66
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 7
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 7
 
 
   96:Core/Src/adc.c ****     PeriphClkInitStruct.PLLSAI1.PLLN = 6;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  255              	.LBI8:
  256              		.file 2 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h"
    1:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 8
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 8
 
 
    2:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
   56:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
   57:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Private types -------------------------------------------------------------*/
   58:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Private variables ---------------------------------------------------------*/
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 9
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 9
 
 
   59:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  113:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB3_GRP1_PERIPH  AHB3 GRP1 PERIPH
  114:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
  115:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 10
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 10
 
 
  116:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  170:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
  171:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  172:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 11
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 11
 
 
  173:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB2_GRP1_PERIPH  APB2 GRP1 PERIPH
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  227:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  228:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOA        RCC_C2AHB2ENR_GPIOAEN
  229:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOB        RCC_C2AHB2ENR_GPIOBEN
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 12
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 12
 
 
  230:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOC        RCC_C2AHB2ENR_GPIOCEN
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  284:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  285:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB1_GRP2_PERIPH  C2 APB1 GRP2 PERIPH
  286:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 13
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 13
 
 
  287:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  341:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
  342:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  343:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 14
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 14
 
 
  344:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB1 AHB1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  398:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMAMUX1EN      LL_AHB1_GRP1_DisableClock\n
  399:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_DisableClock\n
  400:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      TSCEN         LL_AHB1_GRP1_DisableClock
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 15
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 15
 
 
  401:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  455:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  456:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1RSTR, Periphs);
  457:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 16
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 16
 
 
  458:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  512:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  513:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB2 AHB2
  514:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 17
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 17
 
 
  515:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  279              	.LBI10:
  539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  280              		.loc 2 539 22 view .LVU93
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 18
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 18
 
 
  281              	.LBB11:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  322 0096 DCE7     		b	.L11
  323              	.L16:
  324              		.align	2
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 19
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 19
 
 
  325              	.L15:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  358              		.loc 1 148 1 view .LVU115
  359 000a 08BD     		pop	{r3, pc}
  360              	.LVL16:
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 20
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 20
 
 
  361              	.L20:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  595:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
  596:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  597:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB2_GRP1_DisableClock(uint32_t Periphs)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 21
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 21
 
 
  365              		.loc 2 597 22 view .LVU117
@@ -1254,22 +1254,22 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 1
  410              		.file 12 "Core/Inc/adc.h"
  411              		.file 13 "Core/Inc/main.h"
  412              		.file 14 "<built-in>"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s 			page 22
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 adc.c
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:21     .text.MX_ADC1_Init:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:27     .text.MX_ADC1_Init:00000000 MX_ADC1_Init
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:156    .text.MX_ADC1_Init:00000078 $d
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:397    .bss.hadc1:00000000 hadc1
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:163    .text.HAL_ADC_MspInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:169    .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:326    .text.HAL_ADC_MspInit:00000098 $d
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:331    .text.HAL_ADC_MspDeInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:337    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:388    .text.HAL_ADC_MspDeInit:00000024 $d
-C:\Users\elhyd\AppData\Local\Temp\ccjJZtnh.s:394    .bss.hadc1:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:21     .text.MX_ADC1_Init:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:27     .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:156    .text.MX_ADC1_Init:00000078 $d
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:397    .bss.hadc1:00000000 hadc1
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:163    .text.HAL_ADC_MspInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:169    .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:326    .text.HAL_ADC_MspInit:00000098 $d
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:331    .text.HAL_ADC_MspDeInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:337    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:388    .text.HAL_ADC_MspDeInit:00000024 $d
+C:\Users\elhyd\AppData\Local\Temp\ccT3LAWi.s:394    .bss.hadc1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_ADC_Init

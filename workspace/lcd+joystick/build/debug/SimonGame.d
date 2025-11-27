@@ -1,4 +1,5 @@
-build/debug/main.o: Core/Src/main.c Core/Inc/main.h \
+build/debug/SimonGame.o: Core/Src/SimonGame.c Core/Inc/SimonGame.h \
+ Core/Inc/joystick.h Core/Inc/adc.h Core/Inc/main.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h \
  Core/Inc/stm32wbxx_hal_conf.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h \
@@ -35,10 +36,11 @@ build/debug/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart_ex.h \
- Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h Core/Inc/adc.h \
- Core/Inc/main.h Core/Inc/tim.h Core/Inc/usart.h Core/Inc/gpio.h \
- Core/Inc/SimonGame.h Core/Inc/joystick.h Core/Inc/adc.h Core/Inc/gpio.h \
- Core/Inc/lcd1602.h Core/Inc/tim.h
+ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h Core/Inc/gpio.h \
+ Core/Inc/lcd1602.h Core/Inc/tim.h Core/Inc/gpio.h
+Core/Inc/SimonGame.h:
+Core/Inc/joystick.h:
+Core/Inc/adc.h:
 Core/Inc/main.h:
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h:
 Core/Inc/stm32wbxx_hal_conf.h:
@@ -79,14 +81,7 @@ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h:
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h:
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart_ex.h:
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h:
-Core/Inc/adc.h:
-Core/Inc/main.h:
-Core/Inc/tim.h:
-Core/Inc/usart.h:
-Core/Inc/gpio.h:
-Core/Inc/SimonGame.h:
-Core/Inc/joystick.h:
-Core/Inc/adc.h:
 Core/Inc/gpio.h:
 Core/Inc/lcd1602.h:
 Core/Inc/tim.h:
+Core/Inc/gpio.h:

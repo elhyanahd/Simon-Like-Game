@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "SimonGame.h"
+#include "lcd1602.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

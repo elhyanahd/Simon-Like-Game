@@ -72,6 +72,9 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x00000000       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .text          0x00000000        0x0 build/debug/SimonGame.o
+ .data          0x00000000        0x0 build/debug/SimonGame.o
+ .bss           0x00000000        0x0 build/debug/SimonGame.o
  .text          0x00000000        0x0 build/debug/adc.o
  .data          0x00000000        0x0 build/debug/adc.o
  .bss           0x00000000        0x0 build/debug/adc.o
@@ -1678,6 +1681,7 @@ Linker script and memory map
 LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crti.o
 LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+LOAD build/debug/SimonGame.o
 LOAD build/debug/adc.o
 LOAD build/debug/gpio.o
 LOAD build/debug/joystick.o
@@ -1736,7 +1740,7 @@ LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode
                 0x08000000                g_pfnVectors
                 0x0800013c                        . = ALIGN (0x4)
 
-.text           0x0800013c     0x359c
+.text           0x0800013c     0x371c
                 0x0800013c                        . = ALIGN (0x4)
  *(.text)
  .text          0x0800013c       0x30 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
@@ -1749,455 +1753,465 @@ LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode
                 0x08000170       0x24 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .text.frame_dummy
                 0x08000194       0x1c c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .text.MX_ADC1_Init
-                0x080001b0       0x84 build/debug/adc.o
-                0x080001b0                MX_ADC1_Init
- .text.HAL_ADC_MspInit
-                0x08000234       0x9c build/debug/adc.o
-                0x08000234                HAL_ADC_MspInit
- .text.MX_GPIO_Init
-                0x080002d0       0xc0 build/debug/gpio.o
-                0x080002d0                MX_GPIO_Init
- .text.Read_ADC_Channel
-                0x08000390       0x56 build/debug/joystick.o
- .text.Joystick_Init
-                0x080003e6       0x12 build/debug/joystick.o
-                0x080003e6                Joystick_Init
- .text.Joystick_Calibrate
-                0x080003f8       0x28 build/debug/joystick.o
-                0x080003f8                Joystick_Calibrate
- .text.Joystick_GetDirection
-                0x08000420       0x2c build/debug/joystick.o
-                0x08000420                Joystick_GetDirection
- .text.Joystick_Pressed
-                0x0800044c       0x2c build/debug/joystick.o
-                0x0800044c                Joystick_Pressed
- .text.Delay_us
-                0x08000478       0x14 build/debug/lcd1602.o
-                0x08000478                Delay_us
- .text.Delay_ms
-                0x0800048c        0x8 build/debug/lcd1602.o
-                0x0800048c                Delay_ms
- .text.LCD_strobe
-                0x08000494       0x28 build/debug/lcd1602.o
-                0x08000494                LCD_strobe
- .text.LCD_send_4bit
-                0x080004bc       0x40 build/debug/lcd1602.o
-                0x080004bc                LCD_send_4bit
- .text.LCD_cmd_4bit
-                0x080004fc       0x24 build/debug/lcd1602.o
-                0x080004fc                LCD_cmd_4bit
- .text.LCD_data_4bit
-                0x08000520       0x30 build/debug/lcd1602.o
-                0x08000520                LCD_data_4bit
- .text.LCD_GotoXY
-                0x08000550       0x14 build/debug/lcd1602.o
-                0x08000550                LCD_GotoXY
- .text.LCD_Init
-                0x08000564       0x40 build/debug/lcd1602.o
-                0x08000564                LCD_Init
- .text.LCD_Cls  0x080005a4       0x1c build/debug/lcd1602.o
-                0x080005a4                LCD_Cls
- .text.LCD_Print
-                0x080005c0       0x14 build/debug/lcd1602.o
-                0x080005c0                LCD_Print
+ .text.Game_Init
+                0x080001b0       0x12 build/debug/SimonGame.o
+                0x080001b0                Game_Init
  .text.displayOnLCD
-                0x080005d4       0x2c build/debug/main.o
-                0x080005d4                displayOnLCD
+                0x080001c2       0x2c build/debug/SimonGame.o
+                0x080001c2                displayOnLCD
+ .text.debounceButton
+                0x080001ee       0x28 build/debug/SimonGame.o
+                0x080001ee                debounceButton
+ *fill*         0x08000216        0x2 
+ .text.Game_Run
+                0x08000218      0x2b8 build/debug/SimonGame.o
+                0x08000218                Game_Run
+ .text.MX_ADC1_Init
+                0x080004d0       0x84 build/debug/adc.o
+                0x080004d0                MX_ADC1_Init
+ .text.HAL_ADC_MspInit
+                0x08000554       0x9c build/debug/adc.o
+                0x08000554                HAL_ADC_MspInit
+ .text.MX_GPIO_Init
+                0x080005f0      0x148 build/debug/gpio.o
+                0x080005f0                MX_GPIO_Init
+ .text.Read_ADC_Channel
+                0x08000738       0x56 build/debug/joystick.o
+ .text.Joystick_Init
+                0x0800078e       0x12 build/debug/joystick.o
+                0x0800078e                Joystick_Init
+ .text.Joystick_Calibrate
+                0x080007a0       0x28 build/debug/joystick.o
+                0x080007a0                Joystick_Calibrate
+ .text.Joystick_GetDirection
+                0x080007c8       0x2c build/debug/joystick.o
+                0x080007c8                Joystick_GetDirection
+ .text.Joystick_Pressed
+                0x080007f4       0x2c build/debug/joystick.o
+                0x080007f4                Joystick_Pressed
+ .text.Delay_us
+                0x08000820       0x14 build/debug/lcd1602.o
+                0x08000820                Delay_us
+ .text.Delay_ms
+                0x08000834        0x8 build/debug/lcd1602.o
+                0x08000834                Delay_ms
+ .text.LCD_strobe
+                0x0800083c       0x28 build/debug/lcd1602.o
+                0x0800083c                LCD_strobe
+ .text.LCD_send_4bit
+                0x08000864       0x40 build/debug/lcd1602.o
+                0x08000864                LCD_send_4bit
+ .text.LCD_cmd_4bit
+                0x080008a4       0x24 build/debug/lcd1602.o
+                0x080008a4                LCD_cmd_4bit
+ .text.LCD_data_4bit
+                0x080008c8       0x30 build/debug/lcd1602.o
+                0x080008c8                LCD_data_4bit
+ .text.LCD_GotoXY
+                0x080008f8       0x14 build/debug/lcd1602.o
+                0x080008f8                LCD_GotoXY
+ .text.LCD_Init
+                0x0800090c       0x40 build/debug/lcd1602.o
+                0x0800090c                LCD_Init
+ .text.LCD_Cls  0x0800094c       0x1c build/debug/lcd1602.o
+                0x0800094c                LCD_Cls
+ .text.LCD_Print
+                0x08000968       0x14 build/debug/lcd1602.o
+                0x08000968                LCD_Print
  .text.Error_Handler
-                0x08000600        0x4 build/debug/main.o
-                0x08000600                Error_Handler
+                0x0800097c        0x4 build/debug/main.o
+                0x0800097c                Error_Handler
  .text.SystemClock_Config
-                0x08000604       0xa2 build/debug/main.o
-                0x08000604                SystemClock_Config
+                0x08000980       0xa2 build/debug/main.o
+                0x08000980                SystemClock_Config
  .text.PeriphCommonClock_Config
-                0x080006a6       0x24 build/debug/main.o
-                0x080006a6                PeriphCommonClock_Config
- *fill*         0x080006ca        0x2 
- .text.main     0x080006cc      0x270 build/debug/main.o
-                0x080006cc                main
+                0x08000a22       0x24 build/debug/main.o
+                0x08000a22                PeriphCommonClock_Config
+ *fill*         0x08000a46        0x2 
+ .text.main     0x08000a48       0x74 build/debug/main.o
+                0x08000a48                main
  .text.HAL_InitTick
-                0x0800093c       0x50 build/debug/stm32wbxx_hal.o
-                0x0800093c                HAL_InitTick
+                0x08000abc       0x50 build/debug/stm32wbxx_hal.o
+                0x08000abc                HAL_InitTick
  .text.HAL_Init
-                0x0800098c       0x2c build/debug/stm32wbxx_hal.o
-                0x0800098c                HAL_Init
+                0x08000b0c       0x2c build/debug/stm32wbxx_hal.o
+                0x08000b0c                HAL_Init
  .text.HAL_IncTick
-                0x080009b8       0x18 build/debug/stm32wbxx_hal.o
-                0x080009b8                HAL_IncTick
+                0x08000b38       0x18 build/debug/stm32wbxx_hal.o
+                0x08000b38                HAL_IncTick
  .text.HAL_GetTick
-                0x080009d0        0xc build/debug/stm32wbxx_hal.o
-                0x080009d0                HAL_GetTick
+                0x08000b50        0xc build/debug/stm32wbxx_hal.o
+                0x08000b50                HAL_GetTick
  .text.HAL_GetTickPrio
-                0x080009dc        0xc build/debug/stm32wbxx_hal.o
-                0x080009dc                HAL_GetTickPrio
+                0x08000b5c        0xc build/debug/stm32wbxx_hal.o
+                0x08000b5c                HAL_GetTickPrio
  .text.HAL_Delay
-                0x080009e8       0x28 build/debug/stm32wbxx_hal.o
-                0x080009e8                HAL_Delay
+                0x08000b68       0x28 build/debug/stm32wbxx_hal.o
+                0x08000b68                HAL_Delay
  .text.LL_ADC_REG_SetSequencerRanks
-                0x08000a10       0x30 build/debug/stm32wbxx_hal_adc.o
+                0x08000b90       0x30 build/debug/stm32wbxx_hal_adc.o
  .text.LL_ADC_SetChannelSamplingTime
-                0x08000a40       0x2c build/debug/stm32wbxx_hal_adc.o
+                0x08000bc0       0x2c build/debug/stm32wbxx_hal_adc.o
  .text.HAL_ADC_Init
-                0x08000a6c      0x1d8 build/debug/stm32wbxx_hal_adc.o
-                0x08000a6c                HAL_ADC_Init
+                0x08000bec      0x1d8 build/debug/stm32wbxx_hal_adc.o
+                0x08000bec                HAL_ADC_Init
  .text.HAL_ADC_PollForConversion
-                0x08000c44       0xb4 build/debug/stm32wbxx_hal_adc.o
-                0x08000c44                HAL_ADC_PollForConversion
+                0x08000dc4       0xb4 build/debug/stm32wbxx_hal_adc.o
+                0x08000dc4                HAL_ADC_PollForConversion
  .text.HAL_ADC_GetValue
-                0x08000cf8        0x6 build/debug/stm32wbxx_hal_adc.o
-                0x08000cf8                HAL_ADC_GetValue
- *fill*         0x08000cfe        0x2 
+                0x08000e78        0x6 build/debug/stm32wbxx_hal_adc.o
+                0x08000e78                HAL_ADC_GetValue
+ *fill*         0x08000e7e        0x2 
  .text.HAL_ADC_ConfigChannel
-                0x08000d00      0x42c build/debug/stm32wbxx_hal_adc.o
-                0x08000d00                HAL_ADC_ConfigChannel
+                0x08000e80      0x42c build/debug/stm32wbxx_hal_adc.o
+                0x08000e80                HAL_ADC_ConfigChannel
  .text.ADC_ConversionStop
-                0x0800112c      0x104 build/debug/stm32wbxx_hal_adc.o
-                0x0800112c                ADC_ConversionStop
+                0x080012ac      0x104 build/debug/stm32wbxx_hal_adc.o
+                0x080012ac                ADC_ConversionStop
  .text.ADC_Enable
-                0x08001230       0xd0 build/debug/stm32wbxx_hal_adc.o
-                0x08001230                ADC_Enable
+                0x080013b0       0xd0 build/debug/stm32wbxx_hal_adc.o
+                0x080013b0                ADC_Enable
  .text.HAL_ADC_Start
-                0x08001300       0x78 build/debug/stm32wbxx_hal_adc.o
-                0x08001300                HAL_ADC_Start
+                0x08001480       0x78 build/debug/stm32wbxx_hal_adc.o
+                0x08001480                HAL_ADC_Start
  .text.ADC_Disable
-                0x08001378       0x94 build/debug/stm32wbxx_hal_adc.o
-                0x08001378                ADC_Disable
+                0x080014f8       0x94 build/debug/stm32wbxx_hal_adc.o
+                0x080014f8                ADC_Disable
  .text.HAL_ADC_Stop
-                0x0800140c       0x42 build/debug/stm32wbxx_hal_adc.o
-                0x0800140c                HAL_ADC_Stop
- *fill*         0x0800144e        0x2 
+                0x0800158c       0x42 build/debug/stm32wbxx_hal_adc.o
+                0x0800158c                HAL_ADC_Stop
+ *fill*         0x080015ce        0x2 
  .text.__NVIC_SetPriority
-                0x08001450       0x28 build/debug/stm32wbxx_hal_cortex.o
+                0x080015d0       0x28 build/debug/stm32wbxx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x08001478       0x3e build/debug/stm32wbxx_hal_cortex.o
- *fill*         0x080014b6        0x2 
+                0x080015f8       0x3e build/debug/stm32wbxx_hal_cortex.o
+ *fill*         0x08001636        0x2 
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080014b8       0x24 build/debug/stm32wbxx_hal_cortex.o
-                0x080014b8                HAL_NVIC_SetPriorityGrouping
+                0x08001638       0x24 build/debug/stm32wbxx_hal_cortex.o
+                0x08001638                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080014dc       0x20 build/debug/stm32wbxx_hal_cortex.o
-                0x080014dc                HAL_NVIC_SetPriority
+                0x0800165c       0x20 build/debug/stm32wbxx_hal_cortex.o
+                0x0800165c                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x080014fc       0x28 build/debug/stm32wbxx_hal_cortex.o
-                0x080014fc                HAL_SYSTICK_Config
+                0x0800167c       0x28 build/debug/stm32wbxx_hal_cortex.o
+                0x0800167c                HAL_SYSTICK_Config
  .text.HAL_GPIO_Init
-                0x08001524      0x1b4 build/debug/stm32wbxx_hal_gpio.o
-                0x08001524                HAL_GPIO_Init
+                0x080016a4      0x1b4 build/debug/stm32wbxx_hal_gpio.o
+                0x080016a4                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x080016d8        0xe build/debug/stm32wbxx_hal_gpio.o
-                0x080016d8                HAL_GPIO_ReadPin
+                0x08001858        0xe build/debug/stm32wbxx_hal_gpio.o
+                0x08001858                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x080016e6        0xa build/debug/stm32wbxx_hal_gpio.o
-                0x080016e6                HAL_GPIO_WritePin
+                0x08001866        0xa build/debug/stm32wbxx_hal_gpio.o
+                0x08001866                HAL_GPIO_WritePin
  .text.HAL_MspInit
-                0x080016f0        0x2 build/debug/stm32wbxx_hal_msp.o
-                0x080016f0                HAL_MspInit
- *fill*         0x080016f2        0x2 
+                0x08001870        0x2 build/debug/stm32wbxx_hal_msp.o
+                0x08001870                HAL_MspInit
+ *fill*         0x08001872        0x2 
  .text.HAL_PWR_EnableBkUpAccess
-                0x080016f4       0x10 build/debug/stm32wbxx_hal_pwr.o
-                0x080016f4                HAL_PWR_EnableBkUpAccess
+                0x08001874       0x10 build/debug/stm32wbxx_hal_pwr.o
+                0x08001874                HAL_PWR_EnableBkUpAccess
  .text.HAL_PWREx_GetVoltageRange
-                0x08001704       0x10 build/debug/stm32wbxx_hal_pwr_ex.o
-                0x08001704                HAL_PWREx_GetVoltageRange
+                0x08001884       0x10 build/debug/stm32wbxx_hal_pwr_ex.o
+                0x08001884                HAL_PWREx_GetVoltageRange
  .text.RCC_SetFlashLatency
-                0x08001714       0xc0 build/debug/stm32wbxx_hal_rcc.o
+                0x08001894       0xc0 build/debug/stm32wbxx_hal_rcc.o
  .text.RCC_SetFlashLatencyFromMSIRange
-                0x080017d4       0x4c build/debug/stm32wbxx_hal_rcc.o
+                0x08001954       0x4c build/debug/stm32wbxx_hal_rcc.o
  .text.HAL_RCC_GetSysClockFreq
-                0x08001820       0xc0 build/debug/stm32wbxx_hal_rcc.o
-                0x08001820                HAL_RCC_GetSysClockFreq
+                0x080019a0       0xc0 build/debug/stm32wbxx_hal_rcc.o
+                0x080019a0                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x080018e0       0x20 build/debug/stm32wbxx_hal_rcc.o
-                0x080018e0                HAL_RCC_GetHCLKFreq
+                0x08001a60       0x20 build/debug/stm32wbxx_hal_rcc.o
+                0x08001a60                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_OscConfig
-                0x08001900      0x718 build/debug/stm32wbxx_hal_rcc.o
-                0x08001900                HAL_RCC_OscConfig
+                0x08001a80      0x718 build/debug/stm32wbxx_hal_rcc.o
+                0x08001a80                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08002018      0x264 build/debug/stm32wbxx_hal_rcc.o
-                0x08002018                HAL_RCC_ClockConfig
+                0x08002198      0x264 build/debug/stm32wbxx_hal_rcc.o
+                0x08002198                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetPCLK1Freq
-                0x0800227c       0x24 build/debug/stm32wbxx_hal_rcc.o
-                0x0800227c                HAL_RCC_GetPCLK1Freq
+                0x080023fc       0x24 build/debug/stm32wbxx_hal_rcc.o
+                0x080023fc                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x080022a0       0x24 build/debug/stm32wbxx_hal_rcc.o
-                0x080022a0                HAL_RCC_GetPCLK2Freq
+                0x08002420       0x24 build/debug/stm32wbxx_hal_rcc.o
+                0x08002420                HAL_RCC_GetPCLK2Freq
  .text.LL_RCC_SetI2CClockSource
-                0x080022c4       0x20 build/debug/stm32wbxx_hal_rcc_ex.o
+                0x08002444       0x20 build/debug/stm32wbxx_hal_rcc_ex.o
  .text.RCCEx_PLLSAI1_ConfigNP
-                0x080022e4       0x8e build/debug/stm32wbxx_hal_rcc_ex.o
+                0x08002464       0x8e build/debug/stm32wbxx_hal_rcc_ex.o
  .text.RCCEx_PLLSAI1_ConfigNQ
-                0x08002372       0x8e build/debug/stm32wbxx_hal_rcc_ex.o
+                0x080024f2       0x8e build/debug/stm32wbxx_hal_rcc_ex.o
  .text.RCCEx_PLLSAI1_ConfigNR
-                0x08002400       0x8e build/debug/stm32wbxx_hal_rcc_ex.o
+                0x08002580       0x8e build/debug/stm32wbxx_hal_rcc_ex.o
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x0800248e      0x2f2 build/debug/stm32wbxx_hal_rcc_ex.o
-                0x0800248e                HAL_RCCEx_PeriphCLKConfig
+                0x0800260e      0x2f2 build/debug/stm32wbxx_hal_rcc_ex.o
+                0x0800260e                HAL_RCCEx_PeriphCLKConfig
  .text.TIM_TI1_ConfigInputStage
-                0x08002780       0x26 build/debug/stm32wbxx_hal_tim.o
+                0x08002900       0x26 build/debug/stm32wbxx_hal_tim.o
  .text.TIM_TI2_ConfigInputStage
-                0x080027a6       0x28 build/debug/stm32wbxx_hal_tim.o
+                0x08002926       0x28 build/debug/stm32wbxx_hal_tim.o
  .text.TIM_ITRx_SetConfig
-                0x080027ce       0x14 build/debug/stm32wbxx_hal_tim.o
- *fill*         0x080027e2        0x2 
+                0x0800294e       0x14 build/debug/stm32wbxx_hal_tim.o
+ *fill*         0x08002962        0x2 
  .text.HAL_TIM_Base_Start
-                0x080027e4       0x58 build/debug/stm32wbxx_hal_tim.o
-                0x080027e4                HAL_TIM_Base_Start
+                0x08002964       0x58 build/debug/stm32wbxx_hal_tim.o
+                0x08002964                HAL_TIM_Base_Start
  .text.TIM_Base_SetConfig
-                0x0800283c       0x78 build/debug/stm32wbxx_hal_tim.o
-                0x0800283c                TIM_Base_SetConfig
+                0x080029bc       0x78 build/debug/stm32wbxx_hal_tim.o
+                0x080029bc                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x080028b4       0x60 build/debug/stm32wbxx_hal_tim.o
-                0x080028b4                HAL_TIM_Base_Init
+                0x08002a34       0x60 build/debug/stm32wbxx_hal_tim.o
+                0x08002a34                HAL_TIM_Base_Init
  .text.TIM_ETR_SetConfig
-                0x08002914       0x1a build/debug/stm32wbxx_hal_tim.o
-                0x08002914                TIM_ETR_SetConfig
- *fill*         0x0800292e        0x2 
+                0x08002a94       0x1a build/debug/stm32wbxx_hal_tim.o
+                0x08002a94                TIM_ETR_SetConfig
+ *fill*         0x08002aae        0x2 
  .text.HAL_TIM_ConfigClockSource
-                0x08002930      0x100 build/debug/stm32wbxx_hal_tim.o
-                0x08002930                HAL_TIM_ConfigClockSource
+                0x08002ab0      0x100 build/debug/stm32wbxx_hal_tim.o
+                0x08002ab0                HAL_TIM_ConfigClockSource
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x08002a30       0x68 build/debug/stm32wbxx_hal_tim_ex.o
-                0x08002a30                HAL_TIMEx_MasterConfigSynchronization
+                0x08002bb0       0x68 build/debug/stm32wbxx_hal_tim_ex.o
+                0x08002bb0                HAL_TIMEx_MasterConfigSynchronization
  .text.UART_EndRxTransfer
-                0x08002a98       0x56 build/debug/stm32wbxx_hal_uart.o
- *fill*         0x08002aee        0x2 
+                0x08002c18       0x56 build/debug/stm32wbxx_hal_uart.o
+ *fill*         0x08002c6e        0x2 
  .text.UART_SetConfig
-                0x08002af0      0x254 build/debug/stm32wbxx_hal_uart.o
-                0x08002af0                UART_SetConfig
+                0x08002c70      0x254 build/debug/stm32wbxx_hal_uart.o
+                0x08002c70                UART_SetConfig
  .text.UART_AdvFeatureConfig
-                0x08002d44       0xca build/debug/stm32wbxx_hal_uart.o
-                0x08002d44                UART_AdvFeatureConfig
+                0x08002ec4       0xca build/debug/stm32wbxx_hal_uart.o
+                0x08002ec4                UART_AdvFeatureConfig
  .text.UART_WaitOnFlagUntilTimeout
-                0x08002e0e       0x9e build/debug/stm32wbxx_hal_uart.o
-                0x08002e0e                UART_WaitOnFlagUntilTimeout
+                0x08002f8e       0x9e build/debug/stm32wbxx_hal_uart.o
+                0x08002f8e                UART_WaitOnFlagUntilTimeout
  .text.UART_CheckIdleState
-                0x08002eac       0xca build/debug/stm32wbxx_hal_uart.o
-                0x08002eac                UART_CheckIdleState
+                0x0800302c       0xca build/debug/stm32wbxx_hal_uart.o
+                0x0800302c                UART_CheckIdleState
  .text.HAL_UART_Init
-                0x08002f76       0x66 build/debug/stm32wbxx_hal_uart.o
-                0x08002f76                HAL_UART_Init
+                0x080030f6       0x66 build/debug/stm32wbxx_hal_uart.o
+                0x080030f6                HAL_UART_Init
  .text.UARTEx_SetNbDataToProcess
-                0x08002fdc       0x4c build/debug/stm32wbxx_hal_uart_ex.o
+                0x0800315c       0x4c build/debug/stm32wbxx_hal_uart_ex.o
  .text.HAL_UARTEx_DisableFifoMode
-                0x08003028       0x3e build/debug/stm32wbxx_hal_uart_ex.o
-                0x08003028                HAL_UARTEx_DisableFifoMode
+                0x080031a8       0x3e build/debug/stm32wbxx_hal_uart_ex.o
+                0x080031a8                HAL_UARTEx_DisableFifoMode
  .text.HAL_UARTEx_SetTxFifoThreshold
-                0x08003066       0x4a build/debug/stm32wbxx_hal_uart_ex.o
-                0x08003066                HAL_UARTEx_SetTxFifoThreshold
+                0x080031e6       0x4a build/debug/stm32wbxx_hal_uart_ex.o
+                0x080031e6                HAL_UARTEx_SetTxFifoThreshold
  .text.HAL_UARTEx_SetRxFifoThreshold
-                0x080030b0       0x4a build/debug/stm32wbxx_hal_uart_ex.o
-                0x080030b0                HAL_UARTEx_SetRxFifoThreshold
+                0x08003230       0x4a build/debug/stm32wbxx_hal_uart_ex.o
+                0x08003230                HAL_UARTEx_SetRxFifoThreshold
  .text.NMI_Handler
-                0x080030fa        0x2 build/debug/stm32wbxx_it.o
-                0x080030fa                NMI_Handler
+                0x0800327a        0x2 build/debug/stm32wbxx_it.o
+                0x0800327a                NMI_Handler
  .text.HardFault_Handler
-                0x080030fc        0x2 build/debug/stm32wbxx_it.o
-                0x080030fc                HardFault_Handler
+                0x0800327c        0x2 build/debug/stm32wbxx_it.o
+                0x0800327c                HardFault_Handler
  .text.MemManage_Handler
-                0x080030fe        0x2 build/debug/stm32wbxx_it.o
-                0x080030fe                MemManage_Handler
+                0x0800327e        0x2 build/debug/stm32wbxx_it.o
+                0x0800327e                MemManage_Handler
  .text.BusFault_Handler
-                0x08003100        0x2 build/debug/stm32wbxx_it.o
-                0x08003100                BusFault_Handler
+                0x08003280        0x2 build/debug/stm32wbxx_it.o
+                0x08003280                BusFault_Handler
  .text.UsageFault_Handler
-                0x08003102        0x2 build/debug/stm32wbxx_it.o
-                0x08003102                UsageFault_Handler
+                0x08003282        0x2 build/debug/stm32wbxx_it.o
+                0x08003282                UsageFault_Handler
  .text.SVC_Handler
-                0x08003104        0x2 build/debug/stm32wbxx_it.o
-                0x08003104                SVC_Handler
+                0x08003284        0x2 build/debug/stm32wbxx_it.o
+                0x08003284                SVC_Handler
  .text.DebugMon_Handler
-                0x08003106        0x2 build/debug/stm32wbxx_it.o
-                0x08003106                DebugMon_Handler
+                0x08003286        0x2 build/debug/stm32wbxx_it.o
+                0x08003286                DebugMon_Handler
  .text.PendSV_Handler
-                0x08003108        0x2 build/debug/stm32wbxx_it.o
-                0x08003108                PendSV_Handler
+                0x08003288        0x2 build/debug/stm32wbxx_it.o
+                0x08003288                PendSV_Handler
  .text.SysTick_Handler
-                0x0800310a        0x8 build/debug/stm32wbxx_it.o
-                0x0800310a                SysTick_Handler
- *fill*         0x08003112        0x2 
+                0x0800328a        0x8 build/debug/stm32wbxx_it.o
+                0x0800328a                SysTick_Handler
+ *fill*         0x08003292        0x2 
  .text.SystemInit
-                0x08003114       0x64 build/debug/system_stm32wbxx.o
-                0x08003114                SystemInit
+                0x08003294       0x64 build/debug/system_stm32wbxx.o
+                0x08003294                SystemInit
  .text.MX_TIM2_Init
-                0x08003178       0x70 build/debug/tim.o
-                0x08003178                MX_TIM2_Init
+                0x080032f8       0x70 build/debug/tim.o
+                0x080032f8                MX_TIM2_Init
  .text.HAL_TIM_Base_MspInit
-                0x080031e8       0x26 build/debug/tim.o
-                0x080031e8                HAL_TIM_Base_MspInit
- *fill*         0x0800320e        0x2 
+                0x08003368       0x26 build/debug/tim.o
+                0x08003368                HAL_TIM_Base_MspInit
+ *fill*         0x0800338e        0x2 
  .text.MX_USART1_UART_Init
-                0x08003210       0x68 build/debug/usart.o
-                0x08003210                MX_USART1_UART_Init
+                0x08003390       0x68 build/debug/usart.o
+                0x08003390                MX_USART1_UART_Init
  .text.HAL_UART_MspInit
-                0x08003278       0x84 build/debug/usart.o
-                0x08003278                HAL_UART_MspInit
+                0x080033f8       0x84 build/debug/usart.o
+                0x080033f8                HAL_UART_MspInit
  .text.data_initializers
-                0x080032fc       0x18 build/debug/startup_stm32wb55xx_cm4.o
+                0x0800347c       0x18 build/debug/startup_stm32wb55xx_cm4.o
  .text.Reset_Handler
-                0x08003314       0x58 build/debug/startup_stm32wb55xx_cm4.o
-                0x08003314                Reset_Handler
+                0x08003494       0x58 build/debug/startup_stm32wb55xx_cm4.o
+                0x08003494                Reset_Handler
  .text.Default_Handler
-                0x0800336c        0x2 build/debug/startup_stm32wb55xx_cm4.o
-                0x0800336c                RTC_Alarm_IRQHandler
-                0x0800336c                EXTI2_IRQHandler
-                0x0800336c                TIM1_CC_IRQHandler
-                0x0800336c                TSC_IRQHandler
-                0x0800336c                USB_HP_IRQHandler
-                0x0800336c                EXTI3_IRQHandler
-                0x0800336c                LPTIM2_IRQHandler
-                0x0800336c                I2C3_ER_IRQHandler
-                0x0800336c                EXTI0_IRQHandler
-                0x0800336c                FPU_IRQHandler
-                0x0800336c                TIM1_UP_TIM16_IRQHandler
-                0x0800336c                AES1_IRQHandler
-                0x0800336c                SPI1_IRQHandler
-                0x0800336c                PWR_SOTF_BLEACT_802ACT_RFPHASE_IRQHandler
-                0x0800336c                DMA2_Channel2_IRQHandler
-                0x0800336c                DMA1_Channel4_IRQHandler
-                0x0800336c                ADC1_IRQHandler
-                0x0800336c                PKA_IRQHandler
-                0x0800336c                DMA1_Channel7_IRQHandler
-                0x0800336c                LCD_IRQHandler
-                0x0800336c                IPCC_C1_TX_IRQHandler
-                0x0800336c                DMA2_Channel1_IRQHandler
-                0x0800336c                QUADSPI_IRQHandler
-                0x0800336c                I2C1_EV_IRQHandler
-                0x0800336c                DMAMUX1_OVR_IRQHandler
-                0x0800336c                DMA1_Channel6_IRQHandler
-                0x0800336c                DMA2_Channel4_IRQHandler
-                0x0800336c                RCC_IRQHandler
-                0x0800336c                DMA1_Channel1_IRQHandler
-                0x0800336c                Default_Handler
-                0x0800336c                DMA2_Channel7_IRQHandler
-                0x0800336c                EXTI15_10_IRQHandler
-                0x0800336c                IPCC_C1_RX_IRQHandler
-                0x0800336c                C2SEV_PWR_C2H_IRQHandler
-                0x0800336c                AES2_IRQHandler
-                0x0800336c                I2C3_EV_IRQHandler
-                0x0800336c                EXTI9_5_IRQHandler
-                0x0800336c                RTC_WKUP_IRQHandler
-                0x0800336c                PVD_PVM_IRQHandler
-                0x0800336c                SPI2_IRQHandler
-                0x0800336c                DMA2_Channel5_IRQHandler
-                0x0800336c                CRS_IRQHandler
-                0x0800336c                DMA1_Channel5_IRQHandler
-                0x0800336c                USB_LP_IRQHandler
-                0x0800336c                EXTI4_IRQHandler
-                0x0800336c                RNG_IRQHandler
-                0x0800336c                TIM1_TRG_COM_TIM17_IRQHandler
-                0x0800336c                TAMP_STAMP_LSECSS_IRQHandler
-                0x0800336c                DMA1_Channel3_IRQHandler
-                0x0800336c                COMP_IRQHandler
-                0x0800336c                HSEM_IRQHandler
-                0x0800336c                WWDG_IRQHandler
-                0x0800336c                LPUART1_IRQHandler
-                0x0800336c                DMA2_Channel6_IRQHandler
-                0x0800336c                TIM2_IRQHandler
-                0x0800336c                TIM1_BRK_IRQHandler
-                0x0800336c                EXTI1_IRQHandler
-                0x0800336c                DMA1_Channel2_IRQHandler
-                0x0800336c                FLASH_IRQHandler
-                0x0800336c                USART1_IRQHandler
-                0x0800336c                I2C1_ER_IRQHandler
-                0x0800336c                LPTIM1_IRQHandler
-                0x0800336c                SAI1_IRQHandler
-                0x0800336c                DMA2_Channel3_IRQHandler
- .text.memset   0x0800336e       0x10 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
-                0x0800336e                memset
- *fill*         0x0800337e        0x2 
+                0x080034ec        0x2 build/debug/startup_stm32wb55xx_cm4.o
+                0x080034ec                RTC_Alarm_IRQHandler
+                0x080034ec                EXTI2_IRQHandler
+                0x080034ec                TIM1_CC_IRQHandler
+                0x080034ec                TSC_IRQHandler
+                0x080034ec                USB_HP_IRQHandler
+                0x080034ec                EXTI3_IRQHandler
+                0x080034ec                LPTIM2_IRQHandler
+                0x080034ec                I2C3_ER_IRQHandler
+                0x080034ec                EXTI0_IRQHandler
+                0x080034ec                FPU_IRQHandler
+                0x080034ec                TIM1_UP_TIM16_IRQHandler
+                0x080034ec                AES1_IRQHandler
+                0x080034ec                SPI1_IRQHandler
+                0x080034ec                PWR_SOTF_BLEACT_802ACT_RFPHASE_IRQHandler
+                0x080034ec                DMA2_Channel2_IRQHandler
+                0x080034ec                DMA1_Channel4_IRQHandler
+                0x080034ec                ADC1_IRQHandler
+                0x080034ec                PKA_IRQHandler
+                0x080034ec                DMA1_Channel7_IRQHandler
+                0x080034ec                LCD_IRQHandler
+                0x080034ec                IPCC_C1_TX_IRQHandler
+                0x080034ec                DMA2_Channel1_IRQHandler
+                0x080034ec                QUADSPI_IRQHandler
+                0x080034ec                I2C1_EV_IRQHandler
+                0x080034ec                DMAMUX1_OVR_IRQHandler
+                0x080034ec                DMA1_Channel6_IRQHandler
+                0x080034ec                DMA2_Channel4_IRQHandler
+                0x080034ec                RCC_IRQHandler
+                0x080034ec                DMA1_Channel1_IRQHandler
+                0x080034ec                Default_Handler
+                0x080034ec                DMA2_Channel7_IRQHandler
+                0x080034ec                EXTI15_10_IRQHandler
+                0x080034ec                IPCC_C1_RX_IRQHandler
+                0x080034ec                C2SEV_PWR_C2H_IRQHandler
+                0x080034ec                AES2_IRQHandler
+                0x080034ec                I2C3_EV_IRQHandler
+                0x080034ec                EXTI9_5_IRQHandler
+                0x080034ec                RTC_WKUP_IRQHandler
+                0x080034ec                PVD_PVM_IRQHandler
+                0x080034ec                SPI2_IRQHandler
+                0x080034ec                DMA2_Channel5_IRQHandler
+                0x080034ec                CRS_IRQHandler
+                0x080034ec                DMA1_Channel5_IRQHandler
+                0x080034ec                USB_LP_IRQHandler
+                0x080034ec                EXTI4_IRQHandler
+                0x080034ec                RNG_IRQHandler
+                0x080034ec                TIM1_TRG_COM_TIM17_IRQHandler
+                0x080034ec                TAMP_STAMP_LSECSS_IRQHandler
+                0x080034ec                DMA1_Channel3_IRQHandler
+                0x080034ec                COMP_IRQHandler
+                0x080034ec                HSEM_IRQHandler
+                0x080034ec                WWDG_IRQHandler
+                0x080034ec                LPUART1_IRQHandler
+                0x080034ec                DMA2_Channel6_IRQHandler
+                0x080034ec                TIM2_IRQHandler
+                0x080034ec                TIM1_BRK_IRQHandler
+                0x080034ec                EXTI1_IRQHandler
+                0x080034ec                DMA1_Channel2_IRQHandler
+                0x080034ec                FLASH_IRQHandler
+                0x080034ec                USART1_IRQHandler
+                0x080034ec                I2C1_ER_IRQHandler
+                0x080034ec                LPTIM1_IRQHandler
+                0x080034ec                SAI1_IRQHandler
+                0x080034ec                DMA2_Channel3_IRQHandler
+ .text.memset   0x080034ee       0x10 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+                0x080034ee                memset
+ *fill*         0x080034fe        0x2 
  .text.__libc_init_array
-                0x08003380       0x48 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
-                0x08003380                __libc_init_array
+                0x08003500       0x48 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
+                0x08003500                __libc_init_array
  .text.__udivmoddi4
-                0x080033c8      0x2f8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x080033c8                __udivmoddi4
+                0x08003548      0x2f8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08003548                __udivmoddi4
  *(.glue_7)
- .glue_7        0x080036c0        0x0 linker stubs
+ .glue_7        0x08003840        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080036c0        0x0 linker stubs
+ .glue_7t       0x08003840        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080036c0        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08003840        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x080036c0        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x080036c0                _init
- .init          0x080036c4        0x8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08003840        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x08003840                _init
+ .init          0x08003844        0x8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x080036cc        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x080036cc                _fini
- .fini          0x080036d0        0x8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtn.o
-                0x080036d8                        . = ALIGN (0x4)
-                0x080036d8                        _etext = .
+ .fini          0x0800384c        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800384c                _fini
+ .fini          0x08003850        0x8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08003858                        . = ALIGN (0x4)
+                0x08003858                        _etext = .
 
-.vfp11_veneer   0x080036d8        0x0
- .vfp11_veneer  0x080036d8        0x0 linker stubs
+.vfp11_veneer   0x08003858        0x0
+ .vfp11_veneer  0x08003858        0x0 linker stubs
 
-.v4_bx          0x080036d8        0x0
- .v4_bx         0x080036d8        0x0 linker stubs
+.v4_bx          0x08003858        0x0
+ .v4_bx         0x08003858        0x0 linker stubs
 
-.iplt           0x080036d8        0x0
- .iplt          0x080036d8        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08003858        0x0
+ .iplt          0x08003858        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x080036d8      0x178
-                0x080036d8                        . = ALIGN (0x4)
+.rodata         0x08003858      0x178
+                0x08003858                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x080036d8       0x2c build/debug/stm32wbxx_hal_rcc.o
+ .rodata        0x08003858       0x2c build/debug/stm32wbxx_hal_rcc.o
  *(.rodata*)
- .rodata.main.str1.4
-                0x08003704       0x82 build/debug/main.o
- *fill*         0x08003786        0x2 
+ .rodata.Game_Run.str1.4
+                0x08003884       0x82 build/debug/SimonGame.o
+ *fill*         0x08003906        0x2 
  .rodata.UARTPrescTable
-                0x08003788       0x18 build/debug/stm32wbxx_hal_uart.o
-                0x08003788                UARTPrescTable
+                0x08003908       0x18 build/debug/stm32wbxx_hal_uart.o
+                0x08003908                UARTPrescTable
  .rodata.denominator.0
-                0x080037a0        0x8 build/debug/stm32wbxx_hal_uart_ex.o
+                0x08003920        0x8 build/debug/stm32wbxx_hal_uart_ex.o
  .rodata.numerator.1
-                0x080037a8        0x8 build/debug/stm32wbxx_hal_uart_ex.o
+                0x08003928        0x8 build/debug/stm32wbxx_hal_uart_ex.o
  .rodata.MSIRangeTable
-                0x080037b0       0x40 build/debug/system_stm32wbxx.o
-                0x080037b0                MSIRangeTable
+                0x08003930       0x40 build/debug/system_stm32wbxx.o
+                0x08003930                MSIRangeTable
  .rodata.APBPrescTable
-                0x080037f0       0x20 build/debug/system_stm32wbxx.o
-                0x080037f0                APBPrescTable
+                0x08003970       0x20 build/debug/system_stm32wbxx.o
+                0x08003970                APBPrescTable
  .rodata.AHBPrescTable
-                0x08003810       0x40 build/debug/system_stm32wbxx.o
-                0x08003810                AHBPrescTable
-                0x08003850                        . = ALIGN (0x4)
+                0x08003990       0x40 build/debug/system_stm32wbxx.o
+                0x08003990                AHBPrescTable
+                0x080039d0                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08003850        0x8
-                0x08003850                        __exidx_start = .
+.ARM            0x080039d0        0x8
+                0x080039d0                        __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.__udivmoddi4
-                0x08003850        0x8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08003858                        __exidx_end = .
+                0x080039d0        0x8 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080039d8                        __exidx_end = .
 
-.preinit_array  0x08003858        0x0
-                0x08003858                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080039d8        0x0
+                0x080039d8                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08003858                        PROVIDE (__preinit_array_end = .)
+                0x080039d8                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08003858        0x4
-                0x08003858                        PROVIDE (__init_array_start = .)
+.init_array     0x080039d8        0x4
+                0x080039d8                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08003858        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0800385c                        PROVIDE (__init_array_end = .)
+ .init_array    0x080039d8        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080039dc                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0800385c        0x4
-                0x0800385c                        PROVIDE (__fini_array_start = .)
+.fini_array     0x080039dc        0x4
+                0x080039dc                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800385c        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08003860                        PROVIDE (__fini_array_end = .)
-                0x08003860                        _sidata = LOADADDR (.data)
+ .fini_array    0x080039dc        0x4 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080039e0                        PROVIDE (__fini_array_end = .)
+                0x080039e0                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08003860        0x0
- .rel.iplt      0x08003860        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080039e0        0x0
+ .rel.iplt      0x080039e0        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000008        0xc load address 0x08003860
+.data           0x20000008        0xc load address 0x080039e0
                 0x20000008                        . = ALIGN (0x4)
                 0x20000008                        _sdata = .
  *(.data)
@@ -2214,10 +2228,10 @@ LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode
                 0x20000010                SystemCoreClock
                 0x20000014                        . = ALIGN (0x4)
 
-.igot.plt       0x20000014        0x0 load address 0x0800386c
+.igot.plt       0x20000014        0x0 load address 0x080039ec
  .igot.plt      0x20000014        0x0 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x20000014        0x0 load address 0x0800386c
+.tdata          0x20000014        0x0 load address 0x080039ec
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20000014                        . = ALIGN (0x4)
                 0x20000014                        _edata = .
@@ -2234,7 +2248,7 @@ LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x20000014        0x0 load address 0x0800386c
+.tbss           0x20000014        0x0 load address 0x080039ec
                 0x20000014                        _sbss = .
                 0x20000014                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -2251,44 +2265,59 @@ LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x20000014      0x17c load address 0x0800386c
+.bss            0x20000014      0x1b0 load address 0x080039ec
  *(.bss)
  *(.bss*)
  .bss.completed.1
                 0x20000014        0x1 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  *fill*         0x20000015        0x3 
  .bss.object.0  0x20000018       0x18 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .bss.hadc1     0x20000030       0x64 build/debug/adc.o
-                0x20000030                hadc1
- .bss.centerX   0x20000094        0x2 build/debug/joystick.o
- *fill*         0x20000096        0x2 
- .bss.joystick  0x20000098       0x14 build/debug/main.o
-                0x20000098                joystick
- .bss.uwTick    0x200000ac        0x4 build/debug/stm32wbxx_hal.o
-                0x200000ac                uwTick
- .bss.htim2     0x200000b0       0x4c build/debug/tim.o
-                0x200000b0                htim2
- .bss.huart1    0x200000fc       0x94 build/debug/usart.o
-                0x200000fc                huart1
+ .bss.lastDirection.0
+                0x20000030        0x1 build/debug/SimonGame.o
+ *fill*         0x20000031        0x3 
+ .bss.directionDelay.1
+                0x20000034        0x4 build/debug/SimonGame.o
+ .bss.direction.2
+                0x20000038        0x1 build/debug/SimonGame.o
+ *fill*         0x20000039        0x3 
+ .bss.lineTwo.3
+                0x2000003c       0x11 build/debug/SimonGame.o
+ *fill*         0x2000004d        0x3 
+ .bss.lineOne.4
+                0x20000050       0x11 build/debug/SimonGame.o
+ *fill*         0x20000061        0x3 
+ .bss.hadc1     0x20000064       0x64 build/debug/adc.o
+                0x20000064                hadc1
+ .bss.centerX   0x200000c8        0x2 build/debug/joystick.o
+ *fill*         0x200000ca        0x2 
+ .bss.joystick  0x200000cc       0x14 build/debug/main.o
+                0x200000cc                joystick
+ .bss.uwTick    0x200000e0        0x4 build/debug/stm32wbxx_hal.o
+                0x200000e0                uwTick
+ .bss.htim2     0x200000e4       0x4c build/debug/tim.o
+                0x200000e4                htim2
+ .bss.huart1    0x20000130       0x94 build/debug/usart.o
+                0x20000130                huart1
  *(COMMON)
-                0x20000190                        . = ALIGN (0x4)
-                0x20000190                        _ebss = .
-                0x20000190                        __bss_end__ = _ebss
+                0x200001c4                        . = ALIGN (0x4)
+                0x200001c4                        _ebss = .
+                0x200001c4                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
                 [!provide]                        PROVIDE (__bss_start = __tbss_start)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x20000190      0x600 load address 0x0800386c
-                0x20000190                        . = ALIGN (0x8)
+                0x200001c4      0x604 load address 0x080039ec
+                0x200001c8                        . = ALIGN (0x8)
+ *fill*         0x200001c4        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x20000190                        PROVIDE (_end = .)
-                0x20000390                        . = (. + _Min_Heap_Size)
- *fill*         0x20000190      0x200 
-                0x20000790                        . = (. + _Min_Stack_Size)
- *fill*         0x20000390      0x400 
-                0x20000790                        . = ALIGN (0x8)
+                0x200001c8                        PROVIDE (_end = .)
+                0x200003c8                        . = (. + _Min_Heap_Size)
+ *fill*         0x200001c8      0x200 
+                0x200007c8                        . = (. + _Min_Stack_Size)
+ *fill*         0x200003c8      0x400 
+                0x200007c8                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -2303,72 +2332,74 @@ LOAD c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode
  .ARM.attributes
                 0x00000022       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .ARM.attributes
-                0x00000056       0x34 build/debug/adc.o
+                0x00000056       0x34 build/debug/SimonGame.o
  .ARM.attributes
-                0x0000008a       0x34 build/debug/gpio.o
+                0x0000008a       0x34 build/debug/adc.o
  .ARM.attributes
-                0x000000be       0x34 build/debug/joystick.o
+                0x000000be       0x34 build/debug/gpio.o
  .ARM.attributes
-                0x000000f2       0x34 build/debug/lcd1602.o
+                0x000000f2       0x34 build/debug/joystick.o
  .ARM.attributes
-                0x00000126       0x34 build/debug/main.o
+                0x00000126       0x34 build/debug/lcd1602.o
  .ARM.attributes
-                0x0000015a       0x34 build/debug/stm32wbxx_hal.o
+                0x0000015a       0x34 build/debug/main.o
  .ARM.attributes
-                0x0000018e       0x34 build/debug/stm32wbxx_hal_adc.o
+                0x0000018e       0x34 build/debug/stm32wbxx_hal.o
  .ARM.attributes
-                0x000001c2       0x34 build/debug/stm32wbxx_hal_cortex.o
+                0x000001c2       0x34 build/debug/stm32wbxx_hal_adc.o
  .ARM.attributes
-                0x000001f6       0x34 build/debug/stm32wbxx_hal_gpio.o
+                0x000001f6       0x34 build/debug/stm32wbxx_hal_cortex.o
  .ARM.attributes
-                0x0000022a       0x34 build/debug/stm32wbxx_hal_msp.o
+                0x0000022a       0x34 build/debug/stm32wbxx_hal_gpio.o
  .ARM.attributes
-                0x0000025e       0x34 build/debug/stm32wbxx_hal_pwr.o
+                0x0000025e       0x34 build/debug/stm32wbxx_hal_msp.o
  .ARM.attributes
-                0x00000292       0x34 build/debug/stm32wbxx_hal_pwr_ex.o
+                0x00000292       0x34 build/debug/stm32wbxx_hal_pwr.o
  .ARM.attributes
-                0x000002c6       0x34 build/debug/stm32wbxx_hal_rcc.o
+                0x000002c6       0x34 build/debug/stm32wbxx_hal_pwr_ex.o
  .ARM.attributes
-                0x000002fa       0x34 build/debug/stm32wbxx_hal_rcc_ex.o
+                0x000002fa       0x34 build/debug/stm32wbxx_hal_rcc.o
  .ARM.attributes
-                0x0000032e       0x34 build/debug/stm32wbxx_hal_tim.o
+                0x0000032e       0x34 build/debug/stm32wbxx_hal_rcc_ex.o
  .ARM.attributes
-                0x00000362       0x34 build/debug/stm32wbxx_hal_tim_ex.o
+                0x00000362       0x34 build/debug/stm32wbxx_hal_tim.o
  .ARM.attributes
-                0x00000396       0x34 build/debug/stm32wbxx_hal_uart.o
+                0x00000396       0x34 build/debug/stm32wbxx_hal_tim_ex.o
  .ARM.attributes
-                0x000003ca       0x34 build/debug/stm32wbxx_hal_uart_ex.o
+                0x000003ca       0x34 build/debug/stm32wbxx_hal_uart.o
  .ARM.attributes
-                0x000003fe       0x34 build/debug/stm32wbxx_it.o
+                0x000003fe       0x34 build/debug/stm32wbxx_hal_uart_ex.o
  .ARM.attributes
-                0x00000432       0x34 build/debug/system_stm32wbxx.o
+                0x00000432       0x34 build/debug/stm32wbxx_it.o
  .ARM.attributes
-                0x00000466       0x34 build/debug/tim.o
+                0x00000466       0x34 build/debug/system_stm32wbxx.o
  .ARM.attributes
-                0x0000049a       0x34 build/debug/usart.o
+                0x0000049a       0x34 build/debug/tim.o
  .ARM.attributes
-                0x000004ce       0x21 build/debug/startup_stm32wb55xx_cm4.o
+                0x000004ce       0x34 build/debug/usart.o
  .ARM.attributes
-                0x000004ef       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+                0x00000502       0x21 build/debug/startup_stm32wb55xx_cm4.o
  .ARM.attributes
-                0x00000523       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
+                0x00000523       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x00000557       0x22 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x00000557       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
  .ARM.attributes
-                0x00000579       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0000058b       0x22 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000005ad       0x22 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x000005ad       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x000005cf       0x22 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x000005e1       0x22 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000603       0x22 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtn.o
 
 MAPPING_TABLE
  *(MAPPING_TABLE)
 
 MB_MEM1
  *(MB_MEM1)
-                0x0800386c                        _siMB_MEM2 = LOADADDR (.MB_MEM2)
+                0x080039ec                        _siMB_MEM2 = LOADADDR (.MB_MEM2)
 
-.MB_MEM2        0x20030000        0x0 load address 0x0800386c
+.MB_MEM2        0x20030000        0x0 load address 0x080039ec
                 0x20030000                        _sMB_MEM2 = .
  *(MB_MEM2)
                 0x20030000                        _eMB_MEM2 = .
@@ -2378,6 +2409,7 @@ LOAD linker stubs
 .comment        0x00000000       0x39
  .comment       0x00000000       0x39 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard/crtbegin.o
                                  0x3a (size before relaxing)
+ .comment       0x00000039       0x3a build/debug/SimonGame.o
  .comment       0x00000039       0x3a build/debug/adc.o
  .comment       0x00000039       0x3a build/debug/gpio.o
  .comment       0x00000039       0x3a build/debug/joystick.o
@@ -2404,294 +2436,303 @@ LOAD linker stubs
  .comment       0x00000039       0x3a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
  .comment       0x00000039       0x3a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_info     0x00000000    0x21eb7
- .debug_info    0x00000000     0x110a build/debug/adc.o
- .debug_info    0x0000110a      0x698 build/debug/gpio.o
- .debug_info    0x000017a2      0xd77 build/debug/joystick.o
- .debug_info    0x00002519      0xec5 build/debug/lcd1602.o
- .debug_info    0x000033de     0x1c48 build/debug/main.o
- .debug_info    0x00005026     0x1668 build/debug/stm32wbxx_hal.o
- .debug_info    0x0000668e     0x312b build/debug/stm32wbxx_hal_adc.o
- .debug_info    0x000097b9      0xf16 build/debug/stm32wbxx_hal_cortex.o
- .debug_info    0x0000a6cf      0x6e5 build/debug/stm32wbxx_hal_gpio.o
- .debug_info    0x0000adb4       0x86 build/debug/stm32wbxx_hal_msp.o
- .debug_info    0x0000ae3a      0x9ff build/debug/stm32wbxx_hal_pwr.o
- .debug_info    0x0000b839     0x138e build/debug/stm32wbxx_hal_pwr_ex.o
- .debug_info    0x0000cbc7     0x2126 build/debug/stm32wbxx_hal_rcc.o
- .debug_info    0x0000eced     0x3051 build/debug/stm32wbxx_hal_rcc_ex.o
- .debug_info    0x00011d3e     0x3e2a build/debug/stm32wbxx_hal_tim.o
- .debug_info    0x00015b68     0x1f30 build/debug/stm32wbxx_hal_tim_ex.o
- .debug_info    0x00017a98     0x63f1 build/debug/stm32wbxx_hal_uart.o
- .debug_info    0x0001de89     0x124f build/debug/stm32wbxx_hal_uart_ex.o
- .debug_info    0x0001f0d8      0x11d build/debug/stm32wbxx_it.o
- .debug_info    0x0001f1f5      0x71d build/debug/system_stm32wbxx.o
- .debug_info    0x0001f912      0xd62 build/debug/tim.o
- .debug_info    0x00020674     0x10b0 build/debug/usart.o
- .debug_info    0x00021724       0x30 build/debug/startup_stm32wb55xx_cm4.o
- .debug_info    0x00021754       0x24 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_info    0x00021778      0x703 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_info    0x00021e7b       0x3c c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+.debug_info     0x00000000    0x22d43
+ .debug_info    0x00000000     0x1098 build/debug/SimonGame.o
+ .debug_info    0x00001098     0x110a build/debug/adc.o
+ .debug_info    0x000021a2      0x770 build/debug/gpio.o
+ .debug_info    0x00002912      0xd77 build/debug/joystick.o
+ .debug_info    0x00003689      0xec5 build/debug/lcd1602.o
+ .debug_info    0x0000454e     0x1964 build/debug/main.o
+ .debug_info    0x00005eb2     0x1668 build/debug/stm32wbxx_hal.o
+ .debug_info    0x0000751a     0x312b build/debug/stm32wbxx_hal_adc.o
+ .debug_info    0x0000a645      0xf16 build/debug/stm32wbxx_hal_cortex.o
+ .debug_info    0x0000b55b      0x6e5 build/debug/stm32wbxx_hal_gpio.o
+ .debug_info    0x0000bc40       0x86 build/debug/stm32wbxx_hal_msp.o
+ .debug_info    0x0000bcc6      0x9ff build/debug/stm32wbxx_hal_pwr.o
+ .debug_info    0x0000c6c5     0x138e build/debug/stm32wbxx_hal_pwr_ex.o
+ .debug_info    0x0000da53     0x2126 build/debug/stm32wbxx_hal_rcc.o
+ .debug_info    0x0000fb79     0x3051 build/debug/stm32wbxx_hal_rcc_ex.o
+ .debug_info    0x00012bca     0x3e2a build/debug/stm32wbxx_hal_tim.o
+ .debug_info    0x000169f4     0x1f30 build/debug/stm32wbxx_hal_tim_ex.o
+ .debug_info    0x00018924     0x63f1 build/debug/stm32wbxx_hal_uart.o
+ .debug_info    0x0001ed15     0x124f build/debug/stm32wbxx_hal_uart_ex.o
+ .debug_info    0x0001ff64      0x11d build/debug/stm32wbxx_it.o
+ .debug_info    0x00020081      0x71d build/debug/system_stm32wbxx.o
+ .debug_info    0x0002079e      0xd62 build/debug/tim.o
+ .debug_info    0x00021500     0x10b0 build/debug/usart.o
+ .debug_info    0x000225b0       0x30 build/debug/startup_stm32wb55xx_cm4.o
+ .debug_info    0x000225e0       0x24 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x00022604      0x703 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_info    0x00022d07       0x3c c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
 
-.debug_abbrev   0x00000000     0x3a0d
- .debug_abbrev  0x00000000      0x283 build/debug/adc.o
- .debug_abbrev  0x00000283      0x1d8 build/debug/gpio.o
- .debug_abbrev  0x0000045b      0x26c build/debug/joystick.o
- .debug_abbrev  0x000006c7      0x206 build/debug/lcd1602.o
- .debug_abbrev  0x000008cd      0x333 build/debug/main.o
- .debug_abbrev  0x00000c00      0x3b1 build/debug/stm32wbxx_hal.o
- .debug_abbrev  0x00000fb1      0x2fb build/debug/stm32wbxx_hal_adc.o
- .debug_abbrev  0x000012ac      0x390 build/debug/stm32wbxx_hal_cortex.o
- .debug_abbrev  0x0000163c      0x201 build/debug/stm32wbxx_hal_gpio.o
- .debug_abbrev  0x0000183d       0x43 build/debug/stm32wbxx_hal_msp.o
- .debug_abbrev  0x00001880      0x247 build/debug/stm32wbxx_hal_pwr.o
- .debug_abbrev  0x00001ac7      0x369 build/debug/stm32wbxx_hal_pwr_ex.o
- .debug_abbrev  0x00001e30      0x360 build/debug/stm32wbxx_hal_rcc.o
- .debug_abbrev  0x00002190      0x475 build/debug/stm32wbxx_hal_rcc_ex.o
- .debug_abbrev  0x00002605      0x270 build/debug/stm32wbxx_hal_tim.o
- .debug_abbrev  0x00002875      0x281 build/debug/stm32wbxx_hal_tim_ex.o
- .debug_abbrev  0x00002af6      0x34e build/debug/stm32wbxx_hal_uart.o
- .debug_abbrev  0x00002e44      0x344 build/debug/stm32wbxx_hal_uart_ex.o
- .debug_abbrev  0x00003188       0x7c build/debug/stm32wbxx_it.o
- .debug_abbrev  0x00003204      0x13f build/debug/system_stm32wbxx.o
- .debug_abbrev  0x00003343      0x262 build/debug/tim.o
- .debug_abbrev  0x000035a5      0x2a0 build/debug/usart.o
- .debug_abbrev  0x00003845       0x24 build/debug/startup_stm32wb55xx_cm4.o
- .debug_abbrev  0x00003869       0x14 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_abbrev  0x0000387d      0x16a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_abbrev  0x000039e7       0x26 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+.debug_abbrev   0x00000000     0x3be2
+ .debug_abbrev  0x00000000      0x261 build/debug/SimonGame.o
+ .debug_abbrev  0x00000261      0x283 build/debug/adc.o
+ .debug_abbrev  0x000004e4      0x1d8 build/debug/gpio.o
+ .debug_abbrev  0x000006bc      0x26c build/debug/joystick.o
+ .debug_abbrev  0x00000928      0x206 build/debug/lcd1602.o
+ .debug_abbrev  0x00000b2e      0x2a7 build/debug/main.o
+ .debug_abbrev  0x00000dd5      0x3b1 build/debug/stm32wbxx_hal.o
+ .debug_abbrev  0x00001186      0x2fb build/debug/stm32wbxx_hal_adc.o
+ .debug_abbrev  0x00001481      0x390 build/debug/stm32wbxx_hal_cortex.o
+ .debug_abbrev  0x00001811      0x201 build/debug/stm32wbxx_hal_gpio.o
+ .debug_abbrev  0x00001a12       0x43 build/debug/stm32wbxx_hal_msp.o
+ .debug_abbrev  0x00001a55      0x247 build/debug/stm32wbxx_hal_pwr.o
+ .debug_abbrev  0x00001c9c      0x369 build/debug/stm32wbxx_hal_pwr_ex.o
+ .debug_abbrev  0x00002005      0x360 build/debug/stm32wbxx_hal_rcc.o
+ .debug_abbrev  0x00002365      0x475 build/debug/stm32wbxx_hal_rcc_ex.o
+ .debug_abbrev  0x000027da      0x270 build/debug/stm32wbxx_hal_tim.o
+ .debug_abbrev  0x00002a4a      0x281 build/debug/stm32wbxx_hal_tim_ex.o
+ .debug_abbrev  0x00002ccb      0x34e build/debug/stm32wbxx_hal_uart.o
+ .debug_abbrev  0x00003019      0x344 build/debug/stm32wbxx_hal_uart_ex.o
+ .debug_abbrev  0x0000335d       0x7c build/debug/stm32wbxx_it.o
+ .debug_abbrev  0x000033d9      0x13f build/debug/system_stm32wbxx.o
+ .debug_abbrev  0x00003518      0x262 build/debug/tim.o
+ .debug_abbrev  0x0000377a      0x2a0 build/debug/usart.o
+ .debug_abbrev  0x00003a1a       0x24 build/debug/startup_stm32wb55xx_cm4.o
+ .debug_abbrev  0x00003a3e       0x14 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x00003a52      0x16a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x00003bbc       0x26 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
 
 .debug_loclists
-                0x00000000     0xf003
+                0x00000000     0xf091
  .debug_loclists
-                0x00000000       0x7d build/debug/adc.o
+                0x00000000      0x1ec build/debug/SimonGame.o
  .debug_loclists
-                0x0000007d       0x30 build/debug/gpio.o
+                0x000001ec       0x7d build/debug/adc.o
  .debug_loclists
-                0x000000ad      0x158 build/debug/joystick.o
+                0x00000269       0x3c build/debug/gpio.o
  .debug_loclists
-                0x00000205      0x1a5 build/debug/lcd1602.o
+                0x000002a5      0x158 build/debug/joystick.o
  .debug_loclists
-                0x000003aa      0x16a build/debug/main.o
+                0x000003fd      0x1a5 build/debug/lcd1602.o
  .debug_loclists
-                0x00000514      0x2e7 build/debug/stm32wbxx_hal.o
+                0x000005a2      0x2e7 build/debug/stm32wbxx_hal.o
  .debug_loclists
-                0x000007fb     0x1703 build/debug/stm32wbxx_hal_adc.o
+                0x00000889     0x1703 build/debug/stm32wbxx_hal_adc.o
  .debug_loclists
-                0x00001efe      0x50b build/debug/stm32wbxx_hal_cortex.o
+                0x00001f8c      0x50b build/debug/stm32wbxx_hal_cortex.o
  .debug_loclists
-                0x00002409      0x2b9 build/debug/stm32wbxx_hal_gpio.o
+                0x00002497      0x2b9 build/debug/stm32wbxx_hal_gpio.o
  .debug_loclists
-                0x000026c2      0x1a9 build/debug/stm32wbxx_hal_pwr.o
+                0x00002750      0x1a9 build/debug/stm32wbxx_hal_pwr.o
  .debug_loclists
-                0x0000286b      0x831 build/debug/stm32wbxx_hal_pwr_ex.o
+                0x000028f9      0x831 build/debug/stm32wbxx_hal_pwr_ex.o
  .debug_loclists
-                0x0000309c      0x975 build/debug/stm32wbxx_hal_rcc.o
+                0x0000312a      0x975 build/debug/stm32wbxx_hal_rcc.o
  .debug_loclists
-                0x00003a11     0x124a build/debug/stm32wbxx_hal_rcc_ex.o
+                0x00003a9f     0x124a build/debug/stm32wbxx_hal_rcc_ex.o
  .debug_loclists
-                0x00004c5b     0x3b72 build/debug/stm32wbxx_hal_tim.o
+                0x00004ce9     0x3b72 build/debug/stm32wbxx_hal_tim.o
  .debug_loclists
-                0x000087cd     0x1c3d build/debug/stm32wbxx_hal_tim_ex.o
+                0x0000885b     0x1c3d build/debug/stm32wbxx_hal_tim_ex.o
  .debug_loclists
-                0x0000a40a     0x377f build/debug/stm32wbxx_hal_uart.o
+                0x0000a498     0x377f build/debug/stm32wbxx_hal_uart.o
  .debug_loclists
-                0x0000db89      0x835 build/debug/stm32wbxx_hal_uart_ex.o
+                0x0000dc17      0x835 build/debug/stm32wbxx_hal_uart_ex.o
  .debug_loclists
-                0x0000e3be       0x8f build/debug/system_stm32wbxx.o
+                0x0000e44c       0x8f build/debug/system_stm32wbxx.o
  .debug_loclists
-                0x0000e44d       0x24 build/debug/tim.o
+                0x0000e4db       0x24 build/debug/tim.o
  .debug_loclists
-                0x0000e471       0x7d build/debug/usart.o
+                0x0000e4ff       0x7d build/debug/usart.o
  .debug_loclists
-                0x0000e4ee      0xb15 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0000e57c      0xb15 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_aranges  0x00000000     0x1338
+.debug_aranges  0x00000000     0x1368
  .debug_aranges
-                0x00000000       0x30 build/debug/adc.o
+                0x00000000       0x38 build/debug/SimonGame.o
  .debug_aranges
-                0x00000030       0x20 build/debug/gpio.o
+                0x00000038       0x30 build/debug/adc.o
  .debug_aranges
-                0x00000050       0x48 build/debug/joystick.o
+                0x00000068       0x20 build/debug/gpio.o
  .debug_aranges
-                0x00000098       0x88 build/debug/lcd1602.o
+                0x00000088       0x48 build/debug/joystick.o
  .debug_aranges
-                0x00000120       0x40 build/debug/main.o
+                0x000000d0       0x88 build/debug/lcd1602.o
  .debug_aranges
-                0x00000160      0x158 build/debug/stm32wbxx_hal.o
+                0x00000158       0x38 build/debug/main.o
  .debug_aranges
-                0x000002b8      0x110 build/debug/stm32wbxx_hal_adc.o
+                0x00000190      0x158 build/debug/stm32wbxx_hal.o
  .debug_aranges
-                0x000003c8       0xe8 build/debug/stm32wbxx_hal_cortex.o
+                0x000002e8      0x110 build/debug/stm32wbxx_hal_adc.o
  .debug_aranges
-                0x000004b0       0x60 build/debug/stm32wbxx_hal_gpio.o
+                0x000003f8       0xe8 build/debug/stm32wbxx_hal_cortex.o
  .debug_aranges
-                0x00000510       0x20 build/debug/stm32wbxx_hal_msp.o
+                0x000004e0       0x60 build/debug/stm32wbxx_hal_gpio.o
  .debug_aranges
-                0x00000530       0x98 build/debug/stm32wbxx_hal_pwr.o
+                0x00000540       0x20 build/debug/stm32wbxx_hal_msp.o
  .debug_aranges
-                0x000005c8      0x1b8 build/debug/stm32wbxx_hal_pwr_ex.o
+                0x00000560       0x98 build/debug/stm32wbxx_hal_pwr.o
  .debug_aranges
-                0x00000780       0xa8 build/debug/stm32wbxx_hal_rcc.o
+                0x000005f8      0x1b8 build/debug/stm32wbxx_hal_pwr_ex.o
  .debug_aranges
-                0x00000828      0x138 build/debug/stm32wbxx_hal_rcc_ex.o
+                0x000007b0       0xa8 build/debug/stm32wbxx_hal_rcc.o
  .debug_aranges
-                0x00000960      0x3e0 build/debug/stm32wbxx_hal_tim.o
+                0x00000858      0x138 build/debug/stm32wbxx_hal_rcc_ex.o
  .debug_aranges
-                0x00000d40      0x190 build/debug/stm32wbxx_hal_tim_ex.o
+                0x00000990      0x3e0 build/debug/stm32wbxx_hal_tim.o
  .debug_aranges
-                0x00000ed0      0x248 build/debug/stm32wbxx_hal_uart.o
+                0x00000d70      0x190 build/debug/stm32wbxx_hal_tim_ex.o
  .debug_aranges
-                0x00001118       0xa8 build/debug/stm32wbxx_hal_uart_ex.o
+                0x00000f00      0x248 build/debug/stm32wbxx_hal_uart.o
  .debug_aranges
-                0x000011c0       0x60 build/debug/stm32wbxx_it.o
+                0x00001148       0xa8 build/debug/stm32wbxx_hal_uart_ex.o
  .debug_aranges
-                0x00001220       0x28 build/debug/system_stm32wbxx.o
+                0x000011f0       0x60 build/debug/stm32wbxx_it.o
  .debug_aranges
-                0x00001248       0x30 build/debug/tim.o
+                0x00001250       0x28 build/debug/system_stm32wbxx.o
  .debug_aranges
-                0x00001278       0x30 build/debug/usart.o
+                0x00001278       0x30 build/debug/tim.o
  .debug_aranges
-                0x000012a8       0x30 build/debug/startup_stm32wb55xx_cm4.o
+                0x000012a8       0x30 build/debug/usart.o
  .debug_aranges
-                0x000012d8       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x000012d8       0x30 build/debug/startup_stm32wb55xx_cm4.o
  .debug_aranges
-                0x000012f8       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x00001308       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .debug_aranges
-                0x00001318       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x00001328       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_aranges
+                0x00001348       0x20 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
 
 .debug_rnglists
-                0x00000000     0x124a
+                0x00000000     0x1269
  .debug_rnglists
-                0x00000000       0x21 build/debug/adc.o
+                0x00000000       0x26 build/debug/SimonGame.o
  .debug_rnglists
-                0x00000021       0x14 build/debug/gpio.o
+                0x00000026       0x21 build/debug/adc.o
  .debug_rnglists
-                0x00000035       0x3d build/debug/joystick.o
+                0x00000047       0x14 build/debug/gpio.o
  .debug_rnglists
-                0x00000072       0x61 build/debug/lcd1602.o
+                0x0000005b       0x3d build/debug/joystick.o
  .debug_rnglists
-                0x000000d3       0x2d build/debug/main.o
+                0x00000098       0x61 build/debug/lcd1602.o
  .debug_rnglists
-                0x00000100      0x109 build/debug/stm32wbxx_hal.o
+                0x000000f9       0x26 build/debug/main.o
  .debug_rnglists
-                0x00000209      0x201 build/debug/stm32wbxx_hal_adc.o
+                0x0000011f      0x109 build/debug/stm32wbxx_hal.o
  .debug_rnglists
-                0x0000040a       0xa9 build/debug/stm32wbxx_hal_cortex.o
+                0x00000228      0x201 build/debug/stm32wbxx_hal_adc.o
  .debug_rnglists
-                0x000004b3       0x45 build/debug/stm32wbxx_hal_gpio.o
+                0x00000429       0xa9 build/debug/stm32wbxx_hal_cortex.o
  .debug_rnglists
-                0x000004f8       0x13 build/debug/stm32wbxx_hal_msp.o
+                0x000004d2       0x45 build/debug/stm32wbxx_hal_gpio.o
  .debug_rnglists
-                0x0000050b       0x6e build/debug/stm32wbxx_hal_pwr.o
+                0x00000517       0x13 build/debug/stm32wbxx_hal_msp.o
  .debug_rnglists
-                0x00000579      0x161 build/debug/stm32wbxx_hal_pwr_ex.o
+                0x0000052a       0x6e build/debug/stm32wbxx_hal_pwr.o
  .debug_rnglists
-                0x000006da      0x114 build/debug/stm32wbxx_hal_rcc.o
+                0x00000598      0x161 build/debug/stm32wbxx_hal_pwr_ex.o
  .debug_rnglists
-                0x000007ee      0x26d build/debug/stm32wbxx_hal_rcc_ex.o
+                0x000006f9      0x114 build/debug/stm32wbxx_hal_rcc.o
  .debug_rnglists
-                0x00000a5b      0x30d build/debug/stm32wbxx_hal_tim.o
+                0x0000080d      0x26d build/debug/stm32wbxx_hal_rcc_ex.o
  .debug_rnglists
-                0x00000d68      0x13b build/debug/stm32wbxx_hal_tim_ex.o
+                0x00000a7a      0x30d build/debug/stm32wbxx_hal_tim.o
  .debug_rnglists
-                0x00000ea3      0x1cb build/debug/stm32wbxx_hal_uart.o
+                0x00000d87      0x13b build/debug/stm32wbxx_hal_tim_ex.o
  .debug_rnglists
-                0x0000106e       0x88 build/debug/stm32wbxx_hal_uart_ex.o
+                0x00000ec2      0x1cb build/debug/stm32wbxx_hal_uart.o
  .debug_rnglists
-                0x000010f6       0x43 build/debug/stm32wbxx_it.o
+                0x0000108d       0x88 build/debug/stm32wbxx_hal_uart_ex.o
  .debug_rnglists
-                0x00001139       0x1a build/debug/system_stm32wbxx.o
+                0x00001115       0x43 build/debug/stm32wbxx_it.o
  .debug_rnglists
-                0x00001153       0x1f build/debug/tim.o
+                0x00001158       0x1a build/debug/system_stm32wbxx.o
  .debug_rnglists
-                0x00001172       0x20 build/debug/usart.o
+                0x00001172       0x1f build/debug/tim.o
  .debug_rnglists
-                0x00001192       0x1f build/debug/startup_stm32wb55xx_cm4.o
+                0x00001191       0x20 build/debug/usart.o
  .debug_rnglists
-                0x000011b1       0x99 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x000011b1       0x1f build/debug/startup_stm32wb55xx_cm4.o
+ .debug_rnglists
+                0x000011d0       0x99 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_line     0x00000000    0x18145
- .debug_line    0x00000000      0x4d1 build/debug/adc.o
- .debug_line    0x000004d1      0x325 build/debug/gpio.o
- .debug_line    0x000007f6      0x457 build/debug/joystick.o
- .debug_line    0x00000c4d      0x62e build/debug/lcd1602.o
- .debug_line    0x0000127b      0x657 build/debug/main.o
- .debug_line    0x000018d2      0xacb build/debug/stm32wbxx_hal.o
- .debug_line    0x0000239d     0x214a build/debug/stm32wbxx_hal_adc.o
- .debug_line    0x000044e7      0x878 build/debug/stm32wbxx_hal_cortex.o
- .debug_line    0x00004d5f      0x761 build/debug/stm32wbxx_hal_gpio.o
- .debug_line    0x000054c0       0x51 build/debug/stm32wbxx_hal_msp.o
- .debug_line    0x00005511      0x564 build/debug/stm32wbxx_hal_pwr.o
- .debug_line    0x00005a75      0xe2e build/debug/stm32wbxx_hal_pwr_ex.o
- .debug_line    0x000068a3     0x1b27 build/debug/stm32wbxx_hal_rcc.o
- .debug_line    0x000083ca     0x2758 build/debug/stm32wbxx_hal_rcc_ex.o
- .debug_line    0x0000ab22     0x4a0b build/debug/stm32wbxx_hal_tim.o
- .debug_line    0x0000f52d     0x1da2 build/debug/stm32wbxx_hal_tim_ex.o
- .debug_line    0x000112cf     0x4f28 build/debug/stm32wbxx_hal_uart.o
- .debug_line    0x000161f7      0xb39 build/debug/stm32wbxx_hal_uart_ex.o
- .debug_line    0x00016d30      0x13d build/debug/stm32wbxx_it.o
- .debug_line    0x00016e6d      0x36f build/debug/system_stm32wbxx.o
- .debug_line    0x000171dc      0x3a2 build/debug/tim.o
- .debug_line    0x0001757e      0x48b build/debug/usart.o
- .debug_line    0x00017a09       0x7f build/debug/startup_stm32wb55xx_cm4.o
- .debug_line    0x00017a88       0x4e c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_line    0x00017ad6      0x625 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_line    0x000180fb       0x4a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+.debug_line     0x00000000    0x185aa
+ .debug_line    0x00000000      0x5a7 build/debug/SimonGame.o
+ .debug_line    0x000005a7      0x4d1 build/debug/adc.o
+ .debug_line    0x00000a78      0x3bc build/debug/gpio.o
+ .debug_line    0x00000e34      0x457 build/debug/joystick.o
+ .debug_line    0x0000128b      0x62e build/debug/lcd1602.o
+ .debug_line    0x000018b9      0x47e build/debug/main.o
+ .debug_line    0x00001d37      0xacb build/debug/stm32wbxx_hal.o
+ .debug_line    0x00002802     0x214a build/debug/stm32wbxx_hal_adc.o
+ .debug_line    0x0000494c      0x878 build/debug/stm32wbxx_hal_cortex.o
+ .debug_line    0x000051c4      0x761 build/debug/stm32wbxx_hal_gpio.o
+ .debug_line    0x00005925       0x51 build/debug/stm32wbxx_hal_msp.o
+ .debug_line    0x00005976      0x564 build/debug/stm32wbxx_hal_pwr.o
+ .debug_line    0x00005eda      0xe2e build/debug/stm32wbxx_hal_pwr_ex.o
+ .debug_line    0x00006d08     0x1b27 build/debug/stm32wbxx_hal_rcc.o
+ .debug_line    0x0000882f     0x2758 build/debug/stm32wbxx_hal_rcc_ex.o
+ .debug_line    0x0000af87     0x4a0b build/debug/stm32wbxx_hal_tim.o
+ .debug_line    0x0000f992     0x1da2 build/debug/stm32wbxx_hal_tim_ex.o
+ .debug_line    0x00011734     0x4f28 build/debug/stm32wbxx_hal_uart.o
+ .debug_line    0x0001665c      0xb39 build/debug/stm32wbxx_hal_uart_ex.o
+ .debug_line    0x00017195      0x13d build/debug/stm32wbxx_it.o
+ .debug_line    0x000172d2      0x36f build/debug/system_stm32wbxx.o
+ .debug_line    0x00017641      0x3a2 build/debug/tim.o
+ .debug_line    0x000179e3      0x48b build/debug/usart.o
+ .debug_line    0x00017e6e       0x7f build/debug/startup_stm32wb55xx_cm4.o
+ .debug_line    0x00017eed       0x4e c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x00017f3b      0x625 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_line    0x00018560       0x4a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
 
-.debug_str      0x00000000     0x7d57
- .debug_str     0x00000000     0x7d57 build/debug/adc.o
-                                0xcab (size before relaxing)
- .debug_str     0x00007d57      0x4dc build/debug/gpio.o
- .debug_str     0x00007d57      0x9d5 build/debug/joystick.o
- .debug_str     0x00007d57      0x913 build/debug/lcd1602.o
- .debug_str     0x00007d57     0x1334 build/debug/main.o
- .debug_str     0x00007d57     0x125c build/debug/stm32wbxx_hal.o
- .debug_str     0x00007d57     0x11f5 build/debug/stm32wbxx_hal_adc.o
- .debug_str     0x00007d57      0xb6c build/debug/stm32wbxx_hal_cortex.o
- .debug_str     0x00007d57      0x496 build/debug/stm32wbxx_hal_gpio.o
- .debug_str     0x00007d57      0x1b1 build/debug/stm32wbxx_hal_msp.o
- .debug_str     0x00007d57      0x69c build/debug/stm32wbxx_hal_pwr.o
- .debug_str     0x00007d57      0xd67 build/debug/stm32wbxx_hal_pwr_ex.o
- .debug_str     0x00007d57      0xfb1 build/debug/stm32wbxx_hal_rcc.o
- .debug_str     0x00007d57     0x15c0 build/debug/stm32wbxx_hal_rcc_ex.o
- .debug_str     0x00007d57     0x182a build/debug/stm32wbxx_hal_tim.o
- .debug_str     0x00007d57     0x11a1 build/debug/stm32wbxx_hal_tim_ex.o
- .debug_str     0x00007d57     0x1356 build/debug/stm32wbxx_hal_uart.o
- .debug_str     0x00007d57      0xb78 build/debug/stm32wbxx_hal_uart_ex.o
- .debug_str     0x00007d57      0x23c build/debug/stm32wbxx_it.o
- .debug_str     0x00007d57      0x4ce build/debug/system_stm32wbxx.o
- .debug_str     0x00007d57      0xbb1 build/debug/tim.o
- .debug_str     0x00007d57      0xcdd build/debug/usart.o
- .debug_str     0x00007d57       0x8f build/debug/startup_stm32wb55xx_cm4.o
- .debug_str     0x00007d57      0x13a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_str     0x00007d57      0x753 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_str     0x00007d57      0x15a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+.debug_str      0x00000000     0x7d95
+ .debug_str     0x00000000     0x7d95 build/debug/SimonGame.o
+                                0xa19 (size before relaxing)
+ .debug_str     0x00007d95      0xcab build/debug/adc.o
+ .debug_str     0x00007d95      0x4dc build/debug/gpio.o
+ .debug_str     0x00007d95      0x9d5 build/debug/joystick.o
+ .debug_str     0x00007d95      0x913 build/debug/lcd1602.o
+ .debug_str     0x00007d95     0x128c build/debug/main.o
+ .debug_str     0x00007d95     0x125c build/debug/stm32wbxx_hal.o
+ .debug_str     0x00007d95     0x11f5 build/debug/stm32wbxx_hal_adc.o
+ .debug_str     0x00007d95      0xb6c build/debug/stm32wbxx_hal_cortex.o
+ .debug_str     0x00007d95      0x496 build/debug/stm32wbxx_hal_gpio.o
+ .debug_str     0x00007d95      0x1b1 build/debug/stm32wbxx_hal_msp.o
+ .debug_str     0x00007d95      0x69c build/debug/stm32wbxx_hal_pwr.o
+ .debug_str     0x00007d95      0xd67 build/debug/stm32wbxx_hal_pwr_ex.o
+ .debug_str     0x00007d95      0xfb1 build/debug/stm32wbxx_hal_rcc.o
+ .debug_str     0x00007d95     0x15c0 build/debug/stm32wbxx_hal_rcc_ex.o
+ .debug_str     0x00007d95     0x182a build/debug/stm32wbxx_hal_tim.o
+ .debug_str     0x00007d95     0x11a1 build/debug/stm32wbxx_hal_tim_ex.o
+ .debug_str     0x00007d95     0x1356 build/debug/stm32wbxx_hal_uart.o
+ .debug_str     0x00007d95      0xb78 build/debug/stm32wbxx_hal_uart_ex.o
+ .debug_str     0x00007d95      0x23c build/debug/stm32wbxx_it.o
+ .debug_str     0x00007d95      0x4ce build/debug/system_stm32wbxx.o
+ .debug_str     0x00007d95      0xbb1 build/debug/tim.o
+ .debug_str     0x00007d95      0xcdd build/debug/usart.o
+ .debug_str     0x00007d95       0x8f build/debug/startup_stm32wb55xx_cm4.o
+ .debug_str     0x00007d95      0x13a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_str     0x00007d95      0x753 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_str     0x00007d95      0x15a c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x00000000     0x2ff0
- .debug_frame   0x00000000       0x68 build/debug/adc.o
- .debug_frame   0x00000068       0x34 build/debug/gpio.o
- .debug_frame   0x0000009c       0xb0 build/debug/joystick.o
- .debug_frame   0x0000014c      0x17c build/debug/lcd1602.o
- .debug_frame   0x000002c8       0xa4 build/debug/main.o
- .debug_frame   0x0000036c      0x2cc build/debug/stm32wbxx_hal.o
- .debug_frame   0x00000638      0x328 build/debug/stm32wbxx_hal_adc.o
- .debug_frame   0x00000960      0x1f4 build/debug/stm32wbxx_hal_cortex.o
- .debug_frame   0x00000b54       0xdc build/debug/stm32wbxx_hal_gpio.o
- .debug_frame   0x00000c30       0x20 build/debug/stm32wbxx_hal_msp.o
- .debug_frame   0x00000c50      0x120 build/debug/stm32wbxx_hal_pwr.o
- .debug_frame   0x00000d70      0x378 build/debug/stm32wbxx_hal_pwr_ex.o
- .debug_frame   0x000010e8      0x1e8 build/debug/stm32wbxx_hal_rcc.o
- .debug_frame   0x000012d0      0x2d4 build/debug/stm32wbxx_hal_rcc_ex.o
- .debug_frame   0x000015a4      0xb48 build/debug/stm32wbxx_hal_tim.o
- .debug_frame   0x000020ec      0x4c0 build/debug/stm32wbxx_hal_tim_ex.o
- .debug_frame   0x000025ac      0x67c build/debug/stm32wbxx_hal_uart.o
- .debug_frame   0x00002c28      0x1d8 build/debug/stm32wbxx_hal_uart_ex.o
- .debug_frame   0x00002e00       0xa8 build/debug/stm32wbxx_it.o
- .debug_frame   0x00002ea8       0x30 build/debug/system_stm32wbxx.o
- .debug_frame   0x00002ed8       0x58 build/debug/tim.o
- .debug_frame   0x00002f30       0x60 build/debug/usart.o
- .debug_frame   0x00002f90       0x2c c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00002fbc       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+.debug_frame    0x00000000     0x3050
+ .debug_frame   0x00000000       0x80 build/debug/SimonGame.o
+ .debug_frame   0x00000080       0x68 build/debug/adc.o
+ .debug_frame   0x000000e8       0x38 build/debug/gpio.o
+ .debug_frame   0x00000120       0xb0 build/debug/joystick.o
+ .debug_frame   0x000001d0      0x17c build/debug/lcd1602.o
+ .debug_frame   0x0000034c       0x80 build/debug/main.o
+ .debug_frame   0x000003cc      0x2cc build/debug/stm32wbxx_hal.o
+ .debug_frame   0x00000698      0x328 build/debug/stm32wbxx_hal_adc.o
+ .debug_frame   0x000009c0      0x1f4 build/debug/stm32wbxx_hal_cortex.o
+ .debug_frame   0x00000bb4       0xdc build/debug/stm32wbxx_hal_gpio.o
+ .debug_frame   0x00000c90       0x20 build/debug/stm32wbxx_hal_msp.o
+ .debug_frame   0x00000cb0      0x120 build/debug/stm32wbxx_hal_pwr.o
+ .debug_frame   0x00000dd0      0x378 build/debug/stm32wbxx_hal_pwr_ex.o
+ .debug_frame   0x00001148      0x1e8 build/debug/stm32wbxx_hal_rcc.o
+ .debug_frame   0x00001330      0x2d4 build/debug/stm32wbxx_hal_rcc_ex.o
+ .debug_frame   0x00001604      0xb48 build/debug/stm32wbxx_hal_tim.o
+ .debug_frame   0x0000214c      0x4c0 build/debug/stm32wbxx_hal_tim_ex.o
+ .debug_frame   0x0000260c      0x67c build/debug/stm32wbxx_hal_uart.o
+ .debug_frame   0x00002c88      0x1d8 build/debug/stm32wbxx_hal_uart_ex.o
+ .debug_frame   0x00002e60       0xa8 build/debug/stm32wbxx_it.o
+ .debug_frame   0x00002f08       0x30 build/debug/system_stm32wbxx.o
+ .debug_frame   0x00002f38       0x58 build/debug/tim.o
+ .debug_frame   0x00002f90       0x60 build/debug/usart.o
+ .debug_frame   0x00002ff0       0x2c c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000301c       0x34 c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
 
 .debug_line_str
                 0x00000000      0x1ab
@@ -2764,6 +2805,10 @@ FLASH_PageErase                                   build/debug/stm32wbxx_hal_flas
 FLASH_WaitForLastOperation                        build/debug/stm32wbxx_hal_flash.o
                                                   build/debug/stm32wbxx_hal_flash_ex.o
 FPU_IRQHandler                                    build/debug/startup_stm32wb55xx_cm4.o
+Game_Init                                         build/debug/SimonGame.o
+                                                  build/debug/main.o
+Game_Run                                          build/debug/SimonGame.o
+                                                  build/debug/main.o
 HAL_ADCEx_Calibration_GetValue                    build/debug/stm32wbxx_hal_adc_ex.o
 HAL_ADCEx_Calibration_SetValue                    build/debug/stm32wbxx_hal_adc_ex.o
 HAL_ADCEx_Calibration_Start                       build/debug/stm32wbxx_hal_adc_ex.o
@@ -2856,9 +2901,9 @@ HAL_DMA_Start_IT                                  build/debug/stm32wbxx_hal_dma.
 HAL_DMA_UnRegisterCallback                        build/debug/stm32wbxx_hal_dma.o
 HAL_DeInit                                        build/debug/stm32wbxx_hal.o
 HAL_Delay                                         build/debug/stm32wbxx_hal.o
-                                                  build/debug/main.o
                                                   build/debug/lcd1602.o
                                                   build/debug/joystick.o
+                                                  build/debug/SimonGame.o
 HAL_EXTI_ClearConfigLine                          build/debug/stm32wbxx_hal_exti.o
 HAL_EXTI_ClearPending                             build/debug/stm32wbxx_hal_exti.o
 HAL_EXTI_GenerateSWI                              build/debug/stm32wbxx_hal_exti.o
@@ -2902,11 +2947,13 @@ HAL_GPIO_Init                                     build/debug/stm32wbxx_hal_gpio
 HAL_GPIO_LockPin                                  build/debug/stm32wbxx_hal_gpio.o
 HAL_GPIO_ReadPin                                  build/debug/stm32wbxx_hal_gpio.o
                                                   build/debug/joystick.o
+                                                  build/debug/SimonGame.o
 HAL_GPIO_TogglePin                                build/debug/stm32wbxx_hal_gpio.o
 HAL_GPIO_WriteMultipleStatePin                    build/debug/stm32wbxx_hal_gpio.o
 HAL_GPIO_WritePin                                 build/debug/stm32wbxx_hal_gpio.o
                                                   build/debug/lcd1602.o
                                                   build/debug/gpio.o
+                                                  build/debug/SimonGame.o
 HAL_GetDEVID                                      build/debug/stm32wbxx_hal.o
 HAL_GetHalVersion                                 build/debug/stm32wbxx_hal.o
 HAL_GetREVID                                      build/debug/stm32wbxx_hal.o
@@ -3333,21 +3380,22 @@ IPCC_C1_TX_IRQHandler                             build/debug/startup_stm32wb55x
 Joystick_Calibrate                                build/debug/joystick.o
                                                   build/debug/main.o
 Joystick_GetDirection                             build/debug/joystick.o
-                                                  build/debug/main.o
+                                                  build/debug/SimonGame.o
 Joystick_Init                                     build/debug/joystick.o
                                                   build/debug/main.o
 Joystick_Pressed                                  build/debug/joystick.o
-                                                  build/debug/main.o
+                                                  build/debug/SimonGame.o
 Joystick_ReadXY                                   build/debug/joystick.o
 LCD_Cls                                           build/debug/lcd1602.o
                                                   build/debug/main.o
+                                                  build/debug/SimonGame.o
 LCD_GotoXY                                        build/debug/lcd1602.o
-                                                  build/debug/main.o
+                                                  build/debug/SimonGame.o
 LCD_IRQHandler                                    build/debug/startup_stm32wb55xx_cm4.o
 LCD_Init                                          build/debug/lcd1602.o
                                                   build/debug/main.o
 LCD_Print                                         build/debug/lcd1602.o
-                                                  build/debug/main.o
+                                                  build/debug/SimonGame.o
 LCD_PrintB16                                      build/debug/lcd1602.o
 LCD_PrintB8                                       build/debug/lcd1602.o
 LCD_PrintH                                        build/debug/lcd1602.o
@@ -3624,7 +3672,8 @@ _write_r                                          c:/Users/elhyd/AppData/Roaming
                                                   c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-stdio.o)
 atexit                                            c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-atexit.o)
                                                   c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
-displayOnLCD                                      build/debug/main.o
+debounceButton                                    build/debug/SimonGame.o
+displayOnLCD                                      build/debug/SimonGame.o
 environ                                           build/debug/syscalls.o
 errno                                             c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reent.o)
                                                   c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sbrkr.o)
@@ -3654,6 +3703,7 @@ memset                                            c:/Users/elhyd/AppData/Roaming
                                                   build/debug/usart.o
                                                   build/debug/main.o
                                                   build/debug/adc.o
+                                                  build/debug/SimonGame.o
                                                   c:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/14.2.1-1.1.1/.content/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 pFlash                                            build/debug/stm32wbxx_hal_flash.o
                                                   build/debug/stm32wbxx_hal_flash_ex.o
