@@ -1,0 +1,149 @@
+#include "SimonGame.h"
+
+/**
+ * @brief  Initialize the game state and information.
+ * @param  game: Pointer to the Game structure to initialize.
+ */
+void Game_Init(Game* game)
+{
+    game->state = WELCOME;
+    memset(&game->info, 0, sizeof(GameInfo));
+}
+
+/**
+ * @brief  Display two lines of text on the LCD.
+ * @param  lineOne: Pointer to the first line of text (max 16 characters).
+ * @param  lineTwo: Pointer to the second line of text (max 16 characters
+ */
+void displayOnLCD(char* lineOne, char* lineTwo)
+{
+  LCD_GotoXY(0, 0);
+  LCD_Print(lineOne);
+  LCD_GotoXY(0, 1);
+  LCD_Print(lineTwo);
+  HAL_Delay(1000);
+}
+
+void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
+{
+    static char lineOne[17] = {0}, lineTwo[17] = {0};
+    static int directionDelay = 0;
+    static JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
+    
+    // FSM to manage game states
+    switch(game->state)
+    {
+      // Display WELCOME message and 
+      //Push to start prompt after 2 seconds
+      case WELCOME:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "Welcome to the");
+        snprintf(lineTwo, sizeof(lineTwo), "Simon Game");
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(2000);  
+        
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "Push To Start!");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+        game->state = START;
+        break;
+
+      // Check if Joystick is pressed to start the game
+      case START:
+        if (Joystick_Pressed(&joystick)) 
+        {  game->state = PLAYER_MENU;  }        
+        break;
+
+      // Display Player selection menu
+      case PLAYER_MENU:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "1 player OR");
+        snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+        displayOnLCD(lineOne, lineTwo);
+        game->state = PLAYER_SELECT;
+        break;
+
+      // Handle Player selection based on joystick UP/DOWN input
+      case PLAYER_SELECT:
+        // Read the joystick input to determine the number of players
+        direction = Joystick_GetDirection(&joystick);
+
+        // Adding "debounce" logic to help resolve jittery input
+        //causing direciton UP to be seen once
+        if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+        {
+          direction = JOY_UP;
+          directionDelay++;
+        }
+        else 
+        { directionDelay = 0; }
+
+        // Update display only if joystick direction has changed
+        if (direction != JOY_IDLE && direction != lastDirection)
+        {
+          
+          if (direction == JOY_UP)
+          {
+            LCD_Cls();
+            snprintf(lineOne, sizeof(lineOne), "<1> player OR");
+            snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+            displayOnLCD(lineOne, lineTwo);
+            game->info.numPlayers = 1;
+            direction = JOY_UP;
+          }    
+          else if (direction == JOY_DOWN) 
+          {
+            LCD_Cls();
+            snprintf(lineOne, sizeof(lineOne), "1 player OR");
+            snprintf(lineTwo, sizeof(lineTwo), "<2> players?");
+            displayOnLCD(lineOne, lineTwo);
+            game->info.numPlayers = 2;
+          }
+
+          lastDirection = direction;  // store last direction
+        }   
+
+        // Check if joystick is pressed to confirm selection
+        // Move to the state which matches the mode selected
+        if (Joystick_Pressed(&joystick)) 
+        {
+          if (game->info.numPlayers == 1)
+            game->state = ONE_PLAYER;
+          else 
+            game->state = TWO_PLAYERS;
+        }
+        break;
+      
+        // For LCD+Joystick testing purposes only,
+        // Display the mode type selected, wait 2 seconds then
+        // return to the PLAYER SELECT state for further 
+        // joystick to LCD interaction testing
+      case ONE_PLAYER:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(2000);  //wait 2 seconds
+        game->state = PLAYER_MENU;
+        break;
+
+      case TWO_PLAYERS:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(2000);  //wait 2 seconds
+        game->state = PLAYER_MENU;
+        break;
+      // case SCORES:
+      //   // Handle scores display logic
+      //   break;
+      // case GAME_RESULT:
+      //   // Handle game result logic
+      //   break;
+      default:
+        game->state = START;
+        break;
+    }
+}
