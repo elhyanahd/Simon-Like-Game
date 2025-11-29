@@ -1,0 +1,262 @@
+#include "SimonGame.h"
+#include "lcd1602.h"
+#include "gpio.h"
+#include <stdio.h> 
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * @brief  Initialize the game state and information.
+ * @param  game: Pointer to the Game structure to initialize.
+ */
+void Game_Init(Game* game)
+{
+    game->state = WELCOME;
+    memset(&game->info, 0, sizeof(GameInfo));
+}
+
+/**
+ * @brief  Display two lines of text on the LCD.
+ * @param  lineOne: Pointer to the first line of text (max 16 characters).
+ * @param  lineTwo: Pointer to the second line of text (max 16 characters
+ */
+void displayOnLCD(char* lineOne, char* lineTwo)
+{
+  LCD_GotoXY(0, 0);
+  LCD_Print(lineOne);
+  LCD_GotoXY(0, 1);
+  LCD_Print(lineTwo);
+  HAL_Delay(1000);
+}
+
+/**
+ * @brief Helper function created for debouncing the switch buttons.
+ *        If the given GPIO switch is pressed (active-low state) wait
+ *        the .2 s delay time and check if switch is released.
+ * 
+ * @param GPIO 
+ * @param Pin 
+ * @return int (1 - if switch is pressed and released, else 0)
+ */
+int debounceButton(GPIO_TypeDef *GPIO, uint16_t Pin)
+{
+  if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET)
+  {
+    HAL_Delay(20);
+    if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET) 
+    { return 1; }
+  }
+  
+  return 0;
+}
+
+void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
+{
+    static char lineOne[17] = {0}, lineTwo[17] = {0};
+    static int directionDelay = 0;
+    static JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
+    
+    // FSM to manage game states
+    switch(game->state)
+    {
+      // Display WELCOME message and 
+      //Push to start prompt after 2 seconds
+      case WELCOME:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "Welcome to the");
+        snprintf(lineTwo, sizeof(lineTwo), "Simon Game");
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(2000);  
+        
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "Push To Start!");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+        game->state = START;
+        break;
+
+      // Check if Joystick is pressed to start the game
+      case START:
+        if (Joystick_Pressed(joystick)) 
+        {  game->state = PLAYER_MENU;  }        
+        break;
+
+      // Display Player selection menu
+      case PLAYER_MENU:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "1 player OR");
+        snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+        displayOnLCD(lineOne, lineTwo);
+        game->state = PLAYER_SELECT;
+        break;
+
+      // Handle Player selection based on joystick UP/DOWN input
+      case PLAYER_SELECT:
+        // Read the joystick input to determine the number of players
+        direction = Joystick_GetDirection(joystick);
+
+        // Adding "debounce" logic to help resolve jittery input
+        //causing direciton UP to be seen once
+        if(directionDelay < 3 && lastDirection == JOY_UP && direction == JOY_IDLE)
+        {
+          direction = JOY_UP;
+          directionDelay++;
+        }
+        else 
+        { directionDelay = 0; }
+
+        // Update display only if joystick direction has changed
+        if (direction != JOY_IDLE && direction != lastDirection)
+        {
+          
+          if (direction == JOY_UP)
+          {
+            LCD_Cls();
+            snprintf(lineOne, sizeof(lineOne), "<1> player OR");
+            snprintf(lineTwo, sizeof(lineTwo), "2 players?");
+            displayOnLCD(lineOne, lineTwo);
+            game->info.numPlayers = 1;
+            direction = JOY_UP;
+          }    
+          else if (direction == JOY_DOWN) 
+          {
+            LCD_Cls();
+            snprintf(lineOne, sizeof(lineOne), "1 player OR");
+            snprintf(lineTwo, sizeof(lineTwo), "<2> players?");
+            displayOnLCD(lineOne, lineTwo);
+            game->info.numPlayers = 2;
+          }
+
+          lastDirection = direction;  // store last direction
+        }   
+
+        // Check if joystick is pressed to confirm selection
+        // Move to the state which matches the mode selected
+        if (Joystick_Pressed(joystick)) 
+        {
+          if (game->info.numPlayers == 1)
+            game->state = ONE_PLAYER;
+          else 
+            game->state = TWO_PLAYERS;
+
+          game->info.round = 1;
+          game->info.sequenceLength = 4;
+          game->info.sequenceSpeed = 1000; // Initial speed 1 s
+        }
+        break;
+      
+        // For LCD+Joystick testing purposes only,
+        // Display the mode type selected, wait 2 seconds then
+        // return to the PLAYER SELECT state for further 
+        // joystick to LCD interaction testing
+      case ONE_PLAYER:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(2000);  //wait 2 seconds
+        game->state = PLAY;
+
+        // Seed the random number generator using joystick readings
+        uint16_t seed[2] = {0};
+        Joystick_ReadXY(&joystick, seed);
+        srand(seed[0] ^ seed[1]);
+        break;
+
+      case TWO_PLAYERS:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(2000);  //wait 2 seconds
+        game->state = PLAYER_MENU;
+        break;
+
+      case PLAY:
+        
+      // case SCORES:
+      //   // Handle scores display logic
+      //   break;
+      // case GAME_RESULT:
+      //   // Handle game result logic
+      //   break;
+      default:
+        game->state = START;
+        break;
+    }
+}
+
+
+/**
+ * @brief  Handle the computer's turn in the game.
+ * @param  game: Pointer to the Game structure.
+ */
+void computerTurn(Game* game)
+{
+  for(int i = 0; i < game->info.sequenceLength; i++)
+  {
+    // select random numbers for the color sequence
+    // 0 - Red, 1 - Blue, 2 - Yellow, 3 - Green
+    int colorRandom = rand() % 4;
+
+    // Store the color code in the sequence array
+    game->info.sequence[i] = colorRandom;
+  }
+
+  for(int i = 0; i < game->info.sequenceLength; i++)
+  {
+    // Light up the corresponding LED based on the color code
+    switch(game->info.sequence[i])
+    {
+      case 0: // Red
+        HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
+        HAL_Delay(game->info.sequenceSpeed);
+        HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
+        break;
+      case 1: // Blue
+        HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
+        HAL_Delay(game->info.sequenceSpeed);
+        HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);
+        break;
+      case 2: // Yellow
+        HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_SET);
+        HAL_Delay(game->info.sequenceSpeed);
+        HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_RESET);
+        break;
+      case 3: // Green
+        HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+        HAL_Delay(game->info.sequenceSpeed);
+        HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
+        break;
+      default:
+        break;
+    }
+  }
+}
+
+/**
+ * @brief  Handle the player's turn in the game.
+ * @param  game: Pointer to the Game structure.
+ * @param  player: The current player number (1 or 2).
+ */
+void playerTurn(Game* game, uint8_t player)
+{
+  int i = 0;
+  while(i < game->info.sequenceLength)
+  {
+
+    if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+    { game->info.playerInputs[player - 1][i] = 0; }
+    
+    if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+    { game->info.playerInputs[player - 1][i] = 1; }
+        
+    if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+    { game->info.playerInputs[player - 1][i] = 2; }
+    
+    if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+    { game->info.playerInputs[player - 1][i] = 3; }
+
+  }
+}

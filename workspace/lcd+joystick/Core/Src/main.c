@@ -120,7 +120,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    Game_Run(&play, &joystick);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
