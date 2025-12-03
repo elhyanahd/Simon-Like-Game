@@ -27,6 +27,8 @@
 /* USER CODE BEGIN Includes */
 #include "SimonGame.h"
 #include "lcd1602.h"
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +50,10 @@
 
 /* USER CODE BEGIN PV */
 Joystick_HandleTypeDef joystick;
+// static int redButtonPressed = 0;
+// static int blueButtonPressed = 0;
+// static int yellowButtonPressed = 0;
+// static int greenButtonPressed = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,16 +65,58 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-/**
- * @brief  Timer period elapsed callback.
- * @param  htim: Pointer to a TIM_HandleTypeDef structure that contains
- *                the configuration information for TIM module.
- */
-/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-    if (htim->Instance == TIM2)
-    { buttonTimer++;  }
-}*/
+// int debounce(GPIO_TypeDef *GPIO, uint16_t Pin)
+// {
+//   // if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET)
+//   // {
+//   //   HAL_Delay(20);
+//     if(HAL_GPIO_ReadPin(GPIO, Pin) == GPIO_PIN_RESET) 
+//     { return 1; }
+//   //}
+  
+//   return 0;
+// }
+
+// /**
+//  * @brief  Timer period elapsed callback.
+//  * @param  htim: Pointer to a TIM_HandleTypeDef structure that contains
+//  *                the configuration information for TIM module.
+//  */
+// void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+// {
+//   static char msg[500];
+//     if (htim->Instance == TIM2)
+//     { 
+//       if(debounce(RedButton_GPIO_Port, RedButton_Pin) && !redButtonPressed)
+//       { 
+//         redButtonPressed = 1; 
+//         snprintf(msg, sizeof(msg), "Red pressed\r\n");
+//         HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
+//       }
+
+      
+//       if(debounce(BlueButton_GPIO_Port, BlueButton_Pin) && !blueButtonPressed)
+//       { 
+//         blueButtonPressed = 1; 
+//         snprintf(msg, sizeof(msg), "Blue pressed\r\n");
+//         HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
+//       }
+          
+//       if(debounce(YellowButtonm_GPIO_Port, YellowButtonm_Pin) && !yellowButtonPressed)
+//       { 
+//         yellowButtonPressed = 1; 
+//         snprintf(msg, sizeof(msg), "Yellow pressed\r\n");
+//         HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
+//       }
+      
+//       if(debounce(GreenButton_GPIO_Port, GreenButton_Pin) && !greenButtonPressed)
+//       { 
+//         greenButtonPressed = 1; 
+//         snprintf(msg, sizeof(msg), "Green pressed\r\n");
+//         HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
+//       }  
+//     }
+// }
 /* USER CODE END 0 */
 
 /**
