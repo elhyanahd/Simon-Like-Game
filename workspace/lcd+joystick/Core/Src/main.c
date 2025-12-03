@@ -47,7 +47,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
 Joystick_HandleTypeDef joystick;
 /* USER CODE END PV */
 
@@ -60,6 +59,16 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/**
+ * @brief  Timer period elapsed callback.
+ * @param  htim: Pointer to a TIM_HandleTypeDef structure that contains
+ *                the configuration information for TIM module.
+ */
+/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM2)
+    { buttonTimer++;  }
+}*/
 /* USER CODE END 0 */
 
 /**
@@ -122,6 +131,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    Game_Run(&play, &joystick);
   }
   /* USER CODE END 3 */
 }

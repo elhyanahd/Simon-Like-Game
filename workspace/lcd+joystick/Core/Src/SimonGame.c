@@ -115,7 +115,6 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
 
         buttonTimer = 0; 
         __HAL_TIM_SET_COUNTER(&htim2, 0);
-        HAL_TIM_Base_Start_IT(&htim2);
         break;
 
       // Check if Joystick is pressed to start the game
@@ -129,7 +128,6 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
             break; 
           }  
         }  
-        HAL_TIM_Base_Stop_IT(&htim2);
         
         if (game->state != PLAYER_MENU)
         { game->state = SLEEP; }
@@ -194,7 +192,7 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
 
             // Seed the random number generator using joystick readings
             uint16_t seed[2] = {0};
-            Joystick_ReadXY(&joystick, seed);
+            Joystick_ReadXY(joystick, seed);
             srand(seed[0] ^ seed[1]);
           }
           else 
@@ -406,7 +404,6 @@ void playerTurn(Game* game, uint8_t player)
     buttonTimer = 0;    
     buttonPressed = 0;
     __HAL_TIM_SET_COUNTER(&htim2, 0);
-    HAL_TIM_Base_Start_IT(&htim2);
     
     while (buttonTimer < 50 && buttonPressed == 0) // 5 seconds timeout
     {
@@ -438,8 +435,6 @@ void playerTurn(Game* game, uint8_t player)
         break; 
       }
     }
-    
-    HAL_TIM_Base_Stop_IT(&htim2);
     
     if(buttonPressed == 0)
     {

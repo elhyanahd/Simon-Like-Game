@@ -1,10 +1,14 @@
 #include "SimonGame.h"
 #include "lcd1602.h"
 #include "gpio.h"
+#include "tim.h"
 #include <stdio.h> 
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
+
+static int buttonTimer = 0;
+static int buttonPressed = 0;
+static char lineOne[17] = {0}, lineTwo[17] = {0};
 
 /**
  * @brief  Initialize the game state and information.
@@ -51,9 +55,43 @@ int debounceButton(GPIO_TypeDef *GPIO, uint16_t Pin)
   return 0;
 }
 
+/**
+ * @brief  Compare the player's input sequence with the computer's sequence.
+ * @param  game: Pointer to the Game structure.
+ */
+void compareSequences(Game* game)
+{
+  if (game->info.numPlayers == 1)
+  {
+    for(int i = 0; i < game->info.sequenceLength; i++)
+    {
+      if(game->info.sequence[i] != game->info.playerInputs[0][i])
+      {
+        game->state = GAME_RESULT;
+        return;
+      }
+    }
+  }
+  else
+  {
+    for(int i = 0; i < game->info.sequenceLength - 1; i++)
+    {
+      if(game->info.playerInputs[0][i] != game->info.playerInputs[1][i])
+      {
+        game->state = GAME_RESULT;
+        return;
+      }
+    }
+  }
+}
+
+/**
+ * @brief  Run the main game loop, managing game states and transitions.
+ * @param  game: Pointer to the Game structure.
+ * @param  joystick: Pointer to the Joystick handle structure.
+ */
 void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
 {
-    static char lineOne[17] = {0}, lineTwo[17] = {0};
     static int directionDelay = 0;
     static JoyStickDirection direction = JOY_IDLE, lastDirection = JOY_IDLE;
     
@@ -74,12 +112,27 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         snprintf(lineTwo, sizeof(lineTwo), "");
         displayOnLCD(lineOne, lineTwo);
         game->state = START;
+
+        buttonTimer = 0; 
+        __HAL_TIM_SET_COUNTER(&htim2, 0);
+        HAL_TIM_Base_Start_IT(&htim2);
         break;
 
       // Check if Joystick is pressed to start the game
+      //Wait 10 seconds and if no input return to SLEEP state
       case START:
-        if (Joystick_Pressed(joystick)) 
-        {  game->state = PLAYER_MENU;  }        
+        while (buttonTimer < 100) // 10 seconds timeout
+        {
+          if (Joystick_Pressed(joystick)) 
+          {  
+            game->state = PLAYER_MENU;  
+            break; 
+          }  
+        }  
+        HAL_TIM_Base_Stop_IT(&htim2);
+        
+        if (game->state != PLAYER_MENU)
+        { game->state = SLEEP; }
         break;
 
       // Display Player selection menu
@@ -136,12 +189,19 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         if (Joystick_Pressed(joystick)) 
         {
           if (game->info.numPlayers == 1)
+          {
             game->state = ONE_PLAYER;
+
+            // Seed the random number generator using joystick readings
+            uint16_t seed[2] = {0};
+            Joystick_ReadXY(joystick, seed);
+            srand(seed[0] ^ seed[1]);
+          }
           else 
             game->state = TWO_PLAYERS;
 
           game->info.round = 1;
-          game->info.sequenceLength = 4;
+          game->info.sequenceLength = 1;
           game->info.sequenceSpeed = 1000; // Initial speed 1 s
         }
         break;
@@ -152,37 +212,134 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         // joystick to LCD interaction testing
       case ONE_PLAYER:
         LCD_Cls();
-        snprintf(lineOne, sizeof(lineOne), "1 Player Mode");
-        snprintf(lineTwo, sizeof(lineTwo), "");
+        snprintf(lineOne, sizeof(lineOne), "Round %d", game->info.round);
+        snprintf(lineTwo, sizeof(lineTwo), "Simon's Turn!");
         displayOnLCD(lineOne, lineTwo);
-        HAL_Delay(2000);  //wait 2 seconds
-        game->state = PLAY;
+        HAL_Delay(500);  //wait 1/2 second
+        computerTurn(game);
 
-        // Seed the random number generator using joystick readings
-        uint16_t seed[2] = {0};
-        Joystick_ReadXY(&joystick, seed);
-        srand(seed[0] ^ seed[1]);
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "Player's Turn!");
+        snprintf(lineTwo, sizeof(lineTwo), "Score: %d", game->info.playerScores[0]);
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(500);  //wait 1/2 second
+        playerTurn(game, 1);
+
+        if(game->state != GAME_RESULT)
+        {
+          compareSequences(game);
+          if(game->state != GAME_RESULT)
+          {
+            // Prepare for next round
+            //Increase round, sequence length and speed
+            game->info.round++;
+            game->info.sequenceLength++;
+            if(game->info.sequenceSpeed > 400)
+            { game->info.sequenceSpeed -= 5; } // Increase speed
+          }
+        }
         break;
 
       case TWO_PLAYERS:
         LCD_Cls();
-        snprintf(lineOne, sizeof(lineOne), "2 Player Mode");
+        snprintf(lineOne, sizeof(lineOne), "Round %d", game->info.round);
         snprintf(lineTwo, sizeof(lineTwo), "");
         displayOnLCD(lineOne, lineTwo);
-        HAL_Delay(2000);  //wait 2 seconds
-        game->state = PLAYER_MENU;
+        HAL_Delay(500);  //wait 1/2 second
+        
+        snprintf(lineOne, sizeof(lineOne), "Player 1's Turn");
+        snprintf(lineTwo, sizeof(lineTwo), "Score: %d", game->info.playerScores[0]);
+        displayOnLCD(lineOne, lineTwo);
+        HAL_Delay(500);  //wait 1/2 second
+        playerTurn(game, 1);
+
+        if (game->state != GAME_RESULT)
+        {
+          if(game->info.round > 1)
+          {
+            compareSequences(game);
+            if(game->state != GAME_RESULT)
+            { game->info.playerScores[0]++; }
+          }
+               
+          // Player 2's turn
+          game->info.sequenceLength++;
+          LCD_Cls();
+          snprintf(lineOne, sizeof(lineOne), "Player 2's Turn");
+          snprintf(lineTwo, sizeof(lineTwo), "Score: %d", game->info.playerScores[1]);
+          displayOnLCD(lineOne, lineTwo);
+          HAL_Delay(500);  //wait 1/2 second
+          playerTurn(game, 2);
+
+          if(game->state != GAME_RESULT)
+          {
+            compareSequences(game);
+            if(game->state != GAME_RESULT)
+            {
+              // Prepare for next round
+              game->info.round++;
+              game->info.sequenceLength++;
+            }
+          }
+        }
         break;
 
-      case PLAY:
-        
-      // case SCORES:
-      //   // Handle scores display logic
-      //   break;
-      // case GAME_RESULT:
-      //   // Handle game result logic
-      //   break;
-      default:
+      case GAME_RESULT:
+        LCD_Cls();
+        if (game->info.numPlayers == 1 )
+        {
+          snprintf(lineOne, sizeof(lineOne), "Game Over!");
+          snprintf(lineTwo, sizeof(lineTwo), "Score: %d", game->info.playerScores[0]);
+          displayOnLCD(lineOne, lineTwo);
+          HAL_Delay(2000);  //wait 2 seconds
+        }
+        else
+        {
+          snprintf(lineOne, sizeof(lineOne), "Game Over!");
+          if(game->info.playerScores[0] > game->info.playerScores[1])
+          {
+            snprintf(lineTwo, sizeof(lineTwo), "Player 1 Wins");
+          }
+          else if(game->info.playerScores[0] < game->info.playerScores[1])
+          {
+            snprintf(lineTwo, sizeof(lineTwo), "Player 2 Wins");
+          }
+          else
+          {
+            snprintf(lineTwo, sizeof(lineTwo), "Players Tied");
+          }
+          displayOnLCD(lineOne, lineTwo);
+          HAL_Delay(2000);  //wait 1 second
+
+          snprintf(lineOne, sizeof(lineOne), "P1 Score: %d", game->info.playerScores[0]);
+          snprintf(lineTwo, sizeof(lineTwo), "P2 Score: %d", game->info.playerScores[1]);
+          displayOnLCD(lineOne, lineTwo);
+          HAL_Delay(2000);  //wait 2 seconds
+        }
+        game->state = PLAYER_MENU;
+        break;
+      
+      case PLAY_AGAIN:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "Play Again?");
+        snprintf(lineTwo, sizeof(lineTwo), "Push to Start");
+        displayOnLCD(lineOne, lineTwo);
         game->state = START;
+        break;
+
+      case SLEEP:
+        LCD_Cls();
+        snprintf(lineOne, sizeof(lineOne), "");
+        snprintf(lineTwo, sizeof(lineTwo), "");
+        displayOnLCD(lineOne, lineTwo);
+
+        // Wait for joystick press to wake up
+        if (Joystick_Pressed(joystick)) 
+        { game->state = WELCOME;  } 
+        break;
+
+      default:
+        game->state = SLEEP;
         break;
     }
 }
@@ -242,21 +399,63 @@ void computerTurn(Game* game)
  */
 void playerTurn(Game* game, uint8_t player)
 {
-  int i = 0;
-  while(i < game->info.sequenceLength)
+
+  for(int i = 0; i < game->info.sequenceLength; i++)
   {
-
-    if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
-    { game->info.playerInputs[player - 1][i] = 0; }
+    // Reset and start timer for player's input timeout
+    buttonTimer = 0;    
+    buttonPressed = 0;
+    __HAL_TIM_SET_COUNTER(&htim2, 0);
+    HAL_TIM_Base_Start_IT(&htim2);
     
-    if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
-    { game->info.playerInputs[player - 1][i] = 1; }
-        
-    if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
-    { game->info.playerInputs[player - 1][i] = 2; }
+    while (buttonTimer < 50 && buttonPressed == 0) // 5 seconds timeout
+    {
+      if(debounceButton(RedButton_GPIO_Port, RedButton_Pin))
+      { 
+        game->info.playerInputs[player - 1][i] = 0;
+        buttonPressed = 1;
+        break; 
+      }
+      
+      if(debounceButton(BlueButton_GPIO_Port, BlueButton_Pin))
+      { 
+        game->info.playerInputs[player - 1][i] = 1;
+        buttonPressed = 1;
+        break; 
+      }
+          
+      if(debounceButton(YellowButtonm_GPIO_Port, YellowButtonm_Pin))
+      { 
+        game->info.playerInputs[player - 1][i] = 2;
+        buttonPressed = 1;
+        break; 
+      }
+      
+      if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
+      { 
+        game->info.playerInputs[player - 1][i] = 3;
+        buttonPressed = 1;
+        break; 
+      }
+    }
     
-    if(debounceButton(GreenButton_GPIO_Port, GreenButton_Pin))
-    { game->info.playerInputs[player - 1][i] = 3; }
-
+    HAL_TIM_Base_Stop_IT(&htim2);
+    
+    if(buttonPressed == 0)
+    {
+      game->state = GAME_RESULT;
+      return;
+    }
   }
 }
+
+/**
+ * @brief  Timer period elapsed callback.
+ * @param  htim: Pointer to a TIM_HandleTypeDef structure that contains
+ *                the configuration information for TIM module.
+ */
+/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM2)
+    { buttonTimer++;  }
+}*/

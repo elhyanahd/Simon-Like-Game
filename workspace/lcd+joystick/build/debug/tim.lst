@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   28:Core/Src/tim.c **** 
   29:Core/Src/tim.c **** /* TIM2 init function */
   30:Core/Src/tim.c **** void MX_TIM2_Init(void)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 2
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 2
 
 
   31:Core/Src/tim.c **** {
@@ -97,7 +97,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   43:Core/Src/tim.c ****   htim2.Instance = TIM2;
   50              		.loc 1 43 3 is_stmt 1 view .LVU5
   51              		.loc 1 43 18 is_stmt 0 view .LVU6
-  52 0014 1448     		ldr	r0, .L9
+  52 0014 1648     		ldr	r0, .L9
   53 0016 4FF08042 		mov	r2, #1073741824
   54 001a 0260     		str	r2, [r0]
   44:Core/Src/tim.c ****   htim2.Init.Prescaler = 31;
@@ -112,13 +112,13 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   46:Core/Src/tim.c ****   htim2.Init.Period = 100000;
   62              		.loc 1 46 3 is_stmt 1 view .LVU11
   63              		.loc 1 46 21 is_stmt 0 view .LVU12
-  64 0022 124A     		ldr	r2, .L9+4
+  64 0022 144A     		ldr	r2, .L9+4
   65 0024 C260     		str	r2, [r0, #12]
   47:Core/Src/tim.c ****   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   66              		.loc 1 47 3 is_stmt 1 view .LVU13
   67              		.loc 1 47 28 is_stmt 0 view .LVU14
   68 0026 0361     		str	r3, [r0, #16]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 3
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 3
 
 
   48:Core/Src/tim.c ****   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -131,7 +131,7 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   74 002a FFF7FEFF 		bl	HAL_TIM_Base_Init
   75              	.LVL0:
   76              		.loc 1 49 6 discriminator 1 view .LVU19
-  77 002e 90B9     		cbnz	r0, .L6
+  77 002e A8B9     		cbnz	r0, .L6
   78              	.L2:
   50:Core/Src/tim.c ****   {
   51:Core/Src/tim.c ****     Error_Handler();
@@ -145,11 +145,11 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   83              		.loc 1 54 3 is_stmt 1 view .LVU22
   84              		.loc 1 54 7 is_stmt 0 view .LVU23
   85 0036 04A9     		add	r1, sp, #16
-  86 0038 0B48     		ldr	r0, .L9
+  86 0038 0D48     		ldr	r0, .L9
   87 003a FFF7FEFF 		bl	HAL_TIM_ConfigClockSource
   88              	.LVL1:
   89              		.loc 1 54 6 discriminator 1 view .LVU24
-  90 003e 68B9     		cbnz	r0, .L7
+  90 003e 80B9     		cbnz	r0, .L7
   91              	.L3:
   55:Core/Src/tim.c ****   {
   56:Core/Src/tim.c ****     Error_Handler();
@@ -167,101 +167,106 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   99              		.loc 1 60 3 is_stmt 1 view .LVU29
  100              		.loc 1 60 7 is_stmt 0 view .LVU30
  101 0046 01A9     		add	r1, sp, #4
- 102 0048 0748     		ldr	r0, .L9
+ 102 0048 0948     		ldr	r0, .L9
  103 004a FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
  104              	.LVL2:
  105              		.loc 1 60 6 discriminator 1 view .LVU31
- 106 004e 40B9     		cbnz	r0, .L8
- 107              	.L1:
+ 106 004e 58B9     		cbnz	r0, .L8
+ 107              	.L4:
   61:Core/Src/tim.c ****   {
   62:Core/Src/tim.c ****     Error_Handler();
   63:Core/Src/tim.c ****   }
   64:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_Init 2 */
-  65:Core/Src/tim.c **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 4
+  65:Core/Src/tim.c ****   HAL_TIM_Base_Start_IT(&htim2);
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 4
 
 
+ 108              		.loc 1 65 3 is_stmt 1 view .LVU32
+ 109 0050 0748     		ldr	r0, .L9
+ 110 0052 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 111              	.LVL3:
   66:Core/Src/tim.c ****   /* USER CODE END TIM2_Init 2 */
   67:Core/Src/tim.c **** 
   68:Core/Src/tim.c **** }
- 108              		.loc 1 68 1 view .LVU32
- 109 0050 09B0     		add	sp, sp, #36
- 110              		.cfi_remember_state
- 111              		.cfi_def_cfa_offset 4
- 112              		@ sp needed
- 113 0052 5DF804FB 		ldr	pc, [sp], #4
- 114              	.L6:
- 115              		.cfi_restore_state
+ 112              		.loc 1 68 1 is_stmt 0 view .LVU33
+ 113 0056 09B0     		add	sp, sp, #36
+ 114              		.cfi_remember_state
+ 115              		.cfi_def_cfa_offset 4
+ 116              		@ sp needed
+ 117 0058 5DF804FB 		ldr	pc, [sp], #4
+ 118              	.L6:
+ 119              		.cfi_restore_state
   51:Core/Src/tim.c ****   }
- 116              		.loc 1 51 5 is_stmt 1 view .LVU33
- 117 0056 FFF7FEFF 		bl	Error_Handler
- 118              	.LVL3:
- 119 005a E9E7     		b	.L2
- 120              	.L7:
+ 120              		.loc 1 51 5 is_stmt 1 view .LVU34
+ 121 005c FFF7FEFF 		bl	Error_Handler
+ 122              	.LVL4:
+ 123 0060 E6E7     		b	.L2
+ 124              	.L7:
   56:Core/Src/tim.c ****   }
- 121              		.loc 1 56 5 view .LVU34
- 122 005c FFF7FEFF 		bl	Error_Handler
- 123              	.LVL4:
- 124 0060 EEE7     		b	.L3
- 125              	.L8:
+ 125              		.loc 1 56 5 view .LVU35
+ 126 0062 FFF7FEFF 		bl	Error_Handler
+ 127              	.LVL5:
+ 128 0066 EBE7     		b	.L3
+ 129              	.L8:
   62:Core/Src/tim.c ****   }
- 126              		.loc 1 62 5 view .LVU35
- 127 0062 FFF7FEFF 		bl	Error_Handler
- 128              	.LVL5:
- 129              		.loc 1 68 1 is_stmt 0 view .LVU36
- 130 0066 F3E7     		b	.L1
- 131              	.L10:
- 132              		.align	2
- 133              	.L9:
- 134 0068 00000000 		.word	htim2
- 135 006c A0860100 		.word	100000
- 136              		.cfi_endproc
- 137              	.LFE1104:
- 139              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
- 140              		.align	1
- 141              		.global	HAL_TIM_Base_MspInit
- 142              		.syntax unified
- 143              		.thumb
- 144              		.thumb_func
- 146              	HAL_TIM_Base_MspInit:
- 147              	.LVL6:
- 148              	.LFB1105:
+ 130              		.loc 1 62 5 view .LVU36
+ 131 0068 FFF7FEFF 		bl	Error_Handler
+ 132              	.LVL6:
+ 133 006c F0E7     		b	.L4
+ 134              	.L10:
+ 135 006e 00BF     		.align	2
+ 136              	.L9:
+ 137 0070 00000000 		.word	htim2
+ 138 0074 A0860100 		.word	100000
+ 139              		.cfi_endproc
+ 140              	.LFE1104:
+ 142              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
+ 143              		.align	1
+ 144              		.global	HAL_TIM_Base_MspInit
+ 145              		.syntax unified
+ 146              		.thumb
+ 147              		.thumb_func
+ 149              	HAL_TIM_Base_MspInit:
+ 150              	.LVL7:
+ 151              	.LFB1105:
   69:Core/Src/tim.c **** 
   70:Core/Src/tim.c **** void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
   71:Core/Src/tim.c **** {
- 149              		.loc 1 71 1 is_stmt 1 view -0
- 150              		.cfi_startproc
- 151              		@ args = 0, pretend = 0, frame = 8
- 152              		@ frame_needed = 0, uses_anonymous_args = 0
- 153              		@ link register save eliminated.
+ 152              		.loc 1 71 1 view -0
+ 153              		.cfi_startproc
+ 154              		@ args = 0, pretend = 0, frame = 8
+ 155              		@ frame_needed = 0, uses_anonymous_args = 0
   72:Core/Src/tim.c **** 
   73:Core/Src/tim.c ****   if(tim_baseHandle->Instance==TIM2)
- 154              		.loc 1 73 3 view .LVU38
- 155              		.loc 1 73 20 is_stmt 0 view .LVU39
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 5
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 5
 
 
- 156 0000 0368     		ldr	r3, [r0]
- 157              		.loc 1 73 5 view .LVU40
- 158 0002 B3F1804F 		cmp	r3, #1073741824
- 159 0006 00D0     		beq	.L17
- 160 0008 7047     		bx	lr
- 161              	.L17:
+ 156              		.loc 1 73 3 view .LVU38
+ 157              		.loc 1 73 20 is_stmt 0 view .LVU39
+ 158 0000 0368     		ldr	r3, [r0]
+ 159              		.loc 1 73 5 view .LVU40
+ 160 0002 B3F1804F 		cmp	r3, #1073741824
+ 161 0006 00D0     		beq	.L17
+ 162 0008 7047     		bx	lr
+ 163              	.L17:
   71:Core/Src/tim.c **** 
- 162              		.loc 1 71 1 view .LVU41
- 163 000a 82B0     		sub	sp, sp, #8
- 164              		.cfi_def_cfa_offset 8
+ 164              		.loc 1 71 1 view .LVU41
+ 165 000a 00B5     		push	{lr}
+ 166              		.cfi_def_cfa_offset 4
+ 167              		.cfi_offset 14, -4
+ 168 000c 83B0     		sub	sp, sp, #12
+ 169              		.cfi_def_cfa_offset 16
   74:Core/Src/tim.c ****   {
   75:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspInit 0 */
   76:Core/Src/tim.c **** 
   77:Core/Src/tim.c ****   /* USER CODE END TIM2_MspInit 0 */
   78:Core/Src/tim.c ****     /* TIM2 clock enable */
   79:Core/Src/tim.c ****     __HAL_RCC_TIM2_CLK_ENABLE();
- 165              		.loc 1 79 5 is_stmt 1 view .LVU42
- 166              	.LVL7:
- 167              	.LBB6:
- 168              	.LBI6:
- 169              		.file 2 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h"
+ 170              		.loc 1 79 5 is_stmt 1 view .LVU42
+ 171              	.LVL8:
+ 172              	.LBB6:
+ 173              	.LBI6:
+ 174              		.file 2 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h"
    1:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
    2:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
    3:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @file    stm32wbxx_ll_bus.h
@@ -293,14 +298,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   29:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       (#) For AHB & APB peripherals, a dummy read to the peripheral register has been
   30:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****           inserted in each LL_{BUS}_GRP{x}_EnableClock() function.
   31:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 6
+
+
   32:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   @endverbatim
   33:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
   34:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
   35:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
   36:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Define to prevent recursive inclusion -------------------------------------*/
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 6
-
-
   37:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #ifndef STM32WBxx_LL_BUS_H
   38:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define STM32WBxx_LL_BUS_H
   39:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
@@ -353,14 +358,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
   86:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
   87:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
   88:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 7
+
+
   89:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
   90:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB2_GRP1_PERIPH  AHB2 GRP1 PERIPH
   91:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
   92:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
   93:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 7
-
-
   94:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
   95:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOA          RCC_AHB2ENR_GPIOAEN
   96:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOB          RCC_AHB2ENR_GPIOBEN
@@ -413,14 +418,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  143:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* SPI2 */
  144:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C1           RCC_APB1ENR1_I2C1EN
  145:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(I2C3)
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 8
+
+
  146:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C3           RCC_APB1ENR1_I2C3EN
  147:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* I2C3 */
  148:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(CRS)
  149:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_CRS            RCC_APB1ENR1_CRSEN
  150:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* CRS */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 8
-
-
  151:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(USB)
  152:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USB            RCC_APB1ENR1_USBEN
  153:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* USB */
@@ -473,14 +478,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  200:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB3_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
  201:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB3_GRP1_PERIPH_RF             RCC_APB3RSTR_RFRST
  202:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 9
+
+
  203:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
  204:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  205:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  206:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  207:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_AHB1_GRP1_PERIPH  C2 AHB1 GRP1 PERIPH
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 9
-
-
  208:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
  209:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  210:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_DMA1         RCC_C2AHB1ENR_DMA1EN
@@ -533,14 +538,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  257:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  258:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
  259:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 10
+
+
  260:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  261:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  262:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB1_GRP1_PERIPH  C2 APB1 GRP1 PERIPH
  263:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
  264:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 10
-
-
  265:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_TIM2         RCC_C2APB1ENR1_TIM2EN
  266:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(LCD)
  267:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_LCD          RCC_C2APB1ENR1_LCDEN
@@ -593,14 +598,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  314:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif /* SAI1 */
  315:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 11
+
+
  317:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  318:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  319:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  320:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB3_GRP1_PERIPH  C2 APB3 GRP1 PERIPH
  321:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 11
-
-
  322:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  323:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB3_GRP1_PERIPH_BLE          RCC_C2APB3ENR_BLEEN
  324:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(RCC_802_SUPPORT)
@@ -653,14 +658,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  371:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  372:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  373:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 12
+
+
  374:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Check if AHB1 peripheral clock is enabled or not
  375:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_IsEnabledClock\n
  376:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_IsEnabledClock\n
  377:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMAMUX1EN      LL_AHB1_GRP1_IsEnabledClock\n
  378:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_IsEnabledClock\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 12
-
-
  379:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      TSCEN         LL_AHB1_GRP1_IsEnabledClock
  380:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  381:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
@@ -713,14 +718,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  428:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
  429:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
  430:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 13
+
+
  431:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  432:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ForceReset(uint32_t Periphs)
  433:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  434:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB1RSTR, Periphs);
  435:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 13
-
-
  436:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  437:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  438:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Release AHB1 peripherals reset.
@@ -773,14 +778,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  485:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  486:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  487:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Disable AHB1 peripherals clock during Low Power (Sleep) mode.
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 14
+
+
  488:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_DisableClockSleep\n
  489:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_DisableClockSleep\n
  490:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMAMUX1SMEN    LL_AHB1_GRP1_DisableClockSleep\n
  491:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    SRAM1SMEN     LL_AHB1_GRP1_DisableClockSleep\n
  492:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    CRCSMEN       LL_AHB1_GRP1_DisableClockSleep\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 14
-
-
  493:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    TSCSMEN       LL_AHB1_GRP1_DisableClockSleep
  494:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  495:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
@@ -833,14 +838,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
  543:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB2ENR, Periphs);
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 15
+
+
  545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
  546:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  547:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  548:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  549:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Check if AHB2 peripheral clock is enabled or not
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 15
-
-
  550:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB2ENR      GPIOAEN       LL_AHB2_GRP1_IsEnabledClock\n
  551:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOBEN       LL_AHB2_GRP1_IsEnabledClock\n
  552:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOCEN       LL_AHB2_GRP1_IsEnabledClock\n
@@ -893,14 +898,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  599:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB2ENR, Periphs);
  600:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  601:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 16
+
+
  602:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  603:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Force AHB2 peripherals reset.
  604:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB2RSTR     GPIOARST      LL_AHB2_GRP1_ForceReset\n
  605:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2RSTR     GPIOBRST      LL_AHB2_GRP1_ForceReset\n
  606:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2RSTR     GPIOCRST      LL_AHB2_GRP1_ForceReset\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 16
-
-
  607:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2RSTR     GPIODRST      LL_AHB2_GRP1_ForceReset\n
  608:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2RSTR     GPIOERST      LL_AHB2_GRP1_ForceReset\n
  609:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2RSTR     GPIOHRST      LL_AHB2_GRP1_ForceReset\n
@@ -953,14 +958,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  656:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  657:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  658:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 17
+
+
  659:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Enable AHB2 peripherals clock during Low Power (Sleep) mode.
  660:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB2SMENR    GPIOASMEN     LL_AHB2_GRP1_EnableClockSleep\n
  661:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2SMENR    GPIOBSMEN     LL_AHB2_GRP1_EnableClockSleep\n
  662:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2SMENR    GPIOCSMEN     LL_AHB2_GRP1_EnableClockSleep\n
  663:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2SMENR    GPIODSMEN     LL_AHB2_GRP1_EnableClockSleep\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 17
-
-
  664:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2SMENR    GPIOESMEN     LL_AHB2_GRP1_EnableClockSleep\n
  665:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2SMENR    GPIOHSMEN     LL_AHB2_GRP1_EnableClockSleep\n
  666:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2SMENR    ADCSMEN       LL_AHB2_GRP1_EnableClockSleep\n
@@ -1013,14 +1018,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  713:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB2SMENR, Periphs);
  714:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  715:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 18
+
+
  716:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  717:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
  718:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  719:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  720:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB3 AHB3
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 18
-
-
  721:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
  722:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  723:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
@@ -1073,14 +1078,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  770:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
  771:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval uint32_t
  772:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 19
+
+
  773:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE uint32_t LL_AHB3_GRP1_IsEnabledClock(uint32_t Periphs)
  774:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  775:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   return ((READ_BIT(RCC->AHB3ENR, Periphs) == (Periphs)) ? 1UL : 0UL);
  776:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  777:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 19
-
-
  778:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
  779:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Disable AHB3 peripherals clock.
  780:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB3ENR      QUADSPIEN     LL_AHB3_GRP1_DisableClock\n
@@ -1133,14 +1138,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  827:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  828:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  829:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 20
+
+
  830:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Release AHB3 peripherals reset.
  831:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB3RSTR     QUADSPIRST    LL_AHB3_GRP1_ReleaseReset\n
  832:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3RSTR     PKARST        LL_AHB3_GRP1_ReleaseReset\n
  833:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3RSTR     AES2RST       LL_AHB3_GRP1_ReleaseReset\n
  834:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3RSTR     RNGRST        LL_AHB3_GRP1_ReleaseReset\n
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 20
-
-
  835:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3RSTR     HSEMRST       LL_AHB3_GRP1_ReleaseReset\n
  836:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3RSTR     IPCCRST       LL_AHB3_GRP1_ReleaseReset\n
  837:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3RSTR     FLASHRST      LL_AHB3_GRP1_ReleaseReset
@@ -1193,14 +1198,14 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  884:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB3SMENR    QUADSPISMEN   LL_AHB3_GRP1_DisableClockSleep\n
  885:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3SMENR    PKASMEN       LL_AHB3_GRP1_DisableClockSleep\n
  886:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3SMENR    AES2SMEN      LL_AHB3_GRP1_DisableClockSleep\n
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 21
+
+
  887:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3SMENR    RNGSMEN       LL_AHB3_GRP1_DisableClockSleep\n
  888:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3SMENR    SRAM2SMEN     LL_AHB3_GRP1_DisableClockSleep\n
  889:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB3SMENR    FLASHSMEN     LL_AHB3_GRP1_DisableClockSleep
  890:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  891:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_QUADSPI (*)
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 21
-
-
  892:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_PKA
  893:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_AES2
  894:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_RNG
@@ -1249,95 +1254,119 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  937:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
  938:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  939:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_EnableClock(uint32_t Periphs)
- 170              		.loc 2 939 22 view .LVU43
- 171              	.LBB7:
+ 175              		.loc 2 939 22 view .LVU43
+ 176              	.LBB7:
  940:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
  941:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   __IO uint32_t tmpreg;
- 172              		.loc 2 941 3 view .LVU44
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 22
+
+
+ 177              		.loc 2 941 3 view .LVU44
  942:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->APB1ENR1, Periphs);
- 173              		.loc 2 942 3 view .LVU45
- 174 000c 4FF0B043 		mov	r3, #1476395008
- 175 0010 9A6D     		ldr	r2, [r3, #88]
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 22
-
-
- 176 0012 42F00102 		orr	r2, r2, #1
- 177 0016 9A65     		str	r2, [r3, #88]
+ 178              		.loc 2 942 3 view .LVU45
+ 179 000e 4FF0B043 		mov	r3, #1476395008
+ 180 0012 9A6D     		ldr	r2, [r3, #88]
+ 181 0014 42F00102 		orr	r2, r2, #1
+ 182 0018 9A65     		str	r2, [r3, #88]
  943:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
  944:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   tmpreg = READ_BIT(RCC->APB1ENR1, Periphs);
- 178              		.loc 2 944 3 view .LVU46
- 179              		.loc 2 944 12 is_stmt 0 view .LVU47
- 180 0018 9B6D     		ldr	r3, [r3, #88]
- 181 001a 03F00103 		and	r3, r3, #1
- 182              		.loc 2 944 10 view .LVU48
- 183 001e 0193     		str	r3, [sp, #4]
+ 183              		.loc 2 944 3 view .LVU46
+ 184              		.loc 2 944 12 is_stmt 0 view .LVU47
+ 185 001a 9B6D     		ldr	r3, [r3, #88]
+ 186 001c 03F00103 		and	r3, r3, #1
+ 187              		.loc 2 944 10 view .LVU48
+ 188 0020 0193     		str	r3, [sp, #4]
  945:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
- 184              		.loc 2 945 3 is_stmt 1 view .LVU49
- 185 0020 019B     		ldr	r3, [sp, #4]
- 186              	.LVL8:
- 187              		.loc 2 945 3 is_stmt 0 view .LVU50
- 188              	.LBE7:
- 189              	.LBE6:
-  80:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspInit 1 */
-  81:Core/Src/tim.c **** 
-  82:Core/Src/tim.c ****   /* USER CODE END TIM2_MspInit 1 */
-  83:Core/Src/tim.c ****   }
-  84:Core/Src/tim.c **** }
- 190              		.loc 1 84 1 view .LVU51
- 191 0022 02B0     		add	sp, sp, #8
- 192              		.cfi_def_cfa_offset 0
- 193              		@ sp needed
- 194 0024 7047     		bx	lr
- 195              		.cfi_endproc
- 196              	.LFE1105:
- 198              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
- 199              		.align	1
- 200              		.global	HAL_TIM_Base_MspDeInit
- 201              		.syntax unified
- 202              		.thumb
- 203              		.thumb_func
- 205              	HAL_TIM_Base_MspDeInit:
- 206              	.LVL9:
- 207              	.LFB1106:
+ 189              		.loc 2 945 3 is_stmt 1 view .LVU49
+ 190 0022 019B     		ldr	r3, [sp, #4]
+ 191              	.LVL9:
+ 192              		.loc 2 945 3 is_stmt 0 view .LVU50
+ 193              	.LBE7:
+ 194              	.LBE6:
+  80:Core/Src/tim.c **** 
+  81:Core/Src/tim.c ****     /* TIM2 interrupt Init */
+  82:Core/Src/tim.c ****     HAL_NVIC_SetPriority(TIM2_IRQn, 0, 0);
+ 195              		.loc 1 82 5 is_stmt 1 view .LVU51
+ 196 0024 0022     		movs	r2, #0
+ 197 0026 1146     		mov	r1, r2
+ 198 0028 1C20     		movs	r0, #28
+ 199              	.LVL10:
+ 200              		.loc 1 82 5 is_stmt 0 view .LVU52
+ 201 002a FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 202              	.LVL11:
+  83:Core/Src/tim.c ****     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+ 203              		.loc 1 83 5 is_stmt 1 view .LVU53
+ 204 002e 1C20     		movs	r0, #28
+ 205 0030 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 206              	.LVL12:
+  84:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspInit 1 */
   85:Core/Src/tim.c **** 
-  86:Core/Src/tim.c **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
-  87:Core/Src/tim.c **** {
- 208              		.loc 1 87 1 is_stmt 1 view -0
- 209              		.cfi_startproc
- 210              		@ args = 0, pretend = 0, frame = 0
- 211              		@ frame_needed = 0, uses_anonymous_args = 0
- 212              		@ link register save eliminated.
-  88:Core/Src/tim.c **** 
-  89:Core/Src/tim.c ****   if(tim_baseHandle->Instance==TIM2)
- 213              		.loc 1 89 3 view .LVU53
- 214              		.loc 1 89 20 is_stmt 0 view .LVU54
- 215 0000 0368     		ldr	r3, [r0]
- 216              		.loc 1 89 5 view .LVU55
- 217 0002 B3F1804F 		cmp	r3, #1073741824
- 218 0006 00D0     		beq	.L20
- 219              	.L18:
-  90:Core/Src/tim.c ****   {
-  91:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 0 */
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 23
+  86:Core/Src/tim.c ****   /* USER CODE END TIM2_MspInit 1 */
+  87:Core/Src/tim.c ****   }
+  88:Core/Src/tim.c **** }
+ 207              		.loc 1 88 1 is_stmt 0 view .LVU54
+ 208 0034 03B0     		add	sp, sp, #12
+ 209              		.cfi_def_cfa_offset 4
+ 210              		@ sp needed
+ 211 0036 5DF804FB 		ldr	pc, [sp], #4
+ 212              		.cfi_endproc
+ 213              	.LFE1105:
+ 215              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
+ 216              		.align	1
+ 217              		.global	HAL_TIM_Base_MspDeInit
+ 218              		.syntax unified
+ 219              		.thumb
+ 220              		.thumb_func
+ 222              	HAL_TIM_Base_MspDeInit:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 23
 
 
+ 223              	.LVL13:
+ 224              	.LFB1106:
+  89:Core/Src/tim.c **** 
+  90:Core/Src/tim.c **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
+  91:Core/Src/tim.c **** {
+ 225              		.loc 1 91 1 is_stmt 1 view -0
+ 226              		.cfi_startproc
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229              		.loc 1 91 1 is_stmt 0 view .LVU56
+ 230 0000 08B5     		push	{r3, lr}
+ 231              		.cfi_def_cfa_offset 8
+ 232              		.cfi_offset 3, -8
+ 233              		.cfi_offset 14, -4
   92:Core/Src/tim.c **** 
-  93:Core/Src/tim.c ****   /* USER CODE END TIM2_MspDeInit 0 */
-  94:Core/Src/tim.c ****     /* Peripheral clock disable */
-  95:Core/Src/tim.c ****     __HAL_RCC_TIM2_CLK_DISABLE();
-  96:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 1 */
-  97:Core/Src/tim.c **** 
-  98:Core/Src/tim.c ****   /* USER CODE END TIM2_MspDeInit 1 */
-  99:Core/Src/tim.c ****   }
- 100:Core/Src/tim.c **** }
- 220              		.loc 1 100 1 view .LVU56
- 221 0008 7047     		bx	lr
- 222              	.L20:
-  95:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 1 */
- 223              		.loc 1 95 5 is_stmt 1 view .LVU57
- 224              	.LVL10:
- 225              	.LBB8:
- 226              	.LBI8:
+  93:Core/Src/tim.c ****   if(tim_baseHandle->Instance==TIM2)
+ 234              		.loc 1 93 3 is_stmt 1 view .LVU57
+ 235              		.loc 1 93 20 is_stmt 0 view .LVU58
+ 236 0002 0368     		ldr	r3, [r0]
+ 237              		.loc 1 93 5 view .LVU59
+ 238 0004 B3F1804F 		cmp	r3, #1073741824
+ 239 0008 00D0     		beq	.L21
+ 240              	.LVL14:
+ 241              	.L18:
+  94:Core/Src/tim.c ****   {
+  95:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 0 */
+  96:Core/Src/tim.c **** 
+  97:Core/Src/tim.c ****   /* USER CODE END TIM2_MspDeInit 0 */
+  98:Core/Src/tim.c ****     /* Peripheral clock disable */
+  99:Core/Src/tim.c ****     __HAL_RCC_TIM2_CLK_DISABLE();
+ 100:Core/Src/tim.c **** 
+ 101:Core/Src/tim.c ****     /* TIM2 interrupt Deinit */
+ 102:Core/Src/tim.c ****     HAL_NVIC_DisableIRQ(TIM2_IRQn);
+ 103:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 1 */
+ 104:Core/Src/tim.c **** 
+ 105:Core/Src/tim.c ****   /* USER CODE END TIM2_MspDeInit 1 */
+ 106:Core/Src/tim.c ****   }
+ 107:Core/Src/tim.c **** }
+ 242              		.loc 1 107 1 view .LVU60
+ 243 000a 08BD     		pop	{r3, pc}
+ 244              	.LVL15:
+ 245              	.L21:
+  99:Core/Src/tim.c **** 
+ 246              		.loc 1 99 5 is_stmt 1 view .LVU61
+ 247              	.LBB8:
+ 248              	.LBI8:
  946:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
  947:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
  948:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
@@ -1349,6 +1378,9 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  954:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_LPTIM2
  955:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
  956:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 24
+
+
  957:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
  958:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP2_EnableClock(uint32_t Periphs)
  959:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
@@ -1378,9 +1410,6 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
  983:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
  984:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2 (*)
  985:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 24
-
-
  986:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3 (*)
  987:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS (*)
  988:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USB (*)
@@ -1409,6 +1438,9 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
 1011:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
 1012:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
 1013:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 25
+
+
 1014:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Disable APB1 peripherals clock.
 1015:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll APB1ENR1     TIM2EN        LL_APB1_GRP1_DisableClock\n
 1016:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         APB1ENR1     LCDEN         LL_APB1_GRP1_DisableClock\n
@@ -1434,63 +1466,76 @@ ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 1
 1036:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
 1037:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
 1038:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_DisableClock(uint32_t Periphs)
- 227              		.loc 2 1038 22 view .LVU58
- 228              	.LBB9:
+ 249              		.loc 2 1038 22 view .LVU62
+ 250              	.LBB9:
 1039:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
 1040:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->APB1ENR1, Periphs);
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 25
+ 251              		.loc 2 1040 3 view .LVU63
+ 252 000c 4FF0B042 		mov	r2, #1476395008
+ 253 0010 936D     		ldr	r3, [r2, #88]
+ 254 0012 23F00103 		bic	r3, r3, #1
+ 255 0016 9365     		str	r3, [r2, #88]
+ 256              	.LVL16:
+ 257              		.loc 2 1040 3 is_stmt 0 view .LVU64
+ 258              	.LBE9:
+ 259              	.LBE8:
+ 102:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 1 */
+ 260              		.loc 1 102 5 is_stmt 1 view .LVU65
+ 261 0018 1C20     		movs	r0, #28
+ 262              	.LVL17:
+ 102:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_MspDeInit 1 */
+ 263              		.loc 1 102 5 is_stmt 0 view .LVU66
+ 264 001a FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 265              	.LVL18:
+ 266              		.loc 1 107 1 view .LVU67
+ 267 001e F4E7     		b	.L18
+ 268              		.cfi_endproc
+ 269              	.LFE1106:
+ 271              		.global	htim2
+ 272              		.section	.bss.htim2,"aw",%nobits
+ 273              		.align	2
+ 276              	htim2:
+ 277 0000 00000000 		.space	76
+ 277      00000000 
+ 277      00000000 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 26
 
 
- 229              		.loc 2 1040 3 view .LVU59
- 230 000a 4FF0B042 		mov	r2, #1476395008
- 231 000e 936D     		ldr	r3, [r2, #88]
- 232 0010 23F00103 		bic	r3, r3, #1
- 233 0014 9365     		str	r3, [r2, #88]
- 234              	.LVL11:
- 235              		.loc 2 1040 3 is_stmt 0 view .LVU60
- 236              	.LBE9:
- 237              	.LBE8:
- 238              		.loc 1 100 1 view .LVU61
- 239 0016 F7E7     		b	.L18
- 240              		.cfi_endproc
- 241              	.LFE1106:
- 243              		.global	htim2
- 244              		.section	.bss.htim2,"aw",%nobits
- 245              		.align	2
- 248              	htim2:
- 249 0000 00000000 		.space	76
- 249      00000000 
- 249      00000000 
- 249      00000000 
- 249      00000000 
- 250              		.text
- 251              	.Letext0:
- 252              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 253              		.file 4 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
- 254              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
- 255              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
- 256              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
- 257              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h"
- 258              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h"
- 259              		.file 10 "Core/Inc/tim.h"
- 260              		.file 11 "Core/Inc/main.h"
-ARM GAS  C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s 			page 26
+ 277      00000000 
+ 277      00000000 
+ 278              		.text
+ 279              	.Letext0:
+ 280              		.file 3 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 281              		.file 4 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 282              		.file 5 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 283              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 284              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
+ 285              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h"
+ 286              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_cortex.h"
+ 287              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h"
+ 288              		.file 11 "Core/Inc/tim.h"
+ 289              		.file 12 "Core/Inc/main.h"
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tim.c
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:21     .text.MX_TIM2_Init:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:27     .text.MX_TIM2_Init:00000000 MX_TIM2_Init
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:134    .text.MX_TIM2_Init:00000068 $d
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:248    .bss.htim2:00000000 htim2
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:140    .text.HAL_TIM_Base_MspInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:146    .text.HAL_TIM_Base_MspInit:00000000 HAL_TIM_Base_MspInit
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:199    .text.HAL_TIM_Base_MspDeInit:00000000 $t
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:205    .text.HAL_TIM_Base_MspDeInit:00000000 HAL_TIM_Base_MspDeInit
-C:\Users\elhyd\AppData\Local\Temp\ccR3cTXf.s:245    .bss.htim2:00000000 $d
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:21     .text.MX_TIM2_Init:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:27     .text.MX_TIM2_Init:00000000 MX_TIM2_Init
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:137    .text.MX_TIM2_Init:00000070 $d
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:276    .bss.htim2:00000000 htim2
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:143    .text.HAL_TIM_Base_MspInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:149    .text.HAL_TIM_Base_MspInit:00000000 HAL_TIM_Base_MspInit
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:216    .text.HAL_TIM_Base_MspDeInit:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:222    .text.HAL_TIM_Base_MspDeInit:00000000 HAL_TIM_Base_MspDeInit
+C:\Users\elhyd\AppData\Local\Temp\cct2Fgdv.s:273    .bss.htim2:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_TIM_Base_Init
 HAL_TIM_ConfigClockSource
 HAL_TIMEx_MasterConfigSynchronization
+HAL_TIM_Base_Start_IT
 Error_Handler
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_NVIC_DisableIRQ

@@ -12,16 +12,14 @@ typedef enum
   PLAYER_SELECT,
   ONE_PLAYER,
   TWO_PLAYERS,
-  PLAY,
-  SCORES,
   GAME_RESULT,
+  PLAY_AGAIN,
   SLEEP
 } GameState ; 
 
 typedef struct 
 {
   uint8_t numPlayers;
-  uint8_t currentPlayer;
   uint8_t sequenceSpeed;
   uint8_t sequence[100];
   uint8_t sequenceLength;
