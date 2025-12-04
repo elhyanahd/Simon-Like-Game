@@ -8,10 +8,10 @@
 #include <stdlib.h>
 
 static int buttonTimer = 0;
-static int redButtonPressed = 0;
-static int blueButtonPressed = 0;
-static int yellowButtonPressed = 0;
-static int greenButtonPressed = 0;
+static Button redButton = {0, 0, LEDR_GPIO_Port, LEDR_Pin}, 
+              blueButton = {0, 0, LEDB_GPIO_Port, LEDB_Pin}, 
+              yellowButton = {0, 0, LEDY_GPIO_Port, LEDY_Pin}, 
+              greenButton = {0, 0, LEDG_GPIO_Port, LEDG_Pin};
 static char lineOne[17] = {0}, lineTwo[17] = {0};
 
 /**
@@ -363,6 +363,7 @@ void computerTurn(Game* game)
 
   for(int i = 0; i < game->info.sequenceLength; i++)
   {
+    
     // Light up the corresponding LED based on the color code
     switch(game->info.sequence[i])
     {
@@ -393,6 +394,37 @@ void computerTurn(Game* game)
         HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
         break;
     }
+    HAL_Delay(200); // Short delay between colors
+  }
+}
+
+void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button)
+{
+  switch(button->state)
+  {
+    case 0: // idle, waiting for press
+      if(HAL_GPIO_ReadPin(port, pin) == GPIO_PIN_RESET)
+        button->state = 1;
+      break;
+
+    case 1: // check stable low
+      if(HAL_GPIO_ReadPin(port, pin) == GPIO_PIN_RESET)
+      {
+        button->stable = 1;   // REGISTER PRESS
+        button->state = 2;
+        HAL_GPIO_WritePin(button->port, button->pin, GPIO_PIN_SET);
+      }
+      else
+        button->state = 0;
+      break;
+
+    case 2: // wait for release
+        if(HAL_GPIO_ReadPin(port, pin) == GPIO_PIN_SET)
+        {
+          button->state = 0;
+          HAL_GPIO_WritePin(button->port, button->pin, GPIO_PIN_RESET);
+        }
+        break;
   }
 }
 
@@ -403,24 +435,33 @@ void computerTurn(Game* game)
  */
 int getButtonPressed()
 {
-  if(redButtonPressed) 
+  static char msg[500] = {0}; 
+  if(redButton.stable)
   { 
-    redButtonPressed = 0; 
+    redButton.stable = 0;
+    snprintf(msg, sizeof(msg), "Red pressed\r\n");
+    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
     return 0; 
   }
-  else if(blueButtonPressed) 
+  else if(blueButton.stable) 
   { 
-    blueButtonPressed = 0; 
+    blueButton.stable = 0;
+    snprintf(msg, sizeof(msg), "Blue pressed\r\n");
+    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
     return 1; 
   }
-  else if(yellowButtonPressed) 
+  else if(yellowButton.stable) 
   {
-    yellowButtonPressed = 0; 
+    yellowButton.stable = 0;
+    snprintf(msg, sizeof(msg), "Yellow pressed\r\n");
+    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
     return 2; 
   }
-  else if(greenButtonPressed) 
-  { 
-    greenButtonPressed = 0; 
+  else if(greenButton.stable)
+  {  
+    greenButton.stable = 0;
+    snprintf(msg, sizeof(msg), "Green pressed\r\n");
+    HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 1000);
     return 3; 
   }
   else
@@ -433,25 +474,29 @@ int getButtonPressed()
  */
 void playerTurn(Game* game)
 {
+  int buttonIndex;
+  
   for(int i = 0; i < game->info.sequenceLength; i++)
   {
-    // Reset and start timer for player's input timeout
-    buttonTimer = 0;    
-    __HAL_TIM_SET_COUNTER(&htim2, 0);
+    // // Reset and start timer for player's input timeout
+    // buttonTimer = 0;    
+    // __HAL_TIM_SET_COUNTER(&htim2, 0);
 
-    int buttonIndex = -1;
+    buttonIndex = -1;
     
     //while (buttonTimer < (300*game->info.sequenceLength) ) // 30 seconds timeout
     while(buttonIndex < 0)
     {
       buttonIndex = getButtonPressed();
-      if(buttonIndex >= 0) // Red
+      if(buttonIndex >= 0)
       {
         game->info.playerInputs[game->info.currentPlayer - 1][i] = buttonIndex;
         break; 
       }
     }
     
+    HAL_Delay(120);
+    // Short delay between colors
     // if(buttonTimer >= (300*game->info.sequenceLength)) // Timeout occurred
     // {
     //   game->state = GAME_RESULT;
@@ -472,16 +517,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     { 
       buttonTimer++;  
 
-      if(HAL_GPIO_ReadPin(RedButton_GPIO_Port, RedButton_Pin) == GPIO_PIN_RESET && redButtonPressed == 0)
-      { redButtonPressed = 1; }
-      
-      if(HAL_GPIO_ReadPin(BlueButton_GPIO_Port, BlueButton_Pin) == GPIO_PIN_RESET && blueButtonPressed == 0)
-      { blueButtonPressed = 1; }
-          
-      if(HAL_GPIO_ReadPin(YellowButtonm_GPIO_Port, YellowButtonm_Pin) == GPIO_PIN_RESET && yellowButtonPressed == 0)
-      { yellowButtonPressed = 1; }
-      
-      if(HAL_GPIO_ReadPin(GreenButton_GPIO_Port, GreenButton_Pin) == GPIO_PIN_RESET && greenButtonPressed == 0)
-      { greenButtonPressed = 1; }
+      debounceButtons(RedButton_GPIO_Port, RedButton_Pin, &redButton);
+      debounceButtons(BlueButton_GPIO_Port, BlueButton_Pin, &blueButton);
+      debounceButtons(YellowButtonm_GPIO_Port, YellowButtonm_Pin, &yellowButton);
+      debounceButtons(GreenButton_GPIO_Port, GreenButton_Pin, &greenButton);
     }
 }

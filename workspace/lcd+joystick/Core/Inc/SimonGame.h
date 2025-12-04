@@ -35,6 +35,14 @@ typedef struct {
     GameInfo info;
 } Game;
 
+typedef struct 
+{
+  uint8_t stable;
+  uint8_t state;
+  GPIO_TypeDef *port; 
+  uint16_t pin;
+} Button;
+
 void Game_Init(Game* game);
 void Game_Run(Game* game, Joystick_HandleTypeDef* joystick);
 void computerTurn(Game* game);
