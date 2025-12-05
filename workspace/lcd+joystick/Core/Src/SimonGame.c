@@ -209,14 +209,14 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
         snprintf(lineOne, sizeof(lineOne), "Round %d", game->info.round);
         snprintf(lineTwo, sizeof(lineTwo), "Simon's Turn!");
         displayOnLCD(lineOne, lineTwo);
-        HAL_Delay(500);  //wait 1/2 second
+        HAL_Delay(1000);  //wait 1/2 second
         computerTurn(game);
 
         LCD_Cls();
         snprintf(lineOne, sizeof(lineOne), "Player's Turn!");
         snprintf(lineTwo, sizeof(lineTwo), "Score: %d", game->info.playerScores[0]);
         displayOnLCD(lineOne, lineTwo);
-        HAL_Delay(500);  //wait 1/2 second
+        HAL_Delay(1000);  //wait 1/2 second
         playerTurn(game);
 
         if(game->state != GAME_RESULT)
@@ -285,7 +285,7 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
           snprintf(lineOne, sizeof(lineOne), "Game Over!");
           snprintf(lineTwo, sizeof(lineTwo), "P1 Score: %d", game->info.playerScores[0]);
           displayOnLCD(lineOne, lineTwo);
-          HAL_Delay(2000);  //wait 2 seconds
+          HAL_Delay(1000);  //wait 2 seconds
         }
         else
         {
@@ -394,7 +394,7 @@ void computerTurn(Game* game)
         HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
         break;
     }
-    HAL_Delay(200); // Short delay between colors
+    HAL_Delay(500); // Short delay between colors
   }
 }
 
@@ -491,6 +491,7 @@ void playerTurn(Game* game)
       if(buttonIndex >= 0)
       {
         game->info.playerInputs[game->info.currentPlayer - 1][i] = buttonIndex;
+
         break; 
       }
     }
@@ -512,7 +513,7 @@ void playerTurn(Game* game)
  */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  static char msg[500];
+  //static char msg[500];
     if (htim->Instance == TIM2)
     { 
       buttonTimer++;  

@@ -84,7 +84,7 @@ void MX_GPIO_Init(void)
   /*Configure GPIO pins : BlueButton_Pin GreenButton_Pin YellowButtonm_Pin */
   GPIO_InitStruct.Pin = BlueButton_Pin|GreenButton_Pin|YellowButtonm_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LEDY_Pin LEDR_Pin */
@@ -118,7 +118,7 @@ void MX_GPIO_Init(void)
   /*Configure GPIO pin : RedButton_Pin */
   GPIO_InitStruct.Pin = RedButton_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(RedButton_GPIO_Port, &GPIO_InitStruct);
 
 }
