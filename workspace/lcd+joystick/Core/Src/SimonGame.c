@@ -129,9 +129,10 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
       // Display Player selection menu
       case PLAYER_MENU:
         LCD_Cls();
-        snprintf(lineOne, sizeof(lineOne), "1 player OR");
+        snprintf(lineOne, sizeof(lineOne), "<1> player OR");
         snprintf(lineTwo, sizeof(lineTwo), "2 players?");
         displayOnLCD(lineOne, lineTwo);
+        game->info.numPlayers = 1;  // Default to 1 player
         game->state = PLAYER_SELECT;
         break;
 
@@ -221,14 +222,9 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
 
         if(game->state != GAME_RESULT)
         {
-          compareSequences(game);
-          if(game->state != GAME_RESULT)
-          {
-            // Prepare for next round
-            //Increase round, sequence length and speed
-            game->info.round++;
-            game->info.sequenceLength++;
-          }
+          // Prepare for next round
+          game->info.round++;
+          game->info.sequenceLength++;
         }
         break;
 
@@ -351,15 +347,10 @@ void Game_Run(Game* game, Joystick_HandleTypeDef* joystick)
  */
 void computerTurn(Game* game)
 {
-  for(int i = 0; i < game->info.sequenceLength; i++)
-  {
-    // select random numbers for the color sequence
-    // 0 - Red, 1 - Blue, 2 - Yellow, 3 - Green
-    int colorRandom = rand() % 4;
-
-    // Store the color code in the sequence array
-    game->info.sequence[i] = colorRandom;
-  }
+  // Add one new random color to the end of the sequence
+  // 0 - Red, 1 - Blue, 2 - Yellow, 3 - Green
+  int colorRandom = rand() % 4;
+  game->info.sequence[game->info.sequenceLength - 1] = colorRandom;
 
   for(int i = 0; i < game->info.sequenceLength; i++)
   {
@@ -369,23 +360,31 @@ void computerTurn(Game* game)
     {
       case 0: // Red
         HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
         break;
       case 1: // Blue
         HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
         break;
       case 2: // Yellow
         HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
         break;
       case 3: // Green
         HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
         break;
       default:
         HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
@@ -413,6 +412,7 @@ void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button)
         button->stable = 1;   // REGISTER PRESS
         button->state = 2;
         HAL_GPIO_WritePin(button->port, button->pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
       }
       else
         button->state = 0;
@@ -423,6 +423,7 @@ void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button)
         {
           button->state = 0;
           HAL_GPIO_WritePin(button->port, button->pin, GPIO_PIN_RESET);
+          HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
         }
         break;
   }
@@ -475,16 +476,11 @@ int getButtonPressed()
 void playerTurn(Game* game)
 {
   int buttonIndex;
-  
+
   for(int i = 0; i < game->info.sequenceLength; i++)
   {
-    // // Reset and start timer for player's input timeout
-    // buttonTimer = 0;    
-    // __HAL_TIM_SET_COUNTER(&htim2, 0);
-
     buttonIndex = -1;
-    
-    //while (buttonTimer < (300*game->info.sequenceLength) ) // 30 seconds timeout
+
     while(buttonIndex < 0)
     {
       buttonIndex = getButtonPressed();
@@ -492,17 +488,48 @@ void playerTurn(Game* game)
       {
         game->info.playerInputs[game->info.currentPlayer - 1][i] = buttonIndex;
 
-        break; 
+        // Check immediately if wrong button pressed
+        if(game->info.numPlayers == 1)
+        {
+          // 1-player mode: check against Simon's sequence
+          if(buttonIndex != game->info.sequence[i])
+          {
+            LCD_Cls();
+            LCD_GotoXY(0, 0);
+            LCD_Print("Wrong! Game Over");
+            HAL_Delay(1000);
+            game->state = GAME_RESULT;
+            return;
+          }
+          game->info.playerScores[0]++;
+        }
+        else if(game->info.numPlayers == 2)
+        {
+          // 2-player mode: check against other player's sequence (except for new color)
+          int otherPlayer = (game->info.currentPlayer == 1) ? 1 : 0;
+
+          // Only check if not adding new color (i < sequenceLength - 1)
+          if(i < game->info.sequenceLength - 1)
+          {
+            if(buttonIndex != game->info.playerInputs[otherPlayer][i])
+            {
+              LCD_Cls();
+              LCD_GotoXY(0, 0);
+              LCD_Print("Wrong! Game Over");
+              HAL_Delay(1000);
+              game->state = GAME_RESULT;
+              return;
+            }
+            // Correct - add score
+            game->info.playerScores[game->info.currentPlayer - 1]++;
+          }
+        }
+
+        break;
       }
     }
-    
+
     HAL_Delay(120);
-    // Short delay between colors
-    // if(buttonTimer >= (300*game->info.sequenceLength)) // Timeout occurred
-    // {
-    //   game->state = GAME_RESULT;
-    //   return;
-    // }
   }
 }
 
