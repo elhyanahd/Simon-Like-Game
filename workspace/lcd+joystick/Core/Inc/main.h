@@ -63,6 +63,10 @@ void Error_Handler(void);
 #define RCC_OSC32_IN_GPIO_Port GPIOC
 #define RCC_OSC32_OUT_Pin GPIO_PIN_15
 #define RCC_OSC32_OUT_GPIO_Port GPIOC
+#define BUZZP_Pin GPIO_PIN_8
+#define BUZZP_GPIO_Port GPIOB
+#define BUZZA_Pin GPIO_PIN_9
+#define BUZZA_GPIO_Port GPIOB
 #define D4_Pin GPIO_PIN_0
 #define D4_GPIO_Port GPIOC
 #define D5_Pin GPIO_PIN_1
@@ -111,8 +115,6 @@ void Error_Handler(void);
 #define STLINK_RX_GPIO_Port GPIOB
 #define STLINK_TX_Pin GPIO_PIN_7
 #define STLINK_TX_GPIO_Port GPIOB
-#define BUZZER_Pin GPIO_PIN_9
-#define BUZZER_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
