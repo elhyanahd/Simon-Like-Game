@@ -360,31 +360,35 @@ void computerTurn(Game* game)
     {
       case 0: // Red
         HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+        __HAL_TIM_SET_PRESCALER(&htim16,283); 
+        HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+        HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
         break;
       case 1: // Blue
         HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+        __HAL_TIM_SET_PRESCALER(&htim16,189); 
+        HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDB_GPIO_Port, LEDB_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+        HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
         break;
       case 2: // Yellow
         HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+        __HAL_TIM_SET_PRESCALER(&htim16,225); 
+        HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDY_GPIO_Port, LEDY_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+        HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
         break;
       case 3: // Green
         HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+        __HAL_TIM_SET_PRESCALER(&htim16,378); 
+        HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
         HAL_Delay(game->info.sequenceSpeed);
         HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+        HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
         break;
       default:
         HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, GPIO_PIN_RESET);
@@ -397,7 +401,7 @@ void computerTurn(Game* game)
   }
 }
 
-void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button)
+void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button, int pre)
 {
   switch(button->state)
   {
@@ -412,7 +416,8 @@ void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button)
         button->stable = 1;   // REGISTER PRESS
         button->state = 2;
         HAL_GPIO_WritePin(button->port, button->pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+        __HAL_TIM_SET_PRESCALER(&htim16,pre); 
+        HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
       }
       else
         button->state = 0;
@@ -423,7 +428,7 @@ void debounceButtons(GPIO_TypeDef *port, uint16_t pin, Button *button)
         {
           button->state = 0;
           HAL_GPIO_WritePin(button->port, button->pin, GPIO_PIN_RESET);
-          HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+          HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
         }
         break;
   }
@@ -497,7 +502,9 @@ void playerTurn(Game* game)
             LCD_Cls();
             LCD_GotoXY(0, 0);
             LCD_Print("Wrong! Game Over");
+            HAL_GPIO_WritePin(GPIOB, BUZZA_Pin, GPIO_PIN_SET);
             HAL_Delay(1000);
+            HAL_GPIO_WritePin(GPIOB, BUZZA_Pin, GPIO_PIN_RESET);
             game->state = GAME_RESULT;
             return;
           }
@@ -516,7 +523,9 @@ void playerTurn(Game* game)
               LCD_Cls();
               LCD_GotoXY(0, 0);
               LCD_Print("Wrong! Game Over");
+              HAL_GPIO_WritePin(GPIOB, BUZZA_Pin, GPIO_PIN_SET);
               HAL_Delay(1000);
+              HAL_GPIO_WritePin(GPIOB, BUZZA_Pin, GPIO_PIN_RESET);
               game->state = GAME_RESULT;
               return;
             }
@@ -545,9 +554,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     { 
       buttonTimer++;  
 
-      debounceButtons(RedButton_GPIO_Port, RedButton_Pin, &redButton);
-      debounceButtons(BlueButton_GPIO_Port, BlueButton_Pin, &blueButton);
-      debounceButtons(YellowButtonm_GPIO_Port, YellowButtonm_Pin, &yellowButton);
-      debounceButtons(GreenButton_GPIO_Port, GreenButton_Pin, &greenButton);
+      debounceButtons(RedButton_GPIO_Port, RedButton_Pin, &redButton, 283);
+      debounceButtons(BlueButton_GPIO_Port, BlueButton_Pin, &blueButton,189);
+      debounceButtons(YellowButtonm_GPIO_Port, YellowButtonm_Pin, &yellowButton,225);
+      debounceButtons(GreenButton_GPIO_Port, GreenButton_Pin, &greenButton,378);
     }
 }
