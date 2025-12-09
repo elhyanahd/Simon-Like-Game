@@ -1,0 +1,636 @@
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"joystick.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/joystick.c"
+  20              		.section	.text.Read_ADC_Channel,"ax",%progbits
+  21              		.align	1
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	Read_ADC_Channel:
+  27              	.LVL0:
+  28              	.LFB1105:
+   1:Core/Src/joystick.c **** #include "joystick.h"
+   2:Core/Src/joystick.c **** 
+   3:Core/Src/joystick.c **** #define ADC_SAMPLES 16
+   4:Core/Src/joystick.c **** #define DEADZONE    80        // adjust depending on how sensitive your joystick is
+   5:Core/Src/joystick.c **** 
+   6:Core/Src/joystick.c **** static uint16_t centerX = 0;
+   7:Core/Src/joystick.c **** 
+   8:Core/Src/joystick.c **** /**
+   9:Core/Src/joystick.c ****  * Initialize joystick handle
+  10:Core/Src/joystick.c ****  * @param joystick Pointer to joystick handle
+  11:Core/Src/joystick.c ****  * @param hadc Pointer to ADC handle
+  12:Core/Src/joystick.c ****  * @param xChannel ADC channel for X-axis
+  13:Core/Src/joystick.c ****  * @param yChannel ADC channel for Y-axis
+  14:Core/Src/joystick.c ****  * @param buttonPort GPIO port for joystick button
+  15:Core/Src/joystick.c ****  * @param buttonPin GPIO pin for joystick button
+  16:Core/Src/joystick.c ****  */
+  17:Core/Src/joystick.c **** void Joystick_Init(Joystick_HandleTypeDef* joystick,
+  18:Core/Src/joystick.c ****                    ADC_HandleTypeDef* hadc,
+  19:Core/Src/joystick.c ****                    uint32_t xChannel,
+  20:Core/Src/joystick.c ****                    uint32_t yChannel,
+  21:Core/Src/joystick.c ****                    GPIO_TypeDef* buttonPort,
+  22:Core/Src/joystick.c ****                    uint16_t buttonPin)
+  23:Core/Src/joystick.c **** {
+  24:Core/Src/joystick.c ****     joystick->hadc = hadc;
+  25:Core/Src/joystick.c ****     joystick->xChannel = xChannel;
+  26:Core/Src/joystick.c ****     joystick->yChannel = yChannel;
+  27:Core/Src/joystick.c ****     joystick->buttonPort = buttonPort;
+  28:Core/Src/joystick.c ****     joystick->buttonPin = buttonPin;
+  29:Core/Src/joystick.c **** }
+  30:Core/Src/joystick.c **** 
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 2
+
+
+  31:Core/Src/joystick.c **** /**
+  32:Core/Src/joystick.c ****  * Read ADC channel and return averaged value
+  33:Core/Src/joystick.c ****  * @param hadc Pointer to ADC handle
+  34:Core/Src/joystick.c ****  * @param channel ADC channel to read
+  35:Core/Src/joystick.c ****  */
+  36:Core/Src/joystick.c **** static uint16_t Read_ADC_Channel(ADC_HandleTypeDef* hadc, uint32_t channel)
+  37:Core/Src/joystick.c **** {
+  29              		.loc 1 37 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 24
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		.loc 1 37 1 is_stmt 0 view .LVU1
+  34 0000 70B5     		push	{r4, r5, r6, lr}
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 4, -16
+  37              		.cfi_offset 5, -12
+  38              		.cfi_offset 6, -8
+  39              		.cfi_offset 14, -4
+  40 0002 86B0     		sub	sp, sp, #24
+  41              		.cfi_def_cfa_offset 40
+  42 0004 0446     		mov	r4, r0
+  38:Core/Src/joystick.c ****     ADC_ChannelConfTypeDef sConfig = {0};
+  43              		.loc 1 38 5 is_stmt 1 view .LVU2
+  44              		.loc 1 38 28 is_stmt 0 view .LVU3
+  45 0006 0026     		movs	r6, #0
+  46 0008 0096     		str	r6, [sp]
+  47 000a 0196     		str	r6, [sp, #4]
+  48 000c 0296     		str	r6, [sp, #8]
+  49 000e 0396     		str	r6, [sp, #12]
+  50 0010 0496     		str	r6, [sp, #16]
+  51 0012 0596     		str	r6, [sp, #20]
+  39:Core/Src/joystick.c ****     sConfig.Channel = channel;
+  52              		.loc 1 39 5 is_stmt 1 view .LVU4
+  53              		.loc 1 39 21 is_stmt 0 view .LVU5
+  54 0014 0091     		str	r1, [sp]
+  40:Core/Src/joystick.c ****     sConfig.Rank = ADC_REGULAR_RANK_1;
+  55              		.loc 1 40 5 is_stmt 1 view .LVU6
+  56              		.loc 1 40 18 is_stmt 0 view .LVU7
+  57 0016 0622     		movs	r2, #6
+  58 0018 0192     		str	r2, [sp, #4]
+  41:Core/Src/joystick.c ****     sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
+  59              		.loc 1 41 5 is_stmt 1 view .LVU8
+  60              		.loc 1 41 26 is_stmt 0 view .LVU9
+  61 001a 0292     		str	r2, [sp, #8]
+  42:Core/Src/joystick.c ****     HAL_ADC_ConfigChannel(hadc, &sConfig);
+  62              		.loc 1 42 5 is_stmt 1 view .LVU10
+  63 001c 6946     		mov	r1, sp
+  64              	.LVL1:
+  65              		.loc 1 42 5 is_stmt 0 view .LVU11
+  66 001e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+  67              	.LVL2:
+  43:Core/Src/joystick.c **** 
+  44:Core/Src/joystick.c ****     uint32_t sum = 0;
+  68              		.loc 1 44 5 is_stmt 1 view .LVU12
+  45:Core/Src/joystick.c **** 
+  46:Core/Src/joystick.c ****     for (int i = 0; i < ADC_SAMPLES; i++)
+  69              		.loc 1 46 5 view .LVU13
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 3
+
+
+  70              	.LBB2:
+  71              		.loc 1 46 10 view .LVU14
+  72              		.loc 1 46 14 is_stmt 0 view .LVU15
+  73 0022 3546     		mov	r5, r6
+  74              		.loc 1 46 5 view .LVU16
+  75 0024 03E0     		b	.L2
+  76              	.LVL3:
+  77              	.L3:
+  47:Core/Src/joystick.c ****     {
+  48:Core/Src/joystick.c ****         HAL_ADC_Start(hadc);
+  49:Core/Src/joystick.c ****         if (HAL_ADC_PollForConversion(hadc, 10) == HAL_OK)
+  50:Core/Src/joystick.c ****             sum += HAL_ADC_GetValue(hadc);
+  51:Core/Src/joystick.c ****         HAL_ADC_Stop(hadc);
+  78              		.loc 1 51 9 is_stmt 1 view .LVU17
+  79 0026 2046     		mov	r0, r4
+  80 0028 FFF7FEFF 		bl	HAL_ADC_Stop
+  81              	.LVL4:
+  46:Core/Src/joystick.c ****     {
+  82              		.loc 1 46 39 discriminator 2 view .LVU18
+  83 002c 0135     		adds	r5, r5, #1
+  84              	.LVL5:
+  85              	.L2:
+  46:Core/Src/joystick.c ****     {
+  86              		.loc 1 46 23 discriminator 1 view .LVU19
+  87 002e 0F2D     		cmp	r5, #15
+  88 0030 0DDC     		bgt	.L6
+  48:Core/Src/joystick.c ****         if (HAL_ADC_PollForConversion(hadc, 10) == HAL_OK)
+  89              		.loc 1 48 9 view .LVU20
+  90 0032 2046     		mov	r0, r4
+  91 0034 FFF7FEFF 		bl	HAL_ADC_Start
+  92              	.LVL6:
+  49:Core/Src/joystick.c ****             sum += HAL_ADC_GetValue(hadc);
+  93              		.loc 1 49 9 view .LVU21
+  49:Core/Src/joystick.c ****             sum += HAL_ADC_GetValue(hadc);
+  94              		.loc 1 49 13 is_stmt 0 view .LVU22
+  95 0038 0A21     		movs	r1, #10
+  96 003a 2046     		mov	r0, r4
+  97 003c FFF7FEFF 		bl	HAL_ADC_PollForConversion
+  98              	.LVL7:
+  49:Core/Src/joystick.c ****             sum += HAL_ADC_GetValue(hadc);
+  99              		.loc 1 49 12 discriminator 1 view .LVU23
+ 100 0040 0028     		cmp	r0, #0
+ 101 0042 F0D1     		bne	.L3
+  50:Core/Src/joystick.c ****         HAL_ADC_Stop(hadc);
+ 102              		.loc 1 50 13 is_stmt 1 view .LVU24
+  50:Core/Src/joystick.c ****         HAL_ADC_Stop(hadc);
+ 103              		.loc 1 50 20 is_stmt 0 view .LVU25
+ 104 0044 2046     		mov	r0, r4
+ 105 0046 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 106              	.LVL8:
+  50:Core/Src/joystick.c ****         HAL_ADC_Stop(hadc);
+ 107              		.loc 1 50 17 discriminator 1 view .LVU26
+ 108 004a 0644     		add	r6, r6, r0
+ 109              	.LVL9:
+  50:Core/Src/joystick.c ****         HAL_ADC_Stop(hadc);
+ 110              		.loc 1 50 17 discriminator 1 view .LVU27
+ 111 004c EBE7     		b	.L3
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 4
+
+
+ 112              	.LVL10:
+ 113              	.L6:
+  50:Core/Src/joystick.c ****         HAL_ADC_Stop(hadc);
+ 114              		.loc 1 50 17 discriminator 1 view .LVU28
+ 115              	.LBE2:
+  52:Core/Src/joystick.c ****     }
+  53:Core/Src/joystick.c **** 
+  54:Core/Src/joystick.c ****     return (uint16_t)(sum / ADC_SAMPLES);
+ 116              		.loc 1 54 5 is_stmt 1 view .LVU29
+  55:Core/Src/joystick.c **** }
+ 117              		.loc 1 55 1 is_stmt 0 view .LVU30
+ 118 004e C6F30F10 		ubfx	r0, r6, #4, #16
+ 119 0052 06B0     		add	sp, sp, #24
+ 120              		.cfi_def_cfa_offset 16
+ 121              		@ sp needed
+ 122 0054 70BD     		pop	{r4, r5, r6, pc}
+ 123              		.loc 1 55 1 view .LVU31
+ 124              		.cfi_endproc
+ 125              	.LFE1105:
+ 127              		.section	.text.Joystick_Init,"ax",%progbits
+ 128              		.align	1
+ 129              		.global	Joystick_Init
+ 130              		.syntax unified
+ 131              		.thumb
+ 132              		.thumb_func
+ 134              	Joystick_Init:
+ 135              	.LVL11:
+ 136              	.LFB1104:
+  23:Core/Src/joystick.c ****     joystick->hadc = hadc;
+ 137              		.loc 1 23 1 is_stmt 1 view -0
+ 138              		.cfi_startproc
+ 139              		@ args = 8, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141              		@ link register save eliminated.
+  24:Core/Src/joystick.c ****     joystick->xChannel = xChannel;
+ 142              		.loc 1 24 5 view .LVU33
+  24:Core/Src/joystick.c ****     joystick->xChannel = xChannel;
+ 143              		.loc 1 24 20 is_stmt 0 view .LVU34
+ 144 0000 0160     		str	r1, [r0]
+  25:Core/Src/joystick.c ****     joystick->yChannel = yChannel;
+ 145              		.loc 1 25 5 is_stmt 1 view .LVU35
+  25:Core/Src/joystick.c ****     joystick->yChannel = yChannel;
+ 146              		.loc 1 25 24 is_stmt 0 view .LVU36
+ 147 0002 4260     		str	r2, [r0, #4]
+  26:Core/Src/joystick.c ****     joystick->buttonPort = buttonPort;
+ 148              		.loc 1 26 5 is_stmt 1 view .LVU37
+  26:Core/Src/joystick.c ****     joystick->buttonPort = buttonPort;
+ 149              		.loc 1 26 24 is_stmt 0 view .LVU38
+ 150 0004 8360     		str	r3, [r0, #8]
+  27:Core/Src/joystick.c ****     joystick->buttonPin = buttonPin;
+ 151              		.loc 1 27 5 is_stmt 1 view .LVU39
+  27:Core/Src/joystick.c ****     joystick->buttonPin = buttonPin;
+ 152              		.loc 1 27 26 is_stmt 0 view .LVU40
+ 153 0006 009B     		ldr	r3, [sp]
+ 154              	.LVL12:
+  27:Core/Src/joystick.c ****     joystick->buttonPin = buttonPin;
+ 155              		.loc 1 27 26 view .LVU41
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 5
+
+
+ 156 0008 C360     		str	r3, [r0, #12]
+  28:Core/Src/joystick.c **** }
+ 157              		.loc 1 28 5 is_stmt 1 view .LVU42
+  28:Core/Src/joystick.c **** }
+ 158              		.loc 1 28 25 is_stmt 0 view .LVU43
+ 159 000a BDF80430 		ldrh	r3, [sp, #4]
+ 160 000e 0382     		strh	r3, [r0, #16]	@ movhi
+  29:Core/Src/joystick.c **** 
+ 161              		.loc 1 29 1 view .LVU44
+ 162 0010 7047     		bx	lr
+ 163              		.cfi_endproc
+ 164              	.LFE1104:
+ 166              		.section	.text.Joystick_Calibrate,"ax",%progbits
+ 167              		.align	1
+ 168              		.global	Joystick_Calibrate
+ 169              		.syntax unified
+ 170              		.thumb
+ 171              		.thumb_func
+ 173              	Joystick_Calibrate:
+ 174              	.LVL13:
+ 175              	.LFB1106:
+  56:Core/Src/joystick.c **** 
+  57:Core/Src/joystick.c **** /**
+  58:Core/Src/joystick.c ****  * Calibration: find true center of joystick X at boot
+  59:Core/Src/joystick.c ****  * @param joystick Pointer to joystick handle
+  60:Core/Src/joystick.c ****  */
+  61:Core/Src/joystick.c **** void Joystick_Calibrate(Joystick_HandleTypeDef *joystick)
+  62:Core/Src/joystick.c **** {
+ 176              		.loc 1 62 1 is_stmt 1 view -0
+ 177              		.cfi_startproc
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180              		.loc 1 62 1 is_stmt 0 view .LVU46
+ 181 0000 70B5     		push	{r4, r5, r6, lr}
+ 182              		.cfi_def_cfa_offset 16
+ 183              		.cfi_offset 4, -16
+ 184              		.cfi_offset 5, -12
+ 185              		.cfi_offset 6, -8
+ 186              		.cfi_offset 14, -4
+ 187 0002 0646     		mov	r6, r0
+  63:Core/Src/joystick.c ****     uint32_t sum = 0;
+ 188              		.loc 1 63 5 is_stmt 1 view .LVU47
+ 189              	.LVL14:
+  64:Core/Src/joystick.c **** 
+  65:Core/Src/joystick.c ****     for (int i = 0; i < 32; i++)
+ 190              		.loc 1 65 5 view .LVU48
+ 191              	.LBB3:
+ 192              		.loc 1 65 10 view .LVU49
+ 193              		.loc 1 65 14 is_stmt 0 view .LVU50
+ 194 0004 0024     		movs	r4, #0
+ 195              	.LBE3:
+  63:Core/Src/joystick.c ****     uint32_t sum = 0;
+ 196              		.loc 1 63 14 view .LVU51
+ 197 0006 2546     		mov	r5, r4
+ 198              	.LBB4:
+ 199              		.loc 1 65 5 view .LVU52
+ 200 0008 05E0     		b	.L9
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 6
+
+
+ 201              	.LVL15:
+ 202              	.L10:
+  66:Core/Src/joystick.c ****         sum += Read_ADC_Channel(joystick->hadc, joystick->xChannel);
+ 203              		.loc 1 66 9 is_stmt 1 view .LVU53
+ 204              		.loc 1 66 16 is_stmt 0 view .LVU54
+ 205 000a 7168     		ldr	r1, [r6, #4]
+ 206 000c 3068     		ldr	r0, [r6]
+ 207 000e FFF7FEFF 		bl	Read_ADC_Channel
+ 208              	.LVL16:
+ 209              		.loc 1 66 13 discriminator 1 view .LVU55
+ 210 0012 0544     		add	r5, r5, r0
+ 211              	.LVL17:
+  65:Core/Src/joystick.c ****         sum += Read_ADC_Channel(joystick->hadc, joystick->xChannel);
+ 212              		.loc 1 65 30 is_stmt 1 discriminator 3 view .LVU56
+ 213 0014 0134     		adds	r4, r4, #1
+ 214              	.LVL18:
+ 215              	.L9:
+  65:Core/Src/joystick.c ****         sum += Read_ADC_Channel(joystick->hadc, joystick->xChannel);
+ 216              		.loc 1 65 23 discriminator 1 view .LVU57
+ 217 0016 1F2C     		cmp	r4, #31
+ 218 0018 F7DD     		ble	.L10
+ 219              	.LBE4:
+  67:Core/Src/joystick.c ****         
+  68:Core/Src/joystick.c ****     centerX = sum / 32;
+ 220              		.loc 1 68 5 view .LVU58
+ 221              		.loc 1 68 19 is_stmt 0 view .LVU59
+ 222 001a 6D09     		lsrs	r5, r5, #5
+ 223              	.LVL19:
+ 224              		.loc 1 68 13 view .LVU60
+ 225 001c 014B     		ldr	r3, .L12
+ 226 001e 1D80     		strh	r5, [r3]	@ movhi
+  69:Core/Src/joystick.c **** }
+ 227              		.loc 1 69 1 view .LVU61
+ 228 0020 70BD     		pop	{r4, r5, r6, pc}
+ 229              	.LVL20:
+ 230              	.L13:
+ 231              		.loc 1 69 1 view .LVU62
+ 232 0022 00BF     		.align	2
+ 233              	.L12:
+ 234 0024 00000000 		.word	centerX
+ 235              		.cfi_endproc
+ 236              	.LFE1106:
+ 238              		.section	.text.Joystick_GetDirection,"ax",%progbits
+ 239              		.align	1
+ 240              		.global	Joystick_GetDirection
+ 241              		.syntax unified
+ 242              		.thumb
+ 243              		.thumb_func
+ 245              	Joystick_GetDirection:
+ 246              	.LVL21:
+ 247              	.LFB1107:
+  70:Core/Src/joystick.c **** 
+  71:Core/Src/joystick.c **** /**
+  72:Core/Src/joystick.c ****  * Return joystick direction (UP / DOWN / IDLE) with deadzone applied
+  73:Core/Src/joystick.c ****  * @param joystick Pointer to joystick handle
+  74:Core/Src/joystick.c ****  */
+  75:Core/Src/joystick.c **** JoyStickDirection Joystick_GetDirection(Joystick_HandleTypeDef *joystick)
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 7
+
+
+  76:Core/Src/joystick.c **** {
+ 248              		.loc 1 76 1 is_stmt 1 view -0
+ 249              		.cfi_startproc
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 0, uses_anonymous_args = 0
+ 252              		.loc 1 76 1 is_stmt 0 view .LVU64
+ 253 0000 08B5     		push	{r3, lr}
+ 254              		.cfi_def_cfa_offset 8
+ 255              		.cfi_offset 3, -8
+ 256              		.cfi_offset 14, -4
+  77:Core/Src/joystick.c ****     uint16_t joystickX = Read_ADC_Channel(joystick->hadc, joystick->xChannel);
+ 257              		.loc 1 77 5 is_stmt 1 view .LVU65
+ 258              		.loc 1 77 26 is_stmt 0 view .LVU66
+ 259 0002 4168     		ldr	r1, [r0, #4]
+ 260 0004 0068     		ldr	r0, [r0]
+ 261              	.LVL22:
+ 262              		.loc 1 77 26 view .LVU67
+ 263 0006 FFF7FEFF 		bl	Read_ADC_Channel
+ 264              	.LVL23:
+  78:Core/Src/joystick.c **** 
+  79:Core/Src/joystick.c ****     int diff = (int)joystickX - (int)centerX;
+ 265              		.loc 1 79 5 is_stmt 1 view .LVU68
+ 266              		.loc 1 79 33 is_stmt 0 view .LVU69
+ 267 000a 074B     		ldr	r3, .L19
+ 268 000c 1B88     		ldrh	r3, [r3]
+ 269              		.loc 1 79 9 view .LVU70
+ 270 000e C01A     		subs	r0, r0, r3
+ 271              	.LVL24:
+  80:Core/Src/joystick.c **** 
+  81:Core/Src/joystick.c ****     if (diff > DEADZONE)
+ 272              		.loc 1 81 5 is_stmt 1 view .LVU71
+ 273              		.loc 1 81 8 is_stmt 0 view .LVU72
+ 274 0010 5028     		cmp	r0, #80
+ 275 0012 04DC     		bgt	.L16
+  82:Core/Src/joystick.c ****         return JOY_UP;
+  83:Core/Src/joystick.c **** 
+  84:Core/Src/joystick.c ****     if (diff < -DEADZONE)
+ 276              		.loc 1 84 5 is_stmt 1 view .LVU73
+ 277              		.loc 1 84 8 is_stmt 0 view .LVU74
+ 278 0014 10F1500F 		cmn	r0, #80
+ 279 0018 03DB     		blt	.L17
+  85:Core/Src/joystick.c ****         return JOY_DOWN;
+  86:Core/Src/joystick.c **** 
+  87:Core/Src/joystick.c ****     return JOY_IDLE;
+ 280              		.loc 1 87 12 view .LVU75
+ 281 001a 0020     		movs	r0, #0
+ 282              	.LVL25:
+ 283              	.L15:
+  88:Core/Src/joystick.c **** }
+ 284              		.loc 1 88 1 view .LVU76
+ 285 001c 08BD     		pop	{r3, pc}
+ 286              	.LVL26:
+ 287              	.L16:
+  82:Core/Src/joystick.c ****         return JOY_UP;
+ 288              		.loc 1 82 16 view .LVU77
+ 289 001e 0120     		movs	r0, #1
+ 290              	.LVL27:
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 8
+
+
+  82:Core/Src/joystick.c ****         return JOY_UP;
+ 291              		.loc 1 82 16 view .LVU78
+ 292 0020 FCE7     		b	.L15
+ 293              	.LVL28:
+ 294              	.L17:
+  85:Core/Src/joystick.c ****         return JOY_DOWN;
+ 295              		.loc 1 85 16 view .LVU79
+ 296 0022 0220     		movs	r0, #2
+ 297              	.LVL29:
+  85:Core/Src/joystick.c ****         return JOY_DOWN;
+ 298              		.loc 1 85 16 view .LVU80
+ 299 0024 FAE7     		b	.L15
+ 300              	.L20:
+ 301 0026 00BF     		.align	2
+ 302              	.L19:
+ 303 0028 00000000 		.word	centerX
+ 304              		.cfi_endproc
+ 305              	.LFE1107:
+ 307              		.section	.text.Joystick_ReadXY,"ax",%progbits
+ 308              		.align	1
+ 309              		.global	Joystick_ReadXY
+ 310              		.syntax unified
+ 311              		.thumb
+ 312              		.thumb_func
+ 314              	Joystick_ReadXY:
+ 315              	.LVL30:
+ 316              	.LFB1108:
+  89:Core/Src/joystick.c **** 
+  90:Core/Src/joystick.c **** /**
+  91:Core/Src/joystick.c ****  * Read X and Y axes (0–4095)
+  92:Core/Src/joystick.c ****  * @param joystick Pointer to joystick handle
+  93:Core/Src/joystick.c ****  * @param xy Array to store X and Y values
+  94:Core/Src/joystick.c ****  */
+  95:Core/Src/joystick.c **** void Joystick_ReadXY(Joystick_HandleTypeDef* joystick, uint16_t* xy)
+  96:Core/Src/joystick.c **** {
+ 317              		.loc 1 96 1 is_stmt 1 view -0
+ 318              		.cfi_startproc
+ 319              		@ args = 0, pretend = 0, frame = 0
+ 320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 321              		.loc 1 96 1 is_stmt 0 view .LVU82
+ 322 0000 38B5     		push	{r3, r4, r5, lr}
+ 323              		.cfi_def_cfa_offset 16
+ 324              		.cfi_offset 3, -16
+ 325              		.cfi_offset 4, -12
+ 326              		.cfi_offset 5, -8
+ 327              		.cfi_offset 14, -4
+ 328 0002 0446     		mov	r4, r0
+ 329 0004 0D46     		mov	r5, r1
+  97:Core/Src/joystick.c ****     xy[0] = Read_ADC_Channel(joystick->hadc, joystick->xChannel); // X-axis
+ 330              		.loc 1 97 5 is_stmt 1 view .LVU83
+ 331              		.loc 1 97 13 is_stmt 0 view .LVU84
+ 332 0006 4168     		ldr	r1, [r0, #4]
+ 333              	.LVL31:
+ 334              		.loc 1 97 13 view .LVU85
+ 335 0008 0068     		ldr	r0, [r0]
+ 336              	.LVL32:
+ 337              		.loc 1 97 13 view .LVU86
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 9
+
+
+ 338 000a FFF7FEFF 		bl	Read_ADC_Channel
+ 339              	.LVL33:
+ 340              		.loc 1 97 11 discriminator 1 view .LVU87
+ 341 000e 2880     		strh	r0, [r5]	@ movhi
+  98:Core/Src/joystick.c ****     xy[1] = Read_ADC_Channel(joystick->hadc, joystick->yChannel); // Y-axis
+ 342              		.loc 1 98 5 is_stmt 1 view .LVU88
+ 343              		.loc 1 98 13 is_stmt 0 view .LVU89
+ 344 0010 A168     		ldr	r1, [r4, #8]
+ 345 0012 2068     		ldr	r0, [r4]
+ 346 0014 FFF7FEFF 		bl	Read_ADC_Channel
+ 347              	.LVL34:
+ 348              		.loc 1 98 11 discriminator 1 view .LVU90
+ 349 0018 6880     		strh	r0, [r5, #2]	@ movhi
+  99:Core/Src/joystick.c **** }
+ 350              		.loc 1 99 1 view .LVU91
+ 351 001a 38BD     		pop	{r3, r4, r5, pc}
+ 352              		.loc 1 99 1 view .LVU92
+ 353              		.cfi_endproc
+ 354              	.LFE1108:
+ 356              		.section	.text.Joystick_Pressed,"ax",%progbits
+ 357              		.align	1
+ 358              		.global	Joystick_Pressed
+ 359              		.syntax unified
+ 360              		.thumb
+ 361              		.thumb_func
+ 363              	Joystick_Pressed:
+ 364              	.LVL35:
+ 365              	.LFB1109:
+ 100:Core/Src/joystick.c **** 
+ 101:Core/Src/joystick.c **** /**
+ 102:Core/Src/joystick.c ****  * Check if joystick button is pressed
+ 103:Core/Src/joystick.c ****  * @param joystick Pointer to joystick handle
+ 104:Core/Src/joystick.c ****  * @return 1 if pressed, 0 otherwise
+ 105:Core/Src/joystick.c ****  */
+ 106:Core/Src/joystick.c **** uint8_t Joystick_Pressed(Joystick_HandleTypeDef* joystick)
+ 107:Core/Src/joystick.c **** {
+ 366              		.loc 1 107 1 is_stmt 1 view -0
+ 367              		.cfi_startproc
+ 368              		@ args = 0, pretend = 0, frame = 0
+ 369              		@ frame_needed = 0, uses_anonymous_args = 0
+ 370              		.loc 1 107 1 is_stmt 0 view .LVU94
+ 371 0000 38B5     		push	{r3, r4, r5, lr}
+ 372              		.cfi_def_cfa_offset 16
+ 373              		.cfi_offset 3, -16
+ 374              		.cfi_offset 4, -12
+ 375              		.cfi_offset 5, -8
+ 376              		.cfi_offset 14, -4
+ 377 0002 0446     		mov	r4, r0
+ 108:Core/Src/joystick.c ****     // Check for Active Low and Debounce the button
+ 109:Core/Src/joystick.c ****     if (HAL_GPIO_ReadPin(joystick->buttonPort, joystick->buttonPin) == GPIO_PIN_RESET)
+ 378              		.loc 1 109 5 is_stmt 1 view .LVU95
+ 379              		.loc 1 109 9 is_stmt 0 view .LVU96
+ 380 0004 018A     		ldrh	r1, [r0, #16]
+ 381 0006 C068     		ldr	r0, [r0, #12]
+ 382              	.LVL36:
+ 383              		.loc 1 109 9 view .LVU97
+ 384 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 10
+
+
+ 385              	.LVL37:
+ 386              		.loc 1 109 8 discriminator 1 view .LVU98
+ 387 000c 10B1     		cbz	r0, .L28
+ 110:Core/Src/joystick.c ****     {
+ 111:Core/Src/joystick.c ****         HAL_Delay(20);
+ 112:Core/Src/joystick.c ****         if(HAL_GPIO_ReadPin(joystick->buttonPort, joystick->buttonPin) == GPIO_PIN_RESET) 
+ 113:Core/Src/joystick.c ****         { return 1; }
+ 114:Core/Src/joystick.c ****     }
+ 115:Core/Src/joystick.c ****   
+ 116:Core/Src/joystick.c ****     return 0;
+ 388              		.loc 1 116 12 view .LVU99
+ 389 000e 0025     		movs	r5, #0
+ 390              	.L24:
+ 117:Core/Src/joystick.c **** }...
+ 391              		.loc 1 117 1 view .LVU100
+ 392 0010 2846     		mov	r0, r5
+ 393 0012 38BD     		pop	{r3, r4, r5, pc}
+ 394              	.LVL38:
+ 395              	.L28:
+ 396              		.loc 1 117 1 view .LVU101
+ 397 0014 0546     		mov	r5, r0
+ 111:Core/Src/joystick.c ****         HAL_Delay(20);
+ 398              		.loc 1 111 9 is_stmt 1 view .LVU102
+ 399 0016 1420     		movs	r0, #20
+ 400 0018 FFF7FEFF 		bl	HAL_Delay
+ 401              	.LVL39:
+ 112:Core/Src/joystick.c ****         if(HAL_GPIO_ReadPin(joystick->buttonPort, joystick->buttonPin) == GPIO_PIN_RESET) 
+ 402              		.loc 1 112 9 view .LVU103
+ 112:Core/Src/joystick.c ****         if(HAL_GPIO_ReadPin(joystick->buttonPort, joystick->buttonPin) == GPIO_PIN_RESET) 
+ 403              		.loc 1 112 12 is_stmt 0 view .LVU104
+ 404 001c 218A     		ldrh	r1, [r4, #16]
+ 405 001e E068     		ldr	r0, [r4, #12]
+ 406 0020 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 407              	.LVL40:
+ 112:Core/Src/joystick.c ****         if(HAL_GPIO_ReadPin(joystick->buttonPort, joystick->buttonPin) == GPIO_PIN_RESET) 
+ 408              		.loc 1 112 11 discriminator 1 view .LVU105
+ 409 0024 0028     		cmp	r0, #0
+ 410 0026 F3D1     		bne	.L24
+ 113:Core/Src/joystick.c ****         { return 1; }
+ 411              		.loc 1 113 18 view .LVU106
+ 412 0028 0125     		movs	r5, #1
+ 413 002a F1E7     		b	.L24
+ 414              		.cfi_endproc
+ 415              	.LFE1109:
+ 417              		.section	.bss.centerX,"aw",%nobits
+ 418              		.align	1
+ 421              	centerX:
+ 422 0000 0000     		.space	2
+ 423              		.text
+ 424              	.Letext0:
+ 425              		.file 2 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 426              		.file 3 "C:/Users/elhyd/AppData/Roaming/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-to
+ 427              		.file 4 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 428              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h"
+ 429              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 430              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
+ 431              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h"
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 11
+
+
+ 432              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_gpio.h"
+ 433              		.file 10 "Core/Inc/joystick.h"
+ 434              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ARM GAS  C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 joystick.c
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:21     .text.Read_ADC_Channel:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:26     .text.Read_ADC_Channel:00000000 Read_ADC_Channel
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:128    .text.Joystick_Init:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:134    .text.Joystick_Init:00000000 Joystick_Init
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:167    .text.Joystick_Calibrate:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:173    .text.Joystick_Calibrate:00000000 Joystick_Calibrate
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:234    .text.Joystick_Calibrate:00000024 $d
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:421    .bss.centerX:00000000 centerX
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:239    .text.Joystick_GetDirection:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:245    .text.Joystick_GetDirection:00000000 Joystick_GetDirection
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:303    .text.Joystick_GetDirection:00000028 $d
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:308    .text.Joystick_ReadXY:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:314    .text.Joystick_ReadXY:00000000 Joystick_ReadXY
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:357    .text.Joystick_Pressed:00000000 $t
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:363    .text.Joystick_Pressed:00000000 Joystick_Pressed
+C:\Users\elhyd\AppData\Local\Temp\cc9Jjv1p.s:418    .bss.centerX:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_ADC_ConfigChannel
+HAL_ADC_Stop
+HAL_ADC_Start
+HAL_ADC_PollForConversion
+HAL_ADC_GetValue
+HAL_GPIO_ReadPin
+HAL_Delay

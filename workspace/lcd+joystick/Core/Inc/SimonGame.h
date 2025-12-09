@@ -1,0 +1,51 @@
+#ifndef GAME_H
+#define GAME_H
+
+#include <stdint.h>
+#include "joystick.h"
+
+typedef enum 
+{
+  WELCOME = 0,
+  START,
+  PLAYER_MENU,
+  PLAYER_SELECT,
+  ONE_PLAYER,
+  TWO_PLAYERS,
+  GAME_RESULT,
+  PLAY_AGAIN,
+  SLEEP,
+  WAKE_UP
+} GameState ; 
+
+typedef struct 
+{
+  uint8_t numPlayers;
+  uint8_t currentPlayer;
+  uint32_t sequenceSpeed;
+  uint8_t sequence[100];
+  uint8_t sequenceLength;
+  uint8_t round;
+  uint8_t playerInputs[2][100];
+  uint8_t playerScores[2];
+} GameInfo ;
+
+typedef struct {
+    GameState state;
+    GameInfo info;
+} Game;
+
+typedef struct 
+{
+  uint8_t stable;
+  uint8_t state;
+  GPIO_TypeDef *port; 
+  uint16_t pin;
+} Button;
+
+void Game_Init(Game* game);
+void Game_Run(Game* game, Joystick_HandleTypeDef* joystick);
+void computerTurn(Game* game);
+void playerTurn(Game* game);
+
+#endif
